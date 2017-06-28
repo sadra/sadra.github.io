@@ -1,0 +1,43 @@
+title: Sadra Isapanah Amlashi
+titleـfa: sadra amlashi sadra
+email: sadra@isapanah.com
+description: > # this means to ignore newlines until "baseurl:"
+  Howdy! My name is Sadra Isapanah Amlashi. I’m an Android and iOS App Developer.
+
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://isapanah.com" # the base hostname & protocol for your site, e.g. http://example.com
+
+twitter_path: https://twitter.com/sadra-amlashi
+github_path:  https://github.com/sadra
+facebook_path:  https://facebook.com/sadra.am123
+medium_path: https://medium.com/sadra
+
+titleFarsi: صدرا املشی
+descriptionFarsi: >
+ سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده ارشد اپلیکیشن iOS و Android.
+
+# Build settings
+permalink: pretty
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-autoprefixer
+  - jekyll-archives
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+sass:
+  sass_dir: _sass
+
+jekyll-archives:
+  enabled:
+    - tags
+    - categories
+  layouts:
+    tag: tag-archive
+    category: category-archive
+  permalinks:
+    tag: '/tag/:name/'
+    category: '/category/:name/'
+

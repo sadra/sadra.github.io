@@ -1,0 +1,57 @@
+.list-items-container
+  margin: 15px 0 15px 0
+  .list-item-tag
+    unicode-bidi: embed
+    white-space: nowrap
+    display: inline-block
+    height: 27px
+    font-size: 1em
+    margin-bottom: 5px
+    margin-left: 5px
+    background-color: #9C27B0
+    color: #ffffff
+    padding: 5px
+    border: solid 1px #9C27B0
+    border-radius: 5px
+    @media screen and (max-width: 500px)
+      font-size: .9em
+      margin-left: 3px
+  .list-item-tag:hover
+    background-color: #E91E63
+    border-color: #E91E63
+  .list-item-tag:before
+    content: "#"
+
+
+.list-item-category
+  unicode-bidi: embed
+  white-space: nowrap
+  display: inline-block
+  height: 27px
+  font-size: 1em
+  margin-bottom: 5px
+  margin-left: 5px
+  color: #4E342E
+  padding-top: 5px
+  padding-bottom: 5px
+  padding-left: 3px
+  font-weight: bolder
+  @media screen and (max-width: 500px)
+    font-size: 0.9em
+.list-item-category:hover
+  color: #E91E63
+.list-item-category:after
+  content: " / "
+
+.list-title
+  font-size: 1.2em
+  margin-bottom: 10px
+  color: #546E7A
+  @media screen and (max-width: 500px)
+    font-size: 1.1em
+    margin-bottom: 7px
+  span
+    color: #37474F
+    font-size: 1.3em
+    @media screen and (max-width: 500px)
+      font-size: 1.2em

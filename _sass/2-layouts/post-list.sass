@@ -1,0 +1,98 @@
+.blog-post-list
+  width: 100%
+  transition: all 0.3s ease-in
+  position: relative
+  z-index: 5
+  top: 0
+  left: 0
+  right: 0
+  padding-top: 5px
+  padding-left: 5px
+  padding-right: 5px
+  margin: 0 auto
+  .blog-post-item-container
+    clear: both
+    margin-top: 10px
+    margin-bottom: 20px
+    @media screen and (max-width: 500px)
+      margin-top: 7px
+      margin-bottom: 15px
+
+    .post-date-box
+      float: right
+      overflow: hidden
+    .post-feature-box
+      margin-right: 15px
+      overflow: hidden
+    .post-item-date
+      color: $post_date
+      margin-top: 3px
+      margin-left: 10px
+      font-size: .75em
+      line-height: 1.1em
+      font-weight: 200
+      text-align: center
+      @media screen and (max-width: 500px)
+        font-size: .65em
+        line-height: .95em
+        font-weight: 100
+        margin-top: 5.5px
+    .post-item-title
+      color: $post_title
+      font-weight: 900
+      font-size: 1.3em
+      display: inline-block
+      height: 25px
+      line-height: 20px
+      @media screen and (max-width: 500px)
+        font-size: 1.05em
+        font-weight: 900
+        margin-right: 5px
+    .post-item-title:hover
+      color: $post_title_hover
+    .post-list-routes
+      margin: 5px 0 5px 5px
+      .tag-link
+        unicode-bidi: embed
+        white-space: nowrap
+        display: inline-block
+        height: 20px
+        font-size: .6em
+        margin-bottom: 2px
+        margin-left: 3px
+        background-color: #9C27B0
+        color: #ffffff
+        padding: 5px
+        border: solid 1px #9C27B0
+        border-radius: 3px
+        @media screen and (max-width: 500px)
+          font-size: 0.55em
+          margin-left: 1px
+      .tag-link:hover
+        background-color: #E91E63
+        border-color: #E91E63
+      .tag-link:before
+        content: "#"
+      .category-link
+        unicode-bidi: embed
+        white-space: nowrap
+        display: inline-block
+        height: 22px
+        font-size: .7em
+        margin-bottom: 2px
+        color: #9E9E9E
+        padding-top: 5px
+        padding-bottom: 5px
+        padding-left: 3px
+        font-weight: bolder
+        @media screen and (max-width: 500px)
+          font-size: 0.6em
+      .category-link:hover
+        color: #9C27B0
+      .category-link:after
+        content: " / "
+.post-item-year
+  margin-top: 25px
+  margin-bottom: 5px
+.post-item-year:after
+  content: ' ⌐'

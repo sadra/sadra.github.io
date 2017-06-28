@@ -1,0 +1,102 @@
+.blog-post-container
+  width: 100%
+  transition: all 0.3s ease-in
+  position: relative
+  z-index: 5
+  top: 0
+  left: 0
+  right: 0
+  padding-top: 5px
+  padding-left: 5px
+  padding-right: 5px
+  margin: auto
+  p
+    font-size: 1em
+    color: black
+    font-weight: 100
+    line-height: 1.5em
+  .post-title-container
+    width: 100%
+    margin: 20px auto
+  .author-card
+    background: #f6f6f6
+    padding: 15px
+    border-radius: 5px
+    border: 1px solid #f6f6f6
+    width: 100%
+    margin: 0 auto
+    .author-message
+      padding-top: 8px
+      display: flex
+      align-items: flex-start
+      p
+        flex: 1
+        font-size: .9em
+      img
+        margin-left: 10px
+        margin-right: 0
+        width: 50px
+        height: 50px
+    .addthis_inline_share_toolbox
+      direction: ltr
+      margin: 5px auto
+  .post_created
+    margin-bottom: 20px
+    p
+      color: $post_date
+
+  .post-routes-list
+    margin: 25px 0 15px 5px
+    .tag-link
+      unicode-bidi: embed
+      white-space: nowrap
+      display: inline-block
+      height: 20px
+      font-size: .6em
+      margin-bottom: 2px
+      margin-left: 3px
+      background-color: #9C27B0
+      color: #ffffff
+      padding: 5px
+      border: solid 1px #9C27B0
+      border-radius: 3px
+      @media screen and (max-width: 500px)
+        font-size: 0.55em
+        margin-left: 1px
+    .tag-link:hover
+      background-color: #E91E63
+      border-color: #E91E63
+    .tag-link:before
+      content: "#"
+    .category-link
+      unicode-bidi: embed
+      white-space: nowrap
+      display: inline-block
+      height: 22px
+      font-size: .7em
+      margin-bottom: 2px
+      color: #9E9E9E
+      padding-top: 5px
+      padding-bottom: 5px
+      padding-left: 3px
+      font-weight: bolder
+      @media screen and (max-width: 500px)
+        font-size: 0.6em
+    .category-link:hover
+      color: #9C27B0
+    .category-link:after
+      content: " / "
+
+  @media screen and (max-width: 500px)
+    width: 92%
+    h1
+      font-size: 1.5em
+      line-height: 1.3em
+  p
+    img
+      max-width: 70%
+      display: block
+      height: initial
+      margin: 10px auto
+      @media screen and (max-width: 700px)
+        max-width: 90%

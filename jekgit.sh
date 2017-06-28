@@ -6,12 +6,10 @@ if [[ -z "$1" ]]; then
 fi
 
 jekyll build && \
-  git add . && \
-  git commit -am "$1" && \
-  git push origin source && \
   cd _site && \
   git add . && \
   git commit -am "$1" && \
   git push origin master && \
   cd .. && \
-  echo "Successfully built and pushed to GitHub."
+  echo "Success
+  fully built and pushed to GitHub."

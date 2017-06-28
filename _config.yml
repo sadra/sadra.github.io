@@ -40,4 +40,5 @@ jekyll-archives:
   permalinks:
     tag: '/tag/:name/'
     category: '/category/:name/'
+include: .nojekyll
 

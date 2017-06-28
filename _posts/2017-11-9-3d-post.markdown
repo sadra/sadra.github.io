@@ -3,10 +3,10 @@ layout: blog_post_rtl
 title:  "پست سوم چون نهد معمار کج، تا ثریا می‌رود دیوار کج!"
 date: '2017-11-9'
 tags:
-    - هالو مارین
+    - iOS
+    - Android
+    - Programming
 categories:
-    - Mari Juana
-    - Jeykill
     - ماری جوانا
 author: sadra
 ---

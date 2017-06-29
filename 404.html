@@ -75,15 +75,18 @@ title: 404 Not Found
         var isPlayed = false;
 
         document.getElementById("playBtn").addEventListener("click", playMusic);
+        const sound = document.getElementById("soundHandle");
 
         function playMusic() {
             if(isPlayed){
                 isPlayed = false;
-                document.getElementById("soundHandle").stop();
+                sound.pause();
+                sound.currentTime = 0;
             }else{
                 isPlayed = true;
-                document.getElementById("soundHandle").stop();
-                document.getElementById("soundHandle").play();
+                sound.pause();
+                sound.currentTime = 0;
+                sound.play();
             }
         }
 

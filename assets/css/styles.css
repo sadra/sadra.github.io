@@ -682,7 +682,7 @@ blockquote p {
 .video-container {
   margin: 20px auto;
   width: 75%;
-  background: url("https://sadra.github.io/assets/img/base/not-loaded.png") no-repeat center center fixed;
+  background: url("https://sadra.github.io/assets/img/base/not-loaded.png") no-repeat;
   background-size: cover; }
   @media screen and (max-width: 600px) {
     .video-container {

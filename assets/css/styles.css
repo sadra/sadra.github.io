@@ -642,7 +642,7 @@ figure {
   text-align: center; }
   .image-wrapper img {
     max-width: 70%;
-    display: block;
+    display: inherit;
     height: initial;
     margin: 10px auto; }
     @media screen and (max-width: 700px) {
@@ -1068,7 +1068,7 @@ footer.footer-wrapper {
         line-height: 1.3em; } }
   .blog-post-container p img {
     max-width: 70%;
-    display: block;
+    display: inherit;
     height: initial;
     margin: 10px auto; }
     @media screen and (max-width: 700px) {
@@ -1186,8 +1186,7 @@ footer.footer-wrapper {
   color: #ffffff; }
   @media screen and (max-width: 590px) {
     .err404-description-container {
-      width: 100%;
-      float: none; } }
+      width: 95%; } }
 
 .err404-movie-container {
   float: right;
@@ -1197,5 +1196,4 @@ footer.footer-wrapper {
   color: #ffffff; }
   @media screen and (max-width: 590px) {
     .err404-movie-container {
-      width: 100%;
-      float: none; } }
+      width: 95%; } }

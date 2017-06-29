@@ -6,11 +6,11 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="{{ page.title }}">
-<meta property="og:url" content="{{ page.url }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
 {% if page.cover %}
-<meta property="og:image" content="{{ page.cover }}" />
+    <meta property="og:image" content="{{ page.cover }}" />
 {% else %}
-<meta property="og:image" content="assets/img/avatar.jpg" />
+    <meta property="og:image" content="{{ site.url }}/assets/img/avatar.jpg" />
 {% endif %}
 <meta property="og:site_name" content="{{ site.titleFarsi }}">
 <meta property="og:description" content="{{ site.description }}">
@@ -20,5 +20,5 @@
 <meta name="twitter:description" content="{{ site.descriptionFarsi }}">
 
 <link rel="alternative" href="/site-map.xml" title="{{ site.titleFarsi }}" type="application/atom+xml">
-<link rel="short icon" type="image/x-icon" href="assets/img/base/favicon.png">
-<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+<link rel="short icon" type="image/x-icon" href="{{ site.baseurl }}/assets/img/base/favicon.png">
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/styles.css">

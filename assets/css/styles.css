@@ -679,6 +679,19 @@ blockquote p {
   display: inline;
   color: #414141 !important; }
 
+.video-container {
+  margin: 20px auto;
+  width: 75%; }
+  @media screen and (max-width: 600px) {
+    .video-container {
+      width: 95%; } }
+  @media screen and (max-width: 900px) {
+    .video-container {
+      width: 90%; } }
+  @media screen and (max-width: 1300px) {
+    .video-container {
+      width: 85%; } }
+
 html {
   position: relative;
   height: 100%; }
@@ -985,6 +998,12 @@ footer.footer-wrapper {
   .blog-post-container .post-title-container {
     width: 100%;
     margin: 20px auto; }
+    @media screen and (max-width: 600px) {
+      .blog-post-container .post-title-container {
+        margin: 15px auto; } }
+    @media screen and (max-width: 400px) {
+      .blog-post-container .post-title-container {
+        margin: 10px auto; } }
   .blog-post-container .author-card {
     background: #f6f6f6;
     padding: 15px;
@@ -1074,6 +1093,21 @@ footer.footer-wrapper {
     @media screen and (max-width: 700px) {
       .blog-post-container p img {
         max-width: 90%; } }
+  .blog-post-container .post-cover {
+    overflow: hidden;
+    height: 300px;
+    width: 100%; }
+    @media screen and (max-width: 900px) {
+      .blog-post-container .post-cover {
+        height: 250px; } }
+    @media screen and (max-width: 600px) {
+      .blog-post-container .post-cover {
+        height: 200px; } }
+    @media screen and (max-width: 400px) {
+      .blog-post-container .post-cover {
+        height: 150px; } }
+    .blog-post-container .post-cover img {
+      width: 100%; }
 
 .archive-title {
   font-size: 1.2em;
@@ -1155,7 +1189,7 @@ footer.footer-wrapper {
 
 .err404-container {
   direction: ltr;
-  background: url("/assets/img/bugart-bacall.jpg") no-repeat center center fixed;
+  background: url("/assets/img/base/404-notfound-cover.jpg") no-repeat center center fixed;
   background-size: cover; }
 
 .err404-container-content {

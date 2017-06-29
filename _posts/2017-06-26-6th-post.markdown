@@ -1,6 +1,6 @@
 ---
 layout: blog_post_rtl
-title:  "پست شیشم چون نهد معمار کج، تا ثریا می‌رود دیوار کج!"
+title:  "پست شیشام چون نهد معمار کج، تا ثریا می‌رود دیوار کج!"
 date: '2017-06-26'
 tags:
     - iOS
@@ -14,6 +14,14 @@ categories:
 author: sadra
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+
+# Awesome Android Spinner
+[![](https://jitpack.io/v/amlashi-sadra/AwesomeSpinner.svg)](https://jitpack.io/#amlashi-sadra/AwesomeSpinner)
+[![License](https://img.shields.io/badge/licence-MIT-lightgrey.svg?style=flat)](https://github.com/amlashi-sadra/AwesomeSpinner/blob/master/LICENSE)
+[![Dependencies](https://img.shields.io/badge/dependencies-non-yellow.svg?style=flat)](#)
+[![Gitter](https://img.shields.io/badge/gitter-join%20chat-%23E91E63.svg?style=flat)](https://gitter.im/AwesomeSpinner)
+[![Minimum Android SDK Version](https://img.shields.io/badge/Minimum%20Android%20SDK-14-blue.svg)](#)
+
 
 Quote break.
 

@@ -11,13 +11,13 @@ layout: theme_rtl
             {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
             {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
             {% if forloop.first %}
-                <h3 id="{{ this_year }}-ref" class="post-item-year">{{this_year}}</h3>
+                <h3 id="{{ this_year }}-ref" class="post-item-year">{{ post.date | jdate: "%y"}}</h3>
             {% endif %}
 
             <div class="blog-post-item-container">
 
                 <div class="post-date-box">
-                    <p class="post-item-date">{{ post.date | date: "%-d"}} <br/> {{ post.date | date: "%B"}}</p>
+                    <p class="post-item-date">{{ post.date | jdate: "%d"}} <br/>{{ post.date | jdate: "%b"}}</p>
                 </div>
 
                 <div class="post-feature-box">
@@ -37,7 +37,7 @@ layout: theme_rtl
             {% if forloop.last %}
             {% else %}
                 {% if this_year != next_year %}
-                    <h3 id="{{ next_year }}-ref" class="post-item-year">{{next_year}}</h3>
+                    <h3 id="{{ next_year }}-ref" class="post-item-year">{{ post.date | jdate: "%y"}}</h3>
                 {% endif %}
             {% endif %}
         {% endfor %}

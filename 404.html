@@ -1,11 +1,45 @@
 ---
 permalink: /404.html
+title: 404 Not Found
 ---
 <html lang="Farsi">
-
-<html>
 <head>
     {% include theme-rtl/head.html %}
+
+    <style>
+        #playBtn {
+            overflow: visible;
+            left: 0;
+            bottom: 0;
+            position: absolute;
+            color: #0a0a0a;
+            background: #ffb101;
+            margin: 5px;
+            width: 40px;
+            height: 44px;
+        }
+
+
+        #playBtn:hover {
+            background-color: #ff9616;
+        }
+
+        #playBtn:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 12.5px;
+            left: 14px;
+            margin: 0 auto;
+            border-style: solid;
+            border-width: 9.5px 0 9.5px 17px;
+            border-color: transparent transparent transparent rgba(255, 255, 255, 1);
+        }
+
+
+    </style>
+
+
 </head>
 
 <body>
@@ -25,13 +59,35 @@ permalink: /404.html
                 <p>If you want the page, just search it again. You know how to search, don't you, baby? Click on back, and return to my heart. <a href="/">Back</a></p>
             </div>
 
+            <div  id="playBtn"></div>
+
         </div>
     </div>
 
-    <audio autoplay>
+    <audio id="soundHandle" autoplay hidden loop>
         <source src="/assets/raw/lauren-bacall-singing.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
+
+
+    <script>
+
+        var isPlayed = false;
+
+        document.getElementById("playBtn").addEventListener("click", playMusic);
+
+        function playMusic() {
+            if(isPlayed){
+                isPlayed = false;
+                document.getElementById("soundHandle").stop();
+            }else{
+                isPlayed = true;
+                document.getElementById("soundHandle").stop();
+                document.getElementById("soundHandle").play();
+            }
+        }
+
+    </script>
 
 {% include theme-rtl/js-link.html %}
 </body>

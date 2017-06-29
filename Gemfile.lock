@@ -9,6 +9,7 @@ GEM
     execjs (2.7.0)
     ffi (1.9.18)
     forwardable-extended (2.6.0)
+    jalalidate (0.3.3)
     jekyll (3.5.0)
       addressable (~> 2.4)
       colorator (~> 1.0)
@@ -50,6 +51,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  jalalidate
   jekyll (= 3.5.0)
   jekyll-archives
   jekyll-autoprefixer

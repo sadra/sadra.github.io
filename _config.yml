@@ -23,6 +23,8 @@ plugins:
   - jekyll-feed
   - jekyll-autoprefixer
   - jekyll-archives
+  - jalalidate
+
 
 exclude:
   - Gemfile

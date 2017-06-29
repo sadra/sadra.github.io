@@ -11,7 +11,7 @@ layout: theme_rtl
         </div>
 
         <div class="post_created">
-            <p>توسط <a href="{{ site.data.authors[page.author].info-url }}">{{ site.data.authors[page.author].name }}</a>  در {{ page.date | date: "%m/%d/%Y" }}</p>
+            <p>توسط <a href="{{ site.data.authors[page.author].info-url }}">{{ site.data.authors[page.author].name }}</a>  در {{ page.date | jdate: "%A %d %b %Y"}}</p> <br/>
         </div>
 
         <div class="post-content">

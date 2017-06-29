@@ -6,11 +6,11 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="{{ page.title }}">
-<meta property="og:url" content="{{ site.baseurl }}/{{ page.url }}">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
 {% if page.cover %}
-    <meta property="og:image" content="{{ site.baseurl }}/{{ page.image }}" />
+    <meta property="og:image" content="{{ page.image }}" />
 {% else %}
-    <meta property="og:image" content="{{ site.baseurl }}/assets/img/avatar.jpg" />
+    <meta property="og:image" content="/assets/img/avatar.jpg" />
 {% endif %}
 <meta property="og:site_name" content="{{ site.titleFarsi }}">
 <meta property="og:description" content="{{ site.description }}">

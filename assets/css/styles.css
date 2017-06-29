@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css");
 @font-face {
   font-family: "Vazir";
   src: local("Vazir");
@@ -818,7 +819,9 @@ footer.footer-wrapper {
   left: 0;
   right: 0; }
   footer.footer-wrapper p {
-    text-align: center; }
+    text-align: center;
+    line-height: 1.2em;
+    margin-bottom: 15px; }
   footer.footer-wrapper .delimiter {
     width: 100%;
     border-top: 1px solid #ededed; }
@@ -849,6 +852,45 @@ footer.footer-wrapper {
     @media screen and (max-width: 500px) {
       footer.footer-wrapper .footer-copyright {
         font-size: 0.8em; } }
+  footer.footer-wrapper .footer-social-links {
+    direction: ltr;
+    font-size: 14px;
+    text-align: center;
+    margin: 5px auto; }
+  footer.footer-wrapper .footer-social-links a {
+    width: 30px;
+    height: 30px;
+    line-height: 30px !important;
+    position: relative;
+    margin: 0 5px;
+    text-align: center;
+    display: inline-block;
+    color: #111;
+    -webkit-transition: all 0.07s cubic-bezier(0.3, 0.1, 0.58, 1);
+    transition: all 0.07s cubic-bezier(0.3, 0.1, 0.58, 1); }
+  footer.footer-wrapper .footer-social-links a i,
+  footer.footer-wrapper .footer-social-links a span {
+    position: relative;
+    top: 2px;
+    left: 1px; }
+  footer.footer-wrapper .footer-social-links a:before {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid #111;
+    border-radius: 2px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transition: all 0.07s cubic-bezier(0.3, 0.1, 0.58, 1);
+    transition: all 0.07s cubic-bezier(0.3, 0.1, 0.58, 1); }
+  footer.footer-wrapper .footer-social-links a:hover {
+    color: #fff; }
+  footer.footer-wrapper .footer-social-links a:hover:before {
+    background: #111; }
 
 .content {
   padding: 30px 10px;

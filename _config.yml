@@ -8,9 +8,11 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://sadra.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 twitter_path: https://twitter.com/sadra-amlashi
-github_path:  https://github.com/sadra
-facebook_path:  https://facebook.com/sadra.am123
+github_path: https://github.com/sadra
+facebook_path: https://facebook.com/sadra.am123
 medium_path: https://medium.com/sadra
+linkedin_path: https://www.linkedin.com/in/amlashisadra/
+
 
 titleFarsi: صدرا املشی
 descriptionFarsi: >

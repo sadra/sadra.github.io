@@ -6,4 +6,4 @@ module Jekyll
   end
 end
 
-Liquid::Template.register_tag('tableend', Jekyll::TableEnd)
+Liquid::Template.register_tag('endtable', Jekyll::TableEnd)

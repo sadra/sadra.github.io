@@ -19,7 +19,7 @@ author: sadra
 | data   | path to data files to supply the data that will be passed into templates. |
 | engine | engine to be used for processing templates. Handlebars is the default. |
 | ext    | extension to be used for dest files. |
-{% tableend %}
+{% endtable %}
 
 {% table dir-ltr pos-center %}
 | Option | Description |
@@ -27,7 +27,7 @@ author: sadra
 | data   | path to data files to supply the data that will be passed into templates. |
 | engine | engine to be used for processing templates. Handlebars is the default. |
 | ext    | extension to be used for dest files. |
-{% tableend %}
+{% endtable %}
 
 {% table dir-rtl pos-left %}
 | Option | Description |
@@ -35,7 +35,7 @@ author: sadra
 | data   | path to data files to supply the data that will be passed into templates. |
 | engine | engine to be used for processing templates. Handlebars is the default. |
 | ext    | extension to be used for dest files. |
-{% tableend %}
+{% endtable %}
 
 
 
@@ -145,7 +145,7 @@ there is some controls for your spinner:
 | setSelection(NUMBER) | `int` position | you should pass the **position of item** to select the item programatically |
 | setSelection(TEXT) | `String` value | you should pass the **item value** to select the item programatically |
 
-{% tableend %}
+{% endtable %}
 
 
 

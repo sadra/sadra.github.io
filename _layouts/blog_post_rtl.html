@@ -6,6 +6,12 @@ layout: theme_rtl
 
     <div class="blog-post-container">
 
+        {% if page.cover %}
+            <div class="post-cover">
+                <img src="{{ site.url }}/assets/img/cover/{{ page.cover }}" alt="{{ page.title }}">
+            </div>
+        {% endif %}
+
         <div class="post-title-container">
             <h1 class="post-title">{{ page.title }}</h1>
         </div>

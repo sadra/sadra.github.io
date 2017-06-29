@@ -10,7 +10,7 @@
 {% if page.cover %}
     <meta property="og:image" content="{{ page.image }}" />
 {% else %}
-    <meta property="og:image" content="/assets/img/avatar.jpg" />
+    <meta property="og:image" content="{{ site.url }}/assets/img/avatar.jpg" />
 {% endif %}
 <meta property="og:site_name" content="{{ site.titleFarsi }}">
 <meta property="og:description" content="{{ site.description }}">

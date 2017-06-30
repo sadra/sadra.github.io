@@ -56,13 +56,13 @@ With **Awesome Spinner** you can implement a material spinner with access to def
 ## Including the library
 
 
-![Alt this is the al of this emage](/assets/img/post/post-a.jpg "This is caption")
+![Alt this is the al of this emage](/assets/img/post/post-2.jpg "This is caption")
 
 {% include func/image.html
-            img="/assets/img/post/post-a.jpg"
+            img="/assets/img/post/post-2.jpg"
             title="title for image"
             caption="caption for image"
-            url="/assets/img/post/post-a.jpg" %}
+            url="/assets/img/post/post-2.jpg" %}
 
 
 

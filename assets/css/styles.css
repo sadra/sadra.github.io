@@ -6,6 +6,13 @@
   src: url("/assets/fonts/Vazir.eot");
   src: url("/assets/fonts/Vazir.woff") format("woff");
   src: url("/assets/fonts/Vazir.ttf") format("opentype"); }
+@font-face {
+  font-family: "Vazir";
+  src: local("Vazir");
+  src: url("/assets/fonts/Vazir-Bold.eot");
+  src: url("/assets/fonts/Vazir-Bold.woff") format("woff");
+  src: url("/assets/fonts/Vazir-Bold.ttf") format("opentype");
+  font-weight: bold; }
 html {
   font-family: "Vazir", Arial, sans-serif;
   line-height: 1.15;
@@ -63,7 +70,7 @@ strong {
 
 b,
 strong {
-  font-weight: bolder; }
+  font-weight: bold; }
 
 code,
 kbd,
@@ -283,6 +290,9 @@ hr {
   background: #1C1E24;
   opacity: 0.35; }
 
+.div-ltr {
+  direction: ltr; }
+
 * {
   box-sizing: border-box;
   -webkit-transition: all 0.3s ease-in;
@@ -296,7 +306,7 @@ body {
   font-weight: 500; }
 
 h6, h5, h4, h3, h2, h1, p, a, small {
-  padding: 0;
+  padding: 10px 0;
   margin: 0;
   text-decoration: none;
   list-style: none; }
@@ -316,6 +326,8 @@ table {
   margin: 20px auto;
   border: #cccccc 1px solid;
   border-radius: 5px; }
+  table th, table tr, table td {
+    text-align: inherit; }
   table td {
     border-left: 1px solid #cccccc; }
   table td:last-child {
@@ -366,6 +378,8 @@ tbody tr {
     border-right: 0 solid #cccccc; }
   .dir-rtl th:last-child {
     border-left: 0 solid #cccccc; }
+  .dir-rtl th, .dir-rtl tr, .dir-rtl td {
+    text-align: inherit; }
 
 .dir-ltr {
   direction: ltr; }
@@ -381,6 +395,8 @@ tbody tr {
     border-left: 0 solid #cccccc; }
   .dir-ltr th:last-child {
     border-right: 0 solid #cccccc; }
+  .dir-ltr th, .dir-ltr tr, .dir-ltr td {
+    text-align: inherit; }
 
 .pos-left table {
   margin: 0 auto 0 0; }
@@ -866,6 +882,7 @@ footer.footer-wrapper {
     text-align: center;
     display: inline-block;
     color: #111;
+    padding: 0;
     -webkit-transition: all 0.07s cubic-bezier(0.3, 0.1, 0.58, 1);
     transition: all 0.07s cubic-bezier(0.3, 0.1, 0.58, 1); }
   footer.footer-wrapper .footer-social-links a i,
@@ -1005,7 +1022,7 @@ footer.footer-wrapper {
         padding-top: 5px;
         padding-bottom: 5px;
         padding-left: 3px;
-        font-weight: bolder; }
+        font-weight: bold; }
         @media screen and (max-width: 500px) {
           .blog-post-list .blog-post-item-container .post-list-routes .category-link {
             font-size: 0.6em; } }
@@ -1115,7 +1132,7 @@ footer.footer-wrapper {
       padding-top: 5px;
       padding-bottom: 5px;
       padding-left: 3px;
-      font-weight: bolder; }
+      font-weight: bold; }
       @media screen and (max-width: 500px) {
         .blog-post-container .post-routes-list .category-link {
           font-size: 0.6em; } }
@@ -1205,7 +1222,7 @@ footer.footer-wrapper {
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 3px;
-  font-weight: bolder; }
+  font-weight: bold; }
   @media screen and (max-width: 500px) {
     .list-item-category {
       font-size: 0.9em; } }

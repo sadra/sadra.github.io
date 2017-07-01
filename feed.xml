@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="https://sadra.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sadra.github.io/" rel="alternate" type="text/html" /><updated>2017-07-01T23:17:48+04:30</updated><id>https://sadra.github.io/</id><title type="html">Sadra Isapanah Amlashi</title><subtitle>Howdy! My name is Sadra Isapanah Amlashi. I’m an Android and iOS App Developer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="https://sadra.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sadra.github.io/" rel="alternate" type="text/html" /><updated>2017-07-02T02:44:06+04:30</updated><id>https://sadra.github.io/</id><title type="html">Sadra Isapanah Amlashi</title><subtitle>Howdy! My name is Sadra Isapanah Amlashi. I’m an Android and iOS App Developer.
 </subtitle><entry><title type="html">برنامه نویسی ۲ نفره</title><link href="https://sadra.github.io/%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C/2016/08/29/pair-programing/" rel="alternate" type="text/html" title="برنامه نویسی ۲ نفره" /><published>2016-08-29T00:00:00+04:30</published><updated>2016-08-29T00:00:00+04:30</updated><id>https://sadra.github.io/%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C/2016/08/29/pair-programing</id><content type="html" xml:base="https://sadra.github.io/%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C/2016/08/29/pair-programing/">&lt;p&gt;در این پست قصد دارم درباره Pair Programming يا برنامه نویسی ۲نفره (جفتی) صحبت کنم. اگر میدونید برنامه نویسی ۲نفره چیه لازم نیست پارگراف بعدی رو بخونید:&lt;/p&gt;
 
 &lt;p&gt;یکی از مواردی که در مدل XP (یکی از متدهاي اجایل) به وضوح مشاهده می شود، مفهومی است تحت عنوان Pair Programming. منظور از این اصطلاح این است که دو برنامه نویس در کنار یکدیگر شروع به کار کردن می کنند. یکی کدنویسی می‌کند و دیگری به کدهای همکارش نگاه می‌کند و در صورتی که نظری در مورد بهتر شدن کد داشت، به همکارش اعلام می کند. (&lt;a href=&quot;https://www.sokanacademy.com/categories/programming/coding/tutorials/457/%D8%A2%D8%B4%D9%86%D8%A7%DB%8C%DB%8C-%D8%A8%D8%A7-%D9%85%D8%AF%D9%84-%D9%87%D8%A7%DB%8C-%D8%A7%D8%AC%D8%A7%DB%8C%D9%84&quot;&gt;سکان آکادمی&lt;/a&gt;)&lt;/p&gt;
@@ -175,7 +175,247 @@
 
   &lt;p&gt;Translated from: &lt;a href=&quot;https://developer.atlassian.com/blog/2015/05/try-pair-programming/&quot;&gt;developer.atlassian.com&lt;/a&gt;&lt;/p&gt;
 
-&lt;/div&gt;</content><author><name>صدرا املشی</name></author><category term="مقاله" /><category term="اسکرام" /><category term="اجایل" /><category term="مدیریت پروژه نرم‌افزاری" /><summary type="html">در این پست قصد دارم درباره Pair Programming يا برنامه نویسی ۲نفره (جفتی) صحبت کنم. اگر میدونید برنامه نویسی ۲نفره چیه لازم نیست پارگراف بعدی رو بخونید:</summary></entry><entry><title type="html">پست تست وبلاگ</title><link href="https://sadra.github.io/tag%20test/%D8%AA%D8%B3%D8%AA%20%D9%87%D8%B4%D8%AA%DA%AF/2000/01/01/test-post/" rel="alternate" type="text/html" title="پست تست وبلاگ" /><published>2000-01-01T00:00:00+03:30</published><updated>2000-01-01T00:00:00+03:30</updated><id>https://sadra.github.io/tag%20test/%D8%AA%D8%B3%D8%AA%20%D9%87%D8%B4%D8%AA%DA%AF/2000/01/01/test-post</id><content type="html" xml:base="https://sadra.github.io/tag%20test/%D8%AA%D8%B3%D8%AA%20%D9%87%D8%B4%D8%AA%DA%AF/2000/01/01/test-post/">&lt;h1 id=&quot;سلام-دنیا&quot;&gt;سلام دنیا&lt;/h1&gt;
+&lt;/div&gt;</content><author><name>صدرا املشی</name></author><category term="مقاله" /><category term="اسکرام" /><category term="اجایل" /><category term="مدیریت پروژه نرم‌افزاری" /><summary type="html">در این پست قصد دارم درباره Pair Programming يا برنامه نویسی ۲نفره (جفتی) صحبت کنم. اگر میدونید برنامه نویسی ۲نفره چیه لازم نیست پارگراف بعدی رو بخونید:</summary></entry><entry><title type="html">پست2 تست وبلاگ</title><link href="https://sadra.github.io/tag%20test/%D8%AA%D8%B3%D8%AA%20%D9%87%D8%B4%D8%AA%DA%AF/2002/11/12/post-2/" rel="alternate" type="text/html" title="پست2  تست وبلاگ" /><published>2002-11-12T00:00:00+03:30</published><updated>2002-11-12T00:00:00+03:30</updated><id>https://sadra.github.io/tag%20test/%D8%AA%D8%B3%D8%AA%20%D9%87%D8%B4%D8%AA%DA%AF/2002/11/12/post-2</id><content type="html" xml:base="https://sadra.github.io/tag%20test/%D8%AA%D8%B3%D8%AA%20%D9%87%D8%B4%D8%AA%DA%AF/2002/11/12/post-2/">&lt;h1 id=&quot;سلام-دنیا&quot;&gt;سلام دنیا&lt;/h1&gt;
+
+&lt;p&gt;این یک نوشتار آزمایشی برای نمایش قابلیتهای &lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;مارک داون&lt;/a&gt; است.&lt;/p&gt;
+
+&lt;h2 id=&quot;یک-لیست&quot;&gt;یک لیست&lt;/h2&gt;
+
+&lt;p&gt;ویژگی های نرم افزار آزاد&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;آزادی اجرای برنامه برای هر کاری (آزادی صفرم)&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;آزادی مطالعه چگونگی کار برنامه و تغییر آن (پیش نیاز: متن برنامه) (آزادی یکم)&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;آزادی تکثیر و کپی برنامه (آزادی دوم)&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;em&gt;آزادی تقویت و بهتر کردن برنامه و توزیع آن برای همگان (پیش نیاز: متن برنامه) (آزادی سوم)&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;آیتم اول&lt;/li&gt;
+  &lt;li&gt;آیتم دوم&lt;/li&gt;
+  &lt;li&gt;آیتم سوم&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;آیتم اول&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;آیتم دوم&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;آیتم سوم&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;نوشته-های-تورفته&quot;&gt;نوشته های تورفته&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, diam semper deserunt in vim, usu in quis percipit accusamus. Vix zril voluptua deseruisse et, sed deleniti sententiae ex. An ferri assueverit per, iusto corpora partiendo eu est. Possim blandit similique an ius, erat sensibus instructior vis at. Scriptorem philosophia in sea, at mei eros periculis.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;تیتر-درجه-یک&quot;&gt;تیتر درجه یک&lt;/h1&gt;
+
+&lt;h2 id=&quot;تیتر-درجه-دو&quot;&gt;تیتر درجه دو&lt;/h2&gt;
+
+&lt;h3 id=&quot;تیتر-درجه-سه&quot;&gt;تیتر درجه سه&lt;/h3&gt;
+
+&lt;p&gt;لورم ایپسوم ( به انگلیسی &lt;code class=&quot;highlighter-rouge&quot;&gt;lorem ipsum&lt;/code&gt; ) متنی است بی مفهوم که تشکیل شده از کلمات معنی دار یا بی معنی کنار هم. کاربر با دیدن متن لورم ایپسوم تصور میکند متنی که در صفحه مشاهده میکند این متن واقعی و مربوط به توضیحات صفحه مورد نظر است واقعی است. حالا سوال اینجاست که این متن “ &lt;strong&gt;لورم ایپسوم&lt;/strong&gt; “ به چه دردی میخورد و اساسا برای چه منظور و هدفی ساخته شده است؟ پیش از بوجود آمدن&lt;del&gt;لورم ایپسوم&lt;/del&gt;، طراحان وب سایت در پروژه های وب سایت و طراحان کرافیک در پروژه های &lt;em&gt;طراحی کاتولوگ ، بروشور ، پوستر و …&lt;/em&gt; همواره با این مشکل مواجه بودند که__صفحات پروژه خود را پیش از آنکه متن اصلی توسط کارفرما ارائه گرد__د و در صفحه مورد نظر قرار گیرد چگونه پر کنند؟؟&lt;/p&gt;
+
+&lt;h2 id=&quot;و-اضافه-کردن-لینک-ها&quot;&gt;و اضافه کردن لینک ها&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.fsf.org/&quot;&gt;بنیاد نرم افزار آزاد&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.gnu.org&quot;&gt;بنیاد گنو&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;جدول-ها&quot;&gt;جدول ها&lt;/h2&gt;
+
+&lt;div class=&quot;table-container dir-rtl pos-right &quot;&gt;
+
+  &lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;ستون اول&lt;/th&gt;
+        &lt;th&gt;ستون دوم&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;متن ستون اول&lt;/td&gt;
+        &lt;td&gt;متن ستون دوم&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;متن دوم ستون اول&lt;/td&gt;
+        &lt;td&gt;متن دوم ستون دوم&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;متن سوم ستون اول&lt;/td&gt;
+        &lt;td&gt;متن سوم ستون سوم&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+
+&lt;/div&gt;
+
+&lt;div class=&quot;table-container dir-ltr pos-center &quot;&gt;
+
+  &lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th style=&quot;text-align: center&quot;&gt;Option&lt;/th&gt;
+        &lt;th style=&quot;text-align: center&quot;&gt;Description&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td style=&quot;text-align: center&quot;&gt;data&lt;/td&gt;
+        &lt;td style=&quot;text-align: center&quot;&gt;path to data files to supply the data that will be passed into templates.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td style=&quot;text-align: center&quot;&gt;engine&lt;/td&gt;
+        &lt;td style=&quot;text-align: center&quot;&gt;engine to be used for processing templates. Handlebars is the default.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td style=&quot;text-align: center&quot;&gt;ext&lt;/td&gt;
+        &lt;td style=&quot;text-align: center&quot;&gt;extension to be used for dest files.&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+
+&lt;/div&gt;
+
+&lt;div class=&quot;table-container dir-ltr pos-left &quot;&gt;
+
+  &lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th style=&quot;text-align: center&quot;&gt;Option&lt;/th&gt;
+        &lt;th style=&quot;text-align: center&quot;&gt;Description&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td style=&quot;text-align: center&quot;&gt;data&lt;/td&gt;
+        &lt;td style=&quot;text-align: center&quot;&gt;path to data files to supply the data that will be passed into templates.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td style=&quot;text-align: center&quot;&gt;engine&lt;/td&gt;
+        &lt;td style=&quot;text-align: center&quot;&gt;engine to be used for processing templates. Handlebars is the default.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td style=&quot;text-align: center&quot;&gt;ext&lt;/td&gt;
+        &lt;td style=&quot;text-align: center&quot;&gt;extension to be used for dest files.&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+
+&lt;/div&gt;
+
+&lt;div class=&quot;table-container dir-ltr pos-left &quot;&gt;
+
+  &lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th style=&quot;text-align: left&quot;&gt;Control&lt;/th&gt;
+        &lt;th style=&quot;text-align: center&quot;&gt;Requierement&lt;/th&gt;
+        &lt;th style=&quot;text-align: left&quot;&gt;Info&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td style=&quot;text-align: left&quot;&gt;getSelectedItem()&lt;/td&gt;
+        &lt;td style=&quot;text-align: center&quot;&gt;-&lt;/td&gt;
+        &lt;td style=&quot;text-align: left&quot;&gt;result = &lt;code class=&quot;highlighter-rouge&quot;&gt;String&lt;/code&gt;: returns the selected item&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td style=&quot;text-align: left&quot;&gt;isSelected()&lt;/td&gt;
+        &lt;td style=&quot;text-align: center&quot;&gt;-&lt;/td&gt;
+        &lt;td style=&quot;text-align: left&quot;&gt;result = &lt;code class=&quot;highlighter-rouge&quot;&gt;boolean&lt;/code&gt;: returns &lt;strong&gt;true&lt;/strong&gt; if any item selected, and vice versa&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td style=&quot;text-align: left&quot;&gt;setSelection(NUMBER)&lt;/td&gt;
+        &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;int&lt;/code&gt; position&lt;/td&gt;
+        &lt;td style=&quot;text-align: left&quot;&gt;you should pass the &lt;strong&gt;position of item&lt;/strong&gt; to select the item programatically&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td style=&quot;text-align: left&quot;&gt;setSelection(TEXT)&lt;/td&gt;
+        &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;String&lt;/code&gt; value&lt;/td&gt;
+        &lt;td style=&quot;text-align: left&quot;&gt;you should pass the &lt;strong&gt;item value&lt;/strong&gt; to select the item programatically&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+
+&lt;/div&gt;
+
+&lt;h1 id=&quot;تست-بج&quot;&gt;تست بج&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://jitpack.io/#amlashi-sadra/AwesomeSpinner&quot;&gt;&lt;img src=&quot;https://jitpack.io/v/amlashi-sadra/AwesomeSpinner.svg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://github.com/amlashi-sadra/AwesomeSpinner/blob/master/LICENSE&quot;&gt;&lt;img src=&quot;https://img.shields.io/badge/licence-MIT-lightgrey.svg?style=flat&quot; alt=&quot;License&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;https://img.shields.io/badge/dependencies-non-yellow.svg?style=flat&quot; alt=&quot;Dependencies&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;https://gitter.im/AwesomeSpinner&quot;&gt;&lt;img src=&quot;https://img.shields.io/badge/gitter-join%20chat-%23E91E63.svg?style=flat&quot; alt=&quot;Gitter&quot; /&gt;&lt;/a&gt;
+&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;https://img.shields.io/badge/Minimum%20Android%20SDK-14-blue.svg&quot; alt=&quot;Minimum Android SDK Version&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;تست-بلاک-کد&quot;&gt;تست بلاک کد&lt;/h1&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Hello World&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-groovy highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;allprojects&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;repositories&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;maven&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'https://jitpack.io'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;com.isapanah.awesomespinner.AwesomeSpinner&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@+id/my_spinner&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;match_parent&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wrap_content&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;app:spinnerDirection=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ltr&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;app:spinnerHint=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Select a category&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;categories&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;();&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;categories&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Automobile&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;categories&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Ariplane&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;ArrayAdapter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;categoriesAdapter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ArrayAdapter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;android&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;simple_spinner_item&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;categories&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;my_spinner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setAdapter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;categoriesAdapter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;تست-عکس&quot;&gt;تست عکس&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/test-post/post-image.jpg&quot; alt=&quot;Test Image&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;image-wrapper&quot;&gt;
+    
+    &lt;a href=&quot;/assets/img/post/test-post/post-image.jpg&quot; title=&quot;Test Image&quot; target=&quot;_blank&quot;&gt;
+        
+        &lt;img src=&quot;/assets/img/post/test-post/post-image.jpg&quot; alt=&quot;Test Image&quot; /&gt;
+        
+    &lt;/a&gt;
+    
+    
+    &lt;p class=&quot;image-caption&quot;&gt;Test Image Caption&lt;/p&gt;
+    
+&lt;/div&gt;
+
+&lt;h1 id=&quot;تست-یوتیوب&quot;&gt;تست یوتیوب&lt;/h1&gt;
+
+&lt;div class=&quot;video-container&quot;&gt;&lt;style&gt;.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }&lt;/style&gt;&lt;div class=&quot;embed-container&quot;&gt;&lt;iframe src=&quot;https://www.youtube.com/embed/xIBiJ_SzJTA&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;تست-آپارات&quot;&gt;تست آپارات&lt;/h1&gt;
+
+&lt;div class=&quot;video-container&quot;&gt;&lt;style&gt;.h_iframe-aparat_embed_frame{position:relative;} .h_iframe-aparat_embed_frame .ratio {display:block;width:100%;height:auto;} .h_iframe-aparat_embed_frame iframe {position:absolute;top:0;left:0;width:100%; height:100%;}&lt;/style&gt;&lt;div class=&quot;h_iframe-aparat_embed_frame&quot;&gt; &lt;span style=&quot;display: block;padding-top: 57%&quot;&gt;&lt;/span&gt;&lt;iframe src=&quot;https://www.aparat.com/video/video/embed/videohash/DY8HB/vt/frame&quot; allowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>صدرا املشی</name></author><category term="Category Test" /><category term="تست دسته بندی" /><summary type="html">سلام دنیا</summary></entry><entry><title type="html">پست تست وبلاگ</title><link href="https://sadra.github.io/tag%20test/%D8%AA%D8%B3%D8%AA%20%D9%87%D8%B4%D8%AA%DA%AF/2000/01/01/test-post/" rel="alternate" type="text/html" title="پست تست وبلاگ" /><published>2000-01-01T00:00:00+03:30</published><updated>2000-01-01T00:00:00+03:30</updated><id>https://sadra.github.io/tag%20test/%D8%AA%D8%B3%D8%AA%20%D9%87%D8%B4%D8%AA%DA%AF/2000/01/01/test-post</id><content type="html" xml:base="https://sadra.github.io/tag%20test/%D8%AA%D8%B3%D8%AA%20%D9%87%D8%B4%D8%AA%DA%AF/2000/01/01/test-post/">&lt;h1 id=&quot;سلام-دنیا&quot;&gt;سلام دنیا&lt;/h1&gt;
 
 &lt;p&gt;این یک نوشتار آزمایشی برای نمایش قابلیتهای &lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;مارک داون&lt;/a&gt; است.&lt;/p&gt;
 

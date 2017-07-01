@@ -15,6 +15,15 @@
     color: black
     font-weight: 100
     line-height: 1.5em
+  ol
+    li
+      p
+        line-height: 1.9em !important
+        padding: 0
+  ul
+    li
+      line-height: 1.9em !important
+
   .post-title-container
     width: 100%
     margin: 20px auto
@@ -117,3 +126,81 @@
       height: 150px
     img
       width: 100%
+  .Prev-next-post-container
+    display: flow-root
+    direction: ltr
+    margin-top: 20px
+    clear: both
+    a
+      text-decoration: none
+      display: inline-block
+      padding: 8px 16px
+    .previous-btn
+      background-color: #f1f1f1
+      color: black
+      float: left
+      text-align: left
+      width: auto
+      border-bottom: 3px solid #cccccc
+      @media screen and (max-width: 400px)
+        width: 100%
+        margin: 5px 5px 5px 0px
+    .previous-btn:hover
+      background-color: #cccccc
+    .next-btn
+      background-color: #FFC107
+      color: white
+      float: right
+      text-align: right
+      width: auto
+      border-bottom: 3px solid #ffab05
+      @media screen and (max-width: 400px)
+        width: 100%
+        margin: 5px 0px 5px 5px
+    .next-btn:hover
+      background-color: #FFB300
+
+  .related-posts-container
+    display: flex
+    margin: 5px 20px 0 20px
+    width: 100%
+    background-color: #ffffff
+    @media screen and (max-width: 800px)
+      display: initial
+    .related-post-box
+      margin: 10px
+      width: 30%
+      border-radius: 3px
+      box-shadow: 0 1px 7px rgba(0,0,0,.2)
+      @media screen and (max-width: 800px)
+        width: auto
+    .related-post-box-info
+      height: 85px
+      padding: 0 8px 8px 8px
+      display: table
+      a
+        display: table-cell
+        vertical-align: middle
+        color: #050505
+        font-size: 1em
+        height: 100%
+        overflow: hidden
+        line-height: 1.4em
+        text-align: right
+      a:hover
+        color: $link-highlight-hover
+    .related-post-box-cover
+      width: 100%
+      height: 90px
+      overflow: hidden
+      background-position: 50% 50% !important
+      background-size: 100% auto
+      a
+        width: 100%
+        height: 100%
+  .related-posts-title
+    margin-top: 25px
+
+
+
+

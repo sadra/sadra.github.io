@@ -10,7 +10,7 @@ tags:
     - مدیریت پروژه نرم‌افزاری
 
 categories:
-    - تکنیک های برنامه‌نویسی
+    - تکنیک‌های برنامه‌نویسی
 
 cover: /assets/img/post/2016-8-29/0-pair-programming-cover.jpg
 

@@ -1,4 +1,4 @@
---
+---
 layout: blog_post_rtl
 title:  "اینترنت اشیا، به سبک گیتار Sensus"
 date: '2016-8-29'

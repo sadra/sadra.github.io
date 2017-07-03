@@ -1257,7 +1257,7 @@ footer.footer-wrapper {
   .blog-post-container .related-posts-title {
     margin-top: 25px; }
   .blog-post-container .post-content {
-    direction: ltr; }
+    direction: rtl; }
 
 .archive-title {
   font-size: 1.2em;

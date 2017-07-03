@@ -1055,7 +1055,9 @@ footer.footer-wrapper {
     font-size: 1em;
     color: black;
     font-weight: 100;
-    line-height: 1.5em; }
+    line-height: 1.5em;
+    direction: rtl;
+    text-align: right; }
   .blog-post-container ol li p {
     line-height: 1.9em !important;
     padding: 0; }

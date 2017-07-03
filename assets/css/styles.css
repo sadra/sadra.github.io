@@ -1039,7 +1039,7 @@ footer.footer-wrapper {
   content: " ⌐"; }
 
 .blog-post-container {
-  direction: ltr;
+  direction: rtl;
   width: 100%;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;

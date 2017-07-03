@@ -1039,6 +1039,7 @@ footer.footer-wrapper {
   content: " ⌐"; }
 
 .blog-post-container {
+  direction: ltr;
   width: 100%;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
@@ -1255,6 +1256,8 @@ footer.footer-wrapper {
         height: 100%; }
   .blog-post-container .related-posts-title {
     margin-top: 25px; }
+  .blog-post-container .post-content {
+    direction: ltr; }
 
 .archive-title {
   font-size: 1.2em;

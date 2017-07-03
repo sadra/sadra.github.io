@@ -22,12 +22,10 @@ author: Sadra
 تست لیست به ترتیب زیر
 
 *   آیتم اول
-
 *   آیتم دوم
 *   آیتم سوم
 
 1.  آیتم اول
-
 2.  آیتم دوم
 3.  آیتم سوم
 
@@ -43,7 +41,6 @@ author: Sadra
 ![Intro](/assets/img/post/2016-8-29/1-intro.jpg)
 
 {% aparat DY8HB %}
-
 
 
 | Option | Description |

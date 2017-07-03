@@ -1052,6 +1052,9 @@ footer.footer-wrapper {
   padding-left: 5px;
   padding-right: 5px;
   margin: auto; }
+  .blog-post-container h1, .blog-post-container h2, .blog-post-container h3, .blog-post-container h4, .blog-post-container h5 {
+    direction: rtl;
+    text-align: right; }
   .blog-post-container p {
     font-size: 1em;
     color: black;

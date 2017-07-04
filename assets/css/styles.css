@@ -1261,6 +1261,13 @@ footer.footer-wrapper {
     margin-top: 25px; }
   .blog-post-container .post-content {
     direction: rtl; }
+  .blog-post-container .image-wrapper img {
+    margin: 10px 5px 0 5px; }
+  .blog-post-container .image-wrapper a {
+    margin: 0; }
+  .blog-post-container .image-wrapper .image-caption {
+    text-align: center;
+    margin: 0 5px; }
 
 .archive-title {
   font-size: 1.2em;

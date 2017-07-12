@@ -1,8 +1,7 @@
-title: Sadra Isapanah Amlashi
-titleـfa: sadra amlashi sadra
+title: وبلاگ صدرا املشی
 email: sadra@isapanah.com
 description: > # this means to ignore newlines until "baseurl:"
-  Howdy! My name is Sadra Isapanah Amlashi. I’m an Android and iOS App Developer.
+ سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده ارشد اپلیکیشن iOS و Android.
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://telipay.me" # the base hostname & protocol for your site, e.g. http://example.com
@@ -13,11 +12,6 @@ facebook_path: https://facebook.com/sadra.am123
 medium_path: https://medium.com/sadra
 linkedin_path: https://www.linkedin.com/in/amlashisadra/
 
-
-titleFarsi: صدرا املشی
-descriptionFarsi: >
- سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده ارشد اپلیکیشن iOS و Android.
-
 # Build settings
 permalink: pretty
 markdown: kramdown
@@ -26,7 +20,6 @@ plugins:
   - jekyll-autoprefixer
   - jekyll-archives
   - jalalidate
-
 
 exclude:
   - Gemfile

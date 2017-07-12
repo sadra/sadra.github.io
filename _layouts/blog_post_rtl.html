@@ -8,7 +8,7 @@ layout: theme_rtl
 
         {% if page.cover %}
             <div class="post-cover">
-                <img src="{{ site.baseurl }}{{ page.cover }}" alt="{{ page.title }}">
+                <img src="{{ site.url }}{{ page.cover }}" alt="{{ page.title }}">
             </div>
         {% endif %}
 
@@ -81,12 +81,12 @@ layout: theme_rtl
                 {% if sameTagCount >= minCommonTags %}
                     <div class="related-post-box">
                         {% if post.cover %}
-                        <a href="{{ site.baseurl }}{{ post.url }}"><div class="related-post-box-cover" style="background-image: url('{{ site.baseurl }}{{ post.cover }}');" ></div></a>
+                        <a href="{{ site.url }}{{ post.url }}"><div class="related-post-box-cover" style="background-image: url('{{ site.url }}{{ post.cover }}');" ></div></a>
                         {% else %}
-                        <a href="{{ site.baseurl }}{{ post.url }}"><div class="related-post-box-cover" style="background-image: url('{{ site.baseurl }}/assets/img/base/no-cover.png');" ></div></a>
+                        <a href="{{ site.url }}{{ post.url }}"><div class="related-post-box-cover" style="background-image: url('{{ site.url }}/assets/img/base/no-cover.png');" ></div></a>
                         {% endif %}
                         <div class="related-post-box-info">
-                            <a href="{{ site.baseurl }}{{ post.url }}" id="related-post-title"> {{ post.title }}</a>
+                            <a href="{{ site.url }}{{ post.url }}" id="related-post-title"> {{ post.title }}</a>
                         </div>
                     </div>
                     {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}

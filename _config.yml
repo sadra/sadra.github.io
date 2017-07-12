@@ -39,4 +39,5 @@ jekyll-archives:
     category: '/category/:name/'
 include:
   - .nojekyll
+
 notfound404-cover: /assets/img/base/bugart-bacall.jpg

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-07-18T10:04:07+04:30</updated><id>/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده ارشد اپلیکیشن iOS و Android.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2017-07-18T13:21:48+04:30</updated><id>/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده ارشد اپلیکیشن iOS و Android.
 </subtitle><entry><title type="html">برنامه نویسی ۲ نفره</title><link href="/%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C/2016/08/29/pair-programing/" rel="alternate" type="text/html" title="برنامه نویسی ۲ نفره" /><published>2016-08-29T00:00:00+04:30</published><updated>2016-08-29T00:00:00+04:30</updated><id>/%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C/2016/08/29/pair-programing</id><content type="html" xml:base="/%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C/2016/08/29/pair-programing/">&lt;p&gt;در این پست قصد دارم درباره Pair Programming يا برنامه نویسی ۲نفره (جفتی) صحبت کنم. اگر میدونید برنامه نویسی ۲نفره چیه لازم نیست پارگراف بعدی رو بخونید:&lt;/p&gt;
 
 &lt;p&gt;یکی از مواردی که در مدل XP (یکی از متدهاي اجایل) به وضوح مشاهده می شود، مفهومی است تحت عنوان Pair Programming. منظور از این اصطلاح این است که دو برنامه نویس در کنار یکدیگر شروع به کار کردن می کنند. یکی کدنویسی می‌کند و دیگری به کدهای همکارش نگاه می‌کند و در صورتی که نظری در مورد بهتر شدن کد داشت، به همکارش اعلام می کند. (&lt;a href=&quot;https://www.sokanacademy.com/categories/programming/coding/tutorials/457/%D8%A2%D8%B4%D9%86%D8%A7%DB%8C%DB%8C-%D8%A8%D8%A7-%D9%85%D8%AF%D9%84-%D9%87%D8%A7%DB%8C-%D8%A7%D8%AC%D8%A7%DB%8C%D9%84&quot;&gt;سکان آکادمی&lt;/a&gt;)&lt;/p&gt;
@@ -240,232 +240,7 @@
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;http://blog.thethings.io/how-iot-will-change-music/&quot;&gt;How IOT will Changes Music&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>صدرا املشی</name></author><category term="راک" /><category term="اینترنت اشیاء" /><category term="گیتار" /><category term="گیتار الکتریک" /><category term="ابزار" /><summary type="html">یخچال هوشمند، فِر هوشمند، لامپ هوشمند، حتی قفل هوشمند و.. و… و..، مطمئنا اینا واژه هایی هستن که تو یک یا نهایت دو سال اخیر بارها شنیده ایم و البته در سالهای آینده بیشتر خواهیم شنید. همه دستگاه هایی که نام بردم یا چیزهای دیگه‌ای که خودتون شنیدید در دسته ای به نام اینترنت اشیا یا بطور مخفف IOT قرار میگیرند( البته خیلی ها از دوستان لطف دارن و میگن اینترنت اشیا نه! اینترنت چیزها! بعضی از دوستان هم که خسته ان میگن چیزنت! ) اما واقعا اینترنت اشیا چیه و چه تعریفی داره. بهتره برای روشن شدن ماجرا از ویکی‌پدیا کمک بگیرییم:</summary></entry><entry><title type="html">برنامه نویسی ۲ نفره</title><link href="/%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C/2016/08/20/pair-programing-v2/" rel="alternate" type="text/html" title="برنامه نویسی ۲ نفره" /><published>2016-08-20T00:00:00+04:30</published><updated>2016-08-20T00:00:00+04:30</updated><id>/%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C/2016/08/20/pair-programing-v2</id><content type="html" xml:base="/%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87%20%D9%86%D9%88%DB%8C%D8%B3%DB%8C/2016/08/20/pair-programing-v2/">&lt;h1 id=&quot;تست-لیست-به-ترتیب-زیر&quot;&gt;تست لیست به ترتیب زیر&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;آیتم اول&lt;/li&gt;
-  &lt;li&gt;آیتم دوم&lt;/li&gt;
-  &lt;li&gt;آیتم سوم&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;آیتم اول&lt;/li&gt;
-  &lt;li&gt;آیتم دوم&lt;/li&gt;
-  &lt;li&gt;آیتم سوم&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;تست-لینک&quot;&gt;تست لینک&lt;/h2&gt;
-
-&lt;p&gt; لورم &lt;a href=&quot;http://google.com&quot;&gt;ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است&lt;/a&gt;. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. &lt;strong&gt;کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه&lt;/strong&gt; و &lt;em&gt;متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری&lt;/em&gt; را__برای طراحان رایانه ای علی الخصوص__طراحان خلاقی&lt;del&gt;و فرهنگ پیشرو در زبان فارسی ایجاد کرد.&lt;/del&gt;در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-8-29/1-intro.jpg&quot; alt=&quot;Intro Pictrue&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;video-container&quot;&gt;&lt;style&gt;.h_iframe-aparat_embed_frame{position:relative;} .h_iframe-aparat_embed_frame .ratio {display:block;width:100%;height:auto;} .h_iframe-aparat_embed_frame iframe {position:absolute;top:0;left:0;width:100%; height:100%;}&lt;/style&gt;&lt;div class=&quot;h_iframe-aparat_embed_frame&quot;&gt; &lt;span style=&quot;display: block;padding-top: 57%&quot;&gt;&lt;/span&gt;&lt;iframe src=&quot;https://www.aparat.com/video/video/embed/videohash/DY8HB/vt/frame&quot; allowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Option&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Description&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;data&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;path to data files to supply the data that will be passed into templates.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;engine&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;engine to be used for processing templates. Handlebars is the default.&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;ext&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;extension to be used for dest files.&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;در این پست قصد دارم درباره Pair Programming يا برنامه نویسی ۲نفره (جفتی) صحبت کنم. اگر میدونید برنامه نویسی ۲نفره چیه لازم نیست پارگراف بعدی رو بخونید:&lt;/p&gt;
-
-&lt;p&gt;یکی از مواردی که در مدل XP (یکی از متدهاي اجایل) به وضوح مشاهده می شود، مفهومی است تحت عنوان Pair Programming. منظور از این اصطلاح این است که دو برنامه نویس در کنار یکدیگر شروع به کار کردن می کنند. یکی کدنویسی می‌کند و دیگری به کدهای همکارش نگاه می‌کند و در صورتی که نظری در مورد بهتر شدن کد داشت، به همکارش اعلام می کند. (&lt;a href=&quot;https://www.sokanacademy.com/categories/programming/coding/tutorials/457/%D8%A2%D8%B4%D9%86%D8%A7%DB%8C%DB%8C-%D8%A8%D8%A7-%D9%85%D8%AF%D9%84-%D9%87%D8%A7%DB%8C-%D8%A7%D8%AC%D8%A7%DB%8C%D9%84&quot;&gt;سکان آکادمی&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-8-29/1-intro.jpg&quot; alt=&quot;Intro&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;چرا-کد-نویسی-دو-نفره&quot;&gt;چرا کد نویسی دو نفره؟&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;اشتراک گذاری دانش:&lt;/strong&gt; وقتی که باهم روی یه کد کار میکنید اشتباه احتمالیتون رو پیدا کرده و یاد می‌گیرید که دیگه اون اشتباه رو تکرار نکنید، این قضیه میتونه برعکس باشه و شما به دوستون یادآور بشید که فلان جای کدش اشتباست و درستش چیه. وقتی که دو نفری کد میزنید نسبت به وقتی که تنهایی کار می‌کنید، بهتر میتونید بفهمید که چی دارید مینویسید و یا چیکار دارید می‌کنید (چون دائما هی از هم میپرسید چرا؟ چرا باید اینکارو بکنم؟ مثلا وقتی بحث میکنید سر اینکه چرا بجای حلقه For باید از While استفاده کنید).&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;یه مقدمه خوب:&lt;/strong&gt; دو نفری کد زدن برای کسانی که تازه استخدام شدن یا تازه از دانشگاه (مثلا رشته برنامه نویسی) فارغ التحصیل شدن میتونه یه نمونه خوب و تمرینی باشه تا نحوه کد زدن صحیح و تفکر برنامه نویسی رو یاد بگیرن. این یه راه خیلی خوبیه تا بتونید اعضای تیمتون رو بهتر بشناسید (با تواناییهاشون آشنا بشید)، بفهمید که استایل کد زدنشون چطوره و ازتون انتظار داره که چطور باهم کار کنید و کد بزنید. برنامه نویسی دو نفری بهتون کمک میکنه تا افراد تیم رو بهتر بشناسید در نتیجه میدونید اگه يك روز به یه مشکل خاص برخوردید به کدوم یک از اعضای تیم باید مراجعه کنید و مشکلتون رو درمیون بگذارید تا حل بشه.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;متمرکز شدن موقع کد نویسی:&lt;/strong&gt; خیلی از ماها در کنار کد زدنمون با صدای ناتیفیکیشن پیام دوستامون تو شبکه های اجتماعی حواسمون پرت میشه و سریع میریم ببینیم کی چی پیام داده (مثلا تلگرام، فیسبوم، توییتر و …)، اما وقتی یکی کنارتون باشه و قرار باشه دو نفری کد بزنید اونوقته که دیگه خجالت می‌کشید و تمام تمرکزتون رو در اون زمان روی کد زدنتون میگذارید ( محاله که دیگه توییترو باز کنی ? )!&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;کد های بهتر و اصولی تر:&lt;/strong&gt; قائدتا موقعی که دو نفری کد میزنید (نسبت به تک نفری) سرعت کمتری دارید اما حتما کدها تمیزتر و اصولی تر بوده، همچنین با باگ یا خطای کمتری روبرو خواهید شد. (البته تحقیق مستندی در این باره صورت نگرفته که بخوام بهتون اثباتش کنم، اما شخصا فکر می‌کنم این حرف صادق باشه. نظر خودتون چیه؟ ? )&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;این موارد و فوایدی که درباره دونفری کد زدن گفتم شبیه فواید CodeReview نیست؟&lt;/strong&gt; (اگه دوس داری بدونی &lt;a href=&quot;https://en.wikipedia.org/wiki/Code_review&quot;&gt;Code Review&lt;/a&gt; چیه از &lt;a href=&quot;https://en.wikipedia.org/wiki/Code_review&quot;&gt;ویکی پدیا&lt;/a&gt; توضیحاتش رو بخون). اگرچه که دو نفری کد زدن خیلی فواید بیشتری بجای CodeReview داره: درواقع شما در لحظه کدهارو بازخوانی (CodeReview) میکنی.&lt;/p&gt;
-
-&lt;h2 id=&quot;واو-اینکه-خیلی-عالیه-اما-چطوری-میتونم-شروع-کنم&quot;&gt;واو اینکه خیلی عالیه! اما چطوری میتونم شروع کنم؟&lt;/h2&gt;
-
-&lt;p&gt;در این مقاله سعی كردم راجع به فرهنگ کد زدن دو نفره صحبت کنم، در جامعه ای که برنامه نویسی دو نفره خیلی کمه (البته اگه اصلا وجود داشته باشه!). پیشنهاد و بحث هایی که در این مقاله میشه ممکنه برای کساني که همین الان دارن دو نفری کد میزنن کمی عجیب و غریب باشه. البته من امیدوارم که این مقاله یه دید مثبت به شما بده در نتیجه ترغیب کنه شمارو که رو بیارید به برنامه نویسی دونفره. بعد از این شما می‌تونید برید تحقیق کنید، مقاله های بیشتری بخونید، حتی راجع بهش مقاله بنویسید، تیم خودتون رو تشکیل داده و این فرهنگ رو گسترش بدید.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;با کی باید جفت بشم؟&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;با کسی که میخواد یا تمایل داره با شما جفت بشه! کسی که تمایل داره در کنار شما کد نویسی کنه بهتر از کسی هست که “بهترین همسان” برای دونفره کد زدنه.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;اگه برای اولین باره، ابتدا در کنار تعدادی برنامه نویس (کمتر از ۵ تا) بنشینید و دو نفره کد زدن رو تجربه کنید تا بفهمید اصلا ۲نفری کد زدن با روحیات شما سازگاره و میتونید اون رو قبول کنید؟&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt; خیلی از مردم دوست ندارن شما وقتتون رو سر نگاه کردن به کد های پروژه اونها (در فکر خودشون) هدر بدید! اگه واسه اونها سخته که (یا تمایل ندارن) بیان سراغ کد های شما، این به دور از ادب هست که شما هم سراغ کدهای اونها رفته و بخوایید که دونفره برنامه نویسی کنید.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;در اولین دفعات اول شما به سراغ دوستتون رفته، و در بازخوانی یا Review کدها بهش کمک کنید. این امر باعث میشه اون هم رغبت پیدا کنه و بیاد پیش شما و وقتش رو روی پروژه شما بزاره.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;خیلی از مردم دوست ندارن دو نفره کد بنویسین (یکی کنارشون بشینه و مثلا کدهاشونو تماشا کنه!)، خودتونو آماده کنید که با تواضع جواب “نه” اونهارو بپذیرید.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;چطوری باید جفتمو پیدا کنم؟&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;با__درخواست مستقیم__ شروع کنید (مثلا: سعید میای کنارم بشینی و باهم روی این پروژه کار کنیم؟). موفق نشدید؟ خوب اشکالی نداره. یه تقویم آماده کنید و زمان و تاریخ هایی که دوست دارین در اون تایم بصورت دو نفری رو پروژه خاص کار کنید رو مشخص کرده و برای اونها بفرستید. (مردم وقتی ببینن شما چقدر مصمم هستید و برای کارهاتون برنامه و زمان بندی مشخص دارید تمایل پیدا میکنن که باهاتون همکاری کنن).&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;این دعوت نامه تقویمی رو برای همه اعضای تیم بفرستید. سعی کنید یه سری برنامه منظم برای یادگیری، آموزش و درگیر کردن اونها با پروژه های برنامه نویسی جفتی تهیه و تدارک ببینید.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-8-29/2-finally-ill-find-you.jpg&quot; alt=&quot;Finally I Found You&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;چه مدت باید جفتی کار کنم؟&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;بعضی ها ۹۰ دقیقه رو مناسب میدونن، بعضی ها هم هستن که کل روز رو جفتی کار می‌کنن، این کار باید هرروز تا تموم شدن یک اسپرینت (دوره های ۲ تا ۴ هفته ای برای اتمام یک فاز از پروژه در مدل اسکرام از متد اجایل – &lt;a href=&quot;https://en.wikipedia.org/wiki/Scrum_(software_development)#Sprint_Backlog&quot;&gt;اطلاعات بیشتر&lt;/a&gt; ) انجام بشه. البته در تحقیقات انجام شده مشخص شده دوره های زمانی کوتاه تر نتیجه بهتری در برنامه نویسی جفتی می‌گیریند (Article: &lt;a href=&quot;http://csis.pace.edu/~grossman/dcs/XR4-PromiscuousPairing.pdf&quot;&gt;Promiscuous Pairing&lt;/a&gt;). البته حتما با دوستتون مشورت کنید و ببینید که اون چقدر میتونه یا تمایل داره که در روز با شما وقت بگذاره و باهم برنامه نویسی کنید!&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;سعی کنید برنامه تون رو بصورت دوره های ۱.۵ تا ۲ ساعته طراحی کنید.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-8-29/3-how-long-pair-programming.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;چند بار میتونم جفتی کار کنم؟&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;این یه موضوعه بین شما، جفت برنامه نویستون و تیمی که توش کار می‌کنید؛ فقط مطمئن بشید همتون باهم سر این موضوع موافقید.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;اگر ممکن بود، سعی کنید با دونفر (مختلف) در طول هفته کار کنید. این به شما کمک می‌کنه تا حس کنید که کار کردن با آدمهای مختلف چطوریه و چطور میتونید خودتون رو با اونها وفق بدید.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;strong&gt;خب، حالا باید چیکار کنم؟&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;دو تا واژه خیلی مهم&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;کد زن (Driver) :&lt;/strong&gt; کدهارو می‌نویسه، طرح کلی از برنامه تو ذهنشه، در باره کدها دید جزئی (Micro) داره.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;راهنما (Navigator) :&lt;/strong&gt; توی کد ها به دنبال مشکلات منطقی، باگ احتمالی و یا پیاده سازی بهتر می‌گرده،‌ مانند یه ناظر حرفه ای عمل میکنه، و از قبل به مشکلات بلقوه که ممکنه پیش بیاد فکر می‌کنه؛ در ضمن، به کد ها یه دید کلی (Macro) داره.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-8-29/4-pairing-vocab.jpg&quot; alt=&quot;Pairing Vocab&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;راهنما کارش مثل کسیه که کدهارو بازبینی میکنه، درواقع یه Code Reviewer، اون دائما به یه راه حل یا روش بهتر توی نوشتن کدها فکر میکنه.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;انواع-برنامه-نویسی-دو-نفره&quot;&gt;انواع برنامه نویسی دو نفره:&lt;/h2&gt;
-
-&lt;p&gt;اصطلاح‌هایی که در زیر میاد کاملا اختراع و ایده خودمه و اصلا ربطی به واژه های رسمی (برنامه نویسی دو نفره) نداره، فقط واسه اینه که یه دید بهتر بهتون بده.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;کلاسیک:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-8-29/5-classic.jpg&quot; alt=&quot;Classic&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;یه ماوس و کیبورد اضافی روی میز باشه که بتونید در لحظه نقش‌هاتون رو باهم عوض کنید، مثلا راهنما بشه کدزن و کدزن بشه راهنما. معمولا در هر ۱۵ دقیقه تا یکساعت حداقل یکبار این اتفاق میفته و مجبور میشید نقش‌هارو رو بهم پاس بدید؛ البته این مورد برای کسایی که تازه کارن حتی به دفعات بیشتر هم میرسه!&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;فواید: کمکتون میکنه تا باهم هماهنگ شده، باهم کار کنید و پیش برید&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;معایب: ممکنه روی میز فضای کافی برای گذاشتن یه کیبورد و ماوس اضافی نباشه&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;تیمی که من باهاشون کار می‌کنم اخیرا یه میز بزرگ واسه برنامه نویسی دو نفره تعیین کردن که دو تا کیبور، ماوس و مانیتور داره – هرموقع که اراده کنن در کثری از ثانیه نقش‌هاشون عوض میشه.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;کند:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;کارشون مثل همون بالاییه، فقط دیگه ماوس و کیبور اضافی در کار نیست!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-8-29/6-the-lazy.jpg&quot; alt=&quot;The Lazy&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;فواید: دیگه نمیتونین پوینتر ماوس همدیگه رو بدزدین و هی با کدا ور برین وسط کد زدن بقلی ؟ ، بدون هیچ دردسر و ابزار اضافه ای شروع به برنامه نویسی اشتراکی (دو نفره) میکنید (هر لحظه که اراده کردین ).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;معایب: مجبورین دستتون رو درااااز کنید و اون نقطه از کد که مشکل داره رو نشون دوستتون بدین ( دهنت سرویس میشه ).&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;تازه کارانه:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;همزمان “راهنما” هم باشید.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-8-29/7-the-noob.jpg&quot; alt=&quot;The Noob&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;فواید: دیگه پر از استرس و نگرانی نخواهید بود،‌ فرصت بیشتری برای سوال پرسیدن دارید&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;معایب: این روش هیچوقت رضایت بخش نیست، و شما خیلی سخت می‌تونید روی کد زدن تمرکز کنید&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;من عاشق تازه کارام. این فرصت رو پیش میاره تا بتونید از راهنما سوال بپرسید، یاد بگیرین که تیم چطوری فکر و کار میکنه، و اینکه بفهمید جفتتون “راهنما” توی چه بخشی خیلی خوبه. این واسه تازه کارهایی مثل من وااااقعا یه فرصت عالیه.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;پریشانانه:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-8-29/8-the-distracted.jpg&quot; alt=&quot;The Distracted&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;مثل همون روش قبلی (تازه کارانه)، با این تفاوت که شما لپتابتونم میارین. اکثر زمان لپتاپاتون رو خیلی نزدیک بهم نگه می‌دارید و ازش برای بررسی کردن سینتسک، مترجم گوگل و یا حل و فصل یه مبحث استفاده می‌کنید. هیچ وقت بقل دستتیتون بیشتر از چند دقیقه معطل نکنید.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;فواید: میتونید خیلی راحت دنبال یه چیزی بگردین و پیداش کنید&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;معایب: خیلی راحت تمرکزتون از بین میره&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;مثل “تازه کارانه” شروع کنید به کار کردن، اما وقتی که احتیاج داشتید دنبال یه چیزی بگردین برید استراتژیتون رو به “پریشانانه” تغییر بدین. یه جورایی این مثل همون حالت کلاسیکه.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;strong&gt;آیا مورد یا چیز دیگه ای هست که باید بدونم؟&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;بهداشت فردیتون رو رعایت کنید!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-8-29/9-hygiene.jpg&quot; alt=&quot;Hygiene&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;حتما دوش بگیرید، ادکلن خوشبو بزنید، مسواک کنید، خوشبو کننده دهان بخورید و حتما شب قبلش از خوردن پیاز و سیر خودداری کنید.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;strong&gt;باهم رفیق و شریک باشید&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-8-29/10-welcoming-pairing.png&quot; alt=&quot;Welcoming Pairing&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;من-اینکارو-شروع-کردم-و-عاشقش-شدمازش-متنفرم&quot;&gt;من اینکارو شروع کردم و عاشقش شدم/ازش متنفرم!&lt;/h2&gt;
-
-&lt;p&gt;بعله! بجای تشکر از من این روش رو تست کنید. خیلی خوشحال می‌شم اگه بدونم شما چه تجربه ای از برنامه نویسی دو نفره داشتید.&lt;/p&gt;
-
-&lt;p&gt;اگه شما ازش متنفر بودین، من واقعا متاسفم. برنامه نویسی دو نفره رو با فرد دیگه ای هم تست کردین؟ اگه نه، سعی کنید با چند نفر دیگه هم این روش رو تجربه کنید. خیلی ها اینجوری کار کردن رو دوست ندارن، اما فکر کنم شما واسه یه بارم که شده باید این روش کار کردن رو تجربه کنید.&lt;/p&gt;
-
-&lt;div class=&quot;div-ltr&quot;&gt;
-
-  &lt;p&gt;Translated from: &lt;a href=&quot;https://developer.atlassian.com/blog/2015/05/try-pair-programming/&quot;&gt;developer.atlassian.com&lt;/a&gt;&lt;/p&gt;
-
-&lt;/div&gt;</content><author><name>صدرا املشی</name></author><category term="مقاله" /><category term="اسکرام" /><category term="اجایل" /><category term="مدیریت پروژه نرم‌افزاری" /><summary type="html">تست لیست به ترتیب زیر</summary></entry><entry><title type="html">پست تست وبلاگ</title><link href="/tag%20test/%D8%AA%D8%B3%D8%AA%20%D9%87%D8%B4%D8%AA%DA%AF/2010/03/03/test-post/" rel="alternate" type="text/html" title="پست تست وبلاگ" /><published>2010-03-03T00:00:00+03:30</published><updated>2010-03-03T00:00:00+03:30</updated><id>/tag%20test/%D8%AA%D8%B3%D8%AA%20%D9%87%D8%B4%D8%AA%DA%AF/2010/03/03/test-post</id><content type="html" xml:base="/tag%20test/%D8%AA%D8%B3%D8%AA%20%D9%87%D8%B4%D8%AA%DA%AF/2010/03/03/test-post/">&lt;h1 id=&quot;سلام-دنیا&quot;&gt;سلام دنیا&lt;/h1&gt;
+&lt;/ul&gt;</content><author><name>صدرا املشی</name></author><category term="راک" /><category term="اینترنت اشیاء" /><category term="گیتار" /><category term="گیتار الکتریک" /><category term="ابزار" /><summary type="html">یخچال هوشمند، فِر هوشمند، لامپ هوشمند، حتی قفل هوشمند و.. و… و..، مطمئنا اینا واژه هایی هستن که تو یک یا نهایت دو سال اخیر بارها شنیده ایم و البته در سالهای آینده بیشتر خواهیم شنید. همه دستگاه هایی که نام بردم یا چیزهای دیگه‌ای که خودتون شنیدید در دسته ای به نام اینترنت اشیا یا بطور مخفف IOT قرار میگیرند( البته خیلی ها از دوستان لطف دارن و میگن اینترنت اشیا نه! اینترنت چیزها! بعضی از دوستان هم که خسته ان میگن چیزنت! ) اما واقعا اینترنت اشیا چیه و چه تعریفی داره. بهتره برای روشن شدن ماجرا از ویکی‌پدیا کمک بگیرییم:</summary></entry><entry><title type="html">پست تست وبلاگ</title><link href="/tag%20test/%D8%AA%D8%B3%D8%AA%20%D9%87%D8%B4%D8%AA%DA%AF/2010/03/03/test-post/" rel="alternate" type="text/html" title="پست تست وبلاگ" /><published>2010-03-03T00:00:00+03:30</published><updated>2010-03-03T00:00:00+03:30</updated><id>/tag%20test/%D8%AA%D8%B3%D8%AA%20%D9%87%D8%B4%D8%AA%DA%AF/2010/03/03/test-post</id><content type="html" xml:base="/tag%20test/%D8%AA%D8%B3%D8%AA%20%D9%87%D8%B4%D8%AA%DA%AF/2010/03/03/test-post/">&lt;h1 id=&quot;سلام-دنیا&quot;&gt;سلام دنیا&lt;/h1&gt;
 
 &lt;p&gt;این یک نوشتار آزمایشی برای نمایش قابلیتهای &lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;مارک داون&lt;/a&gt; است.&lt;/p&gt;
 
@@ -514,6 +289,18 @@
 &lt;h3 id=&quot;تیتر-درجه-سه&quot;&gt;تیتر درجه سه&lt;/h3&gt;
 
 &lt;p&gt;لورم ایپسوم ( به انگلیسی &lt;code class=&quot;highlighter-rouge&quot;&gt;lorem ipsum&lt;/code&gt; ) متنی است بی مفهوم که تشکیل شده از کلمات معنی دار یا بی معنی کنار هم. کاربر با دیدن متن لورم ایپسوم تصور میکند متنی که در صفحه مشاهده میکند این متن واقعی و مربوط به توضیحات صفحه مورد نظر است واقعی است. حالا سوال اینجاست که این متن “ &lt;strong&gt;لورم ایپسوم&lt;/strong&gt; “ به چه دردی میخورد و اساسا برای چه منظور و هدفی ساخته شده است؟ پیش از بوجود آمدن&lt;del&gt;لورم ایپسوم&lt;/del&gt;، طراحان وب سایت در پروژه های وب سایت و طراحان کرافیک در پروژه های &lt;em&gt;طراحی کاتولوگ ، بروشور ، پوستر و …&lt;/em&gt; همواره با این مشکل مواجه بودند که__صفحات پروژه خود را پیش از آنکه متن اصلی توسط کارفرما ارائه گرد__د و در صفحه مورد نظر قرار گیرد چگونه پر کنند؟؟&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;define foobar() {
+    print &quot;Welcome to flavor country!&quot;;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;define&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;foobar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Welcome to flavor country!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;و-اضافه-کردن-لینک-ها&quot;&gt;و اضافه کردن لینک ها&lt;/h2&gt;
 &lt;ul&gt;

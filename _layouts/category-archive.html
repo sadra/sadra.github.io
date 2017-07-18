@@ -8,12 +8,15 @@ layout: theme_rtl
     <div class="blog-post-list">
 
         {% for post in page.posts  %}
-            {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
-            {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
-            {% if forloop.first %}
-            <h3 id="{{ this_year }}-ref" class="post-item-year">{{ post.date | jdate: "%y"}}</h3>
+            {% unless post.next %}
+            <h2 class="post-item-year">{{ post.date | jdate: '%y' }}</h2>
+            {% else %}
+            {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+            {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+            {% if year != nyear %}
+            <h2 class="post-item-year">{{ post.date | jdate: '%y' }}</h2>
             {% endif %}
-
+            {% endunless %}
             <div class="blog-post-item-container">
 
                 <div class="post-date-box">
@@ -33,15 +36,7 @@ layout: theme_rtl
                 </div>
 
             </div>
-
-            {% if forloop.last %}
-            {% else %}
-                {% if this_year != next_year %}
-                    <h3 id="{{ next_year }}-ref" class="post-item-year">{{ post.date | jdate: "%y"}}</h3>
-                {% endif %}
-            {% endif %}
         {% endfor %}
-
 
     </div>
 

@@ -1,65 +1,64 @@
-$white: #FFFFFF
-$black: #000000
+*
+  box-sizing: border-box
+  transition: all .3s ease-in
+body
+  margin: 0px
+  padding: 0px
+  font-family: $font-stack
+  font-size: 100%
+  font-weight: 500
+h3, h2, h1, p, a, small
+  padding: 5px 0
+  margin: 0
+  text-decoration: none
+  list-style: none
+p
+  font-family: $font-stack-two
+  opacity: .80
 
-$nav-item: #000000
-$nav-item-hover: #D84315
-
-$post_title: #1C1E24
-$post_title_hover: #42b64a
-$post_date: #9EA3B4
-
-$gray: #8a8a8a
-
-$title_color: #FFFFFF
-
-$primary: #1C1E24
-$secondary: #9EA3B4
-$highlight: #517AF4
-
-$link-highlight: #1360f4
-$link-highlight-hover: #8523f4
+.hide
+  display: none
 
 h1
-  color: $primary
+  color: $text-header
+  font-size: 1.9em
+  font-weight: 500
+  line-height: 1.4em
+  opacity: .80
 h2
-  font-size: 1.875em
+  color: $text-header
+  font-size: 1.5em
   font-weight: 500
   line-height: 1.2em
-  opacity: .85
+  opacity: .80
+  margin-top: 1.2em
 h3
-  color: $primary
-h4
-  font-size: 1.375em
-  font-weight: 500
-  color: $primary
-  opacity: .85
-h5
-  font-size: 1.375em
+  color: $text-header
+  font-size: 1.2em
   font-weight: 400
-  color: $primary
-h6
-  font-size: 0.75em
-  text-transform: uppercase
-  font-weight: 600
-  color: $secondary
+  line-height: 0.9em
+  opacity: .80
+  margin-top: 0.9em
+
 small
   font-size: 0.75em
   font-weight: 300
-  color: $secondary
+  color: $text-date
   text-transform: uppercase
 p
   font-size: 1em
   font-weight: 200
-  line-height: 2.5em
-  color: $secondary
+  line-height: 2em
+  color: $text-paragraph
+
 a
-  color: $link-highlight
+  color: $text-link
 a:hover
-  color: $link-highlight-hover
+  color: $text-link-hover
 
 hr
   border-style: solid
-  color: $secondary
+  color: $text-paragraph
   opacity: .1
 .hr-padded
   margin: 100px 0 100px 0
@@ -81,7 +80,7 @@ hr
   right: 0
   bottom: 0
   left: 0
-  background: $primary
+  background: $black
   opacity: .35
 
 .div-ltr

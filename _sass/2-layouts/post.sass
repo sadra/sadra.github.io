@@ -11,18 +11,24 @@
   padding-left: 5px
   padding-right: 5px
   margin: auto
+  @media screen and (max-width: 800px)
+    width: 92%
+    h1
+      font-size: 1.5em
+      line-height: 1.3em
   h1, h2, h3, h4, h5
     direction: rtl
     text-align: right
   p
     font-size: 1em
-    color: black
+    color: $text-paragraph
     font-weight: 100
     line-height: 1.5em
     direction: rtl
     text-align: right
   ol
     li
+      line-height: 1.9em !important
       p
         line-height: 1.9em !important
         padding: 0
@@ -37,35 +43,26 @@
       margin: 15px auto
     @media screen and (max-width: 400px)
       margin: 10px auto
-  .author-card
-    background: #f6f6f6
-    padding: 15px
-    border-radius: 5px
-    border: 1px solid #f6f6f6
-    width: 100%
-    margin: 0 auto
-    .author-message
-      padding-top: 8px
-      display: flex
-      align-items: flex-start
-      p
-        flex: 1
-        font-size: .9em
-      img
-        margin-left: 10px
-        margin-right: 0
-        width: 50px
-        height: 50px
-    .addthis_inline_share_toolbox
-      direction: ltr
-      margin: 5px auto
   .post_created
-    margin-bottom: 20px
+    margin: 60px 0 50px 0
     p
-      color: $post_date
+      color: $black
+      line-height: .6em
+    .author_avatar
+      float: right
+      margin-left: 20px
+      img
+        width: 60px
+        height: 60px
+        border-radius: 50%
+    .post_info
+      line-height: .8em
+      padding-top: 2px
+      margin-right: 15px
+      width: 100%
 
   .post-routes-list
-    margin: 25px 0 15px 5px
+    margin: 25px 0 30px 5px
     .tag-link
       unicode-bidi: embed
       white-space: nowrap
@@ -74,17 +71,18 @@
       font-size: .6em
       margin-bottom: 2px
       margin-left: 3px
-      background-color: #9C27B0
-      color: #ffffff
+      background-color: $element-tag
+      color: $element-tag-text
       padding: 5px
-      border: solid 1px #9C27B0
+      border: solid 1px $element-tag
       border-radius: 3px
       @media screen and (max-width: 500px)
         font-size: 0.55em
         margin-left: 1px
-    .tag-link:hover
-      background-color: #E91E63
-      border-color: #E91E63
+    .tag-link:hover,
+    .tag-link:active
+      background-color: $element-tag-hover
+      border-color: $element-tag-hover
     .tag-link:before
       content: "#"
     .category-link
@@ -94,23 +92,19 @@
       height: 22px
       font-size: .7em
       margin-bottom: 2px
-      color: #9E9E9E
+      color: $element-category
       padding-top: 5px
       padding-bottom: 5px
       padding-left: 3px
       font-weight: bold
       @media screen and (max-width: 500px)
         font-size: 0.6em
-    .category-link:hover
-      color: #9C27B0
+    .category-link:hover,
+    .category-link:active
+      color: $element-category-hover
     .category-link:after
       content: " / "
 
-  @media screen and (max-width: 500px)
-    width: 92%
-    h1
-      font-size: 1.5em
-      line-height: 1.3em
   p
     img
       max-width: 70%
@@ -124,6 +118,7 @@
     overflow: hidden
     height: 300px /* Height of the "content" div */
     width: 100%
+    margin: 10px 0 30px 0
     @media screen and (max-width: 900px)
       height: 250px
     @media screen and (max-width: 600px)
@@ -141,36 +136,35 @@
       text-decoration: none
       display: inline-block
       padding: 8px 16px
+      direction: rtl
     .previous-btn
-      background-color: #f1f1f1
-      color: black
+      color: $element-nextprev-btn-title
       float: left
       text-align: left
       width: auto
-      border-bottom: 3px solid #cccccc
       @media screen and (max-width: 400px)
         width: 100%
         margin: 5px 5px 5px 0px
-    .previous-btn:hover
-      background-color: #cccccc
     .next-btn
-      background-color: #FFC107
-      color: white
+      color: $element-nextprev-btn-title
       float: right
       text-align: right
       width: auto
-      border-bottom: 3px solid #ffab05
       @media screen and (max-width: 400px)
         width: 100%
         margin: 5px 0px 5px 5px
-    .next-btn:hover
-      background-color: #FFB300
+    .next-btn:hover,
+    .next-btn:active,
+    .previous-btn:active,
+    .previous-btn:hover
+      color: $element-nextprev-btn-title-hover
+      background-color: $element-nextprev-btn-background
 
   .related-posts-container
     display: flex
     margin: 5px 20px 0 20px
     width: 100%
-    background-color: #ffffff
+    background-color: $white
     @media screen and (max-width: 800px)
       display: initial
     .related-post-box
@@ -193,8 +187,9 @@
         overflow: hidden
         line-height: 1.4em
         text-align: right
-      a:hover
-        color: $link-highlight-hover
+      a:hover,
+      a:active
+        color: $text-link-hover
     .related-post-box-cover
       width: 100%
       height: 90px

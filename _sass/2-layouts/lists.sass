@@ -8,17 +8,18 @@
     font-size: 1em
     margin-bottom: 5px
     margin-left: 5px
-    background-color: #9C27B0
-    color: #ffffff
+    background-color: $element-tag
+    color: $element-tag-text
     padding: 5px
-    border: solid 1px #9C27B0
+    border: solid 1px $element-tag
     border-radius: 5px
     @media screen and (max-width: 500px)
       font-size: .9em
       margin-left: 3px
-  .list-item-tag:hover
-    background-color: #E91E63
-    border-color: #E91E63
+  .list-item-tag:hover,
+  .list-item-tag:active
+    background-color: $element-tag-hover
+    border-color: $element-tag-hover
   .list-item-tag:before
     content: "#"
 
@@ -31,27 +32,28 @@
   font-size: 1em
   margin-bottom: 5px
   margin-left: 5px
-  color: #4E342E
+  color: $element-category
   padding-top: 5px
   padding-bottom: 5px
   padding-left: 3px
   font-weight: bold
   @media screen and (max-width: 500px)
     font-size: 0.9em
-.list-item-category:hover
-  color: #E91E63
+.list-item-category:hover,
+.list-item-category:active
+  color: $element-tag-hover
 .list-item-category:after
   content: " / "
 
 .list-title
   font-size: 1.2em
   margin-bottom: 10px
-  color: #546E7A
+  color: $element-archive-title
   @media screen and (max-width: 500px)
     font-size: 1.1em
     margin-bottom: 7px
   span
-    color: #37474F
+    color: $element-archive-caption
     font-size: 1.3em
     @media screen and (max-width: 500px)
       font-size: 1.2em

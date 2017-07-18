@@ -60,17 +60,18 @@
         font-size: .6em
         margin-bottom: 2px
         margin-left: 3px
-        background-color: #9C27B0
-        color: #ffffff
+        background-color: $element-tag
+        color: $element-tag-text
         padding: 5px
-        border: solid 1px #9C27B0
+        border: solid 1px $element-tag
         border-radius: 3px
         @media screen and (max-width: 500px)
           font-size: 0.55em
           margin-left: 1px
-      .tag-link:hover
-        background-color: #E91E63
-        border-color: #E91E63
+      .tag-link:hover,
+      .tag-link:active
+        background-color: $element-tag-hover
+        border-color: $element-tag-hover
       .tag-link:before
         content: "#"
       .category-link
@@ -80,15 +81,16 @@
         height: 22px
         font-size: .7em
         margin-bottom: 2px
-        color: #9E9E9E
+        color: $element-category
         padding-top: 5px
         padding-bottom: 5px
         padding-left: 3px
         font-weight: bold
         @media screen and (max-width: 500px)
           font-size: 0.6em
-      .category-link:hover
-        color: #9C27B0
+      .category-link:hover,
+      .category-link:active
+        color: $element-category-hover
       .category-link:after
         content: " / "
 .post-item-year

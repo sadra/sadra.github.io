@@ -22,14 +22,14 @@ header.header-rtl
     padding-left: 30px
     padding-right: 30px
     margin: auto
-    border-bottom: 1px solid #ededed
+    border-bottom: 1px solid $gray-200
     @media screen and (max-width: 500px)
       padding-top: 15px
       padding-left: 15px
       padding-right: 15px
     .nav-logo
       font-weight: 900
-      color: $black
+      color: $text-nav
       display: flex
       flex-direction: row
       justify-content: center
@@ -38,7 +38,7 @@ header.header-rtl
       @media screen and (max-width: 500px)
         font-size: 0.9em
     .nav-logo:hover
-      color: $nav-item-hover
+      color: $text-nav-hover
 
     ul.navigation
       display: flex
@@ -49,11 +49,11 @@ header.header-rtl
         display: block
         padding-left: 30px
         a
-          color: $nav-item
+          color: $text-nav
           transition: all 0.15s ease-in
           font-size: 1em
         a:hover
-          color: $nav-item-hover
+          color: $text-nav-hover
         @media screen and (max-width: 500px)
           padding-left: 10px
           a

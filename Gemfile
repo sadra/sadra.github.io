@@ -9,6 +9,8 @@ gem "jekyll", "3.5.0"
 gem "jekyll-autoprefixer"
 gem 'jekyll-archives'
 gem 'jalalidate'
+gem 'jekyll-sitemap'
+
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
@@ -21,6 +23,7 @@ group :jekyll_plugins do
    gem "jekyll-autoprefixer"
    gem 'jekyll-archives'
    gem 'jalalidate'
+    gem 'jekyll-sitemap'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

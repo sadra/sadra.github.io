@@ -1,0 +1,23 @@
+---
+layout: theme_rtl
+---
+<div class="content">
+
+    <h1 class="list-title">لیست همه <span>دسته‌ها</span></h1>
+
+    <div class="list-items-container">
+        {% for category in site.categories %}
+        <a class="list-item-category" href="/category/{{ category[0] | slugify }}">{{ category[0] }}</a>
+        {% endfor %}
+    </div>
+
+
+    <h1 class="list-title">لیست همه <span>#هشتگ‌ها</span></h1>
+
+    <div class="list-items-container">
+        {% for tag in site.tags %}
+        <a class="list-item-tag" href="/tag/{{ tag[0] | slugify }}">{{ tag[0] }}</a>
+        {% endfor %}
+    </div>
+
+</div>

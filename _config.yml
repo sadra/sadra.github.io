@@ -13,13 +13,15 @@ medium_path: https://medium.com/sadra
 linkedin_path: https://www.linkedin.com/in/amlashisadra/
 
 # Build settings
-permalink: pretty
+permalink: :year/:title
 markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-autoprefixer
   - jekyll-archives
   - jalalidate
+  - jekyll-sitemap
+
 
 exclude:
   - Gemfile

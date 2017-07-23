@@ -22,7 +22,6 @@ plugins:
   - jalalidate
   - jekyll-sitemap
 
-
 exclude:
   - Gemfile
   - Gemfile.lock

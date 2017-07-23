@@ -843,7 +843,7 @@ header.header-rtl {
             header.header-rtl nav.nav-wrap ul.navigation li a {
               font-size: 1em; } }
       header.header-rtl nav.nav-wrap ul.navigation li:last-of-type {
-        padding-left: 0px; }
+        padding-left: 0; }
 
 footer.footer-wrapper {
   width: 80%;
@@ -955,7 +955,8 @@ footer.footer-wrapper {
   @media screen and (max-width: 500px) {
     .content {
       padding: 15px 5px;
-      width: 95%; } }
+      width: 95%;
+      margin-top: 15px; } }
 
 .content:after {
   content: "";
@@ -1137,7 +1138,6 @@ footer.footer-wrapper {
         font-size: 0.75em;
         font-weight: 300;
         color: #BDBDBD;
-        text-transform: uppercase;
         line-height: 1.7em; }
   .blog-post-container .post-routes-list {
     margin: 25px 0 30px 5px; }
@@ -1299,7 +1299,7 @@ footer.footer-wrapper {
 
 .archive-title {
   font-size: 1.2em;
-  margin-bottom: 10px;
+  margin: 15px 0;
   color: #546E7A; }
   @media screen and (max-width: 500px) {
     .archive-title {
@@ -1364,7 +1364,7 @@ footer.footer-wrapper {
 
 .list-title {
   font-size: 1.2em;
-  margin-bottom: 10px;
+  margin: 15px 0;
   color: #546E7A; }
   @media screen and (max-width: 500px) {
     .list-title {

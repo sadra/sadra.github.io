@@ -1,5 +1,18 @@
 @charset "UTF-8";
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css");
+@font-face {
+  font-family: "Vazir";
+  src: local("Vazir");
+  src: url("/assets/fonts/Vazir.eot");
+  src: url("/assets/fonts/Vazir.woff");
+  src: url("/assets/fonts/Vazir.ttf") format("opentype"); }
+@font-face {
+  font-family: "Vazir";
+  src: local("Vazir");
+  src: url("/assets/fonts/Vazir-Bold.eot");
+  src: url("/assets/fonts/Vazir-Bold.woff");
+  src: url("/assets/fonts/Vazir-Bold.ttf") format("opentype");
+  font-weight: bold; }
 html {
   font-family: "Vazir", Arial, sans-serif;
   line-height: 1.15;

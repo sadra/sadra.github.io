@@ -1090,16 +1090,22 @@ footer.footer-wrapper {
       .blog-post-container h1 {
         font-size: 1.5em;
         line-height: 1.3em; } }
-  .blog-post-container h1, .blog-post-container h2, .blog-post-container h3, .blog-post-container h4, .blog-post-container h5 {
+  .blog-post-container h1, .blog-post-container h2, .blog-post-container h3, .blog-post-container h4, .blog-post-container h5, .blog-post-container p {
     direction: rtl;
     text-align: right; }
   .blog-post-container p {
     font-size: 1em;
     color: #2b2b2b;
     font-weight: 100;
-    line-height: 1.5em;
-    direction: rtl;
-    text-align: right; }
+    line-height: 1.5em; }
+    .blog-post-container p img {
+      max-width: 70%;
+      display: inherit;
+      height: initial;
+      margin: 10px auto; }
+      @media screen and (max-width: 700px) {
+        .blog-post-container p img {
+          max-width: 90%; } }
   .blog-post-container ol li {
     line-height: 1.9em !important; }
     .blog-post-container ol li p {
@@ -1184,14 +1190,6 @@ footer.footer-wrapper {
       color: #37474F; }
     .blog-post-container .post-routes-list .category-link:after {
       content: " / "; }
-  .blog-post-container p img {
-    max-width: 70%;
-    display: inherit;
-    height: initial;
-    margin: 10px auto; }
-    @media screen and (max-width: 700px) {
-      .blog-post-container p img {
-        max-width: 90%; } }
   .blog-post-container .post-cover {
     overflow: hidden;
     height: 300px;

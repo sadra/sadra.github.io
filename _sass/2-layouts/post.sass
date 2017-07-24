@@ -16,7 +16,7 @@
     h1
       font-size: 1.5em
       line-height: 1.3em
-  h1, h2, h3, h4, h5
+  h1, h2, h3, h4, h5, p
     direction: rtl
     text-align: right
   p
@@ -24,8 +24,13 @@
     color: $text-paragraph
     font-weight: 100
     line-height: 1.5em
-    direction: rtl
-    text-align: right
+    img
+      max-width: 70%
+      display: inherit
+      height: initial
+      margin: 10px auto
+      @media screen and (max-width: 700px)
+        max-width: 90%
   ol
     li
       line-height: 1.9em !important
@@ -110,15 +115,6 @@
       color: $element-category-hover
     .category-link:after
       content: " / "
-
-  p
-    img
-      max-width: 70%
-      display: inherit
-      height: initial
-      margin: 10px auto
-      @media screen and (max-width: 700px)
-        max-width: 90%
 
   .post-cover
     overflow: hidden

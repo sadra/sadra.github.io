@@ -1300,7 +1300,8 @@ footer.footer-wrapper {
   position: fixed;
   bottom: 5px;
   left: 10px;
-  display: none; }
+  display: none;
+  z-index: 9999999; }
   .back-to-top .arrow-up {
     color: rgba(19, 96, 244, 0.8);
     margin: 0;

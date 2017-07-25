@@ -35,6 +35,7 @@ author: Sadra
 > Be quick, as the username is now publicly available. Glad to help!
 >
 > Thanks,
+>
 > Jacqui
 
 بله، اون حساب کاربری رو آزاد کرده بودن و منم سریع رفتم و بر اساس راهنمای [Change your GitHub Username](https://help.github.com/articles/changing-your-github-username/) ، حساب کاربری رو به یوزر Sadra تغییر دادم.

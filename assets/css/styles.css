@@ -704,9 +704,11 @@ blockquote {
   text-align: justify;
   color: #2b2b2b;
   margin: 1.5em 1.5px;
-  padding: 15px;
-  display: -ms-grid;
-  display: grid; }
+  padding: 15px; }
+  blockquote p {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
 
 blockquote:before {
   color: #BDBDBD;

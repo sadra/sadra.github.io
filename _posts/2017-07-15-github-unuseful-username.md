@@ -11,7 +11,7 @@ categories:
     - Tips
     - راه‌حل
 
-cover: /assets/img/post/2017-7-15/github-username.jpg
+cover: /assets/img/post/2017-07-15/github-username.jpg
 
 author: Sadra
 ---

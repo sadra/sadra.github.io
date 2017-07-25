@@ -26,21 +26,17 @@ author: Sadra
 
 بیشتر از ۱۵ دقیقه از پیام من گذشته بود که برام ایمیل فرستادن:
 
-> kjdhkjh
+> Hi Sadra,
 >
-> uhui heiuqh i qewiuheiuqwhiuehiqwh iuqwhieuhqw
+> You are in luck — we have classified the sadra account as inactive and released the username for you to claim, as per our Name Squatting Policy:
 >
-> quwhe qwe, qwioueuqw
-
-<blockquote>
-
-    <p>Hi Sadra,</p>
-    <p>You are in luck — we have classified the sadra account as inactive and released the username for you to claim, as per our Name Squatting Policy:</p>
-    <p>https://help.github.com/articles/name-squatting-policy</p>
-    <p>Be quick, as the username is now publicly available. Glad to help!</p>
-    <p>Thanks, Jacqui</p>
-
-</blockquote>
+> https://help.github.com/articles/name-squatting-policy
+>
+> Be quick, as the username is now publicly available. Glad to help!
+>
+> Thanks,
+>
+> Jacqui
 
 بله، اون حساب کاربری رو آزاد کرده بودن و منم سریع رفتم و بر اساس راهنمای [Change your GitHub Username](https://help.github.com/articles/changing-your-github-username/) ، حساب کاربری رو به یوزر Sadra تغییر دادم.
 

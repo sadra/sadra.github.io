@@ -708,7 +708,8 @@ blockquote {
   blockquote p {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    color: #2b2b2b !important; }
 
 blockquote:before {
   color: #BDBDBD;
@@ -719,10 +720,6 @@ blockquote:before {
   margin-right: 0.16em;
   vertical-align: -0.4em;
   margin-left: 10px; }
-
-blockquote p {
-  display: inline;
-  color: #2b2b2b !important; }
 
 .video-container {
   margin: 20px auto;

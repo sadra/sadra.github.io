@@ -27,9 +27,13 @@ author: Sadra
 بیشتر از ۱۵ دقیقه از پیام من گذشته بود که برام ایمیل فرستادن:
 
 > Hi Sadra,
+>
 > You are in luck — we have classified the sadra account as inactive and released the username for you to claim, as per our Name Squatting Policy:
+>
 > https://help.github.com/articles/name-squatting-policy
+>
 > Be quick, as the username is now publicly available. Glad to help!
+>
 > Thanks,
 > Jacqui
 

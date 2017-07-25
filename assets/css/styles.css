@@ -720,6 +720,13 @@ blockquote p {
   display: inline;
   color: #2b2b2b !important; }
 
+blockquote:first-child {
+  display: absolute;
+  padding-top: 1.3em; }
+
+blockquote:last-child {
+  display: absolute; }
+
 .video-container {
   margin: 20px auto;
   width: 75%;

@@ -704,7 +704,9 @@ blockquote {
   text-align: justify;
   color: #2b2b2b;
   margin: 1.5em 1.5px;
-  padding: 15px; }
+  padding: 15px;
+  display: -ms-grid;
+  display: grid; }
 
 blockquote:before {
   color: #BDBDBD;

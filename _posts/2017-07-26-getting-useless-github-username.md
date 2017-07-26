@@ -1,7 +1,7 @@
 ---
 layout: blog_post_rtl
 title:  "گرفتن نام‌کاربری گیتهاب که توسط فرد دیگری قبلا ثبت شده"
-date: '2017-07-25'
+date: '2017-07-26'
 
 tags:
     - Github
@@ -11,7 +11,7 @@ categories:
     - Tips
     - راه‌حل
 
-cover: /assets/img/post/2017-07-15/github-username.jpg
+cover: /assets/img/post/2017-07-26/github-username.jpg
 
 author: Sadra
 ---

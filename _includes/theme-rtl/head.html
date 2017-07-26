@@ -50,6 +50,16 @@
 <meta property="twitter:image" content="{{ site.url }}/assets/img/avatar.jpg" />
 {% endif %}
 
+{% if page.cover %}
+<meta property="twitter:image" content="{{ site.url }}{{ page.cover }}" />
+<link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+
+{% else %}
+<meta property="twitter:image" content="{{ site.url }}/assets/img/avatar.jpg" />
+<link rel="icon" type="image/x-icon" href="{{ site.url }}/assets/img/avatar.jpg">
+
+{% endif %}
+
 <link rel="alternative" href="/site-map.xml" title="{{ site.title }}" type="application/atom+xml">
 <link rel="short icon" type="image/x-icon" href="{{ site.url }}/assets/img/base/favicon.png">
 <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/styles.css">

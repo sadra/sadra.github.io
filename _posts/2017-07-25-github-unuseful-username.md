@@ -40,4 +40,4 @@ author: Sadra
 
 بله، اون حساب کاربری رو آزاد کرده بودن و منم سریع رفتم و بر اساس راهنمای [Change your GitHub Username](https://help.github.com/articles/changing-your-github-username/) ، حساب کاربری رو به یوزر Sadra تغییر دادم.
 
-حرف آخر، مطابق راهنمای[ What happens when I change my username ](What happens when I change my username)توجه کنید که اگر نام کاربریتون رو تغییر بدین، پروژه‌های که تعریف کرده بودن به آدرس جدید ریدایرکت نمیشن. حتما قبل از انجام این تغییر هواستون باشه که ریپو های قبلیتون رو تغییر بدین.
+حرف آخر، مطابق راهنمای[ What happens when I change my username ](What happens when I change my username)توجه کنید که اگر نام کاربریتون رو تغییر بدین، پروژه‌های که تعریف کرده بودین به آدرس جدید ریدایرکت نمیشن. پس یادتون باشه بعد تغییر نام‌کاربری، حتما لینکهایی که قبلا به پروژتون داده بودید (مثل وبلاگ یا اگر لایبرری ریلیز شده) رو هم اصلاح کنید.

@@ -1,7 +1,6 @@
 <meta charset="utf-8">
 <meta content="IE-edge,chrome=1" http-equiv="X-UA-Compatable">
 <meta name="description" content="{{ site.description }}">
-<title>{{ page.title }}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <script>
@@ -13,20 +12,43 @@
     ga('send', 'pageview');
 </script>
 
+{% if page.title %}
+<title>صدرا املشی | {{ page.title }}</title>
+{% else %}
+<title>وبلاگ صدرا املشی</title>
+{% endif %}
+
 <meta property="og:type" content="website">
-<meta property="og:title" content="{{ page.title }}">
+{% if page.title %}
+<meta property="og:title" content="صدرا املشی | {{ page.title }}">
+{% else %}
+<meta property="og:title" content="وبلاگ صدرا املشی">
+{% endif %}
 <meta property="og:url" content="{{ site.url }}{{ page.url }}">
 {% if page.cover %}
-    <meta property="og:image" content="{{ page.cover }}" />
+<meta property="og:image" content="{{ page.cover }}" />
 {% else %}
-    <meta property="og:image" content="{{ site.url }}/assets/img/avatar.jpg" />
+<meta property="og:image" content="{{ site.url }}/assets/img/avatar.jpg" />
 {% endif %}
-<meta property="og:site_name" content="{{ site.title }}">
+{% if page.title %}
+<meta property="og:site_name" content="صدرا املشی | {{ page.title }}">
+{% else %}
+<meta property="og:site_name" content="وبلاگ صدرا املشی">
+{% endif %}
 <meta property="og:description" content="{{ site.description }}">
 
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="{{  page.title }}">
+{% if page.title %}
+<meta property="twitter:title" content="صدرا املشی | {{ page.title }}">
+{% else %}
+<meta property="twitter:title" content="وبلاگ صدرا املشی">
+{% endif %}
 <meta name="twitter:description" content="{{ site.description }}">
+{% if page.cover %}
+<meta property="twitter:image" content="{{ site.url }}{{ page.cover }}" />
+{% else %}
+<meta property="twitter:image" content="{{ site.url }}/assets/img/avatar.jpg" />
+{% endif %}
 
 <link rel="alternative" href="/site-map.xml" title="{{ site.title }}" type="application/atom+xml">
 <link rel="short icon" type="image/x-icon" href="{{ site.url }}/assets/img/base/favicon.png">

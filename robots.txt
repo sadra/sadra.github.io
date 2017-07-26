@@ -1,1 +1,1 @@
-Sitemap: http://isapanah.com//sitemap.xml
+Sitemap: http://isapanah.com/sitemap.xml

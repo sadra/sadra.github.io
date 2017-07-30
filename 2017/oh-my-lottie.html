@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html lang="Farsi" dir="rtl">
+
+<html>
+    <head>
+        <meta charset="utf-8">
+<meta content="IE-edge,chrome=1" http-equiv="X-UA-Compatable">
+<meta name="description" content="سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده ارشد اپلیکیشن iOS و Android.
+">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-68873815-10', 'auto');
+    ga('send', 'pageview');
+</script>
+
+
+<meta name="twitter:card" content="summary">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="http://isapanah.com/2017/oh-my-lottie">
+<meta property="og:description" content="سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده ارشد اپلیکیشن iOS و Android.
+">
+<meta name="twitter:description" content="سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده ارشد اپلیکیشن iOS و Android.
+">
+
+
+<title>صدرا املشی | استفاده از انیمیشن در توسعه اپلیکیشن</title>
+<meta property="twitter:title" content="صدرا املشی | استفاده از انیمیشن در توسعه اپلیکیشن">
+<meta property="og:site_name" content="صدرا املشی | استفاده از انیمیشن در توسعه اپلیکیشن">
+<meta property="og:title" content="صدرا املشی | استفاده از انیمیشن در توسعه اپلیکیشن">
+
+
+
+<meta property="twitter:image" content="http://isapanah.com/assets/img/post/2017-07-30/oh-my-lottie-0.png" />
+<meta property="og:image" content="http://isapanah.com/assets/img/post/2017-07-30/oh-my-lottie-0.png" />
+
+
+<link rel="alternative" href="/site-map.xml" title="وبلاگ صدرا املشی" type="application/atom+xml">
+<link rel="short icon" type="image/x-icon" href="http://isapanah.com/assets/img/base/favicon.png">
+<link rel="stylesheet" type="text/css" href="http://isapanah.com/assets/css/styles.css">
+
+    </head>
+
+    <body dir="rtl">
+        <!-- Header -->
+<header class="header-rtl">
+    <nav class="nav-wrap">
+        <a href="/" class="nav-logo">وبلاگ صدرا املشی</a>
+        <ul class="navigation">
+
+            <li><a href="/">نوشته‌ها</a></li>
+            <li><a href="/list/items">دسته‌ها</a></li>
+            <li><a href="/about">درباره</a></li>
+            <li><a href="http://cv.isapanah.com/">رزومه</a></li>
+            <li><a href="https://sadra.github.io/english">English</a></li>
+
+        </ul>
+    </nav>
+</header>
+<!-- /Header -->
+
+        <div class="content">
+
+    <div class="blog-post-container">
+
+        <div class="post-title-container">
+            <h1 class="post-title">استفاده از انیمیشن در توسعه اپلیکیشن</h1>
+        </div>
+
+        <div class="post_created">
+
+            <div class="author_avatar">
+                <img src="/assets/img/base/avatar.jpg" alt="صدرا املشی" id="avatar-img" />
+            </div>
+
+            <div class="post_info">
+                <p> <a href="/about">صدرا املشی</a> </p>
+                <small>توسعه دهنده</small><br/>
+                <small> در چهارشنبه 04 مرداد 1396</small>
+            </div>
+
+        </div>
+
+        
+        <div class="post-cover">
+            <img src="http://isapanah.com/assets/img/post/2017-07-30/oh-my-lottie-0.png" alt="استفاده از انیمیشن در توسعه اپلیکیشن">
+        </div>
+        
+
+        <div class="post-content">
+            <p>یکی از موضوعاتی که چندوقت اخیر ذهن منو مشغول کرده بود، این بوده که بتونم از منابع گرافیکی و انیمیشن‌های پیچیده در پروژم استفاده کنم. ولی هربار پیگیری این قضیه رو عقب مینداختم. تا اینکه دیروز <a href="https://www.instagram.com/farid_landi">فرید</a> ازم پرسید که واسه این قضیه راه حلی داری؟ و این موضوع بهونه‌ای شد و با <a href="http://dcamp.ir/">شایان</a> دنبال یه سرویس خوب گشتیم. امروز اصلا حوصله کد‌نویسی ندارم و فقط در ادامه به مواردی که برخوردیم اشاره میکنم تا پست‌های بعدی بریم سراغ کدنویسی‌هاش :P</p>
+
+<h2 id="لایبرری-اندروید-glide">لایبرری اندروید Glide</h2>
+
+<p>یکی از گزینه ها برای استفاده از انیمیشن (یا همون فایل gif) در پروژه اندروید، لایبرری <a href="https://github.com/bumptech/glide">Glide</a> هست. کار کردن باهاش هم خیلی سادست:</p>
+
+<ol>
+  <li>
+    <p>فقط لایبرری رو بهش اضافه میکنید</p>
+  </li>
+  <li>
+    <p>و بعد ویو رو به پروژتون اضافه می‌کنید</p>
+  </li>
+  <li>
+    <p>و در آخر هم کلاسش رو فراخونی کرده و انیمیشن خودتون رو بهش معرفی میکنید</p>
+  </li>
+  <li>
+    <p>و خب اینم میشه نتیجش</p>
+  </li>
+</ol>
+
+<p><img src="/assets/img/post/2017-07-30/oh-my-lottie-10.gif" alt="Glide Result" /></p>
+
+<p>این لایبرری علاوه بر همه خوبیهاش، مشکلاتی هم داره:</p>
+
+<ul>
+  <li>
+    <p>میزان استفاده از رم رو به شدت بالا میبره</p>
+  </li>
+  <li>
+    <p>شما کنترل مناسبی روی انیمیشن نداره</p>
+  </li>
+  <li>
+    <p>و موقع Scale شدن انیمه، ممکنه تصویرتون پیکسله بشه</p>
+  </li>
+</ul>
+
+<h2 id="ابزار-supernova-studio">ابزار SuperNova Studio</h2>
+
+<p>این ابزار یه چیزی شبیه اسکچ هست. با این تفاوت که شما همه لایه هایی که در این استدیو طراحی و پیاده‌سازی میکنید، میتونید خروجی بگیرید (Native) و تو پروژتون ازش استفاده کنید.</p>
+
+<p>با استفاده از ابزارهای زیادی که <a href="https://supernova.studio/">SuperNova Studio</a> در اختیارتون گذشته، شما میتونید برای سه پلتفرم Android ، iOS و ReactJs خروجی بگیرید.</p>
+
+<p><img src="/assets/img/post/2017-07-30/oh-my-lottie-2.png" alt="SuperNova Studio" /></p>
+
+<p>سوپرنوا این امکان رو به شما میده که بتونید قبل از ورود به مرحله توسعه،‌در داخل همون استدیو لایه‌هاتون روی تست بگیرید. این امکان وجود داره که پیشنمایش لایه‌هاتون رو در هر سایزی روی شبیه ساز Android ، iOS و البته مرورگر، تست کنید. این ابزار به شما کمک میکنه که قبل از شروع به نوشتن حتی یک خط کد، از UI و UX اپتون مطمئن شید.</p>
+
+<p>چرا راجع به SuperNova گفتم؟ برای اینکه شما میتونید انیمیشن‌هایی که در onboarding اپهای دیگه میبینید رو همینجا طراحی کرده و بعد توی پروژتون ایمپورتش کنید.</p>
+
+<p><img src="/assets/img/post/2017-07-30/oh-my-lottie-3.png" alt="SuperNova Studio" /></p>
+
+<p>لازم به ذکره که هنوز خودم از این سرویس استفاده نکردم و چیزهایی که گفتم بعضا از روی داکیومنتهاش و ویدئوهایی بود که درباره استدیوشون منتشر کرده بودن. SuperNova Studio الان در نسخه بتا هست و شما میتونید به رایگان دانلودش کرده و ازش استفاده کنید.</p>
+
+<h2 id="فریمورک-متن-باز-lottie">فریم‌ورک متن باز Lottie</h2>
+
+<p>لاتی، نخونید لوتی (-_)))، چیزیه که من اینهمه واسش سروصدا راه انداختم ;) فریم ورک <a href="https://airbnb.design/lottie/">Lottie</a>، دقیقا همه همونچیزیه که ما بهش احتیاج داشتیم. یا بهتر بگم،‌ فریم‌ورک‌های قبل از تو، سؤتفاهم بود :))</p>
+
+<p><img src="/assets/img/post/2017-07-30/oh-my-lottie-9.png" alt="Lottie" /></p>
+
+<p> لاتی به همین سادگیه:</p>
+
+<ol>
+  <li>
+    <p>منابع گرافیکیتو در After Effect بساز</p>
+  </li>
+  <li>
+    <p>ازش خروجی JSON بگیر</p>
+  </li>
+  <li>
+    <p>حالا Lottie بهت کمک میکنه که ازش در iOS، Android و ReactJS استفاده کنی.</p>
+  </li>
+</ol>
+
+<p><strong>لاتی چیه؟</strong></p>
+
+<p>لاتی یک فریم‌ورک رایگان و متن بازه که توسط بروبچه‌های <a href="https://airbnb.design">AirBnb</a> توسعه داده شد. تا قبل از این برای استفاده کردن از انیمیشن‌های پیچیده مجبور بودیم کلی کدهای مسخره و پیچیده رو بکار ببریم و کلی پروسه الکی به اپمون اضافه کنیم. حتی لازم بود واسه اینکه انیمه ها پیکسله نشن، تو سایزهای مختلف اونهارو آماده کرده و به پروژمون اضافه کنیم یا اینکه هزارخط کد بنویسیم تا یه انیمیشن احمقانه رو پیاده کنیم :(</p>
+
+<p><img src="/assets/img/post/2017-07-30/oh-my-lottie-4.gif" alt="Lottie" /></p>
+
+<p>با اینکه انیمیشن کلی به زیبا شده اپ و بالا بردن تجربه کاربری کمک میکنه اما بخاطر همین مشکلات خیلی از توسعه دهنده ها کلا از انیمیشن استفاده نمیکردن و تنها بسنده میکردن به همون اندک انیمه‌هایی که پلفترم بهشون اجازه میداد! اما AirBnb کلا این تصور و تفکر رو تغییر داد.</p>
+
+<p><strong>ماجرای Lottie</strong></p>
+
+<p>لاتی ابزاریه که به شما کمک میکنه تا بدون محدودیت منابع گرافیکی رندر شده در افترافکت رو خروجی بگیرین و بصورت Native در iOS ، Android و ReactNative استفاده کنید. سال ۲۰۱۵ بود که <a href="https://twitter.com/airnanan">Hernan Torrisi</a> ایتالیایی یک اکسنتشکن برای افترافکت به نام <a href="https://github.com/bodymovin/bodymovin">BodyMovin</a> ساخت، تا به کاربرا کمک کنه از پروژه هاشون برای بصورت HTML و JSON و فرمتهای دیگه خروجی بگیرن.</p>
+
+<p>بعد از این بود که چهارنفر نفر از بروبچه‌های AirBnb تصمیم گرفتن تا با استفاده از اون فایل JSON شروع کنن برای هرسه پلتفرم فریم‌ورک Lottie رو پیاده کنن. بدین صورت بود که ‌‌<a href="http://github.com/buba447">Brandon Withrow</a> برای <a href="https://github.com/airbnb/lottie-ios">iOS</a>، سپس <a href="https://twitter.com/gpeal8">Gabriel Peal</a> برای <a href="https://github.com/airbnb/lottie-android">Android</a> و بعدش <a href="https://twitter.com/intelligibabble">Leland Richardson</a> برای <a href="https://github.com/airbnb/lottie-react-native">ReactNative</a> این سرویس رو پیاده کردن. ناگفته نمونه که <a href="https://twitter.com/therealsalih?lang=en">Salih Abdul-Karim</a> مدیریت این تیم و پیاده سازی User Experience رو بر عهده داشته. و اینجوری بود که Lottie خلق شد. و چقدر خوب این فریم‌روک پیاده شده.</p>
+
+<div class="image-wrapper">
+    
+    <a href="#" title="Salih Abdul-Karim" target="_blank">
+        
+        <img src="/assets/img/post/2017-07-30/oh-my-lottie-5.jpg" alt="Salih Abdul-Karim" />
+        
+    </a>
+    
+    
+    <p class="image-caption">صلیح عبدالکریم، جیگر منه :))</p>
+    
+</div>
+
+<blockquote>
+  <p>قالَ شایان: ازونجایی که هرسه فاندر AirBnb طراح و گرافیست بودن، به همین دلیل به شدت روی گرافیک و منابع بصری سرویس‌هاشون توجه میکنن. پس بعید نیست که همچین چیزی مثل Lottie انقدر خوب، با کیفیت و کاربردی پیاده بشه.</p>
+</blockquote>
+
+<p><strong>وقتی روزهای بد تموم میشن</strong></p>
+
+<p>روند کار همیشه اینطور بوده که تیم طراحی، UI اپ رو توی اسکچ یا فتوشاپ میزد. و طرح به توسعه دهنده سپرده میشد و ایشون هم بر اساس پروتوتایپی که دریافت کرده شروه به کد زدن میکرد:</p>
+
+<ul>
+  <li>
+    <p>این پروسه معمولا خیلی طول میکشید</p>
+  </li>
+  <li>
+    <p>و معمولا چیزی که پیاده میشد و با طرحی که زده میشد نسبتا اختلاف داشت</p>
+  </li>
+</ul>
+
+<p>اوضاع وقتی بدتر میشد که در پروتوتایپ انیمیشن هم وجود داشت! اونوقت توسعه دهنده باید برای هم انیمیشن یه رسورس تعریف کنه. اوضاع وقتی حزن‌انگیز میشه که انیمیشن پیچیده میشه اونوقت باید برای Line art یه سری ریسورس، برای Charecter-based animation یه سری ریسورس، و برای Logo animation یه سری رسورس دیگه تعریف کنه. تصور کنید وقتی که بخواید اینارو ریفکتور کنه یا تغییری توشون بده. چقدر کد، چقدر فایل، چقدر زحمت و چقدر دردسر!</p>
+
+<p><img src="/assets/img/post/2017-07-30/oh-my-lottie-7.gif" alt="Lottie" /></p>
+
+<p>اما حالا طراح یکبار انیمیشن رو طراحی میکنه،‌ یه خروجی جیسون میگیره میده به توسعه دهنده‌ها و روی هرسه پلتفرم یه چیز رو تحویل میگیره، همونچیزی که خودش طراحی کرده. هرموقع هم نیاز به تغییر بود، تو افترک‌افکت تغییرات انجا میشه و فایل جیسون پاس میشه به توسعه دهنده ها. به همین سادگی‌، به همین خوشمزگی!</p>
+
+<p>یکی از امکانات خوب لاتی اینه که به ما اجازه کنترل کامل ویوو ساخته شده رو میده. شما میتونید انیمه رو جلو برده یا برعکس شروع پخش کنید (بشدت پرکاربرد در onboarding). و میتونید بر اساس اینترکت که کاربر به ویوو داره اون رو تغییر بدید. مثل، همربرگر منو.</p>
+
+<p><strong>یه راه حل انعطاف‌‌پذیر و کاربردی</strong></p>
+
+<p>دو ابزار دیگه مثل لاتی وجود دارن که کاربرد مشابهی دارن، <a href="http://www.marcuseckert.com/squall/">Squall</a> که توسط <a href="https://twitter.com/marcus_eckert">Marcus Eckert</a> توسعه داده شده. و <a href="https://github.com/facebookincubator/Keyframes">Keyframes</a> که محصولی از فیسبوکه. لایبرری Keyframes متاسفانه یه بخش کوچیکی از خصوصیات After Effect رو پشتیبانی میکنه و بیشتر روی interactionها تمرکز داره، درصورتی که ممکنه انیمیشن‌های ما خصوصیات خاصی داشته باشن. اما Squall، بسیار ابزار خوب و کاملیه اما متاسفانه فقط iOS رو پیشتیبانی میکنه. شاید جالب باشه بدونید که برو بچه های Lottie از خصوصایت و الگورتیم های Squall تو سرویسهاشون استفاده کردن، الالخصوص برای تفسیر و خودند فایل جیسون خروجی از AfterEffect.</p>
+
+<p><img src="/assets/img/post/2017-07-30/oh-my-lottie-6.gif" alt="Lottie" /></p>
+
+<p>علاوه بر اینها، لاتی امکانت دیگه هم گذاشته تا سرویس رو هرچه بیشتر کاربردی کنه. برای مثال، شما میتونید فایلهای JSON رو از روی وب فراخونی کنید، که خیلی خیلی خیلی برای A/B Testing مفید و کاربردیه. همینطور که قبلا گفتم شما میتونید کنترل کاملی روی انیمیشنتون داشته باشد، اون رو عقب جلو کنید، یا سرعتش رو کم و زیاد کنید و همه اینها به یه نیم خط کد قابل پیاده‌سازیه. موضوع جالبتر میشه وقتی که بدونید شما در iOS میتونید بصورت Native از Lottie برای پیاده سازی ترنزیشن انیمیشن استفاده کنید، اونم انیمیشن‌های پیچیده.</p>
+
+<p><strong>جامعه توسعه دهنده‌ها</strong></p>
+
+<p>ازونجای که Lottie یه فریم‌ورک متن‌باز هست، تونسته یه جامعه قوی از طراح‌ها و توسعه‌دهندگان رو دور هم جمع کنید تا اونها با کمک همدیگه، هم بتونن Lottie رو ارتقاع بدن هم کلی ریسورس خوب و با کیفیت تولید کنن. اگه حال کار کردن به افترافکت رو ندارید میتونید از انیمیشن‌های آماده استفاده کنید، اونها در <a href="http://9-squares.tumblr.com/">9Squares</a>، <a href="https://motioncorpse.tumblr.com/">Motion Corpse</a>، <a href="https://animography.net/products/mobilo">AnimoGraphy</a> و <a href="https://www.lottiefiles.com">LottieFiles</a> به راحتی در دسترس شما هستن</p>
+
+<p><img src="/assets/img/post/2017-07-30/oh-my-lottie-8.gif" alt="Lottie" /></p>
+
+<p><strong>خب اینهمه تعریف کردی، حالا چطوری ازش استفاده کنم؟</strong></p>
+
+<p>برنامه من اینه که در این هفته جاری نحوه استفاده از Lottie رو در هرسه پلتفرم Android، iOS و ReactJS به شما نشون بدم. پس اگه تاحالا از این فریم‌ورک استفاده نکردین، منتظر پست‌های بعدی تو هفته جاری باشین. یا اگه استفاده کردین و جاییش مشکل یا سوالی دارین، در <a href="https://twitter.com/intent/tweet?screen_name=sadra_amlashi">توییتر</a> من رو <a href="https://twitter.com/intent/tweet?screen_name=sadra_amlashi">منشن</a> کنید و سوالتون رو بپرسید تا در پستهای بعدی ‌به اون موارد رو حتما بررسی کنم.</p>
+
+        </div>
+
+
+        <div class="post-routes-list">
+            
+            <a class="category-link" href="/category/ابزار">ابزار</a>
+            
+            <a class="category-link" href="/category/تجربه-کاربری">تجربه کاربری</a>
+            
+            
+            <a class="tag-link" href="/tag/android">Android</a>
+            
+            <a class="tag-link" href="/tag/ios">iOS</a>
+            
+            <a class="tag-link" href="/tag/reactnative">ReactNative</a>
+            
+            <a class="tag-link" href="/tag/ui">UI</a>
+            
+            <a class="tag-link" href="/tag/animation">Animation</a>
+            
+            <a class="tag-link" href="/tag/lottie">Lottie</a>
+            
+        </div>
+
+
+        <div class="Prev-next-post-container">
+            
+            <a class="previous-btn" href="/2017/how-getting-useless-github-username">نوشته قبلی: گرفتن نام‌کاربری گیتهابی که توسط فرد دیگری قبلا ثبت شده ←</a>
+            
+            
+        </div>
+
+
+    </div>
+
+</div>
+
+<a id="back-to-top" href="#" class="back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left">
+    <img src="/assets/img/base/arrow-up.png" class="arrow-up"/>
+</a>
+
+
+        <!-- Footer -->
+<footer class="footer-wrapper">
+
+
+    <div class="delimiter">
+        <a href="/" class="footer-logo">
+            <img src="http://isapanah.com/assets/img/base/favicon.png" class="logo-wrapper">
+        </a>
+    </div>
+
+    <p class="footer-copyright">
+        2008 - 2017<br>
+        مطالب تحت لیسانس <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" rel="license" target="_blank">کریتیو کامنز</a> منتشر می‌شوند.
+
+    </p>
+
+    <div class="footer-social-links">
+        <a href="https://twitter.com/sadra-amlashi" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a href="https://github.com/sadra" title="Github" target="_blank"><i class="fa fa-github"></i></a>
+        <a href="https://medium.com/sadra" title="Medium" target="_blank"><i class="fa fa-medium"></i></a>
+        <a href="https://www.linkedin.com/in/amlashisadra/" title="Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
+        <a href="https://facebook.com/sadra.am123" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+    </div>
+
+
+ </footer>
+<!-- /Footer -->
+
+        <script  type="application/javascript" src="http://isapanah.com/assets/js/jquery-3.2.1.min.js"></script>
+<script  type="application/javascript" src="http://isapanah.com/assets/js/function.js"></script>
+<script  type="application/javascript" src="http://isapanah.com/assets/js/html2canvas.min.js"></script>
+<script  type="application/javascript" src="http://isapanah.com/assets/js/canvas2image.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5952bba56b75766c"></script>
+    </body>
+</html>

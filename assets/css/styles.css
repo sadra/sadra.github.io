@@ -706,20 +706,16 @@ blockquote {
   margin: 1.5em 1.5px;
   padding: 15px; }
   blockquote p {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     color: #2b2b2b !important; }
-
-blockquote:before {
-  color: #BDBDBD;
-  content: " ”";
-  font-family: Georgia, serif;
-  font-size: 4em;
-  line-height: 0.1em;
-  margin-right: 0.16em;
-  vertical-align: -0.4em;
-  margin-left: 10px; }
+  blockquote p:first-child:before {
+    color: #BDBDBD;
+    content: " ”";
+    font-family: Georgia, serif;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.16em;
+    vertical-align: -0.4em;
+    margin-left: 10px; }
 
 .video-container {
   margin: 20px auto;
@@ -1114,6 +1110,9 @@ footer.footer-wrapper {
       padding: 0; }
   .blog-post-container ul li {
     line-height: 1.9em !important; }
+    .blog-post-container ul li p {
+      line-height: 1.9em !important;
+      padding: 0; }
   .blog-post-container .post-title-container {
     width: 100%;
     margin-top: 0;
@@ -1193,18 +1192,18 @@ footer.footer-wrapper {
       content: " / "; }
   .blog-post-container .post-cover {
     overflow: hidden;
-    height: 300px;
+    height: 400px;
     width: 100%;
     margin: 10px 0 30px 0; }
     @media screen and (max-width: 900px) {
       .blog-post-container .post-cover {
-        height: 250px; } }
+        height: 350px; } }
     @media screen and (max-width: 600px) {
       .blog-post-container .post-cover {
         height: 200px; } }
     @media screen and (max-width: 400px) {
       .blog-post-container .post-cover {
-        height: 150px; } }
+        height: 250px; } }
     .blog-post-container .post-cover img {
       width: 100%; }
   .blog-post-container .Prev-next-post-container {

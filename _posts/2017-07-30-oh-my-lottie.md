@@ -89,7 +89,6 @@ author: Sadra
 
 بعد از این بود که چهارنفر نفر از بروبچه‌های AirBnb تصمیم گرفتن تا با استفاده از اون فایل JSON شروع کنن برای هرسه پلتفرم فریم‌ورک Lottie رو پیاده کنن. بدین صورت بود که ‌‌[Brandon Withrow](http://github.com/buba447) برای [iOS](https://github.com/airbnb/lottie-ios)، سپس [Gabriel Peal](https://twitter.com/gpeal8) برای [Android](https://github.com/airbnb/lottie-android) و بعدش [Leland Richardson](https://twitter.com/intelligibabble) برای [ReactNative](https://github.com/airbnb/lottie-react-native) این سرویس رو پیاده کردن. ناگفته نمونه که [Salih Abdul-Karim](https://twitter.com/therealsalih?lang=en) مدیریت این تیم و پیاده سازی User Experience رو بر عهده داشته. و اینجوری بود که Lottie خلق شد. و چقدر خوب این فریم‌روک پیاده شده.
 
-
 {% include func/image.html
             img="/assets/img/post/2017-07-30/oh-my-lottie-5.jpg"
             title="Salih Abdul-Karim"

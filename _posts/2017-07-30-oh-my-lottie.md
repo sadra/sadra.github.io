@@ -125,7 +125,7 @@ author: Sadra
 
 **جامعه توسعه دهنده‌ها**
 
-ازونجای که Lottie یه فریم‌ورک متن‌باز هست، تونسته یه جامعه قوی از طراح‌ها و توسعه‌دهندگان رو دور هم جمع کنه تا اونها با کمک همدیگه، هم بتونن Lottie رو ارتقاع بدن هم کلی ریسورس خوب و با کیفیت تولید کنن. اگه حال کار کردن به افترافکت رو ندارید میتونید از انیمیشن‌های آماده استفاده کنید، اونها در [9Squares](http://9-squares.tumblr.com/)، [Motion Corpse](https://motioncorpse.tumblr.com/)، [AnimoGraphy](https://animography.net/products/mobilo) و [LottieFiles](https://www.lottiefiles.com) به راحتی در دسترس شما هستن
+ازونجای که Lottie یه فریم‌ورک متن‌باز هست، تونسته یه جامعه قوی از طراح‌ها و توسعه‌دهندگان رو دور هم جمع کنه تا اونها با کمک همدیگه، هم بتونن Lottie رو ارتقاع بدن هم کلی ریسورس خوب و با کیفیت تولید کنن. اگه حال کار کردن با افترافکت رو ندارید، یا توی تیمتون گرافیست ماهر برای کار کردن با این ابزار موجود نیست، میتونید از انیمیشن‌های آماده استفاده کنید، اونها در [9Squares](http://9-squares.tumblr.com/)، [Motion Corpse](https://motioncorpse.tumblr.com/)، [AnimoGraphy](https://animography.net/products/mobilo) و [LottieFiles](https://www.lottiefiles.com) به راحتی در دسترس شما هستن
 
 ![Lottie](/assets/img/post/2017-07-30/oh-my-lottie-8.gif)
 

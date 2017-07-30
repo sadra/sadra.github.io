@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://isapanah.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://isapanah.com/" rel="alternate" type="text/html" /><updated>2017-07-31T00:10:29+04:30</updated><id>http://isapanah.com/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده ارشد اپلیکیشن iOS و Android.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://isapanah.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://isapanah.com/" rel="alternate" type="text/html" /><updated>2017-07-31T00:11:27+04:30</updated><id>http://isapanah.com/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده ارشد اپلیکیشن iOS و Android.
 </subtitle><entry><title type="html">استفاده از انیمیشن در توسعه اپلیکیشن</title><link href="http://isapanah.com/2017/oh-my-lottie" rel="alternate" type="text/html" title="استفاده از انیمیشن در توسعه اپلیکیشن" /><published>2017-07-26T00:00:00+04:30</published><updated>2017-07-26T00:00:00+04:30</updated><id>http://isapanah.com/2017/oh-my-lottie</id><content type="html" xml:base="http://isapanah.com/2017/oh-my-lottie">&lt;p&gt;یکی از موضوعاتی که چندوقت اخیر ذهن منو مشغول کرده بود، این بوده که بتونم از منابع گرافیکی و انیمیشن‌های پیچیده در پروژم استفاده کنم. ولی هربار پیگیری این قضیه رو عقب مینداختم. تا اینکه دیروز &lt;a href=&quot;https://www.instagram.com/farid_landi&quot;&gt;فرید&lt;/a&gt; ازم پرسید آیا برای این قضیه راه حلی دارم؟ و این موضوع بهونه‌ای شد، تا با &lt;a href=&quot;http://dcamp.ir/&quot;&gt;شایان&lt;/a&gt; دنبال یه سرویس خوب بگردیم. امروز قصد ندارم کد‌نویسی کنم و فقط میخوام مورادی که پیدا کردیم رو به شما معرفی کنم.&lt;/p&gt;
 
 &lt;h2 id=&quot;لایبرری-اندروید-glide&quot;&gt;لایبرری اندروید Glide&lt;/h2&gt;
@@ -130,8 +130,9 @@
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/post/2017-07-30/oh-my-lottie-6.gif&quot; alt=&quot;Lottie&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;علاوه بر اینها، لاتی امکانت دیگه هم داره تا سرویس رو هرچه بیشتر کاربردی کنه. برای مثال، شما میتونید فایلهای JSON رو مستقیما از روی وب فراخونی کنید، که خیلی خیلی خیلی برای A/B Testing مفید و کاربردیه. همینطور که قبلا گفتم شما میتونید کنترل کاملی روی انیمیشنتون داشته باشید، اون رو عقب (Reverse) جلو (Forward) کنید، یا سرعتش رو کم و زیاد کنید، موقع اینترکت با کاربر ظاهرش رو عوض کرده یا افکت‌های خاصی بهش بدید، همه اینها با یه نیم خط کد قابل پیاده‌سازیه.
-موضوع جالبتر میشه وقتی که بدونید شما در iOS میتونید بصورت Native از Lottie برای پیاده سازی ترنزیشن انیمیشن استفاده کنید، اونم انیمیشن‌های پیچیده.&lt;/p&gt;
+&lt;p&gt;علاوه بر اینها، لاتی امکانت دیگه هم داره تا سرویس رو هرچه بیشتر کاربردی کنه. برای مثال، شما میتونید فایلهای JSON رو مستقیما از روی وب فراخونی کنید، که خیلی خیلی خیلی برای A/B Testing مفید و کاربردیه. همینطور که قبلا گفتم شما میتونید کنترل کاملی روی انیمیشنتون داشته باشید، اون رو عقب (Reverse) جلو (Forward) کنید، یا سرعتش رو کم و زیاد کنید، موقع اینترکت با کاربر ظاهرش رو عوض کرده یا افکت‌های خاصی بهش بدید، همه اینها با یه نیم خط کد قابل پیاده‌سازیه.&lt;/p&gt;
+
+&lt;p&gt;موضوع جالبتر میشه وقتی که بدونید شما در iOS میتونید بصورت Native از Lottie برای پیاده سازی ترنزیشن انیمیشن استفاده کنید، اونم انیمیشن‌های پیچیده.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;جامعه توسعه دهنده‌ها&lt;/strong&gt;&lt;/p&gt;
 

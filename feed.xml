@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://isapanah.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://isapanah.com/" rel="alternate" type="text/html" /><updated>2017-07-31T00:05:25+04:30</updated><id>http://isapanah.com/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده ارشد اپلیکیشن iOS و Android.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://isapanah.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://isapanah.com/" rel="alternate" type="text/html" /><updated>2017-07-31T00:08:18+04:30</updated><id>http://isapanah.com/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده ارشد اپلیکیشن iOS و Android.
 </subtitle><entry><title type="html">استفاده از انیمیشن در توسعه اپلیکیشن</title><link href="http://isapanah.com/2017/oh-my-lottie" rel="alternate" type="text/html" title="استفاده از انیمیشن در توسعه اپلیکیشن" /><published>2017-07-26T00:00:00+04:30</published><updated>2017-07-26T00:00:00+04:30</updated><id>http://isapanah.com/2017/oh-my-lottie</id><content type="html" xml:base="http://isapanah.com/2017/oh-my-lottie">&lt;p&gt;یکی از موضوعاتی که چندوقت اخیر ذهن منو مشغول کرده بود، این بوده که بتونم از منابع گرافیکی و انیمیشن‌های پیچیده در پروژم استفاده کنم. ولی هربار پیگیری این قضیه رو عقب مینداختم. تا اینکه دیروز &lt;a href=&quot;https://www.instagram.com/farid_landi&quot;&gt;فرید&lt;/a&gt; ازم پرسید آیا برای این قضیه راه حلی دارم؟ و این موضوع بهونه‌ای شد، تا با &lt;a href=&quot;http://dcamp.ir/&quot;&gt;شایان&lt;/a&gt; دنبال یه سرویس خوب بگردیم. امروز قصد ندارم کد‌نویسی کنم و فقط میخوام مورادی که پیدا کردیم رو به شما معرفی کنم.&lt;/p&gt;
 
 &lt;h2 id=&quot;لایبرری-اندروید-glide&quot;&gt;لایبرری اندروید Glide&lt;/h2&gt;
@@ -105,7 +105,7 @@
 
 &lt;p&gt;&lt;strong&gt;وقتی روزهای بد تموم میشن&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;روند کار همیشه اینطور بوده که تیم طراحی، طرح رابط کاربری اپ رو توی اسکچ یا فتوشاپ پیاده می‌کرد. و بعد طرح به توسعه دهنده سپرده میشد و ایشون هم بر اساس پروتوتایپی که دریافت کرده شروه به کد زدن میکرد:&lt;/p&gt;
+&lt;p&gt;روند کار همیشه اینطور بوده که تیم طراحی، طرح رابط کاربری اپ رو توی اسکچ یا فتوشاپ پیاده می‌کرد. و بعد طرح به توسعه دهنده سپرده میشد و ایشون هم بر اساس پروتوتایپی که دریافت کرده شروع به کد زدن میکرد:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -122,11 +122,11 @@
 
 &lt;p&gt;اما حالا طراح یکبار انیمیشن رو طراحی میکنه،‌ یه خروجی جیسون تحویل توسعه دهنده‌ها میده، و روی هرسه پلتفرم یک چیز واحد رو تحویل میگیره! هرموقع هم نیاز به تغییر بود، تو افترک‌افکت تغییرات انجا میشه و فایل جیسون پاس میشه به توسعه دهنده ها. به همین سادگی‌، به همین خوشمزگی!&lt;/p&gt;
 
-&lt;p&gt;یکی از امکانات خوب لاتی اینه که به ما اجازه کنترل کامل ویوو ساخته شده رو میده. شما میتونید انیمه رو جلو برده یا برعکس شروع به پخش کنید (بشدت پرکاربرد در onboarding). و میتونید بر اساس اینترکت‌ی که کاربر با ویوو داره اون رو تغییر بدید. مثل، همربرگر منو.&lt;/p&gt;
+&lt;p&gt;یکی از امکانات خوب لاتی اینه که به ما اجازه کنترل کامل ویوو ساخته شده رو میده. شما میتونید انیمه رو جلو برده یا برعکس شروع به پخش کنید (بشدت پرکاربرد در onboarding). و میتونید بر اساس اینترکت‌ی که کاربر با ویوو داره اون رو تغییر بدید، مثل همربرگر منو.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;یه راه حل انعطاف‌‌پذیر و کاربردی&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;دو ابزار دیگه مثل لاتی که کاربرد مشابهی دارن، &lt;a href=&quot;http://www.marcuseckert.com/squall/&quot;&gt;Squall&lt;/a&gt; که توسط &lt;a href=&quot;https://twitter.com/marcus_eckert&quot;&gt;Marcus Eckert&lt;/a&gt; توسعه داده شده و &lt;a href=&quot;https://github.com/facebookincubator/Keyframes&quot;&gt;Keyframes&lt;/a&gt; که محصولی از فیسبوکه. لایبرری Keyframes متاسفانه یه بخش کوچیکی از خصوصیات After Effect رو پشتیبانی میکنه و بیشتر روی interactionها تمرکز داره، درصورتی که ممکنه انیمیشن‌های ما خصوصیات خاصی داشته باشن و از ابزارهای پیچیده افترافکت در منابعمون استفاده شده باشه. برعکس Squall، بسیار ابزار خوب و کاملیه و اکثر خصوصیات پیاده شده در افترافکت رو پشتیبانی میکنه. با اینحال، متاسفانه فقط iOS رو پیشتیبانی میکنه. شاید جالب باشه بدونید که برو بچه های Lottie از خصوصایت و الگورتیم های Squall تو سرویسهاشون استفاده کردن، الالخصوص برای تفسیر و خوندن فایل جیسون که از AfterEffect خروجی گرفته شده.&lt;/p&gt;
+&lt;p&gt;دو ابزار دیگه مثل لاتی که کاربرد مشابهی دارن، &lt;a href=&quot;http://www.marcuseckert.com/squall/&quot;&gt;Squall&lt;/a&gt; که توسط &lt;a href=&quot;https://twitter.com/marcus_eckert&quot;&gt;Marcus Eckert&lt;/a&gt; توسعه داده شده و &lt;a href=&quot;https://github.com/facebookincubator/Keyframes&quot;&gt;Keyframes&lt;/a&gt; که محصولی از فیسبوکه. لایبرری Keyframes متاسفانه یه بخش کوچیکی از خصوصیات After Effect رو پشتیبانی میکنه و بیشتر روی interactionها تمرکز داره، درصورتی که ممکنه انیمیشن‌های ما خصوصیات خاصی داشته باشن و از ابزارهای پیچیده افترافکت در منابعمون استفاده شده باشه. برعکس Squall، بسیار ابزار خوب و کاملیه و اکثر خصوصیات پیاده شده در افترافکت رو پشتیبانی میکنه. با اینحال، متاسفانه فقط iOS رو پیشتیبانی میکنه. شاید جالب باشه بدونید که برو بچه های Lottie از خصوصیات و الگورتیم های Squall تو سرویسهاشون استفاده کردن، الالخصوص برای تفسیر و خوندن فایل جیسون که از AfterEffect خروجی گرفته شده.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/post/2017-07-30/oh-my-lottie-6.gif&quot; alt=&quot;Lottie&quot; /&gt;&lt;/p&gt;
 

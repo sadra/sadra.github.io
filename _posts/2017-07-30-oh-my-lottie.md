@@ -85,7 +85,7 @@ author: Sadra
 
 **ماجرای Lottie**
 
-لاتی ابزاریه که به شما کمک میکنه تا بدون محدودیت، منابع گرافیکی رندر شده در افترافکت رو خروجی بگیرین و بصورت Native در iOS ، Android و ReactNative استفاده کنید. سال ۲۰۱۵ بود که [Hernan Torrisi](https://twitter.com/airnanan) ایتالیایی یک افزونه برای افترافکت به نام [BodyMovin](https://github.com/bodymovin/bodymovin) ساخت، تا به کاربرا کمک کنه از پروژه هاشون برای بصورت HTML و JSON و فرمتهای دیگه خروجی بگیرن.
+لاتی ابزاریه که به شما کمک میکنه تا بدون محدودیت، منابع گرافیکی رندر شده در افترافکت رو خروجی بگیرین و بصورت Native در iOS ، Android و ReactNative استفاده کنید. سال ۲۰۱۵ بود که [Hernan Torrisi](https://twitter.com/airnanan) ایتالیایی یک افزونه برای افترافکت به نام [BodyMovin](https://github.com/bodymovin/bodymovin) ساخت، تا به کاربرا کمک کنه از پروژه هاشون بصورت HTML و JSON و فرمتهای دیگه خروجی بگیرن.
 
 بعد از این بود که چهارنفر نفر از بروبچه‌های AirBnb تصمیم گرفتن تا با استفاده از اون فایل JSON شروع کنن برای هرسه پلتفرم فریم‌ورک Lottie رو پیاده کنن. بدین صورت بود که ‌‌[Brandon Withrow](http://github.com/buba447) برای [iOS](https://github.com/airbnb/lottie-ios)، سپس [Gabriel Peal](https://twitter.com/gpeal8) برای [Android](https://github.com/airbnb/lottie-android) و بعدش [Leland Richardson](https://twitter.com/intelligibabble) برای [ReactNative](https://github.com/airbnb/lottie-react-native) این سرویس رو پیاده کردن. ناگفته نمونه که [Salih Abdul-Karim](https://twitter.com/therealsalih?lang=en) مدیریت این تیم و پیاده سازی User Experience رو بر عهده داشته. و اینجوری بود که Lottie خلق شد. و چقدر خوب این فریم‌روک پیاده شده.
 

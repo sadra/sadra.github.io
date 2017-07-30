@@ -73,7 +73,7 @@ author: Sadra
 
 2.  ازش خروجی JSON بگیر
 
-3.  حالا Lottie بهت کمک میکنه که در iOS، Android و ReactJS از اون استفاده کنی.
+3.  حالا Lottie بهت کمک میکنه که در iOS، Android و ReactNative از اون استفاده کنی.
 
 **لاتی چیه؟**
 

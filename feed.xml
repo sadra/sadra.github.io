@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://isapanah.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://isapanah.com/" rel="alternate" type="text/html" /><updated>2017-07-30T19:46:13+04:30</updated><id>http://isapanah.com/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده ارشد اپلیکیشن iOS و Android.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://isapanah.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://isapanah.com/" rel="alternate" type="text/html" /><updated>2017-07-30T19:47:04+04:30</updated><id>http://isapanah.com/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده ارشد اپلیکیشن iOS و Android.
 </subtitle><entry><title type="html">استفاده از انیمیشن در توسعه اپلیکیشن</title><link href="http://isapanah.com/2017/oh-my-lottie" rel="alternate" type="text/html" title="استفاده از انیمیشن در توسعه اپلیکیشن" /><published>2017-07-26T00:00:00+04:30</published><updated>2017-07-26T00:00:00+04:30</updated><id>http://isapanah.com/2017/oh-my-lottie</id><content type="html" xml:base="http://isapanah.com/2017/oh-my-lottie">&lt;p&gt;یکی از موضوعاتی که چندوقت اخیر ذهن منو مشغول کرده بود، این بوده که بتونم از منابع گرافیکی و انیمیشن‌های پیچیده در پروژم استفاده کنم. ولی هربار پیگیری این قضیه رو عقب مینداختم. تا اینکه دیروز &lt;a href=&quot;https://www.instagram.com/farid_landi&quot;&gt;فرید&lt;/a&gt; ازم پرسید آیا برای این قضیه راه حلی دارم؟ و این موضوع بهونه‌ای شد و تا با &lt;a href=&quot;http://dcamp.ir/&quot;&gt;شایان&lt;/a&gt; دنبال یه سرویس خوب بگردیم. امروز قصد ندارم کد‌نویسی کنم و فقط میخوام مورادی که پیدا کردیم رو به شما معرفی کنم.&lt;/p&gt;
 
 &lt;h2 id=&quot;لایبرری-اندروید-glide&quot;&gt;لایبرری اندروید Glide&lt;/h2&gt;
@@ -38,7 +38,7 @@
 
 &lt;h2 id=&quot;محیط-توسعه-supernova-studio&quot;&gt;محیط توسعه SuperNova Studio&lt;/h2&gt;
 
-&lt;p&gt;این ابزار چیزی شبیه Sketch ست. با این تفاوت که میتونید از تمام لایه‌هایی که در این محیط طراحی میکنید، بصورت Native خروجی گرفته و در پروژتون،‌ایمپورتش کنید.&lt;/p&gt;
+&lt;p&gt;این ابزار چیزی شبیه Sketch ست. با این تفاوت که میتونید از تمام لایه‌هایی که در این محیط طراحی میکنید، بصورت Native خروجی گرفته و در پروژتون،‌ ایمپورتش کنید.&lt;/p&gt;
 
 &lt;p&gt;با استفاده از ابزارهای زیادی که &lt;a href=&quot;https://supernova.studio/&quot;&gt;SuperNova Studio&lt;/a&gt; در اختیارتون گذشته، شما میتونید برای سه پلتفرم Android ، iOS و React خروجی بگیرید.&lt;/p&gt;
 
@@ -54,7 +54,7 @@
 
 &lt;h2 id=&quot;فریمورک-متن-باز-lottie&quot;&gt;فریم‌ورک متن باز Lottie&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;لاتی&lt;/strong&gt;، نخونید &lt;strong&gt;لوتی&lt;/strong&gt;، چیزیه که من اینهمه واسش سروصدا راه انداختم! فریم ورک &lt;a href=&quot;https://airbnb.design/lottie/&quot;&gt;Lottie&lt;/a&gt;، دقیقا همه‌ی همونچیزیه که ما بهش احتیاج داشتیم. یا بهتر بگم،‌ فریم‌ورک‌های قبل از تو، سؤتفاهم بود :))&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;لاتی&lt;/strong&gt;، نخونید &lt;strong&gt;لوتی&lt;/strong&gt;! چیزیه که من اینهمه واسش سروصدا راه انداختم! فریم ورک &lt;a href=&quot;https://airbnb.design/lottie/&quot;&gt;Lottie&lt;/a&gt;، دقیقا همه‌ی همونچیزیه که ما بهش احتیاج داشتیم. یا بهتر بگم،‌ فریم‌ورک‌های قبل از تو، سؤتفاهم بود :))&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/post/2017-07-30/oh-my-lottie-9.png&quot; alt=&quot;Lottie&quot; /&gt;&lt;/p&gt;
 

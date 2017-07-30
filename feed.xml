@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://isapanah.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://isapanah.com/" rel="alternate" type="text/html" /><updated>2017-07-30T15:45:22+04:30</updated><id>http://isapanah.com/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده ارشد اپلیکیشن iOS و Android.
-</subtitle><entry><title type="html">استفاده از انیمیشن در توسعه اپلیکیشن</title><link href="http://isapanah.com/2017/oh-my-lottie" rel="alternate" type="text/html" title="استفاده از انیمیشن در توسعه اپلیکیشن" /><published>2017-07-26T00:00:00+04:30</published><updated>2017-07-26T00:00:00+04:30</updated><id>http://isapanah.com/2017/oh-my-lottie</id><content type="html" xml:base="http://isapanah.com/2017/oh-my-lottie">&lt;p&gt;یکی از موضوعاتی که چندوقت اخیر ذهن منو مشغول کرده بود، این بوده که بتونم از منابع گرافیکی و انیمیشن‌های پیچیده در پروژم استفاده کنم. ولی هربار پیگیری این قضیه رو عقب مینداختم. تا اینکه دیروز &lt;a href=&quot;https://www.instagram.com/farid_landi&quot;&gt;فرید&lt;/a&gt; ازم پرسید که واسه این قضیه راه حلی داری؟ و این موضوع بهونه‌ای شد و با &lt;a href=&quot;http://dcamp.ir/&quot;&gt;شایان&lt;/a&gt; دنبال یه سرویس خوب گشتیم. امروز اصلا حوصله کد‌نویسی ندارم و فقط در ادامه به مواردی که برخوردیم اشاره میکنم تا پست‌های بعدی بریم سراغ کدنویسی‌هاش :P&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://isapanah.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://isapanah.com/" rel="alternate" type="text/html" /><updated>2017-07-30T19:44:09+04:30</updated><id>http://isapanah.com/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده ارشد اپلیکیشن iOS و Android.
+</subtitle><entry><title type="html">استفاده از انیمیشن در توسعه اپلیکیشن</title><link href="http://isapanah.com/2017/oh-my-lottie" rel="alternate" type="text/html" title="استفاده از انیمیشن در توسعه اپلیکیشن" /><published>2017-07-26T00:00:00+04:30</published><updated>2017-07-26T00:00:00+04:30</updated><id>http://isapanah.com/2017/oh-my-lottie</id><content type="html" xml:base="http://isapanah.com/2017/oh-my-lottie">&lt;p&gt;یکی از موضوعاتی که چندوقت اخیر ذهن منو مشغول کرده بود، این بوده که بتونم از منابع گرافیکی و انیمیشن‌های پیچیده در پروژم استفاده کنم. ولی هربار پیگیری این قضیه رو عقب مینداختم. تا اینکه دیروز &lt;a href=&quot;https://www.instagram.com/farid_landi&quot;&gt;فرید&lt;/a&gt; ازم پرسید آیا برای این قضیه راه حلی دارم؟ و این موضوع بهونه‌ای شد و با &lt;a href=&quot;http://dcamp.ir/&quot;&gt;شایان&lt;/a&gt; دنبال یه سرویس خوب بگردیم. امروز قصد ندارم کد‌نویسی کنم و فقط میخوام مورادی که پیدا کردیم رو بعتون معرفی کنم.&lt;/p&gt;
 
 &lt;h2 id=&quot;لایبرری-اندروید-glide&quot;&gt;لایبرری اندروید Glide&lt;/h2&gt;
 
-&lt;p&gt;یکی از گزینه ها برای استفاده از انیمیشن (یا همون فایل gif) در پروژه اندروید، لایبرری &lt;a href=&quot;https://github.com/bumptech/glide&quot;&gt;Glide&lt;/a&gt; هست. کار کردن باهاش هم خیلی سادست:&lt;/p&gt;
+&lt;p&gt;لایبرری &lt;a href=&quot;https://github.com/bumptech/glide&quot;&gt;Glide&lt;/a&gt; یکی از گزینه‌ها برای استفاده از انیمیشن (یا همون فایل gif) در پروژه اندرویده. و استفاده کردن از اون هم خیلی ساده ست:&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
@@ -13,10 +13,10 @@
     &lt;p&gt;و بعد ویو رو به پروژتون اضافه می‌کنید&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;و در آخر هم کلاسش رو فراخونی کرده و انیمیشن خودتون رو بهش معرفی میکنید&lt;/p&gt;
+    &lt;p&gt;و در آخر ویوو رو در کلاستون کَست کرده و انیمیشن خودتون رو بهش معرفی میکنید&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;و خب اینم میشه نتیجش&lt;/p&gt;
+    &lt;p&gt;در نهایت این میشه نتیجش&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
@@ -29,32 +29,32 @@
     &lt;p&gt;میزان استفاده از رم رو به شدت بالا میبره&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;شما کنترل مناسبی روی انیمیشن نداره&lt;/p&gt;
+    &lt;p&gt;شما کنترل مناسبی روی انیمیشن ندارید&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;و موقع Scale شدن انیمه، ممکنه تصویرتون پیکسله بشه&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;ابزار-supernova-studio&quot;&gt;ابزار SuperNova Studio&lt;/h2&gt;
+&lt;h2 id=&quot;محیط-توسعه-supernova-studio&quot;&gt;محیط توسعه SuperNova Studio&lt;/h2&gt;
 
-&lt;p&gt;این ابزار یه چیزی شبیه اسکچ هست. با این تفاوت که شما همه لایه هایی که در این استدیو طراحی و پیاده‌سازی میکنید، میتونید خروجی بگیرید (Native) و تو پروژتون ازش استفاده کنید.&lt;/p&gt;
+&lt;p&gt;این ابزار چیزی شبیه Sketch ست. با این تفاوت که میتونید از تمام لایه‌هایی که در این محیط طراحی میکنید، میتونید بصورت Native خروجی گرفته و در پروژتون،‌ایمپورتش کنید.&lt;/p&gt;
 
-&lt;p&gt;با استفاده از ابزارهای زیادی که &lt;a href=&quot;https://supernova.studio/&quot;&gt;SuperNova Studio&lt;/a&gt; در اختیارتون گذشته، شما میتونید برای سه پلتفرم Android ، iOS و ReactJs خروجی بگیرید.&lt;/p&gt;
+&lt;p&gt;با استفاده از ابزارهای زیادی که &lt;a href=&quot;https://supernova.studio/&quot;&gt;SuperNova Studio&lt;/a&gt; در اختیارتون گذشته، شما میتونید برای سه پلتفرم Android ، iOS و React خروجی بگیرید.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/post/2017-07-30/oh-my-lottie-2.png&quot; alt=&quot;SuperNova Studio&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;سوپرنوا این امکان رو به شما میده که بتونید قبل از ورود به مرحله توسعه،‌در داخل همون استدیو لایه‌هاتون روی تست بگیرید. این امکان وجود داره که پیشنمایش لایه‌هاتون رو در هر سایزی روی شبیه ساز Android ، iOS و البته مرورگر، تست کنید. این ابزار به شما کمک میکنه که قبل از شروع به نوشتن حتی یک خط کد، از UI و UX اپتون مطمئن شید.&lt;/p&gt;
+&lt;p&gt;سوپرنوا این امکان رو به شما میده که بتونید قبل از ورود به مرحله توسعه،‌در داخل همون استدیو، لایه‌هاتون روی تست بگیرید. این امکان وجود داره که پیشنمایش لایه‌ها در هر سایزی روی شبیه ساز Android ، iOS و البته مرورگر، اجرا کنید. این ابزار به شما کمک میکنه که قبل از شروع به نوشتن حتی یک خط کد، از UI و UX اپتون مطمئن بشید.&lt;/p&gt;
 
-&lt;p&gt;چرا راجع به SuperNova گفتم؟ برای اینکه شما میتونید انیمیشن‌هایی که در onboarding اپهای دیگه میبینید رو همینجا طراحی کرده و بعد توی پروژتون ایمپورتش کنید.&lt;/p&gt;
+&lt;p&gt;چرا راجع به SuperNova گفتم؟ برای اینکه در محیط توسعه این استدیو، میتونید انیمیشن‌های خودتون رو پیاده سازی کنید، و خروجی که دریافت میکنید رو عینا توی پروژتون استفاده کنید.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/post/2017-07-30/oh-my-lottie-3.png&quot; alt=&quot;SuperNova Studio&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;لازم به ذکره که هنوز خودم از این سرویس استفاده نکردم و چیزهایی که گفتم بعضا از روی داکیومنتهاش و ویدئوهایی بود که درباره استدیوشون منتشر کرده بودن. SuperNova Studio الان در نسخه بتا هست و شما میتونید به رایگان دانلودش کرده و ازش استفاده کنید.&lt;/p&gt;
+&lt;p&gt;لازم به ذکره که هنوز خودم از این سرویس استفاده نکردم و چیزهایی که گفتم بعضا از روی داکیومنتهاش و ویدئوهایی بود که درباره استدیوشون منتشر کردند. SuperNova Studio الان در نسخه بتاست و شما میتونید به رایگان دانلود کرده و ازش استفاده کنید.&lt;/p&gt;
 
 &lt;h2 id=&quot;فریمورک-متن-باز-lottie&quot;&gt;فریم‌ورک متن باز Lottie&lt;/h2&gt;
 
-&lt;p&gt;لاتی، نخونید لوتی (-_)))، چیزیه که من اینهمه واسش سروصدا راه انداختم ;) فریم ورک &lt;a href=&quot;https://airbnb.design/lottie/&quot;&gt;Lottie&lt;/a&gt;، دقیقا همه همونچیزیه که ما بهش احتیاج داشتیم. یا بهتر بگم،‌ فریم‌ورک‌های قبل از تو، سؤتفاهم بود :))&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;لاتی&lt;/strong&gt;، نخونید &lt;strong&gt;لوتی&lt;/strong&gt;، چیزیه که من اینهمه واسش سروصدا راه انداختم! فریم ورک &lt;a href=&quot;https://airbnb.design/lottie/&quot;&gt;Lottie&lt;/a&gt;، دقیقا همه‌ی همونچیزیه که ما بهش احتیاج داشتیم. یا بهتر بگم،‌ فریم‌ورک‌های قبل از تو، سؤتفاهم بود :))&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/post/2017-07-30/oh-my-lottie-9.png&quot; alt=&quot;Lottie&quot; /&gt;&lt;/p&gt;
 
@@ -62,27 +62,27 @@
 
 &lt;ol&gt;
   &lt;li&gt;
-    &lt;p&gt;منابع گرافیکیتو در After Effect بساز&lt;/p&gt;
+    &lt;p&gt;منابع گرافیکی‌تو در After Effect بساز&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;ازش خروجی JSON بگیر&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;حالا Lottie بهت کمک میکنه که ازش در iOS، Android و ReactJS استفاده کنی.&lt;/p&gt;
+    &lt;p&gt;حالا Lottie بهت کمک میکنه که در iOS، Android و ReactJS از اون استفاده کنی.&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;&lt;strong&gt;لاتی چیه؟&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;لاتی یک فریم‌ورک رایگان و متن بازه که توسط بروبچه‌های &lt;a href=&quot;https://airbnb.design&quot;&gt;AirBnb&lt;/a&gt; توسعه داده شد. تا قبل از این برای استفاده کردن از انیمیشن‌های پیچیده مجبور بودیم کلی کدهای مسخره و پیچیده رو بکار ببریم و کلی پروسه الکی به اپمون اضافه کنیم. حتی لازم بود واسه اینکه انیمه ها پیکسله نشن، تو سایزهای مختلف اونهارو آماده کرده و به پروژمون اضافه کنیم یا اینکه هزارخط کد بنویسیم تا یه انیمیشن احمقانه رو پیاده کنیم :(&lt;/p&gt;
+&lt;p&gt;لاتی یک فریم‌ورک رایگان و متن بازه که توسط بروبچه‌های &lt;a href=&quot;https://airbnb.design&quot;&gt;AirBnb&lt;/a&gt; توسعه داده شد. تا قبل از این برای استفاده کردن از انیمیشن‌های پیچیده، مجبور بودیم کلی کدهای مسخره و پیچیده رو بکار ببریم و کلی پروسه الکی به اپمون اضافه کنیم. حتی لازم بود واسه اینکه انیمه ها پیکسله نشن، برای هر فایل انیمه سایزهای مختلف خروجی بگیریم و به پروژمون اضافه کنیم! یا اینکه هزارخط کد بنویسیم تا یه انیمیشن احمقانه رو پیاده کنیم :(&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/post/2017-07-30/oh-my-lottie-4.gif&quot; alt=&quot;Lottie&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;با اینکه انیمیشن کلی به زیبا شده اپ و بالا بردن تجربه کاربری کمک میکنه اما بخاطر همین مشکلات خیلی از توسعه دهنده ها کلا از انیمیشن استفاده نمیکردن و تنها بسنده میکردن به همون اندک انیمه‌هایی که پلفترم بهشون اجازه میداد! اما AirBnb کلا این تصور و تفکر رو تغییر داد.&lt;/p&gt;
+&lt;p&gt;با اینکه انیمیشن بسیار بسیار در زیبا شدن اپ و بالا بردن تجربه کاربری کمک میکنه، اما بخاطر همین مشکلات خیلی از توسعه دهنده ها کلا از انیمیشن استفاده نمیکنند و تنها به همون منابع محدودی که خود محیط توسعهدر اختیارشون میگذاره، بسنده میکنن! اما AirBnb کلا این تصور و تفکر رو تغییر داد.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;ماجرای Lottie&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;لاتی ابزاریه که به شما کمک میکنه تا بدون محدودیت منابع گرافیکی رندر شده در افترافکت رو خروجی بگیرین و بصورت Native در iOS ، Android و ReactNative استفاده کنید. سال ۲۰۱۵ بود که &lt;a href=&quot;https://twitter.com/airnanan&quot;&gt;Hernan Torrisi&lt;/a&gt; ایتالیایی یک اکسنتشکن برای افترافکت به نام &lt;a href=&quot;https://github.com/bodymovin/bodymovin&quot;&gt;BodyMovin&lt;/a&gt; ساخت، تا به کاربرا کمک کنه از پروژه هاشون برای بصورت HTML و JSON و فرمتهای دیگه خروجی بگیرن.&lt;/p&gt;
+&lt;p&gt;لاتی ابزاریه که به شما کمک میکنه تا بدون محدودیت، منابع گرافیکی رندر شده در افترافکت رو خروجی بگیرین و بصورت Native در iOS ، Android و ReactNative استفاده کنید. سال ۲۰۱۵ بود که &lt;a href=&quot;https://twitter.com/airnanan&quot;&gt;Hernan Torrisi&lt;/a&gt; ایتالیایی یک اکسنتشکن برای افترافکت به نام &lt;a href=&quot;https://github.com/bodymovin/bodymovin&quot;&gt;BodyMovin&lt;/a&gt; ساخت، تا به کاربرا کمک کنه از پروژه هاشون برای بصورت HTML و JSON و فرمتهای دیگه خروجی بگیرن.&lt;/p&gt;
 
 &lt;p&gt;بعد از این بود که چهارنفر نفر از بروبچه‌های AirBnb تصمیم گرفتن تا با استفاده از اون فایل JSON شروع کنن برای هرسه پلتفرم فریم‌ورک Lottie رو پیاده کنن. بدین صورت بود که ‌‌&lt;a href=&quot;http://github.com/buba447&quot;&gt;Brandon Withrow&lt;/a&gt; برای &lt;a href=&quot;https://github.com/airbnb/lottie-ios&quot;&gt;iOS&lt;/a&gt;، سپس &lt;a href=&quot;https://twitter.com/gpeal8&quot;&gt;Gabriel Peal&lt;/a&gt; برای &lt;a href=&quot;https://github.com/airbnb/lottie-android&quot;&gt;Android&lt;/a&gt; و بعدش &lt;a href=&quot;https://twitter.com/intelligibabble&quot;&gt;Leland Richardson&lt;/a&gt; برای &lt;a href=&quot;https://github.com/airbnb/lottie-react-native&quot;&gt;ReactNative&lt;/a&gt; این سرویس رو پیاده کردن. ناگفته نمونه که &lt;a href=&quot;https://twitter.com/therealsalih?lang=en&quot;&gt;Salih Abdul-Karim&lt;/a&gt; مدیریت این تیم و پیاده سازی User Experience رو بر عهده داشته. و اینجوری بود که Lottie خلق شد. و چقدر خوب این فریم‌روک پیاده شده.&lt;/p&gt;
 
@@ -100,37 +100,37 @@
 &lt;/div&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;قالَ شایان: ازونجایی که هرسه فاندر AirBnb طراح و گرافیست بودن، به همین دلیل به شدت روی گرافیک و منابع بصری سرویس‌هاشون توجه میکنن. پس بعید نیست که همچین چیزی مثل Lottie انقدر خوب، با کیفیت و کاربردی پیاده بشه.&lt;/p&gt;
+  &lt;p&gt;قالَ شایان: ازونجایی که هرسه فاندر AirBnb طراح و گرافیست بودن، به همین دلیل به شدت روی گرافیک و منابع بصری سرویس‌هاشون تاکید و توجه ویژه ای داشتند. پس دور از ذهن نیست که چرا همچین چیزی مثل Lottie انقدر خوب، با کیفیت و کاربردی پیاده میشه.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;&lt;strong&gt;وقتی روزهای بد تموم میشن&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;روند کار همیشه اینطور بوده که تیم طراحی، UI اپ رو توی اسکچ یا فتوشاپ میزد. و طرح به توسعه دهنده سپرده میشد و ایشون هم بر اساس پروتوتایپی که دریافت کرده شروه به کد زدن میکرد:&lt;/p&gt;
+&lt;p&gt;روند کار همیشه اینطور بوده که تیم طراحی، رابط کاربری اپ رو توی اسکچ یا فتوشاپ میزد. و بعد طرح به توسعه دهنده سپرده میشد و ایشون هم بر اساس پروتوتایپی که دریافت کرده شروه به کد زدن میکرد:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;این پروسه معمولا خیلی طول میکشید&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;و معمولا چیزی که پیاده میشد و با طرحی که زده میشد نسبتا اختلاف داشت&lt;/p&gt;
+    &lt;p&gt;و معمولا چیزی که پیاده میشد، با طرحی که زده شده بود، نسبتا اختلاف داشت&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;اوضاع وقتی بدتر میشد که در پروتوتایپ انیمیشن هم وجود داشت! اونوقت توسعه دهنده باید برای هم انیمیشن یه رسورس تعریف کنه. اوضاع وقتی حزن‌انگیز میشه که انیمیشن پیچیده میشه اونوقت باید برای Line art یه سری ریسورس، برای Charecter-based animation یه سری ریسورس، و برای Logo animation یه سری رسورس دیگه تعریف کنه. تصور کنید وقتی که بخواید اینارو ریفکتور کنه یا تغییری توشون بده. چقدر کد، چقدر فایل، چقدر زحمت و چقدر دردسر!&lt;/p&gt;
+&lt;p&gt;اوضاع وقتی بدتر میشد که در پروتوتایپ انیمیشن هم وجود داشت! اونوقت توسعه دهنده باید برای هر انیمیشن یه ریسورس تعریف کنه. اوضاع وقتی حزن‌انگیز میشه که انیمیشن پیچیده میشه در نتیجه باید برای Line art یه سری ریسورس، برای Charecter-based animation یه سری ریسورس، و برای Logo animation هم یه سری ریسورس دیگه تعریف کنه. تصور کنید وقتی که بخواید اینارو ریفکتور کنه یا تغییری در اونها بده. چقدر کد، چقدر فایل، چقدر زحمت و چقدر دردسر!&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/post/2017-07-30/oh-my-lottie-7.gif&quot; alt=&quot;Lottie&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;اما حالا طراح یکبار انیمیشن رو طراحی میکنه،‌ یه خروجی جیسون میگیره میده به توسعه دهنده‌ها و روی هرسه پلتفرم یه چیز رو تحویل میگیره، همونچیزی که خودش طراحی کرده. هرموقع هم نیاز به تغییر بود، تو افترک‌افکت تغییرات انجا میشه و فایل جیسون پاس میشه به توسعه دهنده ها. به همین سادگی‌، به همین خوشمزگی!&lt;/p&gt;
+&lt;p&gt;اما حالا طراح یکبار انیمیشن رو طراحی میکنه،‌ یه خروجی جیسون تحویل توسعه دهنده‌ها میده، و روی هرسه پلتفرم یک چیز واحد رو تحویل میگیره! هرموقع هم نیاز به تغییر بود، تو افترک‌افکت تغییرات انجا میشه و فایل جیسون پاس میشه به توسعه دهنده ها. به همین سادگی‌، به همین خوشمزگی!&lt;/p&gt;
 
-&lt;p&gt;یکی از امکانات خوب لاتی اینه که به ما اجازه کنترل کامل ویوو ساخته شده رو میده. شما میتونید انیمه رو جلو برده یا برعکس شروع پخش کنید (بشدت پرکاربرد در onboarding). و میتونید بر اساس اینترکت که کاربر به ویوو داره اون رو تغییر بدید. مثل، همربرگر منو.&lt;/p&gt;
+&lt;p&gt;یکی از امکانات خوب لاتی اینه که به ما اجازه کنترل کامل ویوو ساخته شده رو میده. شما میتونید انیمه رو جلو برده یا برعکس شروع به پخش کنید (بشدت پرکاربرد در onboarding). و میتونید بر اساس اینترکت‌ی که کاربر با ویوو داره اون رو تغییر بدید. مثل، همربرگر منو.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;یه راه حل انعطاف‌‌پذیر و کاربردی&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;دو ابزار دیگه مثل لاتی وجود دارن که کاربرد مشابهی دارن، &lt;a href=&quot;http://www.marcuseckert.com/squall/&quot;&gt;Squall&lt;/a&gt; که توسط &lt;a href=&quot;https://twitter.com/marcus_eckert&quot;&gt;Marcus Eckert&lt;/a&gt; توسعه داده شده. و &lt;a href=&quot;https://github.com/facebookincubator/Keyframes&quot;&gt;Keyframes&lt;/a&gt; که محصولی از فیسبوکه. لایبرری Keyframes متاسفانه یه بخش کوچیکی از خصوصیات After Effect رو پشتیبانی میکنه و بیشتر روی interactionها تمرکز داره، درصورتی که ممکنه انیمیشن‌های ما خصوصیات خاصی داشته باشن. اما Squall، بسیار ابزار خوب و کاملیه اما متاسفانه فقط iOS رو پیشتیبانی میکنه. شاید جالب باشه بدونید که برو بچه های Lottie از خصوصایت و الگورتیم های Squall تو سرویسهاشون استفاده کردن، الالخصوص برای تفسیر و خودند فایل جیسون خروجی از AfterEffect.&lt;/p&gt;
+&lt;p&gt;دو ابزار دیگه مثل لاتی که کاربرد مشابهی دارن، &lt;a href=&quot;http://www.marcuseckert.com/squall/&quot;&gt;Squall&lt;/a&gt; که توسط &lt;a href=&quot;https://twitter.com/marcus_eckert&quot;&gt;Marcus Eckert&lt;/a&gt; توسعه داده شده و &lt;a href=&quot;https://github.com/facebookincubator/Keyframes&quot;&gt;Keyframes&lt;/a&gt; که محصولی از فیسبوکه. لایبرری Keyframes متاسفانه یه بخش کوچیکی از خصوصیات After Effect رو پشتیبانی میکنه و بیشتر روی interactionها تمرکز داره، درصورتی که ممکنه انیمیشن‌های ما خصوصیات خاصی داشته باشن و از ابزارهای پیچیده افترافکت در منابعمون استفاده شده باشه. برعکس Squall، بسیار ابزار خوب و کاملیه و اکثر خصوصیات پیاده شده در افترافکت رو پشتیبانی میکنه. با اینحال، متاسفانه فقط iOS رو پیشتیبانی میکنه. شاید جالب باشه بدونید که برو بچه های Lottie از خصوصایت و الگورتیم های Squall تو سرویسهاشون استفاده کردن، الالخصوص برای تفسیر و خوندن فایل جیسون که از AfterEffect خروجی گرفته شده.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/post/2017-07-30/oh-my-lottie-6.gif&quot; alt=&quot;Lottie&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;علاوه بر اینها، لاتی امکانت دیگه هم گذاشته تا سرویس رو هرچه بیشتر کاربردی کنه. برای مثال، شما میتونید فایلهای JSON رو از روی وب فراخونی کنید، که خیلی خیلی خیلی برای A/B Testing مفید و کاربردیه. همینطور که قبلا گفتم شما میتونید کنترل کاملی روی انیمیشنتون داشته باشد، اون رو عقب جلو کنید، یا سرعتش رو کم و زیاد کنید و همه اینها به یه نیم خط کد قابل پیاده‌سازیه. موضوع جالبتر میشه وقتی که بدونید شما در iOS میتونید بصورت Native از Lottie برای پیاده سازی ترنزیشن انیمیشن استفاده کنید، اونم انیمیشن‌های پیچیده.&lt;/p&gt;
+&lt;p&gt;علاوه بر اینها، لاتی امکانت دیگه هم داره تا سرویس رو هرچه بیشتر کاربردی کنه. برای مثال، شما میتونید فایلهای JSON رو مستقیما از روی وب فراخونی کنید، که خیلی خیلی خیلی برای A/B Testing مفید و کاربردیه. همینطور که قبلا گفتم شما میتونید کنترل کاملی روی انیمیشنتون داشته باشید، اون رو عقب جلو کنید، یا سرعتش رو کم و زیاد کنید، موقع اینترکت با کارب ظاهرش رو عوض کنید و همه اینها با یه نیم خط کد قابل پیاده‌سازیه. موضوع جالبتر میشه وقتی که بدونید شما در iOS میتونید بصورت Native از Lottie برای پیاده سازی ترنزیشن انیمیشن استفاده کنید، اونم انیمیشن‌های پیچیده.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;جامعه توسعه دهنده‌ها&lt;/strong&gt;&lt;/p&gt;
 
@@ -140,7 +140,7 @@
 
 &lt;p&gt;&lt;strong&gt;خب اینهمه تعریف کردی، حالا چطوری ازش استفاده کنم؟&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;برنامه من اینه که در این هفته جاری نحوه استفاده از Lottie رو در هرسه پلتفرم Android، iOS و ReactJS به شما نشون بدم. پس اگه تاحالا از این فریم‌ورک استفاده نکردین، منتظر پست‌های بعدی تو هفته جاری باشین. یا اگه استفاده کردین و جاییش مشکل یا سوالی دارین، در &lt;a href=&quot;https://twitter.com/intent/tweet?screen_name=sadra_amlashi&quot;&gt;توییتر&lt;/a&gt; من رو &lt;a href=&quot;https://twitter.com/intent/tweet?screen_name=sadra_amlashi&quot;&gt;منشن&lt;/a&gt; کنید و سوالتون رو بپرسید تا در پستهای بعدی ‌به اون موارد رو حتما بررسی کنم.&lt;/p&gt;</content><author><name>صدرا املشی</name></author><category term="Android" /><category term="iOS" /><category term="ReactNative" /><category term="UI" /><category term="Animation" /><category term="Lottie" /><summary type="html">یکی از موضوعاتی که چندوقت اخیر ذهن منو مشغول کرده بود، این بوده که بتونم از منابع گرافیکی و انیمیشن‌های پیچیده در پروژم استفاده کنم. ولی هربار پیگیری این قضیه رو عقب مینداختم. تا اینکه دیروز فرید ازم پرسید که واسه این قضیه راه حلی داری؟ و این موضوع بهونه‌ای شد و با شایان دنبال یه سرویس خوب گشتیم. امروز اصلا حوصله کد‌نویسی ندارم و فقط در ادامه به مواردی که برخوردیم اشاره میکنم تا پست‌های بعدی بریم سراغ کدنویسی‌هاش :P</summary></entry><entry><title type="html">گرفتن نام‌کاربری گیتهابی که توسط فرد دیگری قبلا ثبت شده</title><link href="http://isapanah.com/2017/how-getting-useless-github-username" rel="alternate" type="text/html" title="گرفتن نام‌کاربری گیتهابی که توسط فرد دیگری قبلا ثبت شده" /><published>2017-07-26T00:00:00+04:30</published><updated>2017-07-26T00:00:00+04:30</updated><id>http://isapanah.com/2017/how-getting-useless-github-username</id><content type="html" xml:base="http://isapanah.com/2017/how-getting-useless-github-username">&lt;p&gt;شاید براتون پیش اومده باشه که توی گیتهاب میخواستین یک نام کاربری ثبت کنین، اما این نام‌کاربری قبلا توسط یه نفر دیگه گرفته شده. اوضاع وقتی ضدحالتر میشه که، میبینی طرف فقط اون رو اشغال کرده و تابحال هیچ استفاده‌ای ازش نشده!&lt;/p&gt;
+&lt;p&gt;برنامه من اینه که در این هفته جاری نحوه استفاده از Lottie رو در هرسه پلتفرم Android، iOS و ReactJS به شما نشون بدم. پس اگه تاحالا از این فریم‌ورک استفاده نکردین، منتظر پست‌های بعدی تو هفته جاری باشین. یا اگه استفاده کردین و جاییش مشکل یا سوالی دارین، در &lt;a href=&quot;https://twitter.com/intent/tweet?screen_name=sadra_amlashi&quot;&gt;توییتر&lt;/a&gt; من رو &lt;a href=&quot;https://twitter.com/intent/tweet?screen_name=sadra_amlashi&quot;&gt;منشن&lt;/a&gt; کنید و سوالتون رو بپرسید تا در پستهای بعدی ‌به اون موارد رو حتما بررسی کنم.&lt;/p&gt;</content><author><name>صدرا املشی</name></author><category term="Android" /><category term="iOS" /><category term="ReactNative" /><category term="UI" /><category term="Animation" /><category term="Lottie" /><summary type="html">یکی از موضوعاتی که چندوقت اخیر ذهن منو مشغول کرده بود، این بوده که بتونم از منابع گرافیکی و انیمیشن‌های پیچیده در پروژم استفاده کنم. ولی هربار پیگیری این قضیه رو عقب مینداختم. تا اینکه دیروز فرید ازم پرسید آیا برای این قضیه راه حلی دارم؟ و این موضوع بهونه‌ای شد و با شایان دنبال یه سرویس خوب بگردیم. امروز قصد ندارم کد‌نویسی کنم و فقط میخوام مورادی که پیدا کردیم رو بعتون معرفی کنم.</summary></entry><entry><title type="html">گرفتن نام‌کاربری گیتهابی که توسط فرد دیگری قبلا ثبت شده</title><link href="http://isapanah.com/2017/how-getting-useless-github-username" rel="alternate" type="text/html" title="گرفتن نام‌کاربری گیتهابی که توسط فرد دیگری قبلا ثبت شده" /><published>2017-07-26T00:00:00+04:30</published><updated>2017-07-26T00:00:00+04:30</updated><id>http://isapanah.com/2017/how-getting-useless-github-username</id><content type="html" xml:base="http://isapanah.com/2017/how-getting-useless-github-username">&lt;p&gt;شاید براتون پیش اومده باشه که توی گیتهاب میخواستین یک نام کاربری ثبت کنین، اما این نام‌کاربری قبلا توسط یه نفر دیگه گرفته شده. اوضاع وقتی ضدحالتر میشه که، میبینی طرف فقط اون رو اشغال کرده و تابحال هیچ استفاده‌ای ازش نشده!&lt;/p&gt;
 
 &lt;p&gt;برای من هم این موقعیت پیش اومده! قبلا حساب کاربری من در گیتهاب &lt;strong&gt;amlashi-sadra&lt;/strong&gt; بود، اما با راهنمایی یکی از دوستانم تونستم نام‌کاربری &lt;strong&gt;Sadra&lt;/strong&gt;، که توسط یه نفر دیگه رجیستر شده و البته بلااستفاده بود رو برای خودم ثبت کنم. اما چطوری؟&lt;/p&gt;
 

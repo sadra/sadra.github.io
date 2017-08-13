@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://isapanah.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://isapanah.com/" rel="alternate" type="text/html" /><updated>2017-08-13T09:43:35+04:30</updated><id>http://isapanah.com/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده اپلیکیشن iOS و Android.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://isapanah.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://isapanah.com/" rel="alternate" type="text/html" /><updated>2017-08-13T22:36:16+04:30</updated><id>http://isapanah.com/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده اپلیکیشن iOS و Android.
 </subtitle><entry><title type="html">انیمیشن در اندروید با Lottie</title><link href="http://isapanah.com/2017/oh-my-android-lottie" rel="alternate" type="text/html" title="انیمیشن در اندروید با Lottie" /><published>2017-08-07T00:00:00+04:30</published><updated>2017-08-07T00:00:00+04:30</updated><id>http://isapanah.com/2017/oh-my-android-lottie</id><content type="html" xml:base="http://isapanah.com/2017/oh-my-android-lottie">&lt;p&gt;همونطور که قبلا بهتون قول داده بودم، در این پست قراره به آموزش استفاده از &lt;a href=&quot;https://github.com/airbnb/lottie-android&quot;&gt;لایبرری Lottie&lt;/a&gt; و اضافه کردن منابع بصری انیمه به پروژه اندروید بپردازیم.&lt;/p&gt;
 
 &lt;p&gt;فهرست:&lt;/p&gt;
@@ -18,7 +18,7 @@
 
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;#lottie-install&quot;&gt;نصب و آماده‌سازی اولیه&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#lottie-basic&quot;&gt;مبانی اولیه و استفاده انیمیشن ساده&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#lottie-basic&quot;&gt;مبانی اولیه و استفاده از یک انیمیشن ساده&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#lottie-progress&quot;&gt;انیمیشن با قابلیت کنترل progress&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#lottie-animated-button&quot;&gt;پیاده‌سازی دکمه‌های انیمیشنی&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#lottie-animated-font&quot;&gt;پیاده سازی فونت انیمیشنی&lt;/a&gt;&lt;/li&gt;
@@ -36,9 +36,9 @@
 
 &lt;p&gt;در اولین گام، فرض میکنیم که شما انیمیشن مورد نظر خودتون رو در AfterEffect طراحی کردین و حالا وقتشه که ازش خروجی بگیرید. خب برای اینکار لازمه که اول پلاگین &lt;a href=&quot;https://github.com/bodymovin/bodymovin&quot;&gt;BodyMovin&lt;/a&gt; روی افترافکت نصب کرده باشید.&lt;/p&gt;
 
-&lt;p&gt;میتونید پلاگین رو از &lt;a href=&quot;http://aescripts.com/bodymovin/&quot;&gt;aescripts&lt;/a&gt; یا &lt;a href=&quot;https://creative.adobe.com/addons/products/12557&quot;&gt;adobe store&lt;/a&gt; دریافت کنید؛ اما چون دانلود کردن ازینجا خیلی دردسر داشت، من گذاشتمش توی ریپوی پروژه و میتونید از گیتهاب مستقیما دانلودش کنید. ( &lt;a href=&quot;https://github.com/sadra/LottieExampleProject/blob/master/repo/plugin/bodymovin_v4.10.2.zip&quot;&gt;دانلود پلاگین BodyMovin&lt;/a&gt; )&lt;/p&gt;
+&lt;p&gt;میتونید پلاگین رو از &lt;a href=&quot;http://aescripts.com/bodymovin/&quot;&gt;aescripts&lt;/a&gt; یا &lt;a href=&quot;https://creative.adobe.com/addons/products/12557&quot;&gt;adobe store&lt;/a&gt; دریافت کنید؛ اما چون دانلود کردن از اینجا خیلی دردسر داشت، من گذاشتمش در ریپوی پروژه و میتونید از گیتهاب مستقیما دانلودش کنید. ( &lt;a href=&quot;https://github.com/sadra/LottieExampleProject/blob/master/repo/plugin/bodymovin_v4.10.2.zip&quot;&gt;دانلود پلاگین BodyMovin&lt;/a&gt; )&lt;/p&gt;
 
-&lt;p&gt;فایل دانلودی رو آنزیپ کنید، درون پوشه یک فایل &lt;strong&gt;bodymovin.zxp&lt;/strong&gt; وجود داره. باید اون رو به عنوان اکستنشن به پروژه اضافه کنید، که اونم خیلی دردسر داره :D برای راحتتر پیش رفتن این موضوع از ابزاری به نام &lt;strong&gt;zxp&lt;/strong&gt; استفاده میکنیم. نرم‌افزار zxp-installer رو از &lt;a href=&quot;http://aescripts.com/learn/zxp-installer/&quot;&gt;aescripts&lt;/a&gt; دانلود و نصب کنید. بعد از اجرا کردنش کافیه فایل bodymovin.zxp رو به zxp درگ اند دراپ کنید.&lt;/p&gt;
+&lt;p&gt;فایل دانلودی رو آنزیپ کنید، درون پوشه یک فایل &lt;strong&gt;bodymovin.zxp&lt;/strong&gt; وجود داره. باید اون رو به عنوان اکستنشن به پروژه اضافه کنید، که اونم خیلی دردسر داره! برای راحتتر پیش رفتن این موضوع از ابزاری به نام &lt;strong&gt;zxp&lt;/strong&gt; استفاده میکنیم. نرم‌افزار zxp-installer رو از &lt;a href=&quot;http://aescripts.com/learn/zxp-installer/&quot;&gt;aescripts&lt;/a&gt; دانلود و نصب کنید. بعد از اجرا کردنش کافیه فایل bodymovin.zxp رو به zxp درگ اند دراپ کنید.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/post/2017-08-10/zxp-0.png&quot; alt=&quot;ZXP Installer&quot; /&gt;&lt;/p&gt;
 
@@ -60,11 +60,11 @@
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/post/2017-08-10/bodymovin-1.png&quot; alt=&quot;ZXP Installer&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;انمیشین‌ی که میخوایید ازش خروجی بگیرید رو سلکت کنید‌.&lt;/p&gt;
+&lt;p&gt;انمیشین‌ی که میخوایید ازش خروجی بگیرید رو انتخاب کنید‌.&lt;/p&gt;
 
-&lt;p&gt;توجه کنید که میتونید در همینجا Preview انیمیشن رو هم مشاهده کنید، یا میتونید اینکارو با نصب پلیر مخصوص بای‌مووین انجام بدید، فقط کافیه روی Get the Player کلیک کرده و نصبش کنید.&lt;/p&gt;
+&lt;p&gt;توجه کنید که میتونید در همینجا Preview انیمیشن رو هم مشاهده کنید، یا میتونید اینکارو با نصب پلیر مخصوص بادی‌مووین انجام بدید، فقط کافیه روی Get the Player کلیک کرده و نصبش کنید.&lt;/p&gt;
 
-&lt;p&gt;خب در آخر روی Render کلیک کنید.&lt;/p&gt;
+&lt;p&gt;و در آخر روی Render کلیک کنید.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/post/2017-08-10/bodymovin-2.png&quot; alt=&quot;ZXP Installer&quot; /&gt;&lt;/p&gt;
 
@@ -82,7 +82,7 @@
 
 &lt;p&gt;قبل از شروع همه چیز، من برای نمونه و تمرین یه پروژه اندروید ساخته و در گیتهابم گذاشتم، میتونید به &lt;a href=&quot;https://github.com/sadra/LottieExampleProject&quot;&gt;صفحه گیتهاب این پروژه&lt;/a&gt; مراجعه کرده و به تمامی فایلها مثل پلاگینها، نمونه های انیمیشن و کدهای سمپل در همون ریپوزیتوری دسترسی داشته باشد.&lt;/p&gt;
 
-&lt;p&gt;خب در اولین گام باید لایبرری &lt;strong&gt;Lottie&lt;/strong&gt; رو به پروژمون اضافه کنیم. کافیه اون رو در Dependencie های پروژه در فایل &lt;code class=&quot;highlighter-rouge&quot;&gt;build.gradle&lt;/code&gt; معرفی کنیم و بعدشم هم پروژه رو یکبار سینک میکنیم.&lt;/p&gt;
+&lt;p&gt;در اولین گام باید لایبرری &lt;strong&gt;Lottie&lt;/strong&gt; رو به پروژمون اضافه کنیم. کافیه اون رو در Dependencie های پروژه در فایل &lt;code class=&quot;highlighter-rouge&quot;&gt;build.gradle&lt;/code&gt; معرفی کنیم و بعدشم هم پروژه رو یکبار سینک میکنیم.&lt;/p&gt;
 
 &lt;div class=&quot;language-groovy highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;dependencies&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;n&quot;&gt;compile&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'com.airbnb.android:lottie:2.1.0'&lt;/span&gt;
@@ -92,9 +92,9 @@
 
 &lt;p&gt;شما باید فایلهای انیمیشن رو در پوشه &lt;strong&gt;assets&lt;/strong&gt; قرار بدید. اگر قبلا پوشه رو تعریف کردین که هیچ، اما اگه اینکارو نکردین کافیه یه دایرکتوری به اسم assets در مسیر &lt;code class=&quot;highlighter-rouge&quot;&gt;app/src/main&lt;/code&gt; ایجاد کرده و بعد فایلهای json انیمیشن رو بریزید اونجا.&lt;/p&gt;
 
-&lt;p&gt;فایلهای JSON ای که در این پروژه استفاده کردم رو میتونید از مستقیما از &lt;a href=&quot;https://github.com/sadra/LottieExampleProject/tree/master/app/src/main/assets&quot;&gt;ریپوی گیتهاب&lt;/a&gt; دریافت کنید.&lt;/p&gt;
+&lt;p&gt;فایلهای JSON ای که در این پروژه استفاده کردم رو میتونید مستقیما از &lt;a href=&quot;https://github.com/sadra/LottieExampleProject/tree/master/app/src/main/assets&quot;&gt;ریپوی گیتهاب&lt;/a&gt; دریافت کنید.&lt;/p&gt;
 
-&lt;h3 id=&quot;lottie-basic&quot;&gt;2.  مبانی اولیه و استفاده انیمیشن ساده&lt;/h3&gt;
+&lt;h3 id=&quot;lottie-basic&quot;&gt;2.  مبانی اولیه و استفاده از یک انیمیشن ساده&lt;/h3&gt;
 
 &lt;p&gt;اول باید view مربوط به لاتی رو به Layout مورد نظرتون اضافه کنید.&lt;/p&gt;
 
@@ -108,9 +108,9 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;در این ویوو، &lt;strong&gt;lottie_fileName&lt;/strong&gt; اشاره به نام و محل فایل json انیمیشنتون داره. توجه کنید که اگه فایل json رو همینجوری در assets قرار دادید که هیچ، فقط کافیه اسم فایل رو نام ببرید؛ اما اگه اون رو در یک پوشه درون assets تجمیع کردین، یادتون نره که حتما نام پوشه رو قبل از فایل ذکر کنید مثلا: &lt;code class=&quot;highlighter-rouge&quot;&gt;myFolder/anim.json&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;قبل از هرچیزی بهتره با پارامتر‌های اصلی که به ویوومون دادیم آشنا بشیم. پارامتر &lt;strong&gt;lottie_fileName&lt;/strong&gt; اشاره به نام و محل فایل json انیمیشنتون داره. توجه کنید که اگه فایل json رو همینجوری در assets قرار دادید که هیچ، فقط کافیه اسم فایل رو نام ببرید؛ اما اگه اون رو در یک پوشه درون assets تجمیع کردین، یادتون نره که حتما نام پوشه رو قبل از فایل ذکر کنید مثلا: &lt;code class=&quot;highlighter-rouge&quot;&gt;myFolder/anim.json&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;پارامتر &lt;strong&gt;lottie_loop&lt;/strong&gt; اشاره به این مورد داره که این انیمیشن بصورت لوپ یا بدون پایان پخش بشه یا نه. اگه اشاره ای بهش نکنید که بصورت پیشفرض &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt; ولی اگه میخواید انیمیشنتون لوپ داشته باشه، یادتون نره که به &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; بودنش اشاره کنید.&lt;/p&gt;
+&lt;p&gt;پارامتر &lt;strong&gt;lottie_loop&lt;/strong&gt; اشاره به این مورد داره که این انیمیشن بصورت  با یا بدون لوپ (بی پایان) پخش بشه. اگه اشاره ای بهش نکنید بصورت پیشفرض &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt; هست، ولی اگه میخواهید انیمیشنتون لوپ داشته باشه، یادتون نره که به &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; بودنش اشاره کنید.&lt;/p&gt;
 
 &lt;p&gt;و مورد آخر هم &lt;strong&gt;lottie_autoPlay&lt;/strong&gt; هست، که میگه میخوایید همون موقع که ویوو ظاهر شده، شروع کنه به پخش یا نه؟ این هم بصورت پیشفرض &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt; هست.&lt;/p&gt;
 
@@ -132,7 +132,7 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;ما در حالت کد، امکانات خیلی زیادی داریم. برای مثال اگه بخوایم سرعت انیمیشن رو کم یا زیاد کنیم کافیه متد &lt;code class=&quot;highlighter-rouge&quot;&gt;.setSpeed(floatValue)&lt;/code&gt; رو صدا بزنیم و مقدار دهی کنیم. مقدار 1.0 یعنی سرعت معمولیش، هرچی از یک بالاتر یا پایینتر باشه، انیمیشن به همون نسبت سریعتر یا کندتر نمایش داده میشه.&lt;/p&gt;
+&lt;p&gt;ما در حالت کد، امکانات خیلی زیادی داریم. برای مثال اگه بخوایم سرعت انیمیشن رو کم یا زیاد کنیم کافیه متد &lt;code class=&quot;highlighter-rouge&quot;&gt;.setSpeed(floatValue)&lt;/code&gt; رو صدا بزنیم و مقدار دهی کنیم. مقدار 1.0 یعنی همون سرعت نرمال خودش. حالا هرچی از یک بالاتر یا پایینتر باشه، انیمیشن به همون نسبت سریعتر یا کندتر نمایش داده میشه.&lt;/p&gt;
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
 &lt;span class=&quot;n&quot;&gt;animationView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setSpeed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;1.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//normal speed&lt;/span&gt;
@@ -149,18 +149,18 @@
 &lt;/div&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;توجه کنید که اگر یکبار Pause کنید انیمیشن متوقف شد، مجددا اگر pauseAnimation صدرا کنید انیمیشن به نمایش خود ادامه می‌دهد. این مورد درباره resumeAnimation هم صادق هست! احساس میکنم مشکلی در خود لایبرری هست، و این مورد رو واسشون issue کردن تا بررسی کنن، پس هواستون بهش باشه.&lt;/p&gt;
+  &lt;p&gt;توجه کنید که اگر یکبار Pause کنید انیمیشن متوقف میشه، اما مجددا اگر pauseAnimation رو صدا کنید انیمیشن به نمایش خودش ادامه می‌دهد( Resume میشه ). این مورد درباره resumeAnimation هم صادق هست! احساس میکنم مشکلی در خود لایبرریه، و این مورد رو واسشون issue کردم تا بررسی کنن، پس حواستون بهش باشه.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;یکی دیگه از امکاناتی که در کد به ما داده میشه، اینکه بتونیم به انیمشن رنگ دلخواه خودمون رو بدیم. یه &lt;code class=&quot;highlighter-rouge&quot;&gt;PorterDuffColorFilter&lt;/code&gt; ایجاد کرده و رنگ مورد نظرتون رو بهش بدین. این موضوع رو در نظر داشته باشن که مود رنگ هم روی &lt;code class=&quot;highlighter-rouge&quot;&gt;PorterDuff.Mode.SRC&lt;/code&gt; باشه بهترین حالته، در مودهای دیگه رنگ تغییر میکنه.&lt;/p&gt;
+&lt;p&gt;یکی دیگه از امکاناتی که در کد به ما داده میشه، اینه که بتونیم به انیمشن رنگ دلخواه خودمون رو بدیم. یه &lt;code class=&quot;highlighter-rouge&quot;&gt;PorterDuffColorFilter&lt;/code&gt; ایجاد کرده و رنگ مورد نظرتون رو بهش بدین. این موضوع رو در نظر داشته باشن که &lt;strong&gt;Mode&lt;/strong&gt; رنگ هم روی &lt;code class=&quot;highlighter-rouge&quot;&gt;PorterDuff.Mode.SRC&lt;/code&gt; باشه بهترین حالته، در مودهای دیگه رنگ تغییر میکنه.&lt;/p&gt;
 
-&lt;p&gt;خب، حالا برای اضافه کردن رنگ ۲متد اصلی داریم. وقتی میخوایم به کل ویوو انیمیشنمون رنگ بدیم از متد &lt;code class=&quot;highlighter-rouge&quot;&gt;addColorFilter(colorFilter)&lt;/code&gt; استفاده میکنم. مواقعی پیش میاد که میخواییم به یه لایه خاص از انیمیشنمون رنگ بدیم، برای اینکار از متد &lt;code class=&quot;highlighter-rouge&quot;&gt;addColorFilterToLayer(“layerName”, colorFilter)&lt;/code&gt; استفاده می‌کنیم. لازمه که اول اسم لایه ای که میخواید رنگ بگیره رو نام برده، و سپس فیلتر رنگ خودتون رو مشخص کنید.&lt;/p&gt;
+&lt;p&gt;خب، حالا برای اضافه کردن رنگ ۲متد اصلی داریم. برای اینکه به کل ویوو انیمیشنمون رنگ بدیم، باید از متد &lt;code class=&quot;highlighter-rouge&quot;&gt;addColorFilter(colorFilter)&lt;/code&gt; استفاده کنیم. مواقعی پیش میاد که میخواییم به یه لایه خاص از انیمیشنمون رنگ بدیم، برای اینکار از متد &lt;code class=&quot;highlighter-rouge&quot;&gt;addColorFilterToLayer(“layerName”, colorFilter)&lt;/code&gt; استفاده می‌کنیم. لازمه که اول اسم لایه ای که میخواید رنگ بگیره رو نام برده، و سپس فیلتر رنگ خودتون رو مشخص کنید.&lt;/p&gt;
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PorterDuffColorFilter&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;colorFilter1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PorterDuffColorFilter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parseColor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;#CC0321&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PorterDuff&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Mode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;SRC&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;animationView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addColorFilter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;colorFilter1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
 
 &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PorterDuffColorFilter&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;colorFilter2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PorterDuffColorFilter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;RED&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PorterDuff&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Mode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;SRC&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;animationView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addColorFilterToLayer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;the layer name&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;colorFilter1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;animationView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;addColorFilterToLayer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;LAYER_NAME&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;colorFilter1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -192,9 +192,9 @@
 
 &lt;h3 id=&quot;lottie-progress&quot;&gt;3.  انیمیشن با قابلیت کنترل Progress  &lt;/h3&gt;
 
-&lt;p&gt;یکی از قابلیت های کاربردی که Lottie در اختیار شما میگذاره، اینه که شما بتونید روند یا Progress انیمیشنتون رو کنترل کنید. هر انیمیشنی شامل یک بازه &lt;strong&gt;0.0&lt;/strong&gt; تا &lt;strong&gt;1.0&lt;/strong&gt; میشه، برای اینکه بتونید مشخص کنید که انیمیشنتون از کجا شروع بشه، یا اینکه الان در کدوم فریم باشه، فقط کافیه متد &lt;code class=&quot;highlighter-rouge&quot;&gt;setProgress(floatValue)&lt;/code&gt; رو صدا زده و مقدار مورد نظر رو بهش بدید.&lt;/p&gt;
+&lt;p&gt;یکی از قابلیت های کاربردی که Lottie در اختیار شما میگذاره، اینه که شما بتونید روند یا Progress انیمیشنتون رو کنترل کنید. هر انیمیشنی شامل یک بازه &lt;strong&gt;0.0&lt;/strong&gt; تا &lt;strong&gt;1.0&lt;/strong&gt; میشه (اشاره به همون ۰ تا ۱۰۰ درصد داره)، برای اینکه بتونید مشخص کنید که انیمیشنتون از کجا شروع بشه، یا اینکه الان در کدوم فریم باشه، فقط کافیه متد &lt;code class=&quot;highlighter-rouge&quot;&gt;setProgress(floatValue)&lt;/code&gt; رو صدا زده و مقدار مورد نظر رو بهش بدید.&lt;/p&gt;
 
-&lt;p&gt;من برای اینکه این تمرین رو انجام بدم، یه seekBar در لی‌اَوت‌م گذاشتم، و با onProgressChanged اون رو ردیابی کرده،‌ و به ازای هر تغییر، مقدار &lt;code class=&quot;highlighter-rouge&quot;&gt;((float)progress)/100&lt;/code&gt; رو به progress انیمیشنمون مقداردهی میکنم:&lt;/p&gt;
+&lt;p&gt;من برای اینکه این تمرین رو انجام بدم، یه seekBar در لی‌اَوت‌م گذاشتم، و با &lt;strong&gt;onProgressChanged&lt;/strong&gt; اون رو ردیابی کرده،‌ و به ازای هر تغییر، مقدار &lt;code class=&quot;highlighter-rouge&quot;&gt;((float)progress)/100&lt;/code&gt; رو به progress انیمیشنمون مقداردهی میکنم:&lt;/p&gt;
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;seekBar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setOnSeekBarChangeListener&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SeekBar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;OnSeekBarChangeListener&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
 
@@ -226,7 +226,7 @@
 
 &lt;h3 id=&quot;lottie-animated-button&quot;&gt;4.  پیاده‌سازی دکمه‌های انیمیشنی&lt;/h3&gt;
 
-&lt;p&gt;یکی از مواردی که خیلی در زیبایی و تجربه کاربری لذت‌بخش تاثیر داره، استفاده کردن از دکمه‌هاییه که افکت‌های انیمیشنی دارند. برای مثال همبرگر منويي که با کلیک میچرخه و از Hamburger به Back Button تبدیل میشه.&lt;/p&gt;
+&lt;p&gt;یکی از مواردی که خیلی در زیبایی و تجربه کاربری لذت‌بخش تاثیر داره و در &lt;a href=&quot;https://material.io/guidelines/motion/material-motion.html&quot;&gt;منابع متریال&lt;/a&gt; هم به اون اشاره شده، استفاده کردن از دکمه‌هاییه که افکت‌های انیمیشنی دارند. برای مثال همبرگر منويي که با کلیک میچرخه و از Hamburger به Back Button تبدیل میشه.&lt;/p&gt;
 
 &lt;p&gt;سوال اینجاست که چطوری باید همچین چیزی رو طراحی کنیم!؟ بگذارید موضوع رو ساده کنیم، ما یه انیمیشن از دکمه سوییچ داریم. این انیمیشن از پراگرس &lt;strong&gt;0.0&lt;/strong&gt; تا &lt;strong&gt;0.5&lt;/strong&gt; نشون میده که سوییچ &lt;code class=&quot;highlighter-rouge&quot;&gt;On&lt;/code&gt; میشه، و از پراگرس &lt;strong&gt;0.5&lt;/strong&gt; تا &lt;strong&gt;1.0&lt;/strong&gt; نشون میده که سوییچ &lt;code class=&quot;highlighter-rouge&quot;&gt;Off&lt;/code&gt; میشه.&lt;/p&gt;
 
@@ -255,7 +255,7 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;&lt;strong&gt;همبرگر منو:&lt;/strong&gt; در این مثال بازم هم من یه مقدار بولین برای دنبال کردن باز/بسته بودن منو درست کردم. حالا موقع بازشدن همبرگر منو، با استفاده از کلاس &lt;code class=&quot;highlighter-rouge&quot;&gt;ValueAnimator&lt;/code&gt; یک رنج از پراگرس ایجاد کرده &lt;code class=&quot;highlighter-rouge&quot;&gt;(0.05f, 0.45f)&lt;/code&gt; و مقداری هم برای مدت زمان سپری کردن این انیمیشن هم تعریف میکنم &lt;code class=&quot;highlighter-rouge&quot;&gt;setDuration(2000)&lt;/code&gt;. برای بسته شدن همبرگر منو هم، یه رنج دیگه با مقادیری بلعکس ایجاد کردم. خب، از الان هربار که کاربر روی دکمه کلیک کنه، انیمیشن نمایش داده میشه و انگار که منو باز و بسته میشه.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;همبرگر منو:&lt;/strong&gt; در این مثال بازم هم من یه مقدار بولین برای دنبال کردن باز/بسته بودن منو درست کردم. حالا موقع بازشدن همبرگر منو، با استفاده از کلاس &lt;code class=&quot;highlighter-rouge&quot;&gt;ValueAnimator&lt;/code&gt; یک رنج از پراگرس ایجاد کرده &lt;code class=&quot;highlighter-rouge&quot;&gt;(0.05f, 0.45f)&lt;/code&gt; و مقداری هم برای مدت زمان سپری کردن این انیمیشن تعریف میکنم &lt;code class=&quot;highlighter-rouge&quot;&gt;setDuration(2000)&lt;/code&gt;. برای بسته شدن همبرگر منو هم، یه رنج دیگه با مقادیری بلعکس ایجاد کردم. خب، از الان هربار که کاربر روی دکمه کلیک کنه، انیمیشن نمایش داده میشه و انگار که منو باز و بسته میشه.&lt;/p&gt;
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//With ValueAnimator&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;ValueAnimator&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;animator&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
@@ -277,7 +277,7 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;&lt;strong&gt;دکمه رادیو:&lt;/strong&gt; در مورد کیس رادیو باتن هم برای اکتیو کردن سلکشن، یکبار انیمیشن کامل به نمایش درمیاد، بار دوم که کاربر کلیک میکنه، پراگرس روی &lt;strong&gt;0.0&lt;/strong&gt; یعنی موقعی که رادیو انتخاب نشده بود ست میشه. و این روند همینجوری ادامه خواهد داشت.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;دکمه رادیو:&lt;/strong&gt; در مورد کیس رادیو باتن هم برای اکتیو کردن سلکشن، یکبار انیمیشن کامل به نمایش درمیاد، بار دوم که کاربر کلیک میکنه، پراگرس روی &lt;strong&gt;0.0&lt;/strong&gt; یعنی موقعی که رادیو انتخاب نشده بود سِت میشه. و این روند همینجوری ادامه خواهد داشت.&lt;/p&gt;
 
 &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;animatedRadioButton&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getProgress&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;1.0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;animatedRadioButton&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;playAnimation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
@@ -286,7 +286,7 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;&lt;strong&gt;دنبال کردن انیمیشن:&lt;/strong&gt; ما متیونیم هم &lt;strong&gt;مراحل&lt;/strong&gt; و هم &lt;strong&gt;روند&lt;/strong&gt; انیمیشنمون رو دنبال کنیم. برای مثال من در مورد کیس دکمه قطع صدا، میخواستم وقتی که انیمیشن تموم شد یه Toast نشون بدم و به کاربر بگم که صدا تموم شد. برای همین متد &lt;code class=&quot;highlighter-rouge&quot;&gt;addAnimatorListener&lt;/code&gt; رو برای ویوومون تعریف کردم که به ما ۴تا متد دیگه میده:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;دنبال کردن انیمیشن:&lt;/strong&gt; ما میتونیم هم &lt;strong&gt;مراحل&lt;/strong&gt; و هم &lt;strong&gt;روند&lt;/strong&gt; انیمیشنمون رو دنبال کنیم. برای مثال من در مورد کیس دکمه قطع صدا، میخواستم وقتی که انیمیشن تموم شد یه Toast نشون بدم و به کاربر بگم که صدا تموم شد. برای همین متد &lt;code class=&quot;highlighter-rouge&quot;&gt;addAnimatorListener&lt;/code&gt; رو برای ویوومون تعریف کردم که به ما ۴تا متد دیگه میده:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -383,7 +383,7 @@
 
 &lt;h3 id=&quot;lottie-animated-font&quot;&gt;5.  پیاده سازی فونت انیمیشنی&lt;/h3&gt;
 
-&lt;p&gt;یکی از چیزهای جالبی که لاتی داشت و بنده خیلی درد کشیدم تا پیادش کنم! ، فونت انیمیشنی هست. قبل از شروع این قسمت دعوت میکنم با دیدن انیمیشن زیر، با این پدیده موضوع آشنا بشید:&lt;/p&gt;
+&lt;p&gt;فونت انیمیشنی، یکی از چیزهای جالبی که لاتی داشت و بنده خیلی درد کشیدم تا پیادش کنم! قبل از شروع این قسمت دعوت میکنم با دیدن انیمیشن زیر، با این پدیده آشنا بشید:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/post/2017-08-10/lottie-anim-3.gif&quot; alt=&quot;Lottie Animation Font Demo&quot; /&gt;&lt;/p&gt;
 
@@ -416,7 +416,7 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;ممکنه بپرسین خب این به چه درد میخوره؟ شاید خود ادیتورش بدردتون نخوره، ولی میتونید ازش استفاده کنید و متنی که دلتون میخواد (مثلا اسم شرکت یا پروژه) رو بصورت انیمیشنی به کاربر نمایش بدید.&lt;/p&gt;
+&lt;p&gt;ممکنه بپرسین این فونت انیمیشنی به چه دردی میخوره؟ شاید خود ادیتورش بدردتون نخوره، ولی میتونید ازش استفاده کنید و متنی که دلتون میخواد (مثلا اسم شرکت یا پروژه) رو بصورت انیمیشنی به کاربر نمایش بدید.&lt;/p&gt;
 
 &lt;p&gt;میتونید از فونت دیگه ای هم استفاه کنید؟ صد در صد، فقط باید زحمت طراحی انیمیشن برای تمامی حروف رو خودتون بکشید :)) چون غیر از همین نمونه ای که روی وب بود، چیز دیگه ای پیدا نکردم.&lt;/p&gt;
 
@@ -434,7 +434,7 @@
 
 &lt;p&gt;و تمرین آخر، در این قسمت میخواهیم یک صفحه خوش‌آمدی گویی، Intro یا OnBoarding بسازیم.&lt;/p&gt;
 
-&lt;p&gt;اول بیایم منطق قضیه رو باهم بررسی کنیم. در این پروژه به یک فایل انیمیشن که شامل تمامی مراحل Intro باشه نیاز داریم. هر مرحله یک آغاز و پایانی داره و ما باید زمان شروع و پایان تمامی مراحل رو در بیاریم، برای مثلا صفحه دوم Intro از پرگرس 0.25 شروع و در 0.42 تموم میشه. حالا موقعی که کاربر Swipe میکنه یا روی دکمه ‘بعدی’ کلیک میکنه ما هم همگام با اسکرول شدن صفحه، پراگرس انیمیشن رو به همون نسبت جلو میبریم.&lt;/p&gt;
+&lt;p&gt;اول بیایم منطق قضیه رو باهم بررسی کنیم. در این پروژه به یک فایل انیمیشن که شامل تمامی مراحل Intro باشه نیاز داریم. هر مرحله یک آغاز و پایانی داره و ما باید زمان شروع و پایان تمامی مراحل رو در بیاریم، برای مثال صفحه دوم Intro از پراگرس 0.25 شروع و در 0.42 تموم میشه. حالا موقعی که کاربر Swipe میکنه یا روی دکمه ‘بعدی’ کلیک میکنه ما هم همگام با اسکرول شدن صفحه، پراگرس انیمیشن رو به همون نسبت جلو میبریم.&lt;/p&gt;
 
 &lt;p&gt;در این تمرین برای صفحه خوش‌امدگویی از لایبرری &lt;a href=&quot;https://github.com/MatthewTamlin/SlidingIntroScreen&quot;&gt;SlidingIntroScreen&lt;/a&gt; و انیمیشن &lt;a href=&quot;https://github.com/sadra/LottieExampleProject/blob/master/app/src/main/assets/services_intro.json&quot;&gt;services_intro&lt;/a&gt; استفاده کردم. و زمان تمامی مراحل انیمیشن رو به ترتیب زیر لیست کردم:&lt;/p&gt;
 
@@ -572,6 +572,17 @@
 &lt;span class=&quot;n&quot;&gt;lottieView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setAnimation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;gift.json&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;LottieAnimationView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;CacheStrategy&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Strong&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;رنگ دادن به یک لایه خاص از انیمیشن&lt;/strong&gt;: مشابه مثالی که در بخش اول زدم، ممکنه شما بخوایید رنگ یک لایه خاص از انیمیشنتون رو تغییر بدید. مثلا در همون مثال ما رنگ بدنه و درپوش جعبه کادو رو تغییر دادیم. اما برای این کار، اگر انیمیشنتون رو خودتون طراحی کردین، میدونید که اسم لایه‌هاتون چیه و اسم لایه مورد نظر رو میبرید و رنگ بهش الصاق میشه. اما اگر از فایل آماده برای انیمیشنتون استفاده کردین، باید فایل JSON رو باز کرده و ببنید کدوم پارامتر‌ها با لیبل &lt;code class=&quot;highlighter-rouge&quot;&gt;nm&lt;/code&gt; مشخص شدن و دونه دونه اونهارو سعی و خطا تست کنید تا معلوم بشه کدومشون لایه مورد نظر شماست. برای مثال همین جعه دو لایه به نام های &lt;code class=&quot;highlighter-rouge&quot;&gt;body Konturen&lt;/code&gt; و &lt;code class=&quot;highlighter-rouge&quot;&gt;top Konturen&lt;/code&gt; اشاره به درپوش و بدنه جعبه داشت که پیدا کرده و رنگ رو بهش الصاق کردیم.&lt;/p&gt;
+
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;//gift.json&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;ddd&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;ind&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;ty&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;nm&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;body Konturen&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;ddd&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;ind&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;ty&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;nm&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;top Konturen&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;زمان بندی در انیمیشن خوش‌آمدگویی:&lt;/strong&gt; اگه یادتون باشه در اون بخش گفتم که انیمیشن به نسبت اسکرول جلو و عقب میره. میدونیم که میزان فاصله دو صفحه از یک Viepager همیشه یکتا و بین همه صفحات مساویه. پس شما هم سعی کنید در انیمیشنی که طراحی میکنید این قانون رو نظر داشته باشید. اگه به همین انیمیشن دقت کنید  در بعضی بخشها سریع و در بعضی دیگه کند به نمایش درمیومد، دلیلش هم عدم توازن زمانی بین دو تغییر انیمیشن بود.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;آپدیت: این بخش در صورت مواجه شدن با مسايل جدید ممکنه به‌روزرسانی بشه.&lt;/strong&gt;&lt;/p&gt;
 

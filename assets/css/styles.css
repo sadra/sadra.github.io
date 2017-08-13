@@ -45,7 +45,8 @@ figure {
 hr {
   box-sizing: content-box;
   height: 0;
-  overflow: visible; }
+  overflow: visible;
+  margin: 30px 0; }
 
 pre {
   font-family: "Vazir", Arial, sans-serif;

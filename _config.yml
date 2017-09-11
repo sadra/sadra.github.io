@@ -42,3 +42,8 @@ include:
   - .nojekyll
 
 notfound404-cover: /assets/img/base/bugart-bacall.jpg
+
+collections:
+  screencasts:
+    output: true
+    permalink: "video/:collection/:title/"

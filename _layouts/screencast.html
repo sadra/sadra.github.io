@@ -1,0 +1,77 @@
+---
+layout: theme_rtl
+---
+
+<div class="cast-content">
+
+    <div class="cast-video">
+
+        <div class="video-container">
+            <div class="h_iframe-aparat_embed_frame">
+                <span style="display: block;padding-top: 57%"></span>
+                <iframe src="https://www.aparat.com/video/video/embed/videohash/{{ page.cast }}/vt/frame" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" ></iframe>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="content">
+
+        <div class="cast-header">
+
+            <div class="cast-author">
+
+                <div class="author_avatar">
+                    <img src="{{ site.data.authors[page.author].avatar }}" alt="{{ site.data.authors[page.author].name }}" id="avatar-img" />
+                </div>
+
+                <hr/>
+
+                <div class="cast_info">
+                    <p> <a href="{{ site.data.authors[page.author].info-url }}">{{ site.data.authors[page.author].name }}</a> </p>
+                    <small>{{ site.data.authors[page.author].bio }}</small><br/>
+                    <small> در {{ page.date | jdate: "%A %d %b %Y"}}</small>
+                </div>
+
+            </div>
+
+            <div class="cas-details">
+                <h1 class="cast-title">{{ page.cast-title }}</h1>
+                <p class="cast-description">{{ page.description }}</p>
+
+                {% if page.exercise-file %}
+                <div class="cast-exercise-file">
+                    <div class="type-1">
+                        <div>
+                            <a href="{{ page.exercise-file }}" class="btn btn-2">
+                                <span class="txt">دانلود فایل تمرین</span>
+                                <span class="round"><i class="fa fa-download"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+
+
+            </div>
+
+        </div>
+
+        <div class="content-block">
+            {{ content }}
+        </div>
+
+    </div>
+
+</div>
+
+<a id="back-to-top" href="#" class="back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left">
+    <img src="/assets/img/base/arrow-up.png" class="arrow-up"/>
+</a>
+
+
+
+
+
+
+

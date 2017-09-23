@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://isapanah.com/video/course/ios-course-two/zero-course/</loc>
+<lastmod>2017-09-10T00:00:00+04:30</lastmod>
+</url>
+<url>
+<loc>http://isapanah.com/video/course/ios-course-one/first-course/</loc>
+<lastmod>2017-09-10T00:00:00+04:30</lastmod>
+</url>
+<url>
+<loc>http://isapanah.com/video/course/ios-course-one/second-course/</loc>
+<lastmod>2017-09-10T00:00:00+04:30</lastmod>
+</url>
+<url>
 <loc>http://isapanah.com/2010/test-post</loc>
 <lastmod>2010-03-03T00:00:00+03:30</lastmod>
 </url>
@@ -25,7 +37,7 @@
 <lastmod>2017-08-07T00:00:00+04:30</lastmod>
 </url>
 <url>
-<loc>http://isapanah.com/video/screencasts/first-screen/</loc>
+<loc>http://isapanah.com/video/screencast/first-screen/</loc>
 <lastmod>2017-09-10T00:00:00+04:30</lastmod>
 </url>
 <url>
@@ -33,6 +45,9 @@
 </url>
 <url>
 <loc>http://isapanah.com/list/categories</loc>
+</url>
+<url>
+<loc>http://isapanah.com/video/courses</loc>
 </url>
 <url>
 <loc>http://isapanah.com/</loc>

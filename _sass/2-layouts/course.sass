@@ -1,0 +1,133 @@
+.course-box-container
+  border-bottom: 1px  solid $gray-200
+
+.course-box-container:last-child
+  border-bottom: 0px
+  padding-bottom: 0px
+
+
+.course-tag-title
+  width: 80%
+  margin: 30px  0 20px 0
+  padding-bottom: 20px
+  font-size: xx-large
+  @media screen and (max-width: 800px)
+    font-size: x-large
+    margin: 20px  0 10px 0
+  @media screen and (max-width: 400px)
+    font-size: large
+    margin: 15px  0 8px 0
+
+
+.course-container
+  .cast-list-header-container
+    margin-bottom: 0 !important
+
+
+  ul.lesson-table
+    padding-left: 0
+    display: table
+    border-collapse: collapse
+    width: 100%
+    margin: 20px 0
+
+  ul.lesson-table li
+    display: table-row
+    width: 100%
+    list-style: none
+    height: 60px
+    border-bottom: 1px solid #EAEDF1
+
+  @media screen and (max-width: 568px)
+  ul.lesson-table li
+    height: 70px
+
+
+  ul.lesson-table li:hover
+    background: rgba(35, 41, 43, 0.03)
+
+  ul.lesson-table li.active
+    font-weight: 500
+    background: #eaedf1
+    position: relative
+
+  ul.lesson-table li.active .lesson-number
+    position: relative
+
+  ul.lesson-table li.active .lesson-number:before
+    content: ""
+    width: 2px
+    height: 100%
+    position: absolute
+    top: 0
+    right: 0
+    background: #FCB526
+
+  ul.lesson-table li a.lesson-link
+    display: block
+    color: #23292B
+    text-decoration: none
+
+
+  ul.lesson-table li form button:active
+    background: none
+
+  ul.lesson-table li form button:focus
+    background: none
+
+  ul.lesson-table li span
+    display: table-cell
+    vertical-align: middle
+
+  @media screen and (max-width: 480px)
+  ul.lesson-table li span
+    font-size: 0.9375em
+
+
+  ul.lesson-table li span.lesson-number
+    font-size: 0.9375em
+    color: #919495
+    width: 62px
+    text-align: center
+
+  @media screen and (max-width: 568px)
+  ul.lesson-table li span.lesson-number
+    text-align: left
+    width: 40px
+    padding-left: 1em
+    padding-right: 1em
+
+
+  @media screen and (max-width: 480px)
+  ul.lesson-table li span.lesson-number
+    font-size: 0.8125em
+    width: 36px
+
+
+  ul.lesson-table li span.lesson-name
+    font-weight: 500
+
+  @media screen and (max-width: 568px)
+  ul.lesson-table li span.lesson-name
+    line-height: 1.25
+
+
+  ul.lesson-table li span.lesson-time
+    width: auto
+    text-align: left
+    padding: 0 1.5em
+
+  @media screen and (max-width: 568px)
+  ul.lesson-table li span.lesson-time
+    padding-right: .75em
+
+  ul.lesson-table
+    li.disabled-lesson
+      background: $gray-050
+      .lesson-number
+        color: $gray-600
+      .lesson-name
+        color: $gray-600
+      .lesson-time
+        color: $gray-600
+

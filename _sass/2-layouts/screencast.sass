@@ -12,6 +12,46 @@
   height: 100%
 
 
+.cast-list-header-container
+  position: relative
+  width: 100%
+  margin-bottom: 50px
+  img
+    width: 100%
+  .casts-list-title
+    position: absolute
+    width: 50%
+    color: white
+    font-size: 1.6em
+    top: 30%
+    right: 25px
+    text-shadow: 0 0 5px #000000
+    @media screen and (max-width: 700px)
+      font-size: 1.5em
+    @media screen and (max-width: 500px)
+      top: 25%
+      font-size: 1.2em
+    @media screen and (max-width: 350px)
+      top: 22%
+      font-size: 0.9em
+  .casts-list-subtitle
+    position: absolute
+    width: 45%
+    color: white
+    font-size: 1.1em
+    top: 50%
+    text-shadow: 0 0 5px #000000
+    right: 25px
+    @media screen and (max-width: 700px)
+      font-size: 0.9em
+    @media screen and (max-width: 500px)
+      top: 45%
+      font-size: 0.7em
+    @media screen and (max-width: 350px)
+      top: 42%
+      font-size: 0.5em
+
+
 .cast-content
   margin: 5px auto
   width: 100%
@@ -229,4 +269,86 @@
   .type-1 a:active .round i
     left: 10%
 
+
+.casts-box-container
+.course-box-container
+  width: 100%
+  .cast-box
+    overflow: auto
+    margin-left: 5px
+    margin-bottom: 25px
+    float: right
+    display: flex
+    width: 31.6%
+    @media screen and (max-width: 1150px)
+      width: 49%
+      min-height: 105px
+    @media screen and (max-width: 760px)
+      width: 100%
+      min-height: 100px
+    .cast-cover
+      width: 30%
+      max-width: 110px
+      float: right
+      max-height: 83px
+
+    .cast-data-container
+      padding: 0  10px
+      width: auto
+      float: right
+      text-align: right
+
+      a p
+        font-size: 1em
+        font-weight: 500
+        line-height: 1.2em
+        color: $text-header
+        padding-top: 0
+        @media screen and (max-width: 800px)
+          font-size: 0.9em
+
+      .cast-info
+        display: flex
+        span
+          color: $gray-700
+          font-size: 0.8em
+          font-weight: 100
+          display: inherit
+          @media screen and (max-width: 800px)
+            font-size: 0.75em
+        i.divider
+          display: inline-block
+          position: relative
+          top: 1px
+          width: 2px
+          height: 10px
+          background: #EAEDF1
+          margin: 0 0.5em
+          line-height: 1
+
+      .cast-tags
+        display: inline-block
+        clear: both
+        .new
+          margin-left: 5px
+          margin-bottom: 5px
+          font-size: 0.8em
+          text-align: center
+          border: 1px $element-new-label solid
+          border-radius: 2px
+          padding: 1px 3px
+          background: $element-new-label
+          color: white
+          float: right
+        .cast-category
+          margin-left: 5px
+          margin-bottom: 5px
+          font-size: 0.8em
+          text-align: center
+          border: 1px $element-tag solid
+          border-radius: 2px
+          padding: 1px 3px
+          background: $element-tag
+          color: white
+          float: right
 

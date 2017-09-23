@@ -44,6 +44,9 @@ include:
 notfound404-cover: /assets/img/base/bugart-bacall.jpg
 
 collections:
-  screencasts:
+  screencast:
     output: true
     permalink: "video/:collection/:title/"
+  course:
+    output: true
+    permalink: "video/:collection/:categories/:title/"

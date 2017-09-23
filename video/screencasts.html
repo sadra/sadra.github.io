@@ -2,22 +2,69 @@
 layout: theme_rtl
 title: اسکرین کست‌ها
 ---
+
 <div class="content">
 
-    <h1 class="list-title">لیست همه <span>دسته‌ها</span></h1>
-
-    <div class="list-items-container">
-        {% for category in site.categories %}
-        <a class="list-item-category" href="/category/{{ category[0] | slugify }}">{{ category[0] }}</a>
-        {% endfor %}
+    <div class="cast-list-header-container">
+        <img src="{{ site.url }}/assets/img/base/cast-title-bg-fade.jpg">
+        <h1 class="casts-list-title">ویدئو کَست</h1>
+        <h1 class="casts-list-subtitle">وید‌يوهای کوتاه، بهترین شیرینی همراه با قهوه اول صبح ;)</h1>
     </div>
 
+    <div class="casts-box-container">
+        {% assign casts = site.screencast | sort: 'date' | reverse %}
+        {% for cast in casts %}
+        <div class="cast-box">
+            <img class="cast-cover" src="{{ site.url }}{{ cast.cover }}" alt="{{ cast.title }}" />
+            <div class="cast-data-container">
 
-    <h1 class="list-title">لیست همه <span>#هشتگ‌ها</span></h1>
+                <div class="cast-tags">
+                    {% capture the14dayago %}{{'now' | date: '%s' | minus : 1209600}}{% endcapture %}
+                    {% capture casttime %}{{cast.date | date: '%s'}}{% endcapture %}
+                    {% if casttime > the14dayago %}
+                    <div class="new">جدید</div>
+                    {% endif %}
 
-    <div class="list-items-container">
-        {% for tag in site.tags %}
-        <a class="list-item-tag" href="/tag/{{ tag[0] | slugify }}">{{ tag[0] }}</a>
+                    {% for category in cast.categories %}
+                    <div class="cast-category">{{ category }}</div>
+                    {% endfor %}
+                </div>
+
+                <a class="post-item-title-link" href="{{ cast.url }}"><p class="post-item-title">{{ cast.cast-title }}</p></a>
+                <div class="cast-info">
+                    <span>{{ cast.date | jdate: "%d %b %y"}} </span><i class="divider"></i><span> {{ cast.cast-time-minutes }} دقیقه و {{ cast.cast-time-seconds }} ثانیه</span>
+                </div>
+
+            </div>
+        </div>
+        <div class="cast-box">
+            <img class="cast-cover" src="{{ site.url }}{{ cast.cover }}" alt="{{ cast.title }}" />
+            <div class="cast-data-container">
+
+                <a class="post-item-title-link" href="{{ cast.url }}"><p class="post-item-title">{{ cast.cast-title }}</p></a>
+                <div class="cast-info">
+                    <span>{{ cast.date | jdate: "%d %b %y"}} </span><i class="divider"></i><span> {{ cast.cast-time-minutes }} دقیقه و {{ cast.cast-time-seconds }} ثانیه</span>
+                </div>
+
+            </div>
+        </div>
+        <div class="cast-box">
+            <img class="cast-cover" src="{{ site.url }}{{ cast.cover }}" alt="{{ cast.title }}" />
+            <div class="cast-data-container">
+
+                {% capture the14dayago %}{{'now' | date: '%s' | minus : 1209600}}{% endcapture %}
+                {% capture casttime %}{{cast.date | date: '%s'}}{% endcapture %}
+                {% if casttime > the14dayago %}
+                    <div class="new">جدید</div>
+                {% endif %}
+
+                <a class="post-item-title-link" href="{{ cast.url }}"><p class="post-item-title">{{ cast.cast-title }}</p></a>
+                <div class="cast-info">
+                    <span>{{ cast.date | jdate: "%d %b %y"}} </span><i class="divider"></i><span> {{ cast.cast-time-minutes }} دقیقه و {{ cast.cast-time-seconds }} ثانیه</span>
+                </div>
+
+            </div>
+        </div>
         {% endfor %}
     </div>
 

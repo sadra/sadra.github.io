@@ -60,6 +60,39 @@ layout: theme_rtl
             {{ content }}
         </div>
 
+
+        <h1 class="category-list-title">لیست دروس این دوره</h1>
+
+        <ul class="lesson-table">
+
+            {% assign courses = site.course | sort: "cast-number-in-course" %}
+            {% for course in courses %}
+                {% if page.categories == course.categories %}
+
+                    {% if course.cast-number-in-course == page.cast-number-in-course %}
+                    <li class="active">
+                    {% elsif course.cast-enable == true %}
+                    <li>
+                    {% elsif course.cast-enable == false %}
+                    <li class="disabled-lesson">
+                    {% endif %}
+
+                        <span class="lesson-number">{{ course.cast-number-in-course }}</span>
+                        <span class="lesson-name">
+                            {% if course.cast-enable == true %}
+                                <a href="{{ course.url }}" class="lesson-link">{{ course.cast-title }}</a>
+                            {% else %}
+                                {{ course.cast-title }}
+                            {% endif %}
+                        </span>
+                        <span class="lesson-time">{{ course.cast-time-minutes }} دقیقه و {{ course.cast-time-seconds }} ثانیه</span>
+
+                    </li>
+
+                {% endif %}
+            {% endfor %}
+        </ul>
+
     </div>
 
 </div>

@@ -1,0 +1,45 @@
+---
+layout: theme_rtl
+title: دوره‌ها
+---
+
+<div class="content course-container">
+
+    <div class="cast-list-header-container course">
+        <img src="{{ site.url }}/assets/img/base/courses-title-bg-fade.jpg">
+        <h1 class="casts-list-title">دوره‌های آموزشی</h1>
+        <h1 class="casts-list-subtitle">باهیم یاد بگیریم، و باهم پیشرفت کنیم :)</h1>
+    </div>
+
+    <h1 class="course-tag-title">آموزش توسعه iOS</h1>
+
+    <div class="course-box-container">
+
+        {% assign items_grouped = site.course | group_by: 'categories' %}
+        {% assign items_tags = items_grouped %}
+        {% for group in items_tags %}
+            {% for item in group.items limit: 1 %}
+                {% if item.tag == "iOS" %}
+                    <div class="cast-box">
+                        <img class="cast-cover" src="{{ site.url }}{{ item.course-banner }}" alt="{{ item.course-name }}" />
+                        <div class="cast-data-container">
+
+                            <div class="cast-tags">
+                                {% capture the14dayago %}{{'now' | date: '%s' | minus : 1209600}}{% endcapture %}
+                                {% capture casttime %}{{item.date | date: '%s'}}{% endcapture %}
+                                {% if casttime > the14dayago %}
+                                <div class="new">جدید</div>
+                                {% endif %}
+                            </div>
+
+                            <a class="post-item-title-link" href="{{ item.url }}"><p class="post-item-title">{{ item.course-name }}</p></a>
+
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+
+    </div>
+
+</div>

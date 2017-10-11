@@ -18,7 +18,7 @@ cover: /assets/img/post/2017-10-11/bottom-navigation-menu-cover.jpg
 author: Sadra
 ---
 
-اگر پست “[جایگزینی برای منوی همبرگر](http://dcamp.ir/hamburger-menu-alternative)” شایان رو خونده باشید حتما متوجه شدید که ما در پروژمون بجای همبرگر منو از [BottomNavigationView](https://developer.android.com/reference/android/support/design/widget/BottomNavigationView.html) استفاده کردیم.
+اگر پست “[جایگزینی برای منوی همبرگر](http://dcamp.ir/hamburger-menu-vs-bottom-navigation)” شایان رو خونده باشید حتما متوجه شدید که ما در پروژمون بجای همبرگر منو از [BottomNavigationView](https://developer.android.com/reference/android/support/design/widget/BottomNavigationView.html) استفاده کردیم.
 
 در این پست قراره به چالش هایی که در روند پیاده سازی این مقوله برخوردیم اشاره کنم و اینکه به چه روشی اونهارو حل کردیم.
 

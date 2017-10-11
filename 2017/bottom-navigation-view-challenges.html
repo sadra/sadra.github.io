@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+<meta content="IE-edge,chrome=1" http-equiv="X-UA-Compatable">
+<meta name="description" content="سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده اپلیکیشن iOS و Android.
+">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-68873815-10', 'auto');
+    ga('send', 'pageview');
+</script>
+
+
+<meta name="twitter:card" content="summary">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="http://isapanah.com/2017/bottom-navigation-view-challenges">
+<meta property="og:description" content="سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده اپلیکیشن iOS و Android.
+">
+<meta name="twitter:description" content="سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده اپلیکیشن iOS و Android.
+">
+
+
+<title>بهبود رابط کاربری با BottomNavigationView | صدرا املشی</title>
+<meta property="twitter:title" content="بهبود رابط کاربری با BottomNavigationView | صدرا املشی">
+<meta property="og:site_name" content="بهبود رابط کاربری با BottomNavigationView | صدرا املشی">
+<meta property="og:title" content="بهبود رابط کاربری با BottomNavigationView | صدرا املشی">
+
+
+
+<meta property="twitter:image" content="http://isapanah.com/assets/img/post/2017-10-11/bottom-navigation-menu-cover.jpg" />
+<meta property="og:image" content="http://isapanah.com/assets/img/post/2017-10-11/bottom-navigation-menu-cover.jpg" />
+
+
+<link rel="alternative" href="/site-map.xml" title="وبلاگ صدرا املشی" type="application/atom+xml">
+<link rel="short icon" type="image/x-icon" href="http://isapanah.com/assets/img/base/favicon.png">
+<link rel="stylesheet" type="text/css" href="http://isapanah.com/assets/css/styles.css">
+
+    </head>
+
+    <body dir="rtl" lang="Farsi" >
+        <!-- Header -->
+<header class="header-rtl">
+    <nav class="nav-wrap">
+        <a href="/" class="nav-logo">وبلاگ صدرا املشی</a>
+        <ul class="navigation">
+
+            <li><a href="/">یادداشت‌ها</a></li>
+            <li><a href="/list/items">موضوعات</a></li>
+            <li><a href="/about">درباره</a></li>
+            <li><a href="http://cv.isapanah.com/">رزومه</a></li>
+            <li><a href="https://sadra.github.io/english">English</a></li>
+
+        </ul>
+    </nav>
+</header>
+<!-- /Header -->
+
+        <div class="content">
+
+    <div class="blog-post-container">
+
+        <div class="post-title-container">
+            <h1 class="post-title">بهبود رابط کاربری با BottomNavigationView</h1>
+        </div>
+
+        <div class="post_created">
+
+            <div class="author_avatar">
+                <img src="/assets/img/base/avatar.jpg" alt="صدرا املشی" id="avatar-img" />
+            </div>
+
+            <div class="post_info">
+                <p> <a href="/about">صدرا املشی</a> </p>
+                <small>توسعه دهنده</small><br/>
+                <small>چهارشنبه 19 مهر 1396</small>
+            </div>
+
+        </div>
+
+        
+        <div class="post-cover">
+            <img src="http://isapanah.com/assets/img/post/2017-10-11/bottom-navigation-menu-cover.jpg" alt="بهبود رابط کاربری با BottomNavigationView">
+        </div>
+        
+
+        <div class="post-content">
+            <p>اگر پست “<a href="http://dcamp.ir/hamburger-menu-alternative">جایگزینی برای منوی همبرگر</a>” شایان رو خونده باشید حتما متوجه شدید که ما در پروژمون بجای همبرگر منو از <a href="https://developer.android.com/reference/android/support/design/widget/BottomNavigationView.html">BottomNavigationView</a> استفاده کردیم.</p>
+
+<p>در این پست قراره به چالش هایی که در روند پیاده سازی این مقوله برخوردیم اشاره کنم و اینکه به چه روشی اونهارو حل کردیم.</p>
+
+<p>خوشحال میشم اگه شما روش بهتری برای رفع این چالشها داشتین با ما به اشتراک بگذارین.</p>
+
+<p>اگه دنبال این هستین که چطوری میتونید BottomNavigationView رو در پروژه‌تون پیاده کنید تنها کافیه تو گوگل سرچ کنید کلی آموزش فارسی و انگلیسی پیدا میشه. با اینحال بنظرم کامل‌ترین آموزش برای این قضیه <a href="https://medium.com/@hitherejoe/exploring-the-android-design-support-library-bottom-navigation-drawer-548de699e8e0">پست Joe Brich</a> هست، البته اگه دنبال یه آموزش ویدئویی هستین بنظرم <a href="https://www.youtube.com/watch?v=wcE7IIHKfRg">این ویدئو در یوتیوب</a> هم گزینه خوبیه.</p>
+
+<h2 id="چالش-اول-حالت-shiftmode-منوی-انتخابی">چالش اول: حالت ShiftMode منوی انتخابی</h2>
+
+<p>اولین چالشی که باهاش مواجه شدیم این بود که موقع کلیک روی یک منو در <strong>BottomNavigationView</strong> اون منو به اصطلاح مَگنیفاید یا بزرگ شده و متن زیرش پنهان میشد، که به این حالت <code class="highlighter-rouge">ShiftMode</code> میگن . مثل انیمیشن پایین:</p>
+
+<p><img src="/assets/img/post/2017-10-11/bottom-navigation-menu-0.gif" alt="Bottom Navigation View" /></p>
+
+<p>در نظر داشتیم تا همه آیکون و متن منو در زیر نشون داده بشه. تمایلی هم به بزرگ شدن آیکون ها نداشتیم، فقط کافی بود که رنگ آیتم انتخاب شده تغییر کنه و فقط آیکون کمی بالا بیاد که نشون بده انتخاب شده.</p>
+
+<p>خب برای اینکار اول از همه یه کلاس <code class="highlighter-rouge">BottomNavigationViewHelper</code> درست کردم. در این کلاس با کمک متد <strong>disableShiftMode</strong> قابلیت ShiftingMode رو از تک تک منو ها گرفته، سپس حذف و جایگزین می‌کنیم.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">BottomNavigationViewHelper</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">disableShiftMode</span><span class="o">(</span><span class="n">BottomNavigationView</span> <span class="n">view</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">BottomNavigationMenuView</span> <span class="n">menuView</span> <span class="o">=</span> <span class="o">(</span><span class="n">BottomNavigationMenuView</span><span class="o">)</span> <span class="n">view</span><span class="o">.</span><span class="na">getChildAt</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+        <span class="k">try</span> <span class="o">{</span>
+            <span class="n">Field</span> <span class="n">shiftingMode</span> <span class="o">=</span> <span class="n">menuView</span><span class="o">.</span><span class="na">getClass</span><span class="o">().</span><span class="na">getDeclaredField</span><span class="o">(</span><span class="s">"mShiftingMode"</span><span class="o">);</span>
+            <span class="n">shiftingMode</span><span class="o">.</span><span class="na">setAccessible</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+            <span class="n">shiftingMode</span><span class="o">.</span><span class="na">setBoolean</span><span class="o">(</span><span class="n">menuView</span><span class="o">,</span> <span class="kc">false</span><span class="o">);</span>
+            <span class="n">shiftingMode</span><span class="o">.</span><span class="na">setAccessible</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span>
+            <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">menuView</span><span class="o">.</span><span class="na">getChildCount</span><span class="o">();</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+                <span class="n">BottomNavigationItemView</span> <span class="n">item</span> <span class="o">=</span> <span class="o">(</span><span class="n">BottomNavigationItemView</span><span class="o">)</span> <span class="n">menuView</span><span class="o">.</span><span class="na">getChildAt</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
+                <span class="c1">//noinspection RestrictedApi</span>
+                <span class="n">item</span><span class="o">.</span><span class="na">setShiftingMode</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span>
+                <span class="c1">// set once again checked value, so view will be updated</span>
+                <span class="c1">//noinspection RestrictedApi</span>
+                <span class="n">item</span><span class="o">.</span><span class="na">setChecked</span><span class="o">(</span><span class="n">item</span><span class="o">.</span><span class="na">getItemData</span><span class="o">().</span><span class="na">isChecked</span><span class="o">());</span>
+            <span class="o">}</span>
+        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">NoSuchFieldException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">Log</span><span class="o">.</span><span class="na">e</span><span class="o">(</span><span class="s">"BNVHelper"</span><span class="o">,</span> <span class="s">"Unable to get shift mode field"</span><span class="o">,</span> <span class="n">e</span><span class="o">);</span>
+        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IllegalAccessException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">Log</span><span class="o">.</span><span class="na">e</span><span class="o">(</span><span class="s">"BNVHelper"</span><span class="o">,</span> <span class="s">"Unable to change value of shift mode"</span><span class="o">,</span> <span class="n">e</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<p>کلاس BottomNavigationViewHelper رو به پروژه‌تون اضافه کنید. حالا کافیه بعد از کست کردن BottomNavigationView مون، اون رو به کلاس هلپر معرفی کرده تا قابلیت ShiftMode شدن رو ازش صلب کنه.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">BottomNavigationView</span> <span class="n">bottomNavigationView</span> <span class="o">=</span> <span class="o">(</span><span class="n">BottomNavigationView</span><span class="o">)</span> <span class="n">findViewById</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">bottomNavigationView</span><span class="o">);</span>
+<span class="n">BottomNavigationViewHelper</span><span class="o">.</span><span class="na">disableShiftMode</span><span class="o">(</span><span class="n">bottomNavigationView</span><span class="o">);</span>
+</code></pre>
+</div>
+
+<h2 id="چالش-دوم-تغییر-رنگ-آیکون-انتخاب-شده">چالش دوم: تغییر رنگ آیکون انتخاب شده</h2>
+
+<p>ما میخواستیم موقع انتخاب شدن آیتم، آیکون‌ش به شکل یا رنگ خاصی تبدیل بشه. اما این امکان درحال عادی وجود نداشت. پس چیکار کردیم؟</p>
+
+<p>من یکبار قبل شروع همه چیز برای همه آیتم ها یک آیکون پیشرفض تعریف کرده،‌ سپس یک متد به نام <code class="highlighter-rouge">changeIcon</code> ایجاد کردم، تا هربار که کاربر آیتمی رو انتخاب میکنه این متد صدا زده بشه. این متد ابتدا آیکونِ همه‌ی آیتم‌هارو روی پیشفرض قرار میده و سپس بر اساس <code class="highlighter-rouge">ID</code> آیتم انتخاب شده، آیکون پیشفرض‌ش رو با آیکون اَکتیو شده، تعویض میکنه.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">private</span> <span class="kt">void</span> <span class="nf">changeIcon</span><span class="o">(</span><span class="kt">int</span> <span class="n">itemIndex</span><span class="o">){</span>
+
+    <span class="n">bottomNavigationView</span><span class="o">.</span><span class="na">getMenu</span><span class="o">().</span><span class="na">getItem</span><span class="o">(</span><span class="mi">0</span><span class="o">).</span><span class="na">setIcon</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">mipmap</span><span class="o">.</span><span class="na">bnv_menu_ic_home</span><span class="o">);</span>
+    <span class="n">bottomNavigationView</span><span class="o">.</span><span class="na">getMenu</span><span class="o">().</span><span class="na">getItem</span><span class="o">(</span><span class="mi">1</span><span class="o">).</span><span class="na">setIcon</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">mipmap</span><span class="o">.</span><span class="na">bnv_menu_ic_news</span><span class="o">);</span>
+    <span class="n">bottomNavigationView</span><span class="o">.</span><span class="na">getMenu</span><span class="o">().</span><span class="na">getItem</span><span class="o">(</span><span class="mi">2</span><span class="o">).</span><span class="na">setIcon</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">mipmap</span><span class="o">.</span><span class="na">bnv_menu_ic_support</span><span class="o">);</span>
+    <span class="n">bottomNavigationView</span><span class="o">.</span><span class="na">getMenu</span><span class="o">().</span><span class="na">getItem</span><span class="o">(</span><span class="mi">3</span><span class="o">).</span><span class="na">setIcon</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">mipmap</span><span class="o">.</span><span class="na">bnv_menu_ic_profile</span><span class="o">);</span>
+
+    <span class="k">switch</span> <span class="o">(</span><span class="n">itemIndex</span><span class="o">){</span>
+        <span class="k">case</span> <span class="mi">0</span><span class="o">:</span>
+            <span class="n">bottomNavigationView</span><span class="o">.</span><span class="na">getMenu</span><span class="o">().</span><span class="na">getItem</span><span class="o">(</span><span class="mi">0</span><span class="o">).</span><span class="na">setIcon</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">mipmap</span><span class="o">.</span><span class="na">bnv_menu_ic_home_active</span><span class="o">);</span>
+            <span class="k">break</span><span class="o">;</span>
+        <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
+            <span class="n">bottomNavigationView</span><span class="o">.</span><span class="na">getMenu</span><span class="o">().</span><span class="na">getItem</span><span class="o">(</span><span class="mi">1</span><span class="o">).</span><span class="na">setIcon</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">mipmap</span><span class="o">.</span><span class="na">bnv_menu_ic_news_active</span><span class="o">);</span>
+            <span class="k">break</span><span class="o">;</span>
+        <span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
+            <span class="n">bottomNavigationView</span><span class="o">.</span><span class="na">getMenu</span><span class="o">().</span><span class="na">getItem</span><span class="o">(</span><span class="mi">2</span><span class="o">).</span><span class="na">setIcon</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">mipmap</span><span class="o">.</span><span class="na">bnv_menu_ic_support_active</span><span class="o">);</span>
+            <span class="k">break</span><span class="o">;</span>
+        <span class="k">case</span> <span class="mi">3</span><span class="o">:</span>
+            <span class="n">bottomNavigationView</span><span class="o">.</span><span class="na">getMenu</span><span class="o">().</span><span class="na">getItem</span><span class="o">(</span><span class="mi">3</span><span class="o">).</span><span class="na">setIcon</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">mipmap</span><span class="o">.</span><span class="na">bnv_menu_ic_profile_active</span><span class="o">);</span>
+            <span class="k">break</span><span class="o">;</span>
+    <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<p>بعدش، یک <strong>listener</strong> برای bottomNavigationView مون تعریف کردم که هرموقع آیتمی انتخاب شد، این متد رو صدا بزنه تا آیکونش به آیکون مورد نظر ما تغییر کنه.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">bottomNavigationView</span><span class="o">.</span><span class="na">setOnNavigationItemSelectedListener</span><span class="o">(</span><span class="k">new</span> <span class="n">BottomNavigationView</span><span class="o">.</span><span class="na">OnNavigationItemSelectedListener</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">onNavigationItemSelected</span><span class="o">(</span><span class="nd">@NonNull</span> <span class="n">MenuItem</span> <span class="n">item</span><span class="o">)</span> <span class="o">{</span>
+
+        <span class="k">switch</span> <span class="o">(</span><span class="n">item</span><span class="o">.</span><span class="na">getItemId</span><span class="o">())</span> <span class="o">{</span>
+            <span class="k">case</span> <span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">action_mainFragments_home</span><span class="o">:</span>
+                <span class="n">changeIcon</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span> <span class="k">break</span><span class="o">;</span>
+            <span class="k">case</span> <span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">action_mainFragments_news</span><span class="o">:</span>
+                <span class="n">changeIcon</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span> <span class="k">break</span><span class="o">;</span>
+            <span class="k">case</span> <span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">action_mainFragments_support</span><span class="o">:</span>
+                <span class="n">changeIcon</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span> <span class="k">break</span><span class="o">;</span>
+            <span class="k">case</span> <span class="n">R</span><span class="o">.</span><span class="na">id</span><span class="o">.</span><span class="na">action_mainFragments_profile</span><span class="o">:</span>
+                <span class="n">changeIcon</span><span class="o">(</span><span class="mi">3</span><span class="o">);</span> <span class="k">break</span><span class="o">;</span>
+        <span class="o">}</span>
+
+        <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+    <span class="o">}</span>
+<span class="o">});</span>
+</code></pre>
+</div>
+
+<p>و در نهایت با توجه به برداشتن حالت مگنیفای و تغییر آیکون چیزی که انتظار داشتیم این شکلی شد:</p>
+
+<p><img src="/assets/img/post/2017-10-11/bottom-navigation-menu-1.gif" alt="Bottom Navigation View" /></p>
+
+<h2 id="چالش-سوم-قرار-دادن-badge-در-هنگام-دریافت-ناتیفیکیشن">چالش سوم: قرار دادن Badge در هنگام دریافت ناتیفیکیشن</h2>
+
+<p>یکی از پر دردسرترین چیزهایی که باهاش روبرو شدیم، بَج گذاشتن کنار یکی از آیتم‌های BNV بود. در اولین تلاش یه shape قرمز رنگ از نوع oval ساختم، بعدش به این فکر کردم که میخوام برای آیتم دومی یه بج نشون بدم، پس عرض صفحه رو گرفته، تقسیم بر ۴ کرده و سپس صربدر ۲.۵ میکردم تا بیافته در مرکز آيتممون! در نهایت هم ویوو مربوطه رو به BNV اضافه میکردم. همه چی درست کار می‌کرد تا موقعی که قرار نبود در سایزهای غیر موبایلی (مثل تبلت) نشون داده بشه، اونموقع دیگه مثل سابق جاش اونجایی نبود که باید باشه و روی هر اسکرین چندین پیکسل جابجا می‌شد.</p>
+
+<p>در اقدام بعدی برای حل این مشکل یه کلاس <code class="highlighter-rouge">BadgeView</code> درست کردم که از نوع AppCompatTextView هست، و تمام حالات ممکن رو براش پیاده کردم تا روی اسکرین های مختلف مشکلی نداشته باشیم، حتی مشکل حالت count یا empty بج رو هم براش در نظر گرفتم. لازم نیست خودتون رو درگیر این اینکه این کلاس چطوری کار میکنه بکنید، فقط کافیه کلاس رو <a href="https://gist.github.com/sadra/d13b354d6205360fc03c80aa2d3fd32b">از اینجا</a> دریافت کرده و به پروژتون اضافه کنید.</p>
+
+<p>حالا برای اضافه کردن Badge اول از همه آیتم منوی مورد نظرتون رو باید انتخاب کنید.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">BottomNavigationMenuView</span> <span class="n">menuView</span> <span class="o">=</span> <span class="o">(</span><span class="n">BottomNavigationMenuView</span><span class="o">)</span> <span class="n">bottomNavigationView</span><span class="o">.</span><span class="na">getChildAt</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+<span class="n">View</span> <span class="n">targetView</span> <span class="o">=</span> <span class="n">menuView</span><span class="o">.</span><span class="na">getChildAt</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span> <span class="c1">//I' select second menu item</span>
+</code></pre>
+</div>
+
+<p>سپس، از BadgeView یه نمونه ایجاد کرده و آیتم منوی مورد نظر رو براش تعریف می‌کنیم.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">badgeView</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BadgeView</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+<span class="n">badgeView</span><span class="o">.</span><span class="na">setTargetView</span><span class="o">(</span><span class="n">targetView</span><span class="o">);</span>
+</code></pre>
+</div>
+
+<p>اگه میخوایین Badge تون شماره داشته باشه (مثلا تعداد پیام‌های دریافتی)، متد <code class="highlighter-rouge">setBadgeCount</code> رو صدا کرده و داخلش مقدار مورد نظرتون رو وارد کنید. اگر نه مثل اینستاگرام یه نقطه کوچیک خالی کنار آیتم مورد نظر خواستین فقط کافیه متد <code class="highlighter-rouge">setEmptyBadge</code> و یا حتی برای سایز کوچیکتر <code class="highlighter-rouge">setEmptySmallerBadge</code> رو صدا کنید.</p>
+
+<p>بطور پیشفرض بَج در بالا سمت راست قرار میگیره. برای اینکه بَج مورد نظر در همه سایز ها و اسکرین ها یکسان و در یک جا قرار داشته باشه (سمت راست آیتم با فاصله ۵ پیکسل از سمت چپ) اول از همه باید اون رو در مرکز آیتم قرار بدیم، بعدش با استفاده از متد <code class="highlighter-rouge">setBadgeMargin</code> مقدار لازمه رو برای فاصله گرفتن از مرکز به سمت بالا سمت راست، یا هرجایی که شما دوست داشتین وارد می‌کنیم.</p>
+
+<p>خب درنهایت، چیزی نوشتیم برای یه <em>بج empty</em> اینه:</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">private</span> <span class="kt">void</span> <span class="nf">insertBadge</span><span class="o">(){</span>
+	<span class="n">BottomNavigationMenuView</span> <span class="n">menuView</span> <span class="o">=</span> <span class="o">(</span><span class="n">BottomNavigationMenuView</span><span class="o">)</span> <span class="n">bottomNavigationView</span><span class="o">.</span><span class="na">getChildAt</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+	<span class="n">View</span> <span class="n">targetView</span> <span class="o">=</span> <span class="n">menuView</span><span class="o">.</span><span class="na">getChildAt</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
+
+	<span class="n">badgeView</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BadgeView</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+	<span class="n">badgeView</span><span class="o">.</span><span class="na">setTargetView</span><span class="o">(</span><span class="n">targetView</span><span class="o">);</span>
+	<span class="n">badgeView</span><span class="o">.</span><span class="na">setEmptyBadge</span><span class="o">();</span>
+	<span class="n">badgeView</span><span class="o">.</span><span class="na">setBadgeGravity</span><span class="o">(</span><span class="n">Gravity</span><span class="o">.</span><span class="na">CENTER</span><span class="o">);</span>
+	<span class="n">badgeView</span><span class="o">.</span><span class="na">setBadgeMargin</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">24</span><span class="o">,</span> <span class="mi">13</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<p>اگر از Badge با شمارنده استفاده کردین، برای افزایش مقدار داخل بَج هم میتونید بصورت دستی مقدار جدید بهش بدید، و هم میتونید با صدا زدن متد <code class="highlighter-rouge">incrementBadgeCount</code> یا <code class="highlighter-rouge">decrementBadgeCount</code> اون رو کم یا زیاد کنید.</p>
+
+<p>برای حذف کردن بج از روی منوی آیتم فقط کافیه متد <code class="highlighter-rouge">removeBadge</code> رو صدا بزنید.</p>
+
+<p>در نهایت چیزی که انتظارشو داشتیم، به همین سادگی به همین خوشمزگی :)</p>
+
+<p><img src="/assets/img/post/2017-10-11/bottom-navigation-menu-2.png" alt="Bottom Navigation View" /></p>
+
+<p><img src="/assets/img/post/2017-10-11/bottom-navigation-menu-3.png" alt="Bottom Navigation View" /></p>
+
+<p><img src="/assets/img/post/2017-10-11/bottom-navigation-menu-4.png" alt="Bottom Navigation View" /></p>
+
+<h2 id="نتیجه-گیری">نتیجه گیری</h2>
+
+<p>نتیجه اینکه کس نخوارد پشت من جز ناخن انگشت من! به هرحال این بندگان خدا در شرکت google خودشون رو به هر دری میزنن تا راه توسعه رو برای ما هموارتر کنن ولی خوب نمیشه در هرچیزی کمال مطلق آفرید، ابزارها آفریده میشن،‌و تکمیل کردنشون وظیفه ما توسعه دهنده‌هاست، مثل همین چالش‌هایی که در این مقوله پیش اومد.</p>
+
+<p>اگر شما تو استفاده از این BottomNavigationView به چالشی برخوردید و حلش کردید یا برای همین موارد پیش اومده پیشنهاد بهتری داشتین ممنون میشم اگه روی <a href="https://twitter.com/sadra_amlashi">توییتر</a> یا <a href="https://t.me/Amlashi">تلگرام</a> با من درمیون بگذارید.</p>
+
+        </div>
+
+
+        <div class="post-routes-list">
+            
+            <a class="category-link" href="/category/چالش">چالش</a>
+            
+            <a class="category-link" href="/category/رابط-کاربری">رابط کاربری</a>
+            
+            <a class="category-link" href="/category/متریال-دیزاین">متریال دیزاین</a>
+            
+            
+            <a class="tag-link" href="/tag/android">Android</a>
+            
+            <a class="tag-link" href="/tag/ui">UI</a>
+            
+            <a class="tag-link" href="/tag/bottomnavigationview">BottomNavigationView</a>
+            
+        </div>
+
+
+        <div class="Prev-next-post-container">
+            
+            <a class="previous-btn" href="/2017/oh-my-android-lottie">نوشته قبلی: انیمیشن در اندروید با Lottie ←</a>
+            
+            
+        </div>
+
+
+    </div>
+
+</div>
+
+<a id="back-to-top" href="#" class="back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left">
+    <img src="/assets/img/base/arrow-up.png" class="arrow-up"/>
+</a>
+
+
+        <!-- Footer -->
+<footer class="footer-wrapper">
+
+    <div class="delimiter">
+        <a href="/" class="footer-logo">
+            <img src="http://isapanah.com/assets/img/base/favicon.png" class="logo-wrapper">
+        </a>
+    </div>
+
+    <p class="footer-copyright">
+        2008 - 2017<br>
+        مطالب تحت لیسانس <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" rel="license" target="_blank">کریتیو کامنز</a> منتشر می‌شوند.
+
+    </p>
+
+    <div class="footer-social-links">
+        <a href="https://twitter.com/sadra-amlashi" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a href="https://github.com/sadra" title="Github" target="_blank"><i class="fa fa-github"></i></a>
+        <a href="https://medium.com/sadra" title="Medium" target="_blank"><i class="fa fa-medium"></i></a>
+        <a href="https://www.linkedin.com/in/amlashisadra/" title="Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
+        <a href="https://facebook.com/sadra.am123" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+    </div>
+
+
+ </footer>
+<!-- /Footer -->
+
+        <script  type="application/javascript" src="http://isapanah.com/assets/js/jquery-3.2.1.min.js"></script>
+<script  type="application/javascript" src="http://isapanah.com/assets/js/function.js"></script>
+<script  type="application/javascript" src="http://isapanah.com/assets/js/html2canvas.min.js"></script>
+<script  type="application/javascript" src="http://isapanah.com/assets/js/canvas2image.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5952bba56b75766c"></script>
+    </body>
+</html>

@@ -53,7 +53,7 @@ author: Sadra
    سرویسی که به شما امکان ایجاد سرویس‌های سمت بک‌اند (بر پایه REST API) و یک پایگاه داده Realtime میده. از این سرویس می‌تونید برای ایجاد بک‌اند خودتون برای استفاده در اپلیکیشن های Android, iOS, JavaScript, Java, Swift, NodeJs و غیره استفاده کنید. از دیتابیس Realtime هم با دسترسی بر پایه RESTP API میتونید در فریم‌ورک‌های جاوااسکریپتی مثل AngulatJs, React, Ember.js و BackBone.js استفاده کنید. (بیشتر بدانید: [متن](https://firebase.google.com/products/realtime-database/) -‌ [ویدئو](https://youtu.be/U5aeM5dvUpA) )
 
 5. ### Firebase Cloud Store
-   فایربیس به شما امکان میده تا بتونید از یک فضای کلاد جهت ذخیره فایل‌هاتون مثل Audio, Image,Video و دیگر انواع فایل استفاده کنید. برای مثال اگه یه اپلیکیشن چت اگه داشته باشید می‌تونید اطلاعاتش رو اونجا هاست کنید و کاربر بصورت کلاد به همه دیتاش در همه پلتفرم‌های ممکن سرویستون دسترسی داره. (بیشتر بدانید: [متن](https://firebase.google.com/products/firestore/) -‌ [ویدئو](https://youtu.be/QcsAb2RR52c) )
+   فایربیس به شما امکان میده تا بتونید از یک فضای کلاد جهت ذخیره فایل‌هاتون مثل Audio, Image,Video و دیگر انواع فایل استفاده کنید. برای مثال اگه یه اپلیکیشن چت داشته باشید می‌تونید اطلاعاتش رو اونجا هاست کنید و کاربر بصورت کلاد به همه دیتاش در همه پلتفرم‌های ممکن سرویستون دسترسی داره. (بیشتر بدانید: [متن](https://firebase.google.com/products/firestore/) -‌ [ویدئو](https://youtu.be/QcsAb2RR52c) )
 
 6. ### Firebase Hosting
    این سرویس هم به عنوان یک هاست برای شما عمل می‌کنه. روی این هاست میتونید از CSS, HTML و هرچیز Javascriptی استفاده کنید، در فرانت اند هرچیزی که میشناسین و در بک‌اند تنها Node.js. این سرویس از CDN و SSL پشتیبانی می‌کنه.(بیشتر بدانید: [متن](https://firebase.google.com/products/hosting) -‌ [ویدئو](https://youtu.be/jsRVHeQd5kU) )

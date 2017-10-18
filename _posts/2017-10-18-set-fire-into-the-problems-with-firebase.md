@@ -44,7 +44,7 @@ author: Sadra
    سرویس رایگان آنالیتیک فایبرس که مشابه Google Analytics، مُنتهی اختصاصی شده برای اپلیکیشن های موبایلی. این سرویس اطلاعات جالبی مثل تعداد نصب، تعداد Uninstall، نرخ بازگشت به اپ و غیره به ما میده. همچنین میتونیم با ایجاد فانل های آماری و دسته بندی کاربران اطلاعات دقیق، مورد به مورد و هدف گذاری شده نیز داشته باشیم.  (بیشتر بدانید: [متن](https://firebase.google.com/docs/analytics) -‌ [ویدئو](https://youtu.be/8iZpH7O6zXo) )
 
 2. ### Firebase Cloud Messagin
-   اگه با سرویس Google Cloud Messaging (GCM) آشنایی دارید باید بگم، که [FCM](https://en.wikipedia.org/wiki/Firebase_Cloud_Messaging) هم مشابه [Google Cloud Messaging](https://en.wikipedia.org/wiki/Google_Cloud_Messaging) یک سرویس کراس پلتفرم و بهینه شده برای اپلیکیشن‌های موبایلی Android, iOA و همچنین WebApplicationها ست، که بطور کاملا رایگان میتونید ازش استفاده کنید. (بیشتر بدانید: [متن](https://firebase.google.com/docs/cloud-messaging) -‌ [ویدئو](https://youtu.be/sioEY4tWmLI?list=PLl-K7zZEsYLmOF_07IayrTntevxtbUxDL) )
+   اگه با سرویس  آشنایی دارید باید بگم، که [FCM](https://en.wikipedia.org/wiki/Firebase_Cloud_Messaging) هم مشابه [Google Cloud Messaging](https://en.wikipedia.org/wiki/Google_Cloud_Messaging) یک سرویس کراس پلتفرم و بهینه شده برای اپلیکیشن‌های موبایلی Android, iOA و همچنین WebApplicationها ست، که بطور کاملا رایگان میتونید ازش استفاده کنید. (بیشتر بدانید: [متن](https://firebase.google.com/docs/cloud-messaging) -‌ [ویدئو](https://youtu.be/sioEY4tWmLI?list=PLl-K7zZEsYLmOF_07IayrTntevxtbUxDL) )
 
 3. ### Firebase Auth
    سرویسی‌ست که به شما این امکان رو میده تا از Client-Side کابرتون رو احراز هویت کنید. کاربر میتونه از طریق شبکه‌های اجتماعی مثل Facebook, Github, Twitter و Google به اپ لاگین کنه، همینطور شما می‌تونید فرآیند احراز هویت رو از طریق ایمیل پسورد انجام بدید. (بیشتر بدانید: [متن](https://firebase.google.com/docs/auth/) -‌ [ویدئو](https://youtu.be/8sGY55yxicA?list=PLl-K7zZEsYLmOF_07IayrTntevxtbUxDL) )
@@ -69,7 +69,6 @@ author: Sadra
 
 10. ### Firebase Cloud Function
 یکی از امکانات کاربردی فایبریس همین سرویس FCF هست. با این سرویس شما می‌تونید سمت بک اند مورد‌نیازتون رو هم طراحی کنید و درنهایت یکسری API بر بستر پروتوکل HTTPS در دسترس داشته باشید. با استفاده از این سرویس شما دیگه نگران Scale کردن و نگهداری سرویس‌هاتون ندارید، تا موقعی که شما هستین، سرویس‌هاتون بر بستر امن و کلاد در اختیار کاربرانتون قرار داره. (بیشتر بدانید: [متن](https://firebase.google.com/docs/functions/) - [ویدئو](https://youtu.be/vr0Gfvp5v1A) )
-
 
 
 ## سرویس‌های درحال پیشرفت

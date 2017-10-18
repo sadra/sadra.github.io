@@ -1,5 +1,123 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://isapanah.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://isapanah.com/" rel="alternate" type="text/html" /><updated>2017-10-11T19:23:13+03:30</updated><id>http://isapanah.com/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده اپلیکیشن iOS و Android.
-</subtitle><entry><title type="html">بهبود رابط کاربری با BottomNavigationView</title><link href="http://isapanah.com/2017/bottom-navigation-view-challenges" rel="alternate" type="text/html" title="بهبود رابط کاربری با BottomNavigationView" /><published>2017-10-11T00:00:00+03:30</published><updated>2017-10-11T00:00:00+03:30</updated><id>http://isapanah.com/2017/bottom-navigation-view-challenges</id><content type="html" xml:base="http://isapanah.com/2017/bottom-navigation-view-challenges">&lt;p&gt;اگر پست “&lt;a href=&quot;http://dcamp.ir/hamburger-menu-vs-bottom-navigation&quot;&gt;جایگزینی برای منوی همبرگر&lt;/a&gt;” شایان رو خونده باشید حتما متوجه شدید که ما در پروژمون بجای همبرگر منو از &lt;a href=&quot;https://developer.android.com/reference/android/support/design/widget/BottomNavigationView.html&quot;&gt;BottomNavigationView&lt;/a&gt; استفاده کردیم.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://isapanah.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://isapanah.com/" rel="alternate" type="text/html" /><updated>2017-10-18T23:57:34+03:30</updated><id>http://isapanah.com/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده اپلیکیشن iOS و Android.
+</subtitle><entry><title type="html">با Firebase مشکلاتتان را به آتش بکشید!</title><link href="http://isapanah.com/2017/set-fire-into-the-problems-with-firebase" rel="alternate" type="text/html" title="با Firebase مشکلاتتان را به آتش بکشید!" /><published>2017-10-18T00:00:00+03:30</published><updated>2017-10-18T00:00:00+03:30</updated><id>http://isapanah.com/2017/set-fire-into-the-problems-with-firebase</id><content type="html" xml:base="http://isapanah.com/2017/set-fire-into-the-problems-with-firebase">&lt;h2 id=&quot;مصائب-مسیح&quot;&gt;مصائب مسیح!&lt;/h2&gt;
+
+&lt;p&gt;تا به امروز اگر می‌خواستیم از سرویسی جهت جمع آوری اطلاعات و آمار درباره وبسایت یا اپلیکیشنمون استفاده کنیم، بی‌شک اولین انتخابمون &lt;strong&gt;&lt;a href=&quot;https://analytics.google.com/&quot;&gt;Google Analytics&lt;/a&gt;&lt;/strong&gt; بود، در درجه بعد سرویس‌های مثل &lt;strong&gt;&lt;a href=&quot;https://fabric.io&quot;&gt;Fabric&lt;/a&gt;&lt;/strong&gt; خودنمایی می‌کند. وای به روزی که نیاز می‌شد تا از سرویسی برای ارسال &lt;strong&gt;PushNotification&lt;/strong&gt; استفاده کنیم، اونوقت باید از &lt;strong&gt;&lt;a href=&quot;https://developers.google.com/cloud-messaging/&quot;&gt;GCM&lt;/a&gt;&lt;/strong&gt;، &lt;strong&gt;&lt;a href=&quot;&quot;&gt;Parse&lt;/a&gt;&lt;/strong&gt; یا &lt;strong&gt;&lt;a href=&quot;&quot;&gt;پوشه&lt;/a&gt;&lt;/strong&gt; استفاده می‌کردیم. بماند که برای اطلاع از کرش‌های اپلیکیشن هم از خیلی‌ها از &lt;strong&gt;&lt;a href=&quot;https://fabric.io/kits/crashlytics&quot;&gt;CrashLystic&lt;/a&gt;&lt;/strong&gt; استفاده می‌کردند.&lt;/p&gt;
+
+&lt;p&gt;تنها برای همین ۳سرویس باید ۳ الی ۵ لایبرری مختلف از لایبرریهای گوگل گرفته تا توییتر و فیسبوک نصب می‌کردیم، چه روزهای طاقت‌فرسایی که برای مدیریت و نویگیت کردن بین این سرویس‌ها طی نشد. همه اینها یک‌طرف، اینکه این سرویس‌های اختصاص برای اپلیکیشن‌های موبایلی لانچ نشده و سرویس‌های هزارپاره هستند در طرفی دیگه.&lt;/p&gt;
+
+&lt;h2 id=&quot;شب-برمیآید&quot;&gt;شب برمی‌آید&lt;/h2&gt;
+
+&lt;p&gt;در سال ۲۰۱۱ دو مهندس به نام‌های &lt;a href=&quot;https://angel.co/james-tamplin&quot;&gt;James Tamplin&lt;/a&gt; و &lt;a href=&quot;https://angel.co/andrew-lee&quot;&gt;Andrew Lee&lt;/a&gt; استارتاپی بنام Firebase رو لانچ کردن. این سرویس در ابتدا یه API چت بود که به توسعه دهنده‌ها این امکان رو میداد تا سرویس چت رو در سایتشون پیاده کنن. بعد از مدتی به اطلاعات زیاد و عجیب منتقل شده بر این بستر مشکوک شدن،‌ و پس از بررسی‌ها معلوم شد که توسعه دهنده‌ها از این سرویس برای ارسال اطلاعات در بازی یا نرم‌افزارهاشون استفاده می‌کردند، درواقع یه سرویس realtime انتقال دیتا.&lt;/p&gt;
+
+&lt;p&gt;در سال ۲۰۱۲ Andrew و James تصمیم گرفتن سرویس چت رو از ساختیار RealTime اون جدا کنند، و  اینگونه بود که فایربیس (بگونه‌ای که الان می‌شناسیمش) خلق شد!&lt;/p&gt;
+
+&lt;p&gt;در سال ۲۰۱۴ شرکت گوگل فایربیس رو خرید، پس از افزودن چند سرویس (مثل Analytics، Crash Report و … ) نهایتا در سال ۲۰۱۵ با خریدن &lt;a href=&quot;https://divshot.com/&quot;&gt;Divshot&lt;/a&gt;  (که یک سرویس کلاد خدمات وب، مثل Storage, CDN, SSL, API و غیره، است) و ادقام آن با سرویس‌های قبلی، اَبَر سرویس فعلی فایبریس رو تشکیل داد.&lt;/p&gt;
+
+&lt;h2 id=&quot;فایربیس-چه-کارهایی-میکند&quot;&gt;فایربیس چه کارهایی می‌کند؟&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;h3 id=&quot;firebase-analytics&quot;&gt;Firebase Analytics&lt;/h3&gt;
+    &lt;p&gt;سرویس رایگان آنالیتیک فایبرس که مشابه Google Analytics، مُنتهی اختصاصی شده برای اپلیکیشن های موبایلی. این سرویس اطلاعات جالبی مثل تعداد نصب، تعداد Uninstall، نرخ بازگشت به اپ و غیره به ما میده. همچنین میتونیم با ایجاد فانل های آماری و دسته بندی کاربران اطلاعات دقیق، مورد به مورد و هدف گذاری شده نیز داشته باشیم.  (بیشتر بدانید: &lt;a href=&quot;https://firebase.google.com/docs/analytics&quot;&gt;متن&lt;/a&gt; -‌ &lt;a href=&quot;https://youtu.be/8iZpH7O6zXo&quot;&gt;ویدئو&lt;/a&gt; )&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h3 id=&quot;firebase-cloud-messagin&quot;&gt;Firebase Cloud Messagin&lt;/h3&gt;
+    &lt;p&gt;اگه با سرویس Google Cloud Messaging (GCM) آشنایی دارید باید بگم، که &lt;a href=&quot;https://en.wikipedia.org/wiki/Firebase_Cloud_Messaging&quot;&gt;FCM&lt;/a&gt; هم مشابه &lt;a href=&quot;https://en.wikipedia.org/wiki/Google_Cloud_Messaging&quot;&gt;Google Cloud Messaging&lt;/a&gt; یک سرویس کراس پلتفرم و بهینه شده برای اپلیکیشن‌های موبایلی Android, iOA و همچنین WebApplicationها ست، که بطور کاملا رایگان میتونید ازش استفاده کنید. (بیشتر بدانید: &lt;a href=&quot;https://firebase.google.com/docs/cloud-messaging&quot;&gt;متن&lt;/a&gt; -‌ &lt;a href=&quot;https://youtu.be/sioEY4tWmLI?list=PLl-K7zZEsYLmOF_07IayrTntevxtbUxDL&quot;&gt;ویدئو&lt;/a&gt; )&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h3 id=&quot;firebase-auth&quot;&gt;Firebase Auth&lt;/h3&gt;
+    &lt;p&gt;سرویسی‌ست که به شما این امکان رو میده تا از Client-Side کابرتون رو احراز هویت کنید. کاربر میتونه از طریق شبکه‌های اجتماعی مثل Facebook, Github, Twitter و Google به اپ لاگین کنه، همینطور شما می‌تونید فرآیند احراز هویت رو از طریق ایمیل پسورد انجام بدید. (بیشتر بدانید: &lt;a href=&quot;https://firebase.google.com/docs/auth/&quot;&gt;متن&lt;/a&gt; -‌ &lt;a href=&quot;https://youtu.be/8sGY55yxicA?list=PLl-K7zZEsYLmOF_07IayrTntevxtbUxDL&quot;&gt;ویدئو&lt;/a&gt; )&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h3 id=&quot;realtime-database&quot;&gt;Realtime Database&lt;/h3&gt;
+    &lt;p&gt;سرویسی که به شما امکان ایجاد سرویس‌های سمتن بک‌اند (بر پایه REST API) و یک پایگاه داده Realtime میده. از این سرویس می‌تونید برای ایجاد بکن‌اند خودتون برای استفاده در اپلیکیشن های Android, iOS, JavaScript, Java, Swift, NodeJs و غیره استفاده کنید. از دیتابیس Realtime هم با دسترسی بر پایه RESTP API میتونید در فریم‌ورک‌های جاوااسکریپتی مثل AngulatJs, React, Ember.js و BackBone.js استفاده کنید. (بیشتر بدانید: &lt;a href=&quot;https://firebase.google.com/products/realtime-database/&quot;&gt;متن&lt;/a&gt; -‌ &lt;a href=&quot;https://youtu.be/U5aeM5dvUpA&quot;&gt;ویدئو&lt;/a&gt; )&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h3 id=&quot;firebase-cloud-store&quot;&gt;Firebase Cloud Store&lt;/h3&gt;
+    &lt;p&gt;فایربیس به شما امکان میده تا بتونید از یک فضای کلاد جهت ذخیره فایل‌هاتون مثل Audio, Image,Video و دیگر انواع فایل استفاده کنید. برای مثال اگه یه اپلیکیشن چت اگه داشته باشید می‌تونید اطلاعاتش رو اونجا هاست کنید و کاربر بصورت کلاد به همه دیتاش در همه پلتفرم‌های ممکن سرویستون دسترسی داره. (بیشتر بدانید: &lt;a href=&quot;https://firebase.google.com/products/firestore/&quot;&gt;متن&lt;/a&gt; -‌ &lt;a href=&quot;https://youtu.be/QcsAb2RR52c&quot;&gt;ویدئو&lt;/a&gt; )&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h3 id=&quot;firebase-hosting&quot;&gt;Firebase Hosting&lt;/h3&gt;
+    &lt;p&gt;این سرویس هم به عنوان یک هاست برای شما عمل می‌کنه. روی این هاست میتونید از CSS, HTML و هرچیز Javascriptی استفاده کنید، در فرانت اند هرچیزی که میشناسین و در بک‌اند تنها Node.js. این سرویس از CDN و SSL پشتیبانی می‌کنه.(بیشتر بدانید: &lt;a href=&quot;https://firebase.google.com/products/hosting&quot;&gt;متن&lt;/a&gt; -‌ &lt;a href=&quot;https://youtu.be/jsRVHeQd5kU&quot;&gt;ویدئو&lt;/a&gt; )&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h3 id=&quot;firebase-test-lab-برای-android&quot;&gt;Firebase Test Lab برای Android&lt;/h3&gt;
+    &lt;p&gt;این FT‌B یکی از جالبترین بخشهای فایربیسه. با این سرویس می‌تونید اپلیکیشنتون رو در انواع مختلفی از گوش‌های اندروید با برند‌های مختلف تست کنید و نتیجه رو بصورت Log، تصویر یا ویدئو دریافت کنید. فایربیس کلیه مراحل تست رو حتی اگر UnitTest برای اپتون ننوشته باشید انجام میده. با این سرویس شما این امکان رو دارید که علاوه بر UnitTestها، تست‌های CI رو هم مورد آزمایش و پاس کنید. و در نهایت نتیجه و آنالیز تست‌هارو در اختیار داشته باشید. (بیشتر بدانید: &lt;a href=&quot;https://firebase.google.com/products/test-lab/&quot;&gt;متن&lt;/a&gt; -‌ &lt;a href=&quot;https://youtu.be/4_ZEEX1x17k&quot;&gt;ویدئو&lt;/a&gt; )&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h3 id=&quot;firebase-crash-reporting&quot;&gt;Firebase Crash Reporting&lt;/h3&gt;
+    &lt;p&gt;اگه می‌خواید بدونید اپتون چه مواقع کرش میکنه یا کاربرانتون معمولا با چه مشکلاتی و به چه دلیل مواجه میشن، این سرویس بهترین کمک رو بهتون میکنه.(بیشتر بدانید: &lt;a href=&quot;https://firebase.google.com/products/crash/&quot;&gt;متن&lt;/a&gt; -‌ &lt;a href=&quot;https://youtu.be/B7mlLVAkcfU&quot;&gt;ویدئو&lt;/a&gt; )&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h3 id=&quot;firebase-perforamnce-monitoring&quot;&gt;Firebase Perforamnce Monitoring&lt;/h3&gt;
+    &lt;p&gt;رویس FPM به شما کمک میکنه تا از پرفرمنس و عملکرد اپلیکیشن Android یا iOSتون در دستگاه‌های کاربرا اطلاعات دقیقی کسب کنید. با استفاده از SDK این سرویس اطلاعات مورد نیازتون جهت سنجش عملکرد اپ از تلفن همراه تک تک کاربرانتون جمع‌اوری میشه و پس آنالیز دیتا‌ها در کنسول فایربیس قابل رویت هست. این سرویس به شما کمک میکنه تا بدونید چه کار‌های باید انجام بدید تا عملکرد یا Perfromance اپ‌تون رو بهبود ببخشید یا اینکه مشکلات حاصله رو رفع کنید. (بیشتر بدانید: &lt;a href=&quot;https://firebase.google.com/docs/perf-mon/&quot;&gt;متن&lt;/a&gt; - &lt;a href=&quot;https://youtu.be/0EHSPFvH7vk?list=PLl-K7zZEsYLmOF_07IayrTntevxtbUxDL&quot;&gt;ویدئو&lt;/a&gt; )&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h3 id=&quot;firebase-cloud-function&quot;&gt;Firebase Cloud Function&lt;/h3&gt;
+    &lt;p&gt;یکی از امکانات کاربردی فایبریس همین سرویس FCF هست. با این سرویس شما می‌تونید سمت بک اند مورد‌نیازتون رو هم طراحی کنید و درنهایت یکسری API بر بستر پروتوکل HTTPS در دسترس داشته باشید. با استفاده از این سرویس شما دیگه نگران Scale کردن و نگهداری سرویس‌هاتون ندارید، تا موقعی که شما هستین، سرویس‌هاتون بر بستر امن و کلاد در اختیار کاربرانتون قرار داره. (بیشتر بدانید: &lt;a href=&quot;https://firebase.google.com/docs/functions/&quot;&gt;متن&lt;/a&gt; - &lt;a href=&quot;https://youtu.be/vr0Gfvp5v1A&quot;&gt;ویدئو&lt;/a&gt; )&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;سرویسهای-درحال-پیشرفت&quot;&gt;سرویس‌های درحال پیشرفت&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;h3 id=&quot;firebase-notifications&quot;&gt;Firebase Notifications&lt;/h3&gt;
+    &lt;p&gt;شما می‌تونید بدون استفاده از API و تنها از داخل پنل فایربیس‌تون برای کاربران اپ نوتیفیکیشن بفرستید، این امکان رو دارید که کاربران رو فیلتر کنید و بر اساس User Propertyهایی که در پنل آنالیتیک فایبربیس‌تون ایجاد کردید (مثلا جنسیت فلان) پیام‌هارو ارسال کنید.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h3 id=&quot;firebase-app-indexing&quot;&gt;Firebase App Indexing&lt;/h3&gt;
+    &lt;p&gt;از این سرویس برای بهبود رتبه اپ در جست‌جوی گوگل استفاده کنید، این سرویس همچنین بهتون کمک میکنه تا در query search گوگل پلی پیشنهاد شده و راحت‌تر پیدا بشید. (بیشتر بدانید: &lt;a href=&quot;https://firebase.google.com/products/app-indexing/&quot;&gt;متن&lt;/a&gt; -‌ &lt;a href=&quot;https://youtu.be/C35OSHlTNwA&quot;&gt;ویدئو&lt;/a&gt; )&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h3 id=&quot;firebase-dynamic-links&quot;&gt;Firebase Dynamic Links&lt;/h3&gt;
+    &lt;p&gt;داینامیک لینک‌ها این امکان رو به شما میدن تا بتونید لینک‌های هوشمند بسازید که در مواقع مختلف رفتار متفاوتی از خودشون نشون بدن. برای مثال شما در وبسایتتون یک محصول برای فروش گذاشتید، کاربر بعد از کلیک روی اون لینک (اگر سایت رو در موبایلش باز کرده باشه و بر اساس پلتفرم سیستم عاملش) به سمتن اون صفحه از اپلیکیشن هدایت میشه که و محصول بهش نشون داده یا همونجا فاکتور برای پرداخت براش صادر میشه تا خریدش رو سریعتر انجام بده. (بیشتر بدانید: &lt;a href=&quot;https://firebase.google.com/docs/dynamic-links/&quot;&gt;متن&lt;/a&gt; - &lt;a href=&quot;https://www.youtube.com/watch?v=LvY1JMcrPF8&quot;&gt;ویدئو&lt;/a&gt; )&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h3 id=&quot;firebase-invites&quot;&gt;Firebase Invites&lt;/h3&gt;
+    &lt;p&gt;این سرویس به شما کمک میکنه تا امکانی رو فراهم کنید برای اینکه کاربرانتون با ایمیل، SMS یا پیام در شبکه‌های اجتماعی دیگر دوستناشون رو برای نصب اپلیکیشن دعوت کنن، و البته این امکان رو هم در اختیار دارید تا میزان بازگشت و استفاده کاربران از دعوت‌های انجام شده رو با آمار دقیق در اختیار داشته باشید. (بیشتر بدانید: &lt;a href=&quot;https://firebase.google.com/docs/invites/&quot;&gt;متن&lt;/a&gt; -‌ &lt;a href=&quot;https://youtu.be/LkaIJCZ_HyM?list=PLl-K7zZEsYLmOF_07IayrTntevxtbUxDL&quot;&gt;ویدئو&lt;/a&gt; )&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h3 id=&quot;firebase-remote-config&quot;&gt;Firebase Remote Config&lt;/h3&gt;
+    &lt;p&gt;یکی از امکانات دیگه‌ی فایربیس همین ًFRCه که به شما این توانایی رو میده تا بصورت کلاد امکان تغییر تنظیمات اپلیکیشنتون رو داشته باشید، بدون اینکه نیاز باشه تا اپ رو آپدیت کنید. برای مثال تمامی موتونی که در اپتون استفاده کردید بصورت یک فایل XML درمیارید، پسفردا اگه به مشکلی برخوردید و خواستید متن رو عوض کنید، یا مثلا رنگ دکمه رو عوض کنید یا هر تغییر دیگه‌ای، فقط کافیه از ریمتون کانفیگ اطلاعات جدید رو ویرایش کرده و ارسال کنید تا همه اپ‌ها رو عوض کنید. (بیشتر بدانید: &lt;a href=&quot;https://firebase.google.com/products/remote-config/&quot;&gt;متن&lt;/a&gt; -‌ &lt;a href=&quot;https://youtu.be/_CXXVFPO6f0&quot;&gt;ویدئو&lt;/a&gt; )&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h3 id=&quot;adwords&quot;&gt;Adwords&lt;/h3&gt;
+    &lt;p&gt;جالب اینجاست که گوگل سرویس Adwordsش رو هم به فایربیس انتقال داده و شما می‌تونید با استفاده از این سرویس مثل سایبق کاربران مورد نظرتون رو هدف قرار داده و نتیجه رو در &lt;strong&gt;Firebase Analytics&lt;/strong&gt; مشاهده کنید.  (بیشتر بدانید: &lt;a href=&quot;https://firebase.google.com/docs/adwords/&quot;&gt;متن&lt;/a&gt; -‌ &lt;a href=&quot;https://youtu.be/YTgJjKU9GdQ&quot;&gt;ویدئو&lt;/a&gt; )&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;کسب-درآمد&quot;&gt;کسب درآمد&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;h3 id=&quot;admob&quot;&gt;Admob&lt;/h3&gt;
+    &lt;p&gt;از سرویس admob جهت پخش تبلیغات و کسب درآمد در اپ‌تون می‌تونید استفاده کنید. (بیشتر بدانید: &lt;a href=&quot;https://firebase.google.com/docs/admob/&quot;&gt;متن&lt;/a&gt; -‌ &lt;a href=&quot;https://youtu.be/EPKmYheOmiw?list=PLl-K7zZEsYLmOF_07IayrTntevxtbUxDL&quot;&gt;ویدئو&lt;/a&gt; )&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;پروژه-های-متنباز&quot;&gt;پروژه های متن‌باز&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;h3 id=&quot;firepad&quot;&gt;Firepad&lt;/h3&gt;
+    &lt;p&gt;این یک سرویس ویرایش متن در لحظه و قابل اشتراکه. فایرپد از ادیتور‌های مختلف مثل Altassian Stash Realtime و Koding در خودش استفاده می‌کنه. (&lt;a href=&quot;https://firepad.io/&quot;&gt;وبسایت&lt;/a&gt;)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h3 id=&quot;firechat&quot;&gt;Firechat&lt;/h3&gt;
+    &lt;p&gt;فایرچت هم یه اپلیکیشن چت Realtime و اوپن سورس هست. (&lt;a href=&quot;https://www.opengarden.com/firechat.html&quot;&gt;وبسایت&lt;/a&gt;)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h3 id=&quot;geofire&quot;&gt;GeoFire&lt;/h3&gt;
+    &lt;p&gt;فایرجئو هم بهمون کمک میکنه تا با استفاده از Firebase Databse بتونیم اطلاعات لوکیشن و جئومتریک کاربران اپلیکیشن رو در پایگاه داده آنلاین‌مون ذخیره کرده و نگهداری کنیم. (و احتمالا بعدا ازش استفاده کنیم 😈) (&lt;a href=&quot;https://github.com/firebase/geofire&quot;&gt;وبسایت&lt;/a&gt;)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;نتیجه-گیری&quot;&gt;نتیجه گیری&lt;/h2&gt;
+
+&lt;p&gt;پس بجای استفاده از چندین سرویس، از یک سرویس کامل استفاده کنید. البته امیدوارم این امر برای شرکت گوگل انحصار ایجاد نکنه و استارتاپ‌های مختلف بتونن با ارائه سرویس‌های خلاقانه و کاربردی مارو در مسیر بهبود خدمت و سرویس به کاربران یاری کنن.&lt;/p&gt;
+
+&lt;p&gt;لازمه که این مورد رو یادآور بشم که فقط سرویس FCM کاملا رایگان هست، و باقی سرویس‌های فایبریس یا از پایه پولی‌هستن یا محدودیت دارن در حالت رایگان، پس قبل از برنامه ریزی برای توسعه،‌ به بخش بیزنسیش هم فکر کنید.&lt;/p&gt;
+
+&lt;p&gt;اول که شروع کردم قرار بود راجع به پیاده‌سازی فایبربیس در اپلیکیشمون فایبرنت صحبت کنم. اما خب دلم نیومد راجع به سرویس‌های فایبربیس ننویسم (چون جایی هم در منابع فارسی ندیدم که کامل راجع بهش نوشته باشه). انشالله در پست یا پست‌های بعدی حسابی راجع به پیاده کردن چند سرویسی که استفاده کردم خواهم نوشت.&lt;/p&gt;
+
+&lt;p&gt;پس تا پست بعدی، اگه سوال مورد یا چیزی بود لطفا در &lt;a href=&quot;https://twitter.com/sadra_amlashi&quot;&gt;توئیتر&lt;/a&gt; یا &lt;a href=&quot;https://t.me/amlashi&quot;&gt;تلگرام&lt;/a&gt; با هم در ارتباط باشیم.&lt;/p&gt;</content><author><name>صدرا املشی</name></author><category term="Google" /><category term="Firebase" /><category term="Android" /><category term="iOS" /><category term="WebApplication" /><summary type="html">مصائب مسیح!</summary></entry><entry><title type="html">بهبود رابط کاربری با BottomNavigationView</title><link href="http://isapanah.com/2017/bottom-navigation-view-challenges" rel="alternate" type="text/html" title="بهبود رابط کاربری با BottomNavigationView" /><published>2017-10-11T00:00:00+03:30</published><updated>2017-10-11T00:00:00+03:30</updated><id>http://isapanah.com/2017/bottom-navigation-view-challenges</id><content type="html" xml:base="http://isapanah.com/2017/bottom-navigation-view-challenges">&lt;p&gt;اگر پست “&lt;a href=&quot;http://dcamp.ir/hamburger-menu-vs-bottom-navigation&quot;&gt;جایگزینی برای منوی همبرگر&lt;/a&gt;” شایان رو خونده باشید حتما متوجه شدید که ما در پروژمون بجای همبرگر منو از &lt;a href=&quot;https://developer.android.com/reference/android/support/design/widget/BottomNavigationView.html&quot;&gt;BottomNavigationView&lt;/a&gt; استفاده کردیم.&lt;/p&gt;
 
 &lt;p&gt;در این پست قراره به چالش هایی که در روند پیاده سازی این مقوله برخوردیم اشاره کنم و اینکه به چه روشی اونهارو حل کردیم.&lt;/p&gt;
 

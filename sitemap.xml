@@ -13,10 +13,6 @@
 <lastmod>2017-09-10T00:00:00+04:30</lastmod>
 </url>
 <url>
-<loc>http://isapanah.com/2010/test-post</loc>
-<lastmod>2010-03-03T00:00:00+03:30</lastmod>
-</url>
-<url>
 <loc>http://isapanah.com/2016/sensus-iot-electronic-guitar</loc>
 <lastmod>2016-08-29T00:00:00+04:30</lastmod>
 </url>
@@ -45,6 +41,10 @@
 <lastmod>2017-10-18T00:00:00+03:30</lastmod>
 </url>
 <url>
+<loc>http://isapanah.com/2017/how-to-fcm-android</loc>
+<lastmod>2017-10-24T00:00:00+03:30</lastmod>
+</url>
+<url>
 <loc>http://isapanah.com/video/screencast/first-screen/</loc>
 <lastmod>2017-09-10T00:00:00+04:30</lastmod>
 </url>
@@ -68,12 +68,6 @@
 </url>
 <url>
 <loc>http://isapanah.com/list/tags</loc>
-</url>
-<url>
-<loc>http://isapanah.com/tag/category-test/</loc>
-</url>
-<url>
-<loc>http://isapanah.com/tag/%D8%AA%D8%B3%D8%AA-%D8%AF%D8%B3%D8%AA%D9%87-%D8%A8%D9%86%D8%AF%DB%8C/</loc>
 </url>
 <url>
 <loc>http://isapanah.com/tag/%D8%B1%D8%A7%DA%A9/</loc>
@@ -139,12 +133,6 @@
 <loc>http://isapanah.com/tag/webapplication/</loc>
 </url>
 <url>
-<loc>http://isapanah.com/category/tag-test/</loc>
-</url>
-<url>
-<loc>http://isapanah.com/category/%D8%AA%D8%B3%D8%AA-%D9%87%D8%B4%D8%AA%DA%AF/</loc>
-</url>
-<url>
 <loc>http://isapanah.com/category/%D9%85%D9%88%D8%B3%DB%8C%D9%82%DB%8C/</loc>
 </url>
 <url>
@@ -176,6 +164,9 @@
 </url>
 <url>
 <loc>http://isapanah.com/category/%D9%85%D8%B9%D8%B1%D9%81%DB%8C/</loc>
+</url>
+<url>
+<loc>http://isapanah.com/category/%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DB%8C/</loc>
 </url>
 <url>
 <loc>http://isapanah.com/short-link/galexen.html</loc>

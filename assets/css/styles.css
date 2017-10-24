@@ -235,8 +235,7 @@ h3, h2, h1, p, a, small {
   list-style: none; }
 
 p {
-  font-family: "Vazir", Arial, sans-serif;
-  opacity: 0.8; }
+  font-family: "Vazir", Arial, sans-serif; }
 
 .hide {
   display: none; }
@@ -274,7 +273,7 @@ p {
   font-size: 1em;
   font-weight: 200;
   line-height: 2em;
-  color: #2b2b2b; }
+  color: #454545; }
 
 a {
   color: #1360f4; }
@@ -284,7 +283,7 @@ a:hover {
 
 hr {
   border-style: solid;
-  color: #2b2b2b;
+  color: #454545;
   opacity: 0.1; }
 
 .hr-padded {
@@ -1099,7 +1098,7 @@ footer.footer-wrapper {
     text-align: right; }
   .blog-post-container p {
     font-size: 1em;
-    color: #2b2b2b;
+    color: #454545;
     font-weight: 100;
     line-height: 1.5em; }
     .blog-post-container p img {
@@ -1448,7 +1447,7 @@ footer.footer-wrapper {
     text-align: right; }
   .content-block p {
     font-size: 1em;
-    color: #2b2b2b;
+    color: #454545;
     font-weight: 100;
     line-height: 1.5em; }
     .content-block p img {

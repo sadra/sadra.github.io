@@ -1,5 +1,629 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://isapanah.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://isapanah.com/" rel="alternate" type="text/html" /><updated>2017-10-19T00:33:37+03:30</updated><id>http://isapanah.com/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده اپلیکیشن iOS و Android.
-</subtitle><entry><title type="html">با Firebase مشکلاتتان را به آتش بکشید!</title><link href="http://isapanah.com/2017/set-fire-into-the-problems-with-firebase" rel="alternate" type="text/html" title="با Firebase مشکلاتتان را به آتش بکشید!" /><published>2017-10-18T00:00:00+03:30</published><updated>2017-10-18T00:00:00+03:30</updated><id>http://isapanah.com/2017/set-fire-into-the-problems-with-firebase</id><content type="html" xml:base="http://isapanah.com/2017/set-fire-into-the-problems-with-firebase">&lt;h2 id=&quot;مصائب-مسیح&quot;&gt;مصائب مسیح!&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://isapanah.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://isapanah.com/" rel="alternate" type="text/html" /><updated>2017-10-25T00:09:53+03:30</updated><id>http://isapanah.com/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده اپلیکیشن iOS و Android.
+</subtitle><entry><title type="html">فایربیس ۱: سرویس Firebase Cloud Messaging</title><link href="http://isapanah.com/2017/how-to-fcm-android" rel="alternate" type="text/html" title="فایربیس ۱: سرویس Firebase Cloud Messaging" /><published>2017-10-24T00:00:00+03:30</published><updated>2017-10-24T00:00:00+03:30</updated><id>http://isapanah.com/2017/how-to-fcm-android</id><content type="html" xml:base="http://isapanah.com/2017/how-to-fcm-android">&lt;p&gt;بنا بر قولی که در &lt;a href=&quot;http://isapanah.com/2017/set-fire-into-the-problems-with-firebase&quot;&gt;پست قبلی&lt;/a&gt; داده بودم، میخوام در یک مجموعه نوشته درباره پیاده سازی و استفاده از سرویس‌های مختلف فایربیس (تا جایی که این امکان برای ما در ایران وجود داشته باشه) صحبت کنم. شما می‌تونید پست‌های این بلاگ در رابطه با سرویس‌های فایربیس از این &lt;a href=&quot;http://isapanah.com/tag/firebase&quot;&gt;لینک موضوعی&lt;/a&gt; مطالعه کنید.&lt;/p&gt;
+
+&lt;p&gt;ازونجایی که مطلب زیاد بود و همچنین دسته بندی‌ها تودرتو، در ادامه فهرستی از کل مطالب و تیترهای موجود در این پست رو لیست کردم. با کلیک روی هر تیتر به اون موضوع هدایت می‌شید.&lt;/p&gt;
+
+&lt;h2 id=&quot;فهرست-مطالب&quot;&gt;فهرست مطالب&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#introduction&quot;&gt;معرفی Firebase Cloud Messaging&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#fcm-account&quot;&gt;افتتاح حساب و ایجاد یک پروژه اندروید در فایربیس&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#basic-app-settings-for-fcm&quot;&gt;تنظیمات اولیه اپلیکیشن اندروید&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#node-service&quot;&gt;سرویس پوش‌ناتیفیکیشن با Node.js&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#prepare-node-service&quot;&gt;آماده‌سازی سرویس Node&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#using-nodejs&quot;&gt;استفاده از سرویس Node&lt;/a&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#node-notification&quot;&gt;Notification&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#node-data&quot;&gt;Data&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#node-combined-message&quot;&gt;Combined Message&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#prepare-app-for-fcm&quot;&gt;آماده سازی اپلیکیشن برای دریافت ناتیفیکیشن&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#receiving-notification&quot;&gt;دریافت ناتیفیکیشن&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#send-and-receive-notification&quot;&gt;ارسال و دریافت ناتیفیکیشن برای گروهی از کاربران&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#user-topics&quot;&gt;ارسال و دریافت ناتیفیکیشن بر اساس Topic یا موضوعی خاص&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#other-settings&quot;&gt;دیگر تنظیمات ارسال پیام&lt;/a&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#other-settings-priority&quot;&gt;اولویت Priority&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#other-settings-time-to-alive&quot;&gt;زمان اعتبار پیام timeToLive&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#other-settings-collapse-key&quot;&gt;کلید جایگزینی پیام collapse_key&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#conclusion&quot;&gt;نتیجه‌گیری&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;introduction&quot;&gt;معرفی Firebase Cloud Messaging&lt;/h2&gt;
+
+&lt;p&gt;فایربیس کلاد مسیجینگ یا به اختصار FCM یکی از سرویس‌های کاربردی فایربیس هست که به شما کمک میکنه تا بتونین پیام‌هاتون رو در کمترین زمان و بدون هیچ هزینه‌ای به دست کاربرتون در پلتفرم‌های مختلفی مثل Android, iOS, WebApplication, C++, Unituy برسونید.پیام شما می‌تونه به یک کاربر، یا گروهی از کاربران، یا بر اساس یه تاپیک و موضوع ارسال بشه.
+ایجاد یک سرویس و ارسال پیام به کاربران شما خیلی ساده‌ست. اول از همه با اضافه کردن SDK فایبربیس به اپلیکیشنتون، کاربرانتون رو در شبکه کلاد فایبربیس رجیستر می‌کنید. و بعد در سمت سرورتون یکسری کد می‌نویسید که تا توسط اون بتونید پیام‌هاتون به کاربر یا گروهی از کاربران ارسال کنید.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2017-10-24/fcm-13.png&quot; alt=&quot;Firebase Cloud Messaging Console&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;شما می‌تونید ده‌ها، هزاران، یا حتی میلیون‌ها پیام در روز بدون هزینه و با دقت ۹۵٪ در کمتر از ۲۵۰میلی‌ثانیه بدون توجه به پلتفرم کاربر به دستشون برسونید. به همین سادگی، به همین خوشمزگی.😍&lt;/p&gt;
+
+&lt;h2 id=&quot;fcm-account&quot;&gt;افتتاح حساب و ایجاد یک پروژه اندروید در فایربیس&lt;/h2&gt;
+
+&lt;p&gt;پس از ثبت‌نام و ورود به &lt;a href=&quot;https://console.firebase.google.com/&quot;&gt;کنسول فایربیس،&lt;/a&gt; می‌بینید که یک پروژه آماده و البته دمو به اسم &lt;strong&gt;&lt;a href=&quot;https://console.firebase.google.com/project/fir-demo-project/overview&quot;&gt;Firebase Demo Project&lt;/a&gt;&lt;/strong&gt; وجود داره، این پروژه فقط درحالت View Only و تنها برای دیدن امکانات فایربیس ایجاد شده. برای ایجاد اولین پروژه فقط کافیه روی Add Project کلیک کنید.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2017-10-24/fcm-0.png&quot; alt=&quot;Firebase Cloud Messaging Console&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;در پنجره باز شده اسمی برای پروژه (FirebaseApp) می‌نویسیم. بهتره Country/region روی همون UnitedStates باقی بمونه. توجه کنید که برای استفاده از Firebase محدودیت وجود داره و فقط می‌تونید ۳ پروژه ایجاد کنید! برای ساختن بیشتر از ۳ پروژه یا باید با یه حساب کاربری دیگه وارد بشید یا اینکه هزینه پرداخت کرده و ظرفیت کنسولتون رو افزایش بدید.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2017-10-24/fcm-1.png&quot; alt=&quot;Firebase Cloud Messaging Console&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;پروژه اولیه ایجاد شده. حالا وقتی وارد پنل می‌شید ۳تا گزینه دارید، ما از بین گزینه‌های پایین، Android App رو انتخاب می‌کنیم.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2017-10-24/fcm-2.png&quot; alt=&quot;Firebase Cloud Messaging Console&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;خب، در این مرحله باید مشخصات اپ رو ثبت کنیم. اول از همه &lt;strong&gt;Package Address&lt;/strong&gt; اپ رو وارد می‌کنیم، و بعد در &lt;strong&gt;App nickname&lt;/strong&gt; همونطور که از اسمش مشخصه یه اسم برای پروژمون می‌نویسیم. در بخش &lt;strong&gt;SHA-1&lt;/strong&gt; میتونید امضای امنیتی اپتون رو وارد کنید، درصورتی که خواستید امنیت بیشتری لحاظ کنید که فقط روی همون پکیج با همون امضا فقط کار کنه، ما که خالی میزاریم 😇 و بعدش هم که &lt;strong&gt;Register App&lt;/strong&gt; رو می‌زنیم.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2017-10-24/fcm-3.png&quot; alt=&quot;Firebase Cloud Messaging Console&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;خب پروژه ایجاد شده، فقط کافیه فایل &lt;strong&gt;google-service.json&lt;/strong&gt; رو دانلود کنیم و سپس روی Continue کلیک کنیم.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2017-10-24/fcm-4.png&quot; alt=&quot;fcm-4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;حالا اون فایل JSON رو، مثل تصویر زیر، به پروژه اپلیکیشنمون (که امیدوارم از قبل درسته کرده بوده باشید) در مسیر &lt;code class=&quot;highlighter-rouge&quot;&gt;../Project/app&lt;/code&gt; کپی می‌کنیم.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2017-10-24/fcm-5.png&quot; alt=&quot;Firebase Cloud Messaging Console&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;خب پروژمون ایجاد شده و کار تمومه.با کلیک روی پروژه اپلیکیشن ایجاد شده، می‌تونیم وارد پنل بشیم و کارهای که لازمه داریم رو انجام بدیم.&lt;/p&gt;
+
+&lt;h2 id=&quot;basic-app-settings-for-fcm&quot;&gt;تنظیمات اولیه اپلیکیشن اندروید&lt;/h2&gt;
+
+&lt;p&gt;قبل شروع همه‌چیز این رو بگم با مراجعه به این ریپوی گیتهاب، می‌تونید به نمونه اپلیکیشنی که برای همین منظور ایجاد کردم دسترسی داشته باشید.&lt;/p&gt;
+
+&lt;p&gt;اول از همه در فایل build.gradle مربوط به &lt;strong&gt;project&lt;/strong&gt; قرار داره خطوط زیر رو اصلاح و اضافه میکنیم.&lt;/p&gt;
+
+&lt;div class=&quot;language-groovy highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Project&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;level&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;gradle&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;project&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;gradle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;):&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;buildscript&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;dependencies&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// Add this line&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;classpath&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'com.google.gms:google-services:3.1.0'&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;و در فایل build.gradle مربوط به &lt;strong&gt;app.module&lt;/strong&gt; خطو زیر رو در انتهای محتویات قبلی اضافه می‌کنیم:&lt;/p&gt;
+
+&lt;div class=&quot;language-groovy highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;level&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;gradle&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;project&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;/&amp;lt;app-module&amp;gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;gradle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;):&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Add to the bottom of the file&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;apply&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;plugin:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'com.google.gms.google-services'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;و همچنین لازمه که لایبرری های مربوط به فایربیس رو هم به &lt;strong&gt;dependencies&lt;/strong&gt; اضافه کنیم.&lt;/p&gt;
+
+&lt;div class=&quot;language-groovy highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Project&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;level&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;gradle&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;project&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;gradle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;):&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;dependencies&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// Add this line&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;compile&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;com.google.firebase:firebase-core:25.+&quot;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;compile&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;com.google.firebase:firebase-messaging:25.+&quot;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;و در نهایت با باید گریدل رو Sync کنیم، بعد از اینکه Gradle کتابخونه‌های مد نظرش رو دریافت و آماده استفاده شد میریم سراغ مرحله بعد.&lt;/p&gt;
+
+&lt;p&gt;خب، حالا اول از همه در مسیر اپلیکیشن یک دایرکتوری به اسم &lt;code class=&quot;highlighter-rouge&quot;&gt;PushNotification&lt;/code&gt; ایجاد میکنیم، یک کلاس به اسم &lt;code class=&quot;highlighter-rouge&quot;&gt;FCMInstanceIDService&lt;/code&gt; ایجاد میکنیم. این کلاس وظیفه ساخت توکن و بروزرسانی اون درصورتی که اکسپایر شده رو بر عهده داره.&lt;/p&gt;
+
+&lt;p&gt;وقتی که کاربر یک توکن دریافت کرده یا توکن قبلی وی باطل و توکن جدید صادر میشه، تابع &lt;code class=&quot;highlighter-rouge&quot;&gt;onTokenRefresh&lt;/code&gt; در این کلاس صدا زده میشه. (&lt;a href=&quot;https://github.com/sadra/FirebaseApp/blob/master/app/src/main/java/com/isapanah/firebase/PushNotification/FCMInstanceIDService.java&quot;&gt;مشاهده کلاس در گیتهاب&lt;/a&gt;)&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;FCMInstanceIDService&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FirebaseInstanceIdService&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;onTokenRefresh&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;onTokenRefresh&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;refreshedToken&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FirebaseInstanceId&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getToken&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+	&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;خب بعد از اینکه کاربر توکن دریافت کرد میتونه از سرویس FCM استفاده کنه، پس ما هم باید یه کلاس ایجاد کنیم که پیام‌های دریافتی FCM رو مدیریت کنه. برای این منظور کلاسی به نام &lt;code class=&quot;highlighter-rouge&quot;&gt;FCMService&lt;/code&gt; ایجاد کرده و اون رو  &lt;strong&gt;extend&lt;/strong&gt; می‌کنیم از &lt;code class=&quot;highlighter-rouge&quot;&gt;FirebaseMessagingService&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;در این کلاس ما می‌تونیم با استفاده از تابع &lt;code class=&quot;highlighter-rouge&quot;&gt;onMessageReceived&lt;/code&gt; در هنگام دریافت پیامی از FCM اون رو مدیریت کرده و هر بلایی که میخواییم سرش بیاریم 😈 (&lt;a href=&quot;https://github.com/sadra/FirebaseApp/blob/master/app/src/main/java/com/isapanah/firebase/PushNotification/FCMService.java&quot;&gt;مشاهده کلاس در گیتهاب&lt;/a&gt;)&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;FCMService&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FirebaseMessagingService&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;onMessageReceived&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RemoteMessage&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;remoteMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;Log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;FCM&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;New notification from: &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;remoteMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getFrom&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;بعد از اینکه دو کلاس &lt;strong&gt;FCMInstanceIDService&lt;/strong&gt; و &lt;strong&gt;FCMService&lt;/strong&gt; وقتشه که اونهارو در &lt;code class=&quot;highlighter-rouge&quot;&gt;AndroidManifest&lt;/code&gt; هم اونهارو به عنوان سرویس رویداد‌های &lt;code class=&quot;highlighter-rouge&quot;&gt;INSTANCE_ID_EVENT&lt;/code&gt; و &lt;code class=&quot;highlighter-rouge&quot;&gt;MESSAGING_EVENT&lt;/code&gt; معرفی کنیم.&lt;/p&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- ADD this lines before &amp;lt;/application&amp;gt; close tag --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;service&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;.PushNotification.FCMInstanceIDService&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;intent-filter&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;action&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;android:name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;com.google.firebase.INSTANCE_ID_EVENT&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/intent-filter&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/service&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;service&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;.PushNotification.FCMService&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;intent-filter&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;action&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;android:name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;com.google.firebase.MESSAGING_EVENT&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/intent-filter&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/service&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;خب در همینجا هم میتونیم آیکون ناتیفیکیشن و رنگ پیش‌زمینه اون رو در منیفست مشخص کنیم. (&lt;a href=&quot;https://github.com/sadra/FirebaseApp/blob/master/app/src/main/AndroidManifest.xml&quot;&gt;مشاهده AndroidManifest در گیتهاب&lt;/a&gt;)&lt;/p&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- ADD this lines before &amp;lt;/application&amp;gt; close tag --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta-data&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;com.google.firebase.messaging.default_notification_icon&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:resource=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@mipmap/ic_launcher&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta-data&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;com.google.firebase.messaging.default_notification_color&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;android:resource=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@color/colorPrimary&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;البته این دو متا دیتا فقط برای ورژن های اندروید 21 یعنی Lolipop به بالا کار میکنه!&lt;/p&gt;
+
+&lt;h2 id=&quot;node-service&quot;&gt;سرویس پوش‌ناتیفیکیشن با Node.js&lt;/h2&gt;
+
+&lt;p&gt;خب قبل از اینکه بریم سراغ تنظمیات بعدی و آماده‌سازی اپلیکیشن، لازمه که یه سرویسی هم فراهم کنیم برای اینکه بتونیم با استفاده از API گوگل برای تلفن‌های همراهی که اپلیکیشن مارو نصب دارند پیام ارسال کنیم.&lt;/p&gt;
+
+&lt;h3 id=&quot;prepare-node-service&quot;&gt;آماده سازی سرویس Node&lt;/h3&gt;
+
+&lt;p&gt;من برای اینکه شما درگیر کارهای مربوط به تهیه این سرویس نشید از قبل اون رو با Node.js نوشتم و در &lt;a href=&quot;https://github.com/sadra/FCMPushNotification&quot;&gt;ریپوزیتوری گیتهاب&lt;/a&gt; قرار دادم.
+فقط کافیه ترمینال رو باز کرده و با دستور &lt;code class=&quot;highlighter-rouge&quot;&gt;git clone REPO_ADDRESS&lt;/code&gt; اون رو در جایی که میخواهید کلون بگیرید.
+بعد از کلون گرفتن (با استفاده از ترمینال یا CMD) وارد دایرکتوری اصلی پروژه node شده و دستور &lt;code class=&quot;highlighter-rouge&quot;&gt;npm install&lt;/code&gt; رو اجرا کنید تا پکیج‌های مورد نیاز رو دانلود کنه. در نهایت بعد از نصب شدن پکیج ها فقط با اجرای دستور &lt;code class=&quot;highlighter-rouge&quot;&gt;npm start&lt;/code&gt; سرویس آماده استفاده ست و با آدرس &lt;code class=&quot;highlighter-rouge&quot;&gt;http://localhost:3000&lt;/code&gt; در دسترس شماست. پس:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;➜  git clone git@github.com:sadra/FCMPushNotification.git
+➜  &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/FCMPushNotification
+➜  FCMPushNotification git:&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;master&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; ✗ npm install
+➜  FCMPushNotification git:&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;master&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; ✗ npm start
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;اگر فایل &lt;code class=&quot;highlighter-rouge&quot;&gt;app.js&lt;/code&gt; رو در این پروژه باز کنید چند کلید وجود داره، اول از همه لازمه که کلید امنیتی استفاده از FCM رو از کنسول فایربیس پروژتون دریافت کرده و بجای API_KEY قرار بدید. برای دریافت API Key به کنسول فایربیس مراجعه کرده، روی پروژه FirebaseApp، و بعد هم روی منوی پروژه اپ اندروید Firebase کلیک کنید و به Settings این اپ برید.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2017-10-24/fcm-6.png&quot; alt=&quot;Firebase Cloud Messaging Console&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;در پنجره باز شده به سربرگ Cloud Messaging رفته کد Server Key رو کپی کرده و در پروژه Node بجای &lt;code class=&quot;highlighter-rouge&quot;&gt;API_KEY&lt;/code&gt; قرار بدید.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2017-10-24/fcm-7.png&quot; alt=&quot;Firebase Cloud Messaging Console&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;در بعد از اون هم لازمه توکن اون اپلیکیشنی برای تست استفاده می‌کنید رو برای &lt;code class=&quot;highlighter-rouge&quot;&gt;USER_KEY&lt;/code&gt; مقدار‌دهی کنید. (این گزینه انتخابیست و الزامی نداره، اما بهتره یک یوزر تست داشته باشیم برای جلوگیری از خطاهای انسانی و تست اپ.)&lt;/p&gt;
+
+&lt;h3 id=&quot;using-nodejs&quot;&gt;استفاده از سرویس پوش Node&lt;/h3&gt;
+
+&lt;p&gt;قبل از اینکه به توضیحات استفاده از این سرویس بپردازم لازمه بدونید که ما چند نوع پیام می‌تونیم ارسال کنیم. مطابق با مستندات FCM ما فقط ۲ نوع پیام داریم: Notification و Data. اما هرکدوم چی هستن و چه فرقی باهم دارن؟&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;h4 id=&quot;node-notification&quot;&gt;Notification&lt;/h4&gt;
+
+    &lt;p&gt;این نوع پیام فقط ۲ بخش داره، &lt;code class=&quot;highlighter-rouge&quot;&gt;title&lt;/code&gt; و &lt;code class=&quot;highlighter-rouge&quot;&gt;body&lt;/code&gt;. شما فقط می‌تونید یه پیام ساده با یک عنوان و یک متن ارسال کنید که محدودیت کارکتر هم دارید. ساختار این پیام به این شکله:&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;payload&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;notification&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Title of the notification message&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;This is Body of the notification message.&quot;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;h4 id=&quot;node-data&quot;&gt;Data&lt;/h4&gt;
+
+    &lt;p&gt;اما اگر پیام شما از نوع Data باشه، شما این امکان رو دارید که پیامتون رو بصورت JSON و با هر ساختار و مقادیری که دوست دارید ارسال کنید، برای مثال:&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;payload&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;score&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;850&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;2:45&quot;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;h4 id=&quot;node-combined-message&quot;&gt;Combined Message&lt;/h4&gt;
+
+    &lt;p&gt;جالب اینجاست که شما می‌تونید هردو نوع Notification و Data رو باهم یکجا بفرستید. برای مثال یه پیام ناتیفیکیشن دارید که میخواهید هم به کاربر پیامی نشون بده هم مقداری رو در دیتابیس اپلیکیشن تغییر بده:&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;payload&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;notification&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;$GOOG up 1.43% on the day&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;$GOOG gained 11.80 points to close at 835.67, up 1.43% on the day.&quot;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;stock&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;GOOG&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;829.62&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;635.67&quot;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;من در این پروژه با استفاده از Express و بر پایه REST API یکسری Route آماده کردم تا شما بتونید بدون دردسر پیام‌هاتون رو ارسال کنید. ما 4 داریم که هرکدوم به ترتیب کارهای زیر رو انجام رو برعهده دارند:&lt;/p&gt;
+
+&lt;div class=&quot;language-http highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;POST /send/notification
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;با این روت می‌تونید یک پیام به صورت notification ساده ارسال کنید.&lt;/p&gt;
+
+&lt;div class=&quot;language-http highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;POST /send/data-notification
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;با این روت می‌تونید یک پیام data ساده ارسال کنید.&lt;/p&gt;
+
+&lt;div class=&quot;language-http highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;POST /send/data-notification/VIP
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;توسط این روت یک پیام data برای یک دسته خاص از کاربرانمون که VIP هستند ارسال می‌کنیم (در ادامه توضیح خواهم داد).&lt;/p&gt;
+
+&lt;div class=&quot;language-http highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;POST /send/combined-notification/VIP
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;توسط این روت هم یک پیام combined برای یک دسته خاص از کاربرانمون که VIP هستند ارسال می‌کنیم.&lt;/p&gt;
+
+&lt;p&gt;برای استفاده از این روت‌ها می‌تونید از دستور CURL در ترمینال کمک بگیرید. اما من توصیه میکنم از &lt;a href=&quot;https://www.getpostman.com/&quot;&gt;Postman&lt;/a&gt; برای ریکوئست زدن استفاده کنید. کالکشن این رو ریکوئست‌هارو هم من از قبل برای شما آماده کردم و در پروژه قرار دادم. فقط کافیه از داخل دایرکتوری پروژه، در فولدر postman-export و یا &lt;a href=&quot;https://github.com/sadra/FCMPushNotification/blob/master/postman-export/Firebase%20Push%20Notification.postman_collection&quot;&gt;از اینجا در ریپوی گیتهاب&lt;/a&gt; اون رو دریافت کرده و به &lt;a href=&quot;https://www.getpostman.com/docs/postman/collections/data_formats&quot;&gt;Postmanتون import&lt;/a&gt; کنید. و یا &lt;a href=&quot;https://www.getpostman.com/collections/3776ad8010e1b7ae2c6e&quot;&gt;از اینجا&lt;/a&gt; بطور مستقیم به پست‌منتون اضافه کنید.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2017-10-24/fcm-8.png&quot; alt=&quot;Firebase Cloud Messaging Console&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;حالا تنها کاری که لازمه انجام بدید اینه که سرویس رو با &lt;code class=&quot;highlighter-rouge&quot;&gt;npm start&lt;/code&gt; اجرا کرده و با Postman ریکوئست‌هاتون رو ارسال کنید. خب کارمون با سرویس Node و Postman تا اینجا تموم شد.&lt;/p&gt;
+
+&lt;h2 id=&quot;prepare-app-for-fcm&quot;&gt;آماده سازی اپلیکیشن برای دریافت ناتیفیکیشن&lt;/h2&gt;
+
+&lt;p&gt;خب رسیدیم به اصل ماجرا، حالا هم اپلیکیشن آماده است هم سرویس Node. اگه پیام رو ارسال کنید اپلیکیشن بدون هیچ مشکلی اون رو دریافت می‌کنه اما چیزی نشون نمیده، چون ما هنوز بهش نگفتیم با پیامی که دریافت کرده چه کاری بکنه.&lt;/p&gt;
+
+&lt;h3 id=&quot;receiving-notification&quot;&gt;دریافت ناتیفیکیشن&lt;/h3&gt;
+
+&lt;p&gt;همونطور که در قسمت قبلی گفتم پیام‌ها توسط کلاس &lt;code class=&quot;highlighter-rouge&quot;&gt;FCMService&lt;/code&gt; در تابع &lt;code class=&quot;highlighter-rouge&quot;&gt;onMessageReceived&lt;/code&gt; می‌تونیم دریافت کنیم. و همونطور که گفتم ۲نوع پیام داریم، یا notification هستند یا data ( و البته هردو باهم ). برای دریافت پیام notification باید تابع &lt;code class=&quot;highlighter-rouge&quot;&gt;getNotification&lt;/code&gt; و برای data از تابع &lt;code class=&quot;highlighter-rouge&quot;&gt;getData&lt;/code&gt; استفاده می‌کنیم.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;onMessageReceived&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;RemoteMessage&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;remoteMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;Log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TAG&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;New notification from: &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;remoteMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getFrom&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;remoteMessage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;remoteMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getNotification&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;Log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TAG&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Notification message: &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;remoteMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getNotification&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;showNotificationWithoutData&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;remoteMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getNotification&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getTitle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;remoteMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getNotification&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getBody&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;remoteMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getData&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;Log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TAG&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Data Payload: &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;remoteMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getData&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;showNotificationWithData&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;remoteMessage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getData&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;اگر پیام که ارسال شده از نوع &lt;strong&gt;notification&lt;/strong&gt; بود، فقط کافیه title و body رو گرفته و با استفاده از &lt;code class=&quot;highlighter-rouge&quot;&gt;NotificationCompat&lt;/code&gt; اون رو نشون بدیم.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;showNotificationWithoutData&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;NotificationCompat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Builder&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;notificationBuilder&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NotificationCompat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Builder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setContentTitle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setContentText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setAutoCancel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setSmallIcon&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getNotificationIcon&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setLargeIcon&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BitmapFactory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;decodeResource&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getResources&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;mipmap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ic_launcher&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setColor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ContextCompat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getColor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;colorPrimary&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;NotificationManager&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;notificationManager&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NotificationManager&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;getSystemService&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Context&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;NOTIFICATION_SERVICE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;notificationManager&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;notify&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getNotify&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;notificationBuilder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;و اگر پیام از نوع &lt;strong&gt;data&lt;/strong&gt; بود، با کمک &lt;code class=&quot;highlighter-rouge&quot;&gt;getData&lt;/code&gt; محتوی پیام رو گرفته، به فایل &lt;strong&gt;JSONObject&lt;/strong&gt; تبدیل کرده و ازش استفاده می‌کنیم.
+من در این پروژه نمونه برای پیام data یک آبجکت بنام type تعریف کردم، اگه type برابر banner باشه، اول پیام رو دریافت کرده، و بعد یه &lt;code class=&quot;highlighter-rouge&quot;&gt;BigPictureStyle&lt;/code&gt; برای &lt;code class=&quot;highlighter-rouge&quot;&gt;NotificationCompat&lt;/code&gt; میسازیم، و در نهایت اون رو &lt;code class=&quot;highlighter-rouge&quot;&gt;NotificationCompat.Builder&lt;/code&gt; نسبت‌دهی می‌کنیم.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;showNotificationWithData&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;util&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Map&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;JSONObject&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bodyObjects&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;JSONObject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bodyObjects&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;banner&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)){&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;showNotificationWithBanner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
+              &lt;span class=&quot;n&quot;&gt;bodyObjects&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;title&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+              &lt;span class=&quot;n&quot;&gt;bodyObjects&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;message&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt;
+              &lt;span class=&quot;n&quot;&gt;bodyObjects&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;banner_url&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bodyObjects&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;dialog_message&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)){&lt;/span&gt;
+          &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;There is a problem&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Exception: &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;showNotificationWithBanner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bannerURL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;//Style for showing notification With Banner&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Bitmap&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;remote_picture&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BitmapFactory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;decodeResource&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getResources&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;drawable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;gray_banner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;NotificationCompat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;BigPictureStyle&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;notiStyle&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NotificationCompat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;BigPictureStyle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;remote_picture&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BitmapFactory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;decodeStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;InputStream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bannerURL&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getContent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;IOException&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;printStackTrace&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;notiStyle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;bigPicture&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;remote_picture&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;NotificationCompat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Builder&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;notificationBuilder&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;NotificationCompat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Builder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setContentTitle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setContentText&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setAutoCancel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setSmallIcon&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getNotificationIcon&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setLargeIcon&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BitmapFactory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;decodeResource&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getResources&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;mipmap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;ic_launcher&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setColor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ContextCompat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getColor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;colorPrimary&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setStyle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;notiStyle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;NotificationManager&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;notificationManager&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NotificationManager&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;getSystemService&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Context&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;NOTIFICATION_SERVICE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;notificationManager&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;notify&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;getNotify&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;notificationBuilder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;مواقعی هست که ما نمی‌خواهیم پیام دریافتی رو بصورت ناتیفیکیشن دریافت کنیم. بلکه میخوایم مثلا اطلاعات دریافتی رو در دیتابیس ذخیره کنیم، یا میخواهیم چیزی رو به کاربر نشون بدیم. من در این نمونه میخواستم که به کاربر یه دیالوگ نشون بدم.
+من نوع پیام رو گذاشتم در حالت dialog_message تا تابع مورد نظر رو صدا کنه.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;showNotificationWithData&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;util&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Map&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;JSONObject&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bodyObjects&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;JSONObject&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bodyObjects&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;banner&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)){&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bodyObjects&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;dialog_message&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)){&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;broadcastTheNotification&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bodyObjects&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;title&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bodyObjects&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;message&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;There is a problem&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Exception: &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;و بعدش در تابع &lt;code class=&quot;highlighter-rouge&quot;&gt;broadcastTheNotification&lt;/code&gt; دیتای دریافتی رو در داخل اپلیکیشن BroadCast کردم.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;broadcastTheNotification&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;Intent&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;notification&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;FCM_ACTION_NEW_NOTIFICATION&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;notification&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;putExtra&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;title&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;notification&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;putExtra&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;message&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;LocalBroadcastManager&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sendBroadcast&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;notification&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;خوب وقتشه تظیمات مربوط به اونجایی که قراره دیالوگ رو نشون بده هم انجام بدیم. پس در MainActivity اول میام یه &lt;code class=&quot;highlighter-rouge&quot;&gt;BroadcastReceiver&lt;/code&gt; ایجاد میکنم و بهش میگم هرموقع پیامی دریافت کردی که کلید &lt;strong&gt;FCM_ACTION_NEW_NOTIFICATION&lt;/strong&gt; رو داشت، متد مورد نظر من رو صدا کن.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BroadcastReceiver&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mRegistrationBroadcastReceiver&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;onCreate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Bundle&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;savedInstanceState&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;mRegistrationBroadcastReceiver&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BroadcastReceiver&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;onReceive&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Context&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Intent&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;switch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getAction&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;FCM_ACTION_NEW_NOTIFICATION:&lt;/span&gt;
+                    &lt;span class=&quot;n&quot;&gt;showDialog&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;intent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//Call the method that shows AlertDialog&lt;/span&gt;
+                    &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;و بعدش هم در متد &lt;code class=&quot;highlighter-rouge&quot;&gt;onResume&lt;/code&gt; لازمه که بگم این اکتیویتی رو برای پیام برودکست شده ای که کلیدش &lt;strong&gt;FCM_ACTION_NEW_NOTIFICATION&lt;/strong&gt; رجیستر کن.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;onResume&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;onResume&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;LocalBroadcastManager&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;registerReceiver&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mRegistrationBroadcastReceiver&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IntentFilter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;FCM_ACTION_NEW_NOTIFICATION&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;توجه کنید که رجیستر کردن برای یک برادکست حتما باید بعد از ساختن BroadcastReceiver باشه.&lt;/p&gt;
+
+&lt;p&gt;همه چی آمادست. اگه پیام معمولی ارسال کنیم یا بصورت دیتا بنری به راحتی ناتیفیکیشن رو نشون میده.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2017-10-24/fcm-9.png&quot; alt=&quot;Firebase Notification&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;و اگر هم نوع پیام data بصورت dialog باشه، برادکست به راحتی دریافت شده و دیالوگ نشون داده میشه.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2017-10-24/fcm-11.jpg&quot; alt=&quot;Firebase Notification&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;send-and-receive-notification&quot;&gt;ارسال و دریافت ناتیفیکیشن برای گروهی از کاربران&lt;/h3&gt;
+
+&lt;p&gt;خب تا الان یاد گرفتیم که برای کاربران اپلیکیشنمون ناتیفیکیشن بفرستیم. اما مواقعی پیش میاد که نمیخواییم برای همه کاربرها پیام ارسال کنیم، بلکه میخوایم فقط گروهی از اونها پیام مارو دریافت کنند. اما چطوری؟&lt;/p&gt;
+
+&lt;p&gt;ما به دو صورت می‌تونیم پیام ارسال کنیم:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;ارسال پیام بر اساس توکن کاربر (بصورت فردی یا گروهی)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;ارسال پیام بر اساس Topic&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;تا قبل از این ما بر اساس توکن به کاربر پیام می‌فرستادیم. بهتره یه نگاهی به ساختار ریکوئستی که برای FCM ارسال میکنیم بندازیم:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;payload&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+   &lt;span class=&quot;na&quot;&gt;notification&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+       &lt;span class=&quot;s2&quot;&gt;&quot;title&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+       &lt;span class=&quot;s2&quot;&gt;&quot;body&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt;
+   &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+   &lt;span class=&quot;na&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;USER_KEY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+   &lt;span class=&quot;c1&quot;&gt;// to : TOPIC_GLOBAL,&lt;/span&gt;
+   &lt;span class=&quot;c1&quot;&gt;// to : TOPIC_VIP_USER,&lt;/span&gt;
+   &lt;span class=&quot;c1&quot;&gt;// condition : &quot;'onscreen' in topics &amp;amp;&amp;amp; 'vip_user' in topics&quot;,&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;ما در &lt;strong&gt;payload&lt;/strong&gt; (درواقع درخواستی که به سمت FCM ارسال میشه)، دو بخش اصلی داریم، اولی &lt;code class=&quot;highlighter-rouge&quot;&gt;notification&lt;/code&gt; یا &lt;code class=&quot;highlighter-rouge&quot;&gt;data&lt;/code&gt; که حامل پیام ما به کاربر هستند و &lt;code class=&quot;highlighter-rouge&quot;&gt;to&lt;/code&gt; یا &lt;code class=&quot;highlighter-rouge&quot;&gt;condition&lt;/code&gt; که مقصد و دریافت کننده پیام رو مشخص میکنه. اما هرکدوم چیکار می‌کنند:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;مقصد مشخص &lt;strong&gt;to&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;ما با دونستن توکن کاربر می‌تونیم پیام رو به یه کاربر خاص یا مجموعه ای از کاربرها ارسال کنیم. برای مثال:&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;XXXXX:YYYYYYYUUUUUIIIIOOOOOO&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//or&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;XXXXX:YYYYYYYUUUUUIIIIAAAAA&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;XXXXX:YYYYYYYUUUUUIIIIBBBBB&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;XXXXX:YYYYYYYUUUUUIIIICCCCC&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;سرویس FCM به ما اجازه می‌ده که کاربرنامون رو در ُُTopic یا موضوع (و موضوع‌های) خاصی عضو کنیم. و بدین ترتیب پیام فقط برای کاربرانی که در فلان موضوع عضو هستند ارسال بشه. برای  در زیر پیام برای کاربرانی ارسال میشه که عضو موضوع &lt;code class=&quot;highlighter-rouge&quot;&gt;vip_user&lt;/code&gt; هستند ارسال میشه:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;/topics/vip_user&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;حالا اگه بخواییم پیام برای همه کاربرا ارسال بشه چی؟ آیا باید توکن همه کابرارو لیست کنیم و بفرستیم؟ نه، نیازی به اینکار نیست! چون همه کاربرها بطور خودکار همون ابتدا عضو تاپیک &lt;code class=&quot;highlighter-rouge&quot;&gt;global&lt;/code&gt; هستند، یعنی اگه قرار بود پیام برای همه ارسال بشه فقط کافیه بگید که:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;/topics/global&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;مقصد شرطی &lt;strong&gt;condition&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;مقصد شرطی یا conditional به ما این امکان رو میده که پیام رو به کاربران بر اساس شرط عضوت اونها در تاپیک‌های خاصی بصورت AND و OR ارسال کنیم. برای مثال در زیر پیام برای کاربرانی که عضو VIP بوده و همچنین خانم هستند ارسال میشه:&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;condition&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;'gender_female' in topics &amp;amp;&amp;amp; 'vip_user' in topics&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;user-topics&quot;&gt;ارسال و دریافت ناتیفیکیشن بر اساس Topic یا موضوعی خاص&lt;/h3&gt;
+
+&lt;p&gt;در این پروژه ای که برای نمونه ساختم، خواستم یه پیام برای کاربرانی که درحال حاضر صفه اپلیکیشنشون باز بوده و از نوع VIP بودن ارسال کنم. پس اول از همه موقعی که اپلیکیشن لانچ شد در متد &lt;code class=&quot;highlighter-rouge&quot;&gt;onResume&lt;/code&gt; اونهارو در تاپیک &lt;code class=&quot;highlighter-rouge&quot;&gt;onscreen&lt;/code&gt; عضو کردم:&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;onResume&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+   &lt;span class=&quot;kd&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;onResume&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;FirebaseMessaging&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;subscribeToTopic&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;onscreen&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;و وقتی هم میره روی &lt;code class=&quot;highlighter-rouge&quot;&gt;onPause&lt;/code&gt; عضویتش رو از اون تاپیک لغو میکنم:&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;onPause&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+   &lt;span class=&quot;kd&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;onPause&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;FirebaseMessaging&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;unsubscribeFromTopic&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;onscreen&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;و حالا برای عضویت در حالت VIP یه FloatActionButton ساختم که وقتی کاربر روش کلیک میکنه اون رو عضو VIP کرده یا عضویتش رو لغو میکنه.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setUserVIP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isVIP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;view&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;getSharedPreferences&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;FCM&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;edit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;putBoolean&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;VIP_USER&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isVIP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;VIPUser&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setImageResource&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isVIP&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;drawable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;special&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;drawable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;not_special&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isVIP&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;Snackbar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;make&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;view&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;You are a VIP user.&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Snackbar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;LENGTH_LONG&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;FirebaseMessaging&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;subscribeToTopic&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;vip_user&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;Snackbar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;make&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;view&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;You are a regular user&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Snackbar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;LENGTH_LONG&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;show&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;FirebaseMessaging&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;unsubscribeFromTopic&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;vip_user&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;خب، همه‌چی آمادست، و فقط کافیه از Postman یه ریکئوست روی  &lt;code class=&quot;highlighter-rouge&quot;&gt;/send/data-notification/VIP&lt;/code&gt; بفرستیم، و نتیجه اینکه:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2017-10-24/fcm-10.png&quot; alt=&quot;Firebase Notification&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;other-settings&quot;&gt;دیگر تنظیمات ارسال پیام&lt;/h3&gt;
+
+&lt;p&gt;&lt;b id=&quot;other-settings-priority&quot;&gt;اولویت Priority:&lt;/b&gt; شما میتونید برای پیامی که ارسال می‌کنید اولویت گذاری کنید. ما به ازای هر پیام دو اولویت داریم &lt;code class=&quot;highlighter-rouge&quot;&gt;normal&lt;/code&gt;  و &lt;code class=&quot;highlighter-rouge&quot;&gt;high&lt;/code&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;high: این اولویت برای مواقعی‌ست که میخواییم پیام در سریعترین زمان ممکن به دست کاربر برسه،‌و اگر اولویت همین باشه، حتی موقعی که گوشی لاک بوده و اینترنتش برای صرفه‌جویی برق قطعه، اینترنت رو وصل میکنه، پیام رو دریافت میکنه و به کاربر نشون میده. این حالت برای اپ‌هایی که پیامرسان هستن بیشتر استفاده میشه. در حالت پیشفرض برای پیام‌های notification اولویت روی high قرار داره.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;normal: این اولویت برای مواقعی‌ست که زمان رسیدن پیام اهمیت نداره،‌و به محض اینکه کاربر گوشیشو از لاک در بیاره و اینترنتش وصل بشه پیام رو بهش نشون میده. درحالت پیشفرض برای پیام‌های data اولویت روی high قرار داره.&lt;/p&gt;
+
+    &lt;p&gt;البته شما‌ می‌تونید خودتون بصورت دستی هم اولویت رو برای اون پیام مشخص کنید.&lt;/p&gt;
+
+    &lt;p&gt;برای این منظور در سرویس Nodejs و در بخش options، آیتم مربوط به priority رو اضافه می‌کنیم.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;b id=&quot;other-settings-time-to-alive&quot;&gt;زمان اعتبار پیام timeToLive:&lt;/b&gt; ممکن است شما بخوایید برای پیام خودتون اعتبار زمانی اعمال کنید، و اگه پیام تا فلان موقع رسید دست کاربر که هیچ، اگه نرسید دیگه به درد نمیخوره نرسون بهش. بصورت پیشفرض این مقدار روی ۰ قرار داره. سرویس FCM تمام تلاششو میکنه تا پیامتون حتما به کاربر برسه ولی خب اعتقاد داره “Now or Never”، یعنی پیامتون یا همین الان به دست کاربر میرسه یا اصن نمیرسه! 😎&lt;/p&gt;
+
+&lt;p&gt;برای این مورد در سرویس Nodejs و در بخش options، آیتم مربوط به timeToLive رو اضافه می‌کنیم.&lt;/p&gt;
+
+&lt;p&gt;&lt;b id=&quot;other-settings-collapse-key&quot;&gt;کلید جایگزینی پیام collapse_key:&lt;/b&gt; البته معنی تحت الفضیه این عبارت میشه (کلید اضمحلال 😐🤣). فرض کنید اولویت پیام درحالت normal قرار داره. یه پیام برای کاربر که میفرستین که مثلا میگه فلان جنس ۲۵٪ تخفیف داره اگه همین الان بخری. بعد نیم‌ساعت تصمیم گرفتین که درصد رو کاهش بدین به ۱۰٪. اونهایی که هنوز پیام رو ندیدن لازم نباشه پیام قبلیو ببینن که گیج بشن، همین ۱۰٪ رو ببینن کافیه. برای اینکار از &lt;code class=&quot;highlighter-rouge&quot;&gt;collapse_key&lt;/code&gt; استفاده می‌کنیم.&lt;/p&gt;
+
+&lt;p&gt;هنگامی که اپلیکیشن در حالت Lock قرار داره و پیام رو به کاربر نشون نمیده تا کاربر اپ رو باز کنه، اگر پیام جدید با همون کلید دریافت کرد،‌ پیام قبلی رو discard کرده و بجاش این پیام جدید رو استفاده می‌کنه.&lt;/p&gt;
+
+&lt;p&gt;برای این مورد در سرویس Nodejs و در بخش options، آیتم مربوط به collapse_key رو اضافه می‌کنیم.
+پس درنهایت مقادیر آپشن میشه:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'POST'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;uri&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'https://fcm.googleapis.com/fcm/send'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;payload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;headers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;s1&quot;&gt;'Content-Type'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'application/json'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;s1&quot;&gt;'Authorization'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;API_KEY&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;priority&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;high&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// or set it on -normal- priority&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;timeToLive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;60&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;60&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;24&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// this message has 24hours to be expired&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;collapseKey&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;discount&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//or what ever you want&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;نتیجه گیری&lt;/h2&gt;
+
+&lt;p&gt;فکر نمیکنم دیگه موردی برای گفتن مونده باشه. امیدوارم به راحتی بتونید از این سرویس استفاده کنید. اگه سوال یا مشکلی بود می‌تونید از طریق &lt;a href=&quot;https://twitter.com/sadra_amlashi&quot;&gt;توییتر&lt;/a&gt; یا &lt;a href=&quot;https://t.me/amlashi&quot;&gt;تلگرام&lt;/a&gt; با من در ارتباط باشید.&lt;/p&gt;
+
+&lt;p&gt;درصورتی که به موارد جدیدی برخوردم، این پست رو به‌روزرسانی خواهم کرد.&lt;/p&gt;</content><author><name>صدرا املشی</name></author><category term="Google" /><category term="Firebase" /><category term="Android" /><summary type="html">بنا بر قولی که در پست قبلی داده بودم، میخوام در یک مجموعه نوشته درباره پیاده سازی و استفاده از سرویس‌های مختلف فایربیس (تا جایی که این امکان برای ما در ایران وجود داشته باشه) صحبت کنم. شما می‌تونید پست‌های این بلاگ در رابطه با سرویس‌های فایربیس از این لینک موضوعی مطالعه کنید.</summary></entry><entry><title type="html">با Firebase مشکلاتتان را به آتش بکشید!</title><link href="http://isapanah.com/2017/set-fire-into-the-problems-with-firebase" rel="alternate" type="text/html" title="با Firebase مشکلاتتان را به آتش بکشید!" /><published>2017-10-18T00:00:00+03:30</published><updated>2017-10-18T00:00:00+03:30</updated><id>http://isapanah.com/2017/set-fire-into-the-problems-with-firebase</id><content type="html" xml:base="http://isapanah.com/2017/set-fire-into-the-problems-with-firebase">&lt;h2 id=&quot;مصائب-مسیح&quot;&gt;مصائب مسیح!&lt;/h2&gt;
 
 &lt;p&gt;تا به امروز اگر می‌خواستیم از سرویسی جهت جمع آوری اطلاعات و آمار درباره وبسایت یا اپلیکیشنمون استفاده کنیم، بی‌شک اولین انتخابمون &lt;strong&gt;&lt;a href=&quot;https://analytics.google.com/&quot;&gt;Google Analytics&lt;/a&gt;&lt;/strong&gt; بود، در درجه بعد سرویس‌هایی مثل &lt;strong&gt;&lt;a href=&quot;https://fabric.io&quot;&gt;Fabric&lt;/a&gt;&lt;/strong&gt; خودنمایی می‌کردند. وای به روزی که نیاز می‌شد تا از سرویسی برای ارسال &lt;strong&gt;PushNotification&lt;/strong&gt; استفاده کنیم، اونوقت باید از &lt;strong&gt;&lt;a href=&quot;https://developers.google.com/cloud-messaging/&quot;&gt;GCM&lt;/a&gt;&lt;/strong&gt;، &lt;strong&gt;&lt;a href=&quot;&quot;&gt;Parse&lt;/a&gt;&lt;/strong&gt; یا &lt;strong&gt;&lt;a href=&quot;&quot;&gt;پوشه&lt;/a&gt;&lt;/strong&gt; استفاده می‌کردیم. بماند که برای اطلاع از کرش‌های اپلیکیشن باید از &lt;strong&gt;&lt;a href=&quot;https://fabric.io/kits/crashlytics&quot;&gt;CrashLystic&lt;/a&gt;&lt;/strong&gt; استفاده می‌کردیم.&lt;/p&gt;
 
@@ -1290,256 +1914,4 @@
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;http://blog.thethings.io/how-iot-will-change-music/&quot;&gt;How IOT will Changes Music&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>صدرا املشی</name></author><category term="راک" /><category term="اینترنت اشیاء" /><category term="گیتار" /><category term="گیتار الکتریک" /><category term="ابزار" /><summary type="html">یخچال هوشمند، فِر هوشمند، لامپ هوشمند، حتی قفل هوشمند و.. و… و..، مطمئنا اینا واژه هایی هستن که تو یک یا نهایت دو سال اخیر بارها شنیده ایم و البته در سالهای آینده بیشتر خواهیم شنید. همه دستگاه هایی که نام بردم یا چیزهای دیگه‌ای که خودتون شنیدید در دسته ای به نام اینترنت اشیا یا بطور مخفف IOT قرار میگیرند( البته خیلی ها از دوستان لطف دارن و میگن اینترنت اشیا نه! اینترنت چیزها! بعضی از دوستان هم که خسته ان میگن چیزنت! ) اما واقعا اینترنت اشیا چیه و چه تعریفی داره. بهتره برای روشن شدن ماجرا از ویکی‌پدیا کمک بگیرییم:</summary></entry><entry><title type="html">پست تست وبلاگ</title><link href="http://isapanah.com/2010/test-post" rel="alternate" type="text/html" title="پست تست وبلاگ" /><published>2010-03-03T00:00:00+03:30</published><updated>2010-03-03T00:00:00+03:30</updated><id>http://isapanah.com/2010/test-post</id><content type="html" xml:base="http://isapanah.com/2010/test-post">&lt;h1 id=&quot;سلام-دنیا&quot;&gt;سلام دنیا&lt;/h1&gt;
-
-&lt;p&gt;این یک نوشتار آزمایشی برای نمایش قابلیتهای &lt;a href=&quot;http://daringfireball.net/projects/markdown/&quot;&gt;مارک داون&lt;/a&gt; است.&lt;/p&gt;
-
-&lt;h2 id=&quot;یک-لیست&quot;&gt;یک لیست&lt;/h2&gt;
-
-&lt;p&gt;ویژگی های نرم افزار آزاد&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;آزادی اجرای برنامه برای هر کاری (آزادی صفرم)&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;آزادی مطالعه چگونگی کار برنامه و تغییر آن (پیش نیاز: متن برنامه) (آزادی یکم)&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;آزادی تکثیر و کپی برنامه (آزادی دوم)&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;&lt;em&gt;آزادی تقویت و بهتر کردن برنامه و توزیع آن برای همگان (پیش نیاز: متن برنامه) (آزادی سوم)&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;آیتم اول&lt;/li&gt;
-  &lt;li&gt;آیتم دوم&lt;/li&gt;
-  &lt;li&gt;آیتم سوم&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;آیتم اول&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;آیتم دوم&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;آیتم سوم&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&quot;نوشته-های-تورفته&quot;&gt;نوشته های تورفته&lt;/h1&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Lorem ipsum dolor sit amet, diam semper deserunt in vim, usu in quis percipit accusamus. Vix zril voluptua deseruisse et, sed deleniti sententiae ex. An ferri assueverit per, iusto corpora partiendo eu est. Possim blandit similique an ius, erat sensibus instructior vis at. Scriptorem philosophia in sea, at mei eros periculis.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&quot;تیتر-درجه-یک&quot;&gt;تیتر درجه یک&lt;/h1&gt;
-
-&lt;h2 id=&quot;تیتر-درجه-دو&quot;&gt;تیتر درجه دو&lt;/h2&gt;
-
-&lt;h3 id=&quot;تیتر-درجه-سه&quot;&gt;تیتر درجه سه&lt;/h3&gt;
-
-&lt;p&gt;لورم ایپسوم ( به انگلیسی &lt;code class=&quot;highlighter-rouge&quot;&gt;lorem ipsum&lt;/code&gt; ) متنی است بی مفهوم که تشکیل شده از کلمات معنی دار یا بی معنی کنار هم. کاربر با دیدن متن لورم ایپسوم تصور میکند متنی که در صفحه مشاهده میکند این متن واقعی و مربوط به توضیحات صفحه مورد نظر است واقعی است. حالا سوال اینجاست که این متن “ &lt;strong&gt;لورم ایپسوم&lt;/strong&gt; “ به چه دردی میخورد و اساسا برای چه منظور و هدفی ساخته شده است؟ پیش از بوجود آمدن&lt;del&gt;لورم ایپسوم&lt;/del&gt;، طراحان وب سایت در پروژه های وب سایت و طراحان کرافیک در پروژه های &lt;em&gt;طراحی کاتولوگ ، بروشور ، پوستر و …&lt;/em&gt; همواره با این مشکل مواجه بودند که__صفحات پروژه خود را پیش از آنکه متن اصلی توسط کارفرما ارائه گرد__د و در صفحه مورد نظر قرار گیرد چگونه پر کنند؟؟&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;define foobar() {
-    print &quot;Welcome to flavor country!&quot;;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;define&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;foobar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Welcome to flavor country!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;و-اضافه-کردن-لینک-ها&quot;&gt;و اضافه کردن لینک ها&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.fsf.org/&quot;&gt;بنیاد نرم افزار آزاد&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.gnu.org&quot;&gt;بنیاد گنو&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;جدول-ها&quot;&gt;جدول ها&lt;/h2&gt;
-
-&lt;div class=&quot;table-container dir-rtl pos-right &quot;&gt;
-
-  &lt;table&gt;
-    &lt;thead&gt;
-      &lt;tr&gt;
-        &lt;th&gt;ستون اول&lt;/th&gt;
-        &lt;th&gt;ستون دوم&lt;/th&gt;
-      &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-      &lt;tr&gt;
-        &lt;td&gt;متن ستون اول&lt;/td&gt;
-        &lt;td&gt;متن ستون دوم&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-        &lt;td&gt;متن دوم ستون اول&lt;/td&gt;
-        &lt;td&gt;متن دوم ستون دوم&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-        &lt;td&gt;متن سوم ستون اول&lt;/td&gt;
-        &lt;td&gt;متن سوم ستون سوم&lt;/td&gt;
-      &lt;/tr&gt;
-    &lt;/tbody&gt;
-  &lt;/table&gt;
-
-&lt;/div&gt;
-
-&lt;div class=&quot;table-container dir-ltr pos-center &quot;&gt;
-
-  &lt;table&gt;
-    &lt;thead&gt;
-      &lt;tr&gt;
-        &lt;th style=&quot;text-align: center&quot;&gt;Option&lt;/th&gt;
-        &lt;th style=&quot;text-align: center&quot;&gt;Description&lt;/th&gt;
-      &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-      &lt;tr&gt;
-        &lt;td style=&quot;text-align: center&quot;&gt;data&lt;/td&gt;
-        &lt;td style=&quot;text-align: center&quot;&gt;path to data files to supply the data that will be passed into templates.&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-        &lt;td style=&quot;text-align: center&quot;&gt;engine&lt;/td&gt;
-        &lt;td style=&quot;text-align: center&quot;&gt;engine to be used for processing templates. Handlebars is the default.&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-        &lt;td style=&quot;text-align: center&quot;&gt;ext&lt;/td&gt;
-        &lt;td style=&quot;text-align: center&quot;&gt;extension to be used for dest files.&lt;/td&gt;
-      &lt;/tr&gt;
-    &lt;/tbody&gt;
-  &lt;/table&gt;
-
-&lt;/div&gt;
-
-&lt;div class=&quot;table-container dir-ltr pos-left &quot;&gt;
-
-  &lt;table&gt;
-    &lt;thead&gt;
-      &lt;tr&gt;
-        &lt;th style=&quot;text-align: center&quot;&gt;Option&lt;/th&gt;
-        &lt;th style=&quot;text-align: center&quot;&gt;Description&lt;/th&gt;
-      &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-      &lt;tr&gt;
-        &lt;td style=&quot;text-align: center&quot;&gt;data&lt;/td&gt;
-        &lt;td style=&quot;text-align: center&quot;&gt;path to data files to supply the data that will be passed into templates.&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-        &lt;td style=&quot;text-align: center&quot;&gt;engine&lt;/td&gt;
-        &lt;td style=&quot;text-align: center&quot;&gt;engine to be used for processing templates. Handlebars is the default.&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-        &lt;td style=&quot;text-align: center&quot;&gt;ext&lt;/td&gt;
-        &lt;td style=&quot;text-align: center&quot;&gt;extension to be used for dest files.&lt;/td&gt;
-      &lt;/tr&gt;
-    &lt;/tbody&gt;
-  &lt;/table&gt;
-
-&lt;/div&gt;
-
-&lt;div class=&quot;table-container dir-ltr pos-left &quot;&gt;
-
-  &lt;table&gt;
-    &lt;thead&gt;
-      &lt;tr&gt;
-        &lt;th style=&quot;text-align: left&quot;&gt;Control&lt;/th&gt;
-        &lt;th style=&quot;text-align: center&quot;&gt;Requierement&lt;/th&gt;
-        &lt;th style=&quot;text-align: left&quot;&gt;Info&lt;/th&gt;
-      &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-      &lt;tr&gt;
-        &lt;td style=&quot;text-align: left&quot;&gt;getSelectedItem()&lt;/td&gt;
-        &lt;td style=&quot;text-align: center&quot;&gt;-&lt;/td&gt;
-        &lt;td style=&quot;text-align: left&quot;&gt;result = &lt;code class=&quot;highlighter-rouge&quot;&gt;String&lt;/code&gt;: returns the selected item&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-        &lt;td style=&quot;text-align: left&quot;&gt;isSelected()&lt;/td&gt;
-        &lt;td style=&quot;text-align: center&quot;&gt;-&lt;/td&gt;
-        &lt;td style=&quot;text-align: left&quot;&gt;result = &lt;code class=&quot;highlighter-rouge&quot;&gt;boolean&lt;/code&gt;: returns &lt;strong&gt;true&lt;/strong&gt; if any item selected, and vice versa&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-        &lt;td style=&quot;text-align: left&quot;&gt;setSelection(NUMBER)&lt;/td&gt;
-        &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;int&lt;/code&gt; position&lt;/td&gt;
-        &lt;td style=&quot;text-align: left&quot;&gt;you should pass the &lt;strong&gt;position of item&lt;/strong&gt; to select the item programatically&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-        &lt;td style=&quot;text-align: left&quot;&gt;setSelection(TEXT)&lt;/td&gt;
-        &lt;td style=&quot;text-align: center&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;String&lt;/code&gt; value&lt;/td&gt;
-        &lt;td style=&quot;text-align: left&quot;&gt;you should pass the &lt;strong&gt;item value&lt;/strong&gt; to select the item programatically&lt;/td&gt;
-      &lt;/tr&gt;
-    &lt;/tbody&gt;
-  &lt;/table&gt;
-
-&lt;/div&gt;
-
-&lt;h1 id=&quot;تست-بج&quot;&gt;تست بج&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://jitpack.io/#amlashi-sadra/AwesomeSpinner&quot;&gt;&lt;img src=&quot;https://jitpack.io/v/amlashi-sadra/AwesomeSpinner.svg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
-&lt;a href=&quot;https://github.com/amlashi-sadra/AwesomeSpinner/blob/master/LICENSE&quot;&gt;&lt;img src=&quot;https://img.shields.io/badge/licence-MIT-lightgrey.svg?style=flat&quot; alt=&quot;License&quot; /&gt;&lt;/a&gt;
-&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;https://img.shields.io/badge/dependencies-non-yellow.svg?style=flat&quot; alt=&quot;Dependencies&quot; /&gt;&lt;/a&gt;
-&lt;a href=&quot;https://gitter.im/AwesomeSpinner&quot;&gt;&lt;img src=&quot;https://img.shields.io/badge/gitter-join%20chat-%23E91E63.svg?style=flat&quot; alt=&quot;Gitter&quot; /&gt;&lt;/a&gt;
-&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;https://img.shields.io/badge/Minimum%20Android%20SDK-14-blue.svg&quot; alt=&quot;Minimum Android SDK Version&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;تست-بلاک-کد&quot;&gt;تست بلاک کد&lt;/h1&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Hello World&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-groovy highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;allprojects&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;repositories&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-		&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;maven&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'https://jitpack.io'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-	&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;com.isapanah.awesomespinner.AwesomeSpinner&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;android:id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;@+id/my_spinner&quot;&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;android:layout_width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;match_parent&quot;&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;android:layout_height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;wrap_content&quot;&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;app:spinnerDirection=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ltr&quot;&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;app:spinnerHint=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Select a category&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;categories&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ArrayList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;();&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;categories&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Automobile&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;categories&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Ariplane&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;ArrayAdapter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;categoriesAdapter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ArrayAdapter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;android&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;simple_spinner_item&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;categories&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;my_spinner&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setAdapter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;categoriesAdapter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h1 id=&quot;تست-عکس&quot;&gt;تست عکس&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/test-post/post-image.jpg&quot; alt=&quot;Test Image&quot; /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;image-wrapper&quot;&gt;
-    
-    &lt;a href=&quot;/assets/img/post/test-post/post-image.jpg&quot; title=&quot;Test Image&quot; target=&quot;_blank&quot;&gt;
-        
-        &lt;img src=&quot;/assets/img/post/test-post/post-image.jpg&quot; alt=&quot;Test Image&quot; /&gt;
-        
-    &lt;/a&gt;
-    
-    
-    &lt;p class=&quot;image-caption&quot;&gt;Test Image Caption&lt;/p&gt;
-    
-&lt;/div&gt;
-
-&lt;h1 id=&quot;تست-یوتیوب&quot;&gt;تست یوتیوب&lt;/h1&gt;
-
-&lt;div class=&quot;video-container&quot;&gt;&lt;style&gt;.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }&lt;/style&gt;&lt;div class=&quot;embed-container&quot;&gt;&lt;iframe src=&quot;https://www.youtube.com/embed/xIBiJ_SzJTA&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;تست-آپارات&quot;&gt;تست آپارات&lt;/h1&gt;
-
-&lt;div class=&quot;video-container&quot;&gt;&lt;style&gt;.h_iframe-aparat_embed_frame{position:relative;} .h_iframe-aparat_embed_frame .ratio {display:block;width:100%;height:auto;} .h_iframe-aparat_embed_frame iframe {position:absolute;top:0;left:0;width:100%; height:100%;}&lt;/style&gt;&lt;div class=&quot;h_iframe-aparat_embed_frame&quot;&gt; &lt;span style=&quot;display: block;padding-top: 57%&quot;&gt;&lt;/span&gt;&lt;iframe src=&quot;https://www.aparat.com/video/video/embed/videohash/DY8HB/vt/frame&quot; allowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>صدرا املشی</name></author><category term="Category Test" /><category term="تست دسته بندی" /><summary type="html">سلام دنیا</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>صدرا املشی</name></author><category term="راک" /><category term="اینترنت اشیاء" /><category term="گیتار" /><category term="گیتار الکتریک" /><category term="ابزار" /><summary type="html">یخچال هوشمند، فِر هوشمند، لامپ هوشمند، حتی قفل هوشمند و.. و… و..، مطمئنا اینا واژه هایی هستن که تو یک یا نهایت دو سال اخیر بارها شنیده ایم و البته در سالهای آینده بیشتر خواهیم شنید. همه دستگاه هایی که نام بردم یا چیزهای دیگه‌ای که خودتون شنیدید در دسته ای به نام اینترنت اشیا یا بطور مخفف IOT قرار میگیرند( البته خیلی ها از دوستان لطف دارن و میگن اینترنت اشیا نه! اینترنت چیزها! بعضی از دوستان هم که خسته ان میگن چیزنت! ) اما واقعا اینترنت اشیا چیه و چه تعریفی داره. بهتره برای روشن شدن ماجرا از ویکی‌پدیا کمک بگیرییم:</summary></entry></feed>

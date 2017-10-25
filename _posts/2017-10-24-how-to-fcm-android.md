@@ -87,7 +87,7 @@ author: Sadra
 اول از همه در فایل build.gradle مربوط به **project** قرار داره خطوط زیر رو اصلاح و اضافه میکنیم.
 
 ```groovy
-# Project-level build.gradle (<project>/build.gradle):
+// Project-level build.gradle (<project>/build.gradle):
 buildscript {
   dependencies {
     // Add this line
@@ -99,7 +99,7 @@ buildscript {
 و در فایل build.gradle مربوط به **app.module** خطو زیر رو در انتهای محتویات قبلی اضافه می‌کنیم:
 
 ```groovy
-#App-level build.gradle (<project>/<app-module>/build.gradle):
+// App-level build.gradle (<project>/<app-module>/build.gradle):
 ...
 // Add to the bottom of the file
 apply plugin: 'com.google.gms.google-services'
@@ -108,7 +108,7 @@ apply plugin: 'com.google.gms.google-services'
 و همچنین لازمه که لایبرری های مربوط به فایربیس رو هم به **dependencies** اضافه کنیم.
 
 ```groovy
-# Project-level build.gradle (<project>/build.gradle):
+// Project-level build.gradle (<project>/build.gradle):
 dependencies {
   ...
   // Add this line

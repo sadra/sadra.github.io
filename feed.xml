@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://isapanah.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://isapanah.com/" rel="alternate" type="text/html" /><updated>2017-10-25T13:24:03+03:30</updated><id>http://isapanah.com/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده اپلیکیشن iOS و Android.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://isapanah.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://isapanah.com/" rel="alternate" type="text/html" /><updated>2017-10-25T23:59:16+03:30</updated><id>http://isapanah.com/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده اپلیکیشن iOS و Android.
 </subtitle><entry><title type="html">فایربیس ۱: سرویس Firebase Cloud Messaging</title><link href="http://isapanah.com/2017/how-to-fcm-android" rel="alternate" type="text/html" title="فایربیس ۱: سرویس Firebase Cloud Messaging" /><published>2017-10-24T00:00:00+03:30</published><updated>2017-10-24T00:00:00+03:30</updated><id>http://isapanah.com/2017/how-to-fcm-android</id><content type="html" xml:base="http://isapanah.com/2017/how-to-fcm-android">&lt;p&gt;بنا بر قولی که در &lt;a href=&quot;http://isapanah.com/2017/set-fire-into-the-problems-with-firebase&quot;&gt;پست قبلی&lt;/a&gt; داده بودم، میخوام در یک مجموعه نوشته درباره پیاده سازی و استفاده از سرویس‌های مختلف فایربیس (تا جایی که این امکان برای ما در ایران وجود داشته باشه) صحبت کنم. شما می‌تونید پست‌های این بلاگ را، در رابطه با سرویس‌های فایربیس، از این &lt;a href=&quot;http://isapanah.com/tag/firebase&quot;&gt;لینک موضوعی&lt;/a&gt; مطالعه کنید.&lt;/p&gt;
 
 &lt;p&gt;ازونجایی که مطالب زیاد بود و همچنین دسته بندی‌ها تودرتو، در ادامه فهرستی از کل مطالب و تیترهای موجود در این پست رو لیست کردم. با کلیک روی هر تیتر به اون موضوع هدایت می‌شید.&lt;/p&gt;
@@ -507,13 +507,13 @@
 
 &lt;p&gt;سرویس FCM به ما اجازه می‌ده که کاربرنامون رو در &lt;code class=&quot;highlighter-rouge&quot;&gt;Topic&lt;/code&gt; یا موضوع (و موضوع‌های) خاصی عضو کنیم. و بدین ترتیب پیام فقط برای کاربرانی که در فلان موضوع عضو هستند ارسال بشه. به این منظور مقصد دریافت رو با کلیدواژه &lt;strong&gt;topics&lt;/strong&gt; و نام تاپیک می‌نویسیم. برای مثال در زیر، مقصدِ پیام برای کاربرانی که عضو موضوع &lt;code class=&quot;highlighter-rouge&quot;&gt;vip_user&lt;/code&gt; هستند تعریف شده:&lt;/p&gt;
 
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;/topics/vip_user&quot;&lt;/span&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;/topics/vip_user&quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;p&gt;حالا اگه بخواییم پیام برای همه کاربرا ارسال بشه چی؟ آیا باید توکن همه کابرارو لیست کنیم و بفرستیم؟ نه، نیازی به اینکار نیست! چون همه کاربرها بطور پیشفرض همون ابتدا عضو تاپیک &lt;code class=&quot;highlighter-rouge&quot;&gt;global&lt;/code&gt; هستند، یعنی اگه قرار بود پیام برای همه ارسال بشه فقط کافیه بگید که:&lt;/p&gt;
 
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;/topics/global&quot;&lt;/span&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;/topics/global&quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 

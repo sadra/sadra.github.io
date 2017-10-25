@@ -600,13 +600,13 @@
 
 <p>سرویس FCM به ما اجازه می‌ده که کاربرنامون رو در <code class="highlighter-rouge">Topic</code> یا موضوع (و موضوع‌های) خاصی عضو کنیم. و بدین ترتیب پیام فقط برای کاربرانی که در فلان موضوع عضو هستند ارسال بشه. به این منظور مقصد دریافت رو با کلیدواژه <strong>topics</strong> و نام تاپیک می‌نویسیم. برای مثال در زیر، مقصدِ پیام برای کاربرانی که عضو موضوع <code class="highlighter-rouge">vip_user</code> هستند تعریف شده:</p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">to</span><span class="err">:</span> <span class="p">,</span> <span class="s2">"/topics/vip_user"</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">to</span><span class="err">:</span> <span class="s2">"/topics/vip_user"</span>
 </code></pre>
 </div>
 
 <p>حالا اگه بخواییم پیام برای همه کاربرا ارسال بشه چی؟ آیا باید توکن همه کابرارو لیست کنیم و بفرستیم؟ نه، نیازی به اینکار نیست! چون همه کاربرها بطور پیشفرض همون ابتدا عضو تاپیک <code class="highlighter-rouge">global</code> هستند، یعنی اگه قرار بود پیام برای همه ارسال بشه فقط کافیه بگید که:</p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">to</span><span class="err">:</span> <span class="p">,</span> <span class="s2">"/topics/global"</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">to</span><span class="err">:</span> <span class="s2">"/topics/global"</span>
 </code></pre>
 </div>
 

@@ -36,6 +36,7 @@ author: Sadra
 *   [دریافت ناتیفیکیشن](#receiving-notification)
     *   [ارسال و دریافت ناتیفیکیشن برای گروهی از کاربران](#send-and-receive-notification)
     *   [ارسال و دریافت ناتیفیکیشن بر اساس Topic یا موضوعی خاص](#user-topics)
+    *   [ارسال پیام برای همه‌ی کاربران](#send-message-to-all)
     *   [دیگر تنظیمات ارسال پیام](#other-settings)
         *   [اولویت Priority](#other-settings-priority)
         *   [زمان اعتبار پیام timeToLive](#other-settings-time-to-alive)

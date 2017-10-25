@@ -489,12 +489,6 @@ to: ["XXXXX:YYYYYYYUUUUUIIIIAAAAA", "XXXXX:YYYYYYYUUUUUIIIIBBBBB", "XXXXX:YYYYYY
 to: "/topics/vip_user"
 ```
 
- حالا اگه بخواییم پیام برای همه کاربرا ارسال بشه چی؟ آیا باید توکن همه کابرارو لیست کنیم و بفرستیم؟ نه، نیازی به اینکار نیست! فقط کافیه همون اول که اپلیکیشن کاربر رو عضو تاپیک `global` کنید و بدین صورت همه کاربرانتون عضو این تاپیک میشن. وبعد، هرموقع خواستید پیام برای همه کاربران ارسال بشه، فقط کافیه بگید:
-
-```javascript
-to: "/topics/global"
-```
-
 - مقصد شرطی **condition**
 
     مقصد شرطی یا conditional به ما این امکان رو میده که پیام رو به کاربران بر اساس شرط عضویت اونها در تاپیک‌های خاصی بصورت AND و OR ارسال کنیم. برای مثال در زیر پیام برای کاربرانی که عضو VIP بوده و همچنین خانم هستند ارسال میشه:
@@ -544,6 +538,26 @@ private void setUserVIP(boolean isVIP, View view){
 خب، همه‌چی آمادست، و فقط کافیه از Postman یه ریکئوست روی  `/send/data-notification/VIP` بفرستیم، و نتیجه اینکه:
 
 ![Firebase Notification](/assets/img/post/2017-10-24/fcm-10.png)
+
+<h3 id="send-message-to-all">ارسال پیام برای همه کاربران</h3>
+
+ حالا اگه بخواییم پیام برای همه کاربرا ارسال بشه چی؟ آیا باید توکن همه کابرارو لیست کنیم و بفرستیم؟ نه، نیازی به اینکار نیست! فقط کافیه همون اول که اپلیکیشن کاربر رو عضو تاپیک `global` کنید و بدین صورت همه کاربرانتون عضو این تاپیک میشن.
+
+```java
+@Override
+protected void onResume() {
+    super.onResume();
+
+    FirebaseMessaging.getInstance().subscribeToTopic("global");
+}
+```
+
+ وبعد، هرموقع خواستید پیام برای همه کاربران ارسال بشه، فقط کافیه سمت سرور تاپیکِ مقصد رو روی `global` ست کنید:
+
+```javascript
+to: "/topics/global"
+```
+
 
 <h3 id="other-settings">دیگر تنظیمات ارسال پیام</h3>
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://isapanah.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://isapanah.com/" rel="alternate" type="text/html" /><updated>2017-10-26T00:39:50+03:30</updated><id>http://isapanah.com/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده اپلیکیشن iOS و Android.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://isapanah.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://isapanah.com/" rel="alternate" type="text/html" /><updated>2017-10-26T00:47:49+03:30</updated><id>http://isapanah.com/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده اپلیکیشن iOS و Android.
 </subtitle><entry><title type="html">فایربیس ۱: سرویس Firebase Cloud Messaging</title><link href="http://isapanah.com/2017/how-to-fcm-android" rel="alternate" type="text/html" title="فایربیس ۱: سرویس Firebase Cloud Messaging" /><published>2017-10-24T00:00:00+03:30</published><updated>2017-10-24T00:00:00+03:30</updated><id>http://isapanah.com/2017/how-to-fcm-android</id><content type="html" xml:base="http://isapanah.com/2017/how-to-fcm-android">&lt;p&gt;بنا بر قولی که در &lt;a href=&quot;http://isapanah.com/2017/set-fire-into-the-problems-with-firebase&quot;&gt;پست قبلی&lt;/a&gt; داده بودم، میخوام در یک مجموعه نوشته درباره پیاده سازی و استفاده از سرویس‌های مختلف فایربیس (تا جایی که این امکان برای ما در ایران وجود داشته باشه) صحبت کنم. شما می‌تونید پست‌های این بلاگ را، در رابطه با سرویس‌های فایربیس، از این &lt;a href=&quot;http://isapanah.com/tag/firebase&quot;&gt;لینک موضوعی&lt;/a&gt; مطالعه کنید.&lt;/p&gt;
 
 &lt;p&gt;ازونجایی که مطالب زیاد بود و همچنین دسته بندی‌ها تودرتو، در ادامه فهرستی از کل مطالب و تیترهای موجود در این پست رو لیست کردم. با کلیک روی هر تیتر به اون موضوع هدایت می‌شید.&lt;/p&gt;
@@ -511,12 +511,6 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;حالا اگه بخواییم پیام برای همه کاربرا ارسال بشه چی؟ آیا باید توکن همه کابرارو لیست کنیم و بفرستیم؟ نه، نیازی به اینکار نیست! فقط کافیه همون اول که اپلیکیشن کاربر رو عضو تاپیک &lt;code class=&quot;highlighter-rouge&quot;&gt;global&lt;/code&gt; کنید و بدین صورت همه کاربرانتون عضو این تاپیک میشن. وبعد، هرموقع خواستید پیام برای همه کاربران ارسال بشه، فقط کافیه بگید:&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;/topics/global&quot;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;مقصد شرطی &lt;strong&gt;condition&lt;/strong&gt;&lt;/p&gt;
@@ -570,6 +564,25 @@
 &lt;p&gt;خب، همه‌چی آمادست، و فقط کافیه از Postman یه ریکئوست روی  &lt;code class=&quot;highlighter-rouge&quot;&gt;/send/data-notification/VIP&lt;/code&gt; بفرستیم، و نتیجه اینکه:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/post/2017-10-24/fcm-10.png&quot; alt=&quot;Firebase Notification&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;send-message-to-all&quot;&gt;ارسال پیام برای همه کاربران&lt;/h3&gt;
+
+&lt;p&gt;حالا اگه بخواییم پیام برای همه کاربرا ارسال بشه چی؟ آیا باید توکن همه کابرارو لیست کنیم و بفرستیم؟ نه، نیازی به اینکار نیست! فقط کافیه همون اول که اپلیکیشن کاربر رو عضو تاپیک &lt;code class=&quot;highlighter-rouge&quot;&gt;global&lt;/code&gt; کنید و بدین صورت همه کاربرانتون عضو این تاپیک میشن.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;onResume&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;onResume&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;FirebaseMessaging&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getInstance&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;subscribeToTopic&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;global&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;وبعد، هرموقع خواستید پیام برای همه کاربران ارسال بشه، فقط کافیه سمت سرور تاپیکِ مقصد رو روی &lt;code class=&quot;highlighter-rouge&quot;&gt;global&lt;/code&gt; ست کنید:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;/topics/global&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;h3 id=&quot;other-settings&quot;&gt;دیگر تنظیمات ارسال پیام&lt;/h3&gt;
 

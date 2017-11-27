@@ -10,7 +10,7 @@ tags:
 
 categories:
 - فایربیس
-- آموزشی
+- آموزش
 
 cover: /assets/img/post/2017-10-24/fcm-cover.png
 

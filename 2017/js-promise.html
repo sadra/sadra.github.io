@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+<meta content="IE-edge,chrome=1" http-equiv="X-UA-Compatable">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="Prmise,RxJs,JavaScript,ES6, جاوا اسکریپت,آموزش">
+<meta name="author" content="Sadra Isapanah Amlashi | صدرا عیسی پناه املشی">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107934487-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-107934487-1');
+</script>
+
+<meta name="twitter:card" content="summary">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="http://isapanah.com/2017/js-promise">
+
+
+<meta name="description" content="در این پست قصد دارم به ساده‌ترین روش ممکن راجع به Promiseها و اینکه واقعا چطوری باید ازشون استفاده کرد صحبت کنم.">
+<meta property="og:description" content="در این پست قصد دارم به ساده‌ترین روش ممکن راجع به Promiseها و اینکه واقعا چطوری باید ازشون استفاده کرد صحبت کنم.">
+<meta name="twitter:description" content="در این پست قصد دارم به ساده‌ترین روش ممکن راجع به Promiseها و اینکه واقعا چطوری باید ازشون استفاده کرد صحبت کنم.">
+
+
+
+
+<title>Promise تابحال هیچوقت انقدر آسون نبوده | صدرا املشی</title>
+<meta property="twitter:title" content="Promise تابحال هیچوقت انقدر آسون نبوده | صدرا املشی">
+<meta property="og:site_name" content="Promise تابحال هیچوقت انقدر آسون نبوده | صدرا املشی">
+<meta property="og:title" content="Promise تابحال هیچوقت انقدر آسون نبوده | صدرا املشی">
+
+
+
+<meta property="twitter:image" content="http://isapanah.com/assets/img/post/2017-11-27/js-promise-cover.png" />
+<meta property="og:image" content="http://isapanah.com/assets/img/post/2017-11-27/js-promise-cover.png" />
+
+
+<link rel="alternative" href="/site-map.xml" title="وبلاگ صدرا املشی" type="application/atom+xml">
+<link rel="short icon" type="image/x-icon" href="http://isapanah.com/assets/img/base/favicon.png">
+<link rel="stylesheet" type="text/css" href="http://isapanah.com/assets/css/styles.css">
+
+    </head>
+
+    <body dir="rtl" lang="Farsi" >
+        <!-- Header -->
+<header class="header-rtl">
+    <nav class="nav-wrap">
+        <a href="/" class="nav-logo">وبلاگ صدرا املشی</a>
+        <ul class="navigation">
+
+            <li><a href="/">یادداشت‌ها</a></li>
+            <li><a href="/list/items">موضوعات</a></li>
+            <li><a href="/about">درباره</a></li>
+            <li><a href="http://cv.isapanah.com/">رزومه</a></li>
+            <li><a href="https://sadra.github.io/english">English</a></li>
+
+        </ul>
+    </nav>
+</header>
+<!-- /Header -->
+
+        <div class="content">
+
+    <div class="blog-post-container">
+
+        <div class="post-title-container">
+            <h1 class="post-title">Promise تابحال هیچوقت انقدر آسون نبوده</h1>
+        </div>
+
+        <div class="post_created">
+
+            <div class="author_avatar">
+                <img src="/assets/img/base/avatar.jpg" alt="صدرا املشی" id="avatar-img" />
+            </div>
+
+            <div class="post_info">
+                <p> <a href="/about">صدرا املشی</a> </p>
+                <small>توسعه دهنده</small><br/>
+                <small>دوشنبه 06 آذر 1396</small>
+            </div>
+
+        </div>
+
+        
+        <div class="post-cover">
+            <img src="http://isapanah.com/assets/img/post/2017-11-27/js-promise-cover.png" alt="Promise تابحال هیچوقت انقدر آسون نبوده">
+        </div>
+        
+
+        <div class="post-content">
+            <h2 id="مقدمه">مقدمه</h2>
+
+<p>خیلی وقت پیش در حین انجام یک پروژه در NodeJs نیاز پیدا کردم که چندتا متد رو بصورت متوالی و nested استفاده کنم، و متد ها هم به این صورت بود که باید صبر میکردن تا داخلی ترین متد انجام بشه و بعد خارجی با استفاده از نتیجه متد داخلی وظیفه خودش رو انجام بده.</p>
+
+<p><img src="/assets/img/post/2017-11-27/js-promise-nested-blocks.jpg" alt="Nested Blocks" /></p>
+
+<p>جدا از این مورد، مشکل دیگه ای که وجود داشته این بود که اولا این متد‌ها Async بودن، و دوما اینکه ممکن بود نتیجه sucessfull یا failed میشد. خلاصه به هر کثافتی که بود کارو انجام دادم.
+چند وقت بعد مهدی بهم گفت که میتونی از Promise برای این قضیه استفاده کنید. و اینگونه بود که زندگی زیبا شد.</p>
+
+<p><img src="/assets/img/post/2017-11-27/js-promise-yeah.gif" alt="Yes" /></p>
+
+<p>از چندتا از دوستان شنیدم که هنوز پرامیس رو درک نکردن و نمیدونم فرقش با چیزای دیگه مثل Callback چیه. در این پست قصد دارم به ساده‌ترین روش ممکن راجع به Promiseها و اینکه واقعا چطوری باید ازشون استفاده کرد صحبت کنم. پس حرف رو کوتاه کنیم و بریم سر اصل مطلب.</p>
+
+<ul>
+  <li><a href="#subject">شرح</a></li>
+  <li><a href="#how-to-create-a-Promise">ساختن یک Promise</a></li>
+  <li><a href="#how-to-user-promise">استفاده از Promise</a></li>
+  <li><a href="#chain-of-promises">زنجیره Promiseها</a></li>
+  <li><a href="#asynchronous-promise">پرامیس‌ها Asynchronous هستند</a></li>
+  <li><a href="#promises-in-variety-of-js">پرامیس در ES5، ES6, ES7</a>
+    <ul>
+      <li><a href="#promise-in-es5">ES5 - در اکثر مرورگرها</a></li>
+      <li><a href="#promise-in-es6">ES6 - در مرورگرهای مدرن، و NodeJs v6</a></li>
+      <li><a href="#promise-in-es7">ES7 - استفاده زا Async Await سینتکس رو قابل خوندن میکنه</a></li>
+    </ul>
+  </li>
+  <li><a href="#when-and-why-promises">چرا و چه موقع از Promise استفاده کنیم؟</a></li>
+  <li><a href="#callback">دنیا قبل از پرامیس: Callback</a></li>
+  <li><a href="#scape-from-callback-hell">فرار از Callback Hell</a></li>
+  <li><a href="#observable">عضو جدید این خانواده: Observables</a></li>
+  <li><a href="#conclusion">نتیجه‌گیری</a></li>
+</ul>
+
+<h2 id="subject">شرح</h2>
+
+<p>بزارین همین اول کار، پرامیس رو با شرح یک مثال براتون ساده کنم:</p>
+
+<blockquote>
+  <p>فرض کنید یه <strong>بچه</strong> هستید هستید. و <strong>مادرتون</strong> بهتون <strong>قول میده</strong> که هفته دیگه یه <strong>گوشی جدید</strong> براتون بخره.</p>
+</blockquote>
+
+<p>شما اولا نمی‌دونید که آیا هفته دیگه یه گوشی براتون میخره یا نه. و ثانیا اینکه آیا واقعا مادرتون برای شما یه گوشی جدید میخره؟ ثالثا ممکنه اصلا اون هفته از دستتون ناراحت باشه و کلا بیخیال خرید گوشی بشه!</p>
+
+<p>این یه مثال کامل از Promise. هر پرامیس ۳وضعیت داره:</p>
+
+<ol>
+  <li>پرامیس در حال بررسیه <strong>Pending</strong>: شما نمی‌دونید که آیا هفته دیگه براتون گوشی میخره یا نه.</li>
+  <li>پرامیس حل شده <strong>Resolved</strong>: مادرتون واقعا یه گوشی جدید براتون خریده.</li>
+  <li>پرامیس رد شده <strong>Rejected</strong>: مادرتون براتون گوشی جدید نخریده، چون واقعا از دستتون ناراحت بوده.</li>
+</ol>
+
+<p>حالا که با مفهوم و حالت‌های پرامیس آشنا شدید، بریم ببینم که چجوری میشه ازش استفاده کرد.</p>
+
+<h2 id="how-to-create-a-Promise">ساختن یک Promise</h2>
+
+<p>اجازه بدید در همین اولین قدم، چیزهایی که بالا گفتیم رو به کد جاوا اسکریپت تبدیل کنیم.</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="cm">/* ES6 */</span>
+<span class="kd">let</span> <span class="nx">isMomHappy</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+
+<span class="c1">//Promise</span>
+<span class="kd">let</span> <span class="nx">willGetNewPhone</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Promise</span><span class="p">(</span>
+  <span class="kd">function</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">isMomHappy</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">let</span> <span class="nx">phone</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="na">brand</span><span class="p">:</span> <span class="s1">'iPhone X'</span><span class="p">,</span>
+        <span class="na">color</span><span class="p">:</span> <span class="s1">'gray'</span>
+      <span class="p">};</span>
+      <span class="nx">resolve</span><span class="p">(</span><span class="nx">phone</span><span class="p">);</span> <span class="c1">//fulfilled</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="kd">let</span> <span class="nx">reason</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">'Mom is angry.'</span><span class="p">)</span>
+      <span class="nx">reject</span><span class="p">(</span><span class="nx">reason</span><span class="p">);</span> <span class="c1">//reject</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">);</span>
+</code></pre>
+</div>
+
+<p>فکر میکنم که خودش به اندازه کافی گویا هست.</p>
+
+<ol>
+  <li>
+    <p>ما یک متغییر بولین بنام <code class="highlighter-rouge">isMomHappy</code> داریم، که برامون مشخص میکنه آیا مامان OK هست واسه خریدن یا نه.</p>
+  </li>
+  <li>
+    <p>یه پرامیس هم بنام <code class="highlighter-rouge">willGetNewPhone</code> داریم. که این پارمیس هم میتونه حل <code class="highlighter-rouge">Resolved</code> بشه (مامان برات یه گوشی جدید بخره)، هم میتونه رد <code class="highlighter-rouge">Rejected</code> بشه (مامان از دستت عصبانیه، و عمرا برات گوشی جدید بخره).</p>
+
+    <p>یک syntax استاندارد برای نوشتن <code class="highlighter-rouge">Promise</code> جدید وجود داره که بر اساس <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise">داکیومنت MDN</a>، این سینتکس اینجوریه:</p>
+  </li>
+</ol>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="c1">//Promise syntax looks like this</span>
+<span class="k">new</span> <span class="nx">Promise</span><span class="p">(</span> <span class="cm">/* executor */</span> <span class="kd">function</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span> <span class="p">);</span>
+</code></pre>
+</div>
+
+<p>تنها چیزهایی که لازمه بخاطر بسپارین این که، وقتی نتیجه کار موفقیت‌آمیزه، باید متد <code class="highlighter-rouge">resolve(your_success_value)</code> رو فراخوانی کرده، و به هر دلیلی اگه نتیجه موفقیت‌آمیز نیست، باید متد <code class="highlighter-rouge">reject(your_fail_value)</code> رو فراخوانی کنید. هردوی اینها باید در داخل متد <code class="highlighter-rouge">Promise</code> انجام بشه.
+   همونطور هم که در مثال می‌بینید ازونجایی که مامان عصبانی بود، ما مجبور شدیم درخواست رو رد کرده و با فرواخوانی متد <code class="highlighter-rouge">reject(reason)</code> و پاس کردن مقدار reason این مقوله رو به سرانجام برسونیم. البته، اگرهم مامان اوکی بود و گوشی جدید رو خرید، جهت بیان نتیجه، با فراخوانی متد <code class="highlighter-rouge">resolve</code> به همراه مقداری از مشخصات گوشی خریداری شده، اعلام کردیم.</p>
+
+<h2 id="how-to-user-promise">استفاده از Promise</h2>
+
+<p>حالا که فهمیدیم چطوری میشه یه پرامیس ساخته، بهتره نحوه استفاده کردن ازش رو هم یاد بگیریم.</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="cm">/* ES6 */</span>
+<span class="p">...</span>
+<span class="c1">// call our promise</span>
+<span class="kd">let</span> <span class="nx">askMom</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+	<span class="nx">willGetNewPhone</span>
+		<span class="p">.</span><span class="nx">then</span><span class="p">(</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">fulfilled</span><span class="p">)</span> <span class="p">{</span>
+			<span class="c1">//yay, you got a new phone</span>
+			<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fulfilled</span><span class="p">);</span>
+			<span class="c1">//output: { brand: 'iPhone X', color: 'gray' }</span>
+		<span class="p">}).</span><span class="k">catch</span><span class="p">(</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+			<span class="c1">//oops, mom don't buy it</span>
+			<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>
+			<span class="c1">//output: 'Mom is angry.'</span>
+		<span class="p">});</span>
+<span class="p">}</span>
+
+<span class="nx">askMom</span><span class="p">();</span>
+</code></pre>
+</div>
+
+<p>در اینجا ما متد <code class="highlighter-rouge">askMom</code> رو صدا میزنیم. در این متد، ما متد پرامیسمون یعنی <code class="highlighter-rouge">willGetNewPhone</code> رو صدا میزنیم.</p>
+
+<p>ما میخواییم از وقتی که پرامیس بهمون جواب میده بتونیم اکشن مناسب رو نشون بده. برای مواقعی که پاسخ <strong>resolve</strong> هست متد <code class="highlighter-rouge">then</code> استفاده میشه؛ و برای مواقعی که پاسخ <strong>reject</strong> هست، متد <code class="highlighter-rouge">catch</code> صدا میشه.</p>
+
+<p>در این مثال، در داخل <code class="highlighter-rouge">.then</code> ما متد <code class="highlighter-rouge">function(fulfilled) {…}</code> رو داریم. مقدار این متغییر <code class="highlighter-rouge">fulfilled</code> چیه؟ دقیقا همون چیزیه که شما در متد <code class="highlighter-rouge">resolve(your-success_value)</code> پاس کردیم. که در اینجا همون مشخصات گوشی جدیده ست.</p>
+
+<p>همینطور در داخل <code class="highlighter-rouge">.catch‍</code> هم متد <code class="highlighter-rouge">function(error) {…}</code> رو داریم. که مقدار <code class="highlighter-rouge">error</code> برابر با مقداری هست که ما با <code class="highlighter-rouge">reject(your_fail_value)</code> پاسش کردیم. در این مثال مقدار error برابر بود با دلیل ریجکت شدن درخواست.</p>
+
+<p>اجازه بدید کدهایی که تا الان زدیم رو اجرا کنیم و نتیجه کار رو ببینیم.
+اجرای دمو از <a href="https://jsbin.com/luceriy/4/edit?js,console">این لینک</a>.</p>
+
+<p><img src="/assets/img/post/2017-11-27/js-promise-mom-promise-demo.gif" alt="Mom Promise Demo" /></p>
+
+<h2 id="chain-of-promises">زنجیره Promiseها</h2>
+
+<p>پرامیس‌ها قابلیت زنجیره (متوالی) شدن رو دارند.</p>
+
+<p>برای مثال، فرض کنید شما همون کودک مثال قبل هستید. حالا به دوستتون <strong>قول می‌دید</strong> که وقتی مامان واستون گوشی جدید رو خرید، بهشون <strong>نشون بدید.</strong></p>
+
+<p>خب، پس بریم پرامیس بعدی رو بنویسیم.</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="p">...</span>
+
+<span class="c1">// 2nd promise</span>
+<span class="kd">let</span> <span class="nx">showNewPhone</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">phone</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="k">new</span> <span class="nx">Promise</span><span class="p">(</span>
+		<span class="kd">function</span> <span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">){</span>
+			<span class="kd">let</span> <span class="nx">message</span> <span class="o">=</span> <span class="s1">'Hey friend, I have a new '</span> <span class="o">+</span> <span class="nx">phone</span><span class="p">.</span><span class="nx">color</span> <span class="o">+</span> <span class="s1">' '</span> <span class="o">+</span> <span class="nx">phone</span><span class="p">.</span><span class="nx">brand</span> <span class="o">+</span> <span class="s1">'.'</span><span class="p">;</span>
+			<span class="nx">resolve</span> <span class="p">(</span><span class="nx">message</span><span class="p">)</span>
+		<span class="p">}</span>
+	<span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p><strong>نکات:</strong></p>
+
+<p>در این مثال احتمالا متوجه شدید که ما از <code class="highlighter-rouge">reject</code> استفاده نکردیم. خب این متد یه چیزی optional و انتخابیه، فقط موقعی که نیاز هست ازش استفاده کنید.</p>
+
+<p>ما حتی میتونیم با استفاده از <code class="highlighter-rouge">Promise.solve</code> این متد رو ساده‌تر هم بنویسیم .</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="c1">// shorten it</span>
+<span class="p">...</span>
+
+<span class="c1">// 2nd promise</span>
+<span class="kd">let</span> <span class="nx">showNewPhone</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">phone</span><span class="p">)</span> <span class="p">{</span>
+	<span class="kd">let</span> <span class="nx">message</span> <span class="o">=</span> <span class="s1">'Hey friend, I have a new '</span> <span class="o">+</span> <span class="nx">phone</span><span class="p">.</span><span class="nx">color</span> <span class="o">+</span> <span class="s1">' '</span> <span class="o">+</span> <span class="nx">phone</span><span class="p">.</span><span class="nx">brand</span> <span class="o">+</span><span class="s1">'.'</span><span class="p">;</span>
+	<span class="k">return</span> <span class="nx">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">message</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>خب، حالا وقت زنجیر کردن پرامیس‌هاست. شما، اون بچه داستان، فقط وقتی میتونید به دوستتون اون گوشی جدید رو نشون بدید <code class="highlighter-rouge">showNewPhone</code> بعد از اینکه مامان اون گوشی رو واستون خریده باشه <code class="highlighter-rouge">willGetNewPhone</code>.</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="p">...</span>
+
+<span class="c1">// call our promise</span>
+<span class="kd">let</span> <span class="nx">askMom</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+	<span class="nx">willGetNewPhone</span>
+		<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">showNewPhone</span><span class="p">)</span> <span class="c1">// chain it here</span>
+		<span class="p">.</span><span class="nx">then</span><span class="p">(</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">fulfilled</span><span class="p">)</span> <span class="p">{</span>
+			<span class="c1">//yay, you got a new phone</span>
+			<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fulfilled</span><span class="p">);</span>
+			<span class="c1">//output: 'Hey friend, I have a new gray iPhone X.'</span>
+		<span class="p">}).</span><span class="k">catch</span><span class="p">(</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+			<span class="c1">//oops, mom don't buy it</span>
+			<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>
+			<span class="c1">//output: 'Mom is angry.'</span>
+		<span class="p">});</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>به همین راحتی میتونید پرامیس‌ها رو به همن زنجیر کنید.</p>
+
+<h2 id="asynchronous-promise">پرامیس‌ها Asynchronous هستند</h2>
+
+<p>این خیلی واضحه که پرامیس‌ها آسنکرون هستن. اصن اجازه بدید برای اثبات این موضوع چندتا لاگ بندازیم.</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="c1">// call our promise</span>
+<span class="kd">let</span> <span class="nx">askMom</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'before asking Mom'</span><span class="p">);</span> <span class="c1">// log before</span>
+	<span class="nx">willGetNewPhone</span>
+		<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">showNewPhone</span><span class="p">)</span>
+		<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">fulfilled</span><span class="p">)</span> <span class="p">{</span>
+			<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fulfilled</span><span class="p">);</span>
+		<span class="p">}).</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+			<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>
+		<span class="p">});</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'after asking mom'</span><span class="p">);</span> <span class="c1">// log after</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>فکر میکنید چه نتیجه‌ چی میشه؟ احتمالا انتظار داریم همچین چیزی دریافت کنید:</p>
+
+<pre><code class="language-Log">1. before asking Mom
+2. Hey friend, I have a new black Samsung phone.
+3. after asking mom
+</code></pre>
+
+<p>ولی چیزی که واقعا دریافت میکنیم اینه:</p>
+
+<pre><code class="language-Log">1. before asking Mom
+2. after asking mom
+3. Hey friend, I have a new black Samsung phone.
+</code></pre>
+
+<p><img src="/assets/img/post/2017-11-27/js-promise-chain-demo.gif" alt="Chain Demo" /></p>
+
+<p><strong>چرا؟ چون زندگی (یا JS) منتظر هیچ کسی نمیومونه</strong></p>
+
+<p>شما، یا درواقع همون بچه، از بازی کردن دست نمی‌کشید موقعی که منتظرید تا مامانتون به قولش (خریدن موبایل جدید) عمل کنه؛ غیر از اینه؟ این همون چیزیه که ما بهش میگیم asynchronous، کد کاملا اجرا میشه، بدون اینکه سرویسمون رو بلاک کنه یا منتظر جواب بشه. هرموقع جواب رسید، بهش واکنش مناسب رو نشون میده. هرکاری که قرار بکنین موقعی که مامان به قولش عمل کرد، فقط کافیه بزارینش داخل <code class="highlighter-rouge">.then</code> 😉 .</p>
+
+<h2 id="promises-in-variety-of-js">پرامیس در ES5، ES6, ES7</h2>
+
+<p><b id="promise-in-es5">ES5 - در اکثر مرورگرها</b></p>
+
+<p>سرویسی که نوشتیم در اکثر مرورگرها و البته در NodeJs قابل استفاده است. البته در ES5 این ابزار همینجوری قابل استفاده نیست و برای استفاده ازش باید از لایبرری <a href="http://bluebirdjs.com/docs/getting-started.html">Bluebird</a> استفاده کنید. البته لایبرری معروف دیگه‌ای هم برای اینکار هست به اسم <a href="https://github.com/kriskowal/q">Q</a> که توسط Kris Kowal توسعه داده شده.</p>
+
+<p><b id="promise-in-es6">ES6 - در مرورگرهای مدرن، و NodeJs v6</b></p>
+
+<p>سرویسی که نوشتیم بصورت نیتیو در ES6 اجرا میشه و احتیاج به هیچ لایبرری خارجی وجود نداره. البته ما در ES6 میتونیم با استفاده از <code class="highlighter-rouge">fat arrow =&gt;</code> فاکنکشن‌ها کدمون رو ساده‌تر هم بنویسیم.</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="cm">/* ES6 */</span>
+<span class="kd">let</span> <span class="nx">isMomHappy</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+
+<span class="c1">//Promise</span>
+<span class="kr">const</span> <span class="nx">willGetNewPhone</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Promise</span><span class="p">(</span>
+  <span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="c1">//fat arrow</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">isMomHappy</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">let</span> <span class="nx">phone</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="na">brand</span><span class="p">:</span> <span class="s1">'iPhone X'</span><span class="p">,</span>
+        <span class="na">color</span><span class="p">:</span> <span class="s1">'gray'</span>
+      <span class="p">};</span>
+      <span class="nx">resolve</span><span class="p">(</span><span class="nx">phone</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="kd">let</span> <span class="nx">reason</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">'Mom is angry.'</span><span class="p">)</span>
+      <span class="nx">reject</span><span class="p">(</span><span class="nx">reason</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">);</span>
+
+<span class="kr">const</span> <span class="nx">showNewPhone</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">phone</span><span class="p">)</span> <span class="p">{</span>
+	<span class="kd">let</span> <span class="nx">message</span> <span class="o">=</span> <span class="s1">'Hey friend, I have a new '</span> <span class="o">+</span> <span class="nx">phone</span><span class="p">.</span><span class="nx">color</span> <span class="o">+</span> <span class="s1">' '</span> <span class="o">+</span> <span class="nx">phone</span><span class="p">.</span><span class="nx">brand</span> <span class="o">+</span><span class="s1">'.'</span><span class="p">;</span>
+	<span class="k">return</span> <span class="nx">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">message</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">// call our promise</span>
+<span class="kr">const</span> <span class="nx">askMom</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+	<span class="nx">willGetNewPhone</span>
+        <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">showNewPhone</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">fulfilled</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fulfilled</span><span class="p">))</span> <span class="c1">// fat arrow</span>
+        <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">));</span> <span class="c1">// fat arrow</span>
+<span class="p">}</span>
+
+<span class="nx">askMom</span><span class="p">();</span>
+</code></pre>
+</div>
+
+<p>توجه کنید که اگه با ES6 آشنایی ندارید. من همه متغییر هایی که قابل تغییر بودند رو با <code class="highlighter-rouge">let</code> مشخص کردم و اونهایی رو هم که با immutable و بدون تغییر هستند رو با <code class="highlighter-rouge">const</code> مشخص کردم. همه فانکشنهایی هم که بصورت <code class="highlighter-rouge">function(arguments)</code> بود رو به <code class="highlighter-rouge">(argument)</code> تغییر دادم. برای آشنایی بیشتر با ES6 می‌تونید لینک‌های زیر رو مطالعه کنید:</p>
+
+<ul>
+  <li>
+    <p><a href="https://strongloop.com/strongblog/es6-variable-declarations/">JavaScript ES6 Variable Declarations with let and const</a></p>
+  </li>
+  <li>
+    <p><a href="https://strongloop.com/strongblog/an-introduction-to-javascript-es6-arrow-functions/">An introduction to Javascript ES6 arrow functions</a></p>
+  </li>
+</ul>
+
+<p><b id="promise-in-es7">ES7 - استفاده زا Async Await سینتکس رو قابل خوندن میکنه</b></p>
+
+<p>اگه قرار باشه این سرویس رو با ES7 بنویسیم، میتونیم با استفاده از تگ های <code class="highlighter-rouge">async</code> و <code class="highlighter-rouge">await</code> کدمون رو تمیزتر بنویسیم. اینطوری میتونیم <code class="highlighter-rouge">then</code> و <code class="highlighter-rouge">catch</code> رو از کدمون حذف کنیم.</p>
+
+<p>پس چیزی که درنهایت بازنویسی میکنیم در ES7 میشه این:</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="cm">/* ES7 */</span>
+<span class="kd">let</span> <span class="nx">isMomHappy</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+
+<span class="c1">//Promise</span>
+<span class="kr">const</span> <span class="nx">willGetNewPhone</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Promise</span><span class="p">(</span>
+  <span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="c1">//fat arrow</span>
+    <span class="k">if</span><span class="p">(</span><span class="nx">isMomHappy</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">let</span> <span class="nx">phone</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="na">brand</span><span class="p">:</span> <span class="s1">'iPhone X'</span><span class="p">,</span>
+        <span class="na">color</span><span class="p">:</span> <span class="s1">'gray'</span>
+      <span class="p">};</span>
+      <span class="nx">resolve</span><span class="p">(</span><span class="nx">phone</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="kd">let</span> <span class="nx">reason</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Error</span><span class="p">(</span><span class="s1">'Mom is angry.'</span><span class="p">)</span>
+      <span class="nx">reject</span><span class="p">(</span><span class="nx">reason</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">);</span>
+
+<span class="c1">//2nd promise</span>
+<span class="nx">async</span> <span class="nx">showNewPhone</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">phone</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="k">new</span> <span class="nx">Promise</span><span class="p">(</span>
+        <span class="p">(</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+            <span class="kd">let</span> <span class="nx">message</span> <span class="o">=</span> <span class="s1">'Hey friend, I have a new '</span> <span class="o">+</span> <span class="nx">phone</span><span class="p">.</span><span class="nx">color</span> <span class="o">+</span> <span class="s1">' '</span> <span class="o">+</span> <span class="nx">phone</span><span class="p">.</span><span class="nx">brand</span> <span class="o">+</span><span class="s1">'.'</span><span class="p">;</span>
+			<span class="k">return</span> <span class="nx">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="nx">message</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">//call our promise</span>
+<span class="nx">async</span> <span class="nx">askMom</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+	<span class="k">try</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'before asking Mom'</span><span class="p">);</span>
+
+        <span class="kd">let</span> <span class="nx">phone</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">willIGetNewPhone</span><span class="p">;</span>
+        <span class="kd">let</span> <span class="nx">message</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">showNewPhone</span><span class="p">(</span><span class="nx">phone</span><span class="p">);</span>
+
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">message</span><span class="p">);</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'after asking mom'</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">catch</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="p">(</span><span class="nx">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">await</span> <span class="nx">askMom</span><span class="p">();</span>
+<span class="p">})();</span>
+</code></pre>
+</div>
+
+<ol>
+  <li>هرموقع که نیاز داشتید یه پرامیس return کنید، فقط کافیه متد مورد نظر رو با <code class="highlighter-rouge">asyn</code> نشانه گذاری کنید. برای مثال:
+<code class="highlighter-rouge">async function showNewPhone(phone)</code></li>
+  <li>هرموقع که احتیاج داشتید پرامیس رو فراخوانی کنید، کافیه قبلش با <code class="highlighter-rouge">await</code> نشانه‌گذاری کنید. برای مثال:
+<code class="highlighter-rouge">let phone = await willIGetNewPhone;</code> و <code class="highlighter-rouge">let message = await showNewPhone(phone);</code>.</li>
+  <li>و در نهایت با استفاده از <code class="highlighter-rouge">try { ... } catch(error) { … }</code> میتونید قضیه <strong>resolved</strong> و <strong>rejected</strong> پرامیس رو هم هندل کندی.</li>
+</ol>
+
+<h2 id="when-and-why-promises">چرا و چه موقع از Promise استفاده کنیم؟</h2>
+
+<p>واقعا چرا به پرامیس احتیاج داریم؟ دنیا قبل از پرامیس چه شکلی بود؟ بزارید قبل از جواب دادن به این سوال ها، کمی برگردیم عقب و ببینیم قبلا اوضاع رو چجوری هندل می‌کردیم.</p>
+
+<p><strong>متد معمولی برای جمع دو عدد</strong></p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="c1">// add two numbers normally</span>
+<span class="kd">function</span> <span class="nx">add</span> <span class="p">(</span><span class="nx">num1</span><span class="p">,</span> <span class="nx">num2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">num1</span> <span class="o">+</span> <span class="nx">num2</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span> <span class="c1">// you get result = 3 immediately</span>
+</code></pre>
+</div>
+
+<p><strong>متد Async برای جمع دو عدد</strong></p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="c1">// add two numbers remotely</span>
+<span class="c1">// get the result by calling an API</span>
+<span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">getAddResultFromServer</span><span class="p">(</span><span class="s1">'http://www.example.com?num1=1&amp;num2=2'</span><span class="p">);</span>
+<span class="c1">// you get result  = "undefined"</span>
+</code></pre>
+</div>
+
+<p>اگه شما عددهارو با متد معمولی جمع بزنید، همون لحظه جوابشو می‌گیرید. اما برعکس،‌ وقتی میخوایید به یک API ریکوئست بزنید که این دوتا عدد رو براتون جمع بزنه، اونموقع باید صبر کنید تا جواب برگرده،‌و نمی‌تونید همون لحظه به جوابتون برسید.</p>
+
+<p>مورد دیگه‌ای هم وجود داره، اگه شما به این شکل بخوایید جوابتون رو بگیرید، معلوم نیست که جواب سرور چیه، و ممکنه حتی سایت دان باشه، یا سرعت پاسخگویی خیلی کم باشه، یا هر مشکل دیگه‌ای. و اینو هم میدونیم که شما قرار نیست کل سرویستون رو بلاک یا فریز کنید و منتظر وایستیم تا بلکه بلاخره جوابی برسه.</p>
+
+<p>فراخوانی APIها، دانلود کردن فایل، خواندن فایل و چیزهایی مثل این، مواردی هستند که باید با استفاده از متد های Async باهاشون کار کرد.</p>
+
+<h2 id="callback">دنیا قبل از پرامیس: Callback</h2>
+
+<p>آیا حتما باید از پرامیس برای فراخوانی متدهای Async استفاده کنیم؟ خیر. قبل از پرامیس، ما از callback استفاده می‌کردیم.
+فانکشن callback فقط برای مواقعی که میخواهیم نتیجه بازگشتی رو دریافت کنیم به کار می‌رود. اجازه بدید با توجه به چیزی حالا راجع به کال‌بک میدونیم، متد قبلی رو بازنویسی کنیم.</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="c1">// add two numbers remotely</span>
+<span class="c1">// get the result by calling an API</span>
+
+<span class="kd">function</span> <span class="nx">addAsync</span> <span class="p">(</span><span class="nx">num1</span><span class="p">,</span> <span class="nx">num2</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// use the famous jQuery getJSON callback API</span>
+    <span class="k">return</span> <span class="nx">$</span><span class="p">.</span><span class="nx">getJSON</span><span class="p">(</span><span class="s1">'http://www.example.com'</span><span class="p">,</span> <span class="p">{</span>
+        <span class="na">num1</span><span class="p">:</span> <span class="nx">num1</span><span class="p">,</span>
+        <span class="na">num2</span><span class="p">:</span> <span class="nx">num2</span>
+    <span class="p">},</span> <span class="nx">callback</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">addAsync</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="nx">success</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// callback</span>
+    <span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">success</span><span class="p">;</span> <span class="c1">// you get result = 3 here</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+
+<p>خب، با این توصیف، پس دیگه به پرامیس چه احتیاجی داریم؟</p>
+
+<p><strong>اگر قرارباشه یکسری اکشن‌های متوالی آسنکرون انجام بدید، چیکار می‌کنید؟</strong></p>
+
+<p>خب بزارید ببینیم چی داریم، قرار حالا بجای اینکه یه بار عمل جمع رو انجام بدیم، ۳بار اینکارو انجام بدیم. با کد زدن معمولی همچین چیزی میشه:</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="c1">// add two numbers normally</span>
+
+<span class="kd">let</span> <span class="nx">resultA</span><span class="p">,</span> <span class="nx">resultB</span><span class="p">,</span> <span class="nx">resultC</span><span class="p">;</span>
+
+ <span class="kd">function</span> <span class="nx">add</span> <span class="p">(</span><span class="nx">num1</span><span class="p">,</span> <span class="nx">num2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">num1</span> <span class="o">+</span> <span class="nx">num2</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">resultA</span> <span class="o">=</span> <span class="nx">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span> <span class="c1">// you get resultA = 3 immediately</span>
+<span class="nx">resultB</span> <span class="o">=</span> <span class="nx">add</span><span class="p">(</span><span class="nx">resultA</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span> <span class="c1">// you get resultB = 6 immediately</span>
+<span class="nx">resultC</span> <span class="o">=</span> <span class="nx">add</span><span class="p">(</span><span class="nx">resultB</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span> <span class="c1">// you get resultC = 10 immediately</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'total'</span> <span class="o">+</span> <span class="nx">resultC</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">resultA</span><span class="p">,</span> <span class="nx">resultB</span><span class="p">,</span> <span class="nx">resultC</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p>حالا اگه بخواییم همون کارو با callback انجام بدیم چطور؟</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="c1">// add two numbers remotely</span>
+<span class="c1">// get the result by calling an API</span>
+
+<span class="kd">let</span> <span class="nx">resultA</span><span class="p">,</span> <span class="nx">resultB</span><span class="p">,</span> <span class="nx">resultC</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">addAsync</span> <span class="p">(</span><span class="nx">num1</span><span class="p">,</span> <span class="nx">num2</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// use the famous jQuery getJSON callback API</span>
+    <span class="k">return</span> <span class="nx">$</span><span class="p">.</span><span class="nx">getJSON</span><span class="p">(</span><span class="s1">'http://www.example.com'</span><span class="p">,</span> <span class="p">{</span>
+        <span class="na">num1</span><span class="p">:</span> <span class="nx">num1</span><span class="p">,</span>
+        <span class="na">num2</span><span class="p">:</span> <span class="nx">num2</span>
+    <span class="p">},</span> <span class="nx">callback</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">addAsync</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="nx">success</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// callback 1</span>
+    <span class="nx">resultA</span> <span class="o">=</span> <span class="nx">success</span><span class="p">;</span> <span class="c1">// you get result = 3 here</span>
+
+    <span class="nx">addAsync</span><span class="p">(</span><span class="nx">resultA</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="nx">success</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="c1">// callback 2</span>
+        <span class="nx">resultB</span> <span class="o">=</span> <span class="nx">success</span><span class="p">;</span> <span class="c1">// you get result = 6 here</span>
+
+        <span class="nx">addAsync</span><span class="p">(</span><span class="nx">resultB</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="nx">success</span> <span class="o">=&gt;</span> <span class="p">{</span>
+            <span class="c1">// callback 3</span>
+            <span class="nx">resultC</span> <span class="o">=</span> <span class="nx">success</span><span class="p">;</span> <span class="c1">// you get result = 10 here</span>
+
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'total'</span> <span class="o">+</span> <span class="nx">resultC</span><span class="p">);</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">resultA</span><span class="p">,</span> <span class="nx">resultB</span><span class="p">,</span> <span class="nx">resultC</span><span class="p">);</span>
+        <span class="p">});</span>
+    <span class="p">});</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+
+<p>این syntax اصلا یوزرفرندلی نیست. خیلی دیگه بخواییم خوشبین باشیم، مثل احرام ثلاثه شده! 😒 اما توسعه دهنده‌های خارجی به همچین چیزی میگن <Callback Hell="">، بخاطر اینکه هر کال‌بک در داخل شکم کال‌بک دیگه‌ای قرار گرفته. تصور کنید که ۱۰تا کال‌بک دارید، کدتون ۱۰ بار نِست می‌شد!</Callback></p>
+
+<h2 id="scape-from-callback-hell">فرار از Callback Hell</h2>
+
+<p>و در این لحظه بود که قهرمان داستان ما، Promise وارد شد 👨🏻‍🎤. بزارید ببینیم کدمون حالا چطوری میشه.</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="c1">// add two numbers remotely using observable</span>
+
+<span class="kd">let</span> <span class="nx">resultA</span><span class="p">,</span> <span class="nx">resultB</span><span class="p">,</span> <span class="nx">resultC</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">addAsync</span><span class="p">(</span><span class="nx">num1</span><span class="p">,</span> <span class="nx">num2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// use ES6 fetch API, which return a promise</span>
+    <span class="k">return</span> <span class="nx">fetch</span><span class="p">(</span><span class="err">`</span><span class="nx">http</span><span class="err">:</span><span class="c1">//www.example.com?num1=${num1}&amp;num2=${num2}`)</span>
+        <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">x</span> <span class="o">=&gt;</span> <span class="nx">x</span><span class="p">.</span><span class="nx">json</span><span class="p">());</span>
+<span class="p">}</span>
+
+<span class="nx">addAsync</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">success</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="nx">resultA</span> <span class="o">=</span> <span class="nx">success</span><span class="p">;</span>
+        <span class="k">return</span> <span class="nx">resultA</span><span class="p">;</span>
+    <span class="p">})</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">success</span> <span class="o">=&gt;</span> <span class="nx">addAsync</span><span class="p">(</span><span class="nx">success</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">success</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="nx">resultB</span> <span class="o">=</span> <span class="nx">success</span><span class="p">;</span>
+        <span class="k">return</span> <span class="nx">resultB</span><span class="p">;</span>
+    <span class="p">})</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">success</span> <span class="o">=&gt;</span> <span class="nx">addAsync</span><span class="p">(</span><span class="nx">success</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">success</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="nx">resultC</span> <span class="o">=</span> <span class="nx">success</span><span class="p">;</span>
+        <span class="k">return</span> <span class="nx">resultC</span><span class="p">;</span>
+    <span class="p">})</span>
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">success</span> <span class="o">=&gt;</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'total: '</span> <span class="o">+</span> <span class="nx">success</span><span class="p">)</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">resultA</span><span class="p">,</span> <span class="nx">resultB</span><span class="p">,</span> <span class="nx">resultC</span><span class="p">)</span>
+    <span class="p">});</span>
+</code></pre>
+</div>
+
+<p>با استفاده از پرامیس‌ها، ما بجای callback از <code class="highlighter-rouge">.then</code> کمک می‌گیریم. در همین نگاه اول متوجه میشیم که چقدر کدهامون با حذف کال‌بک‌های nested یا تودرتو ترو تمیزتر شده. البته که با استفاده از سینکس <code class="highlighter-rouge">asyn</code> و <code class="highlighter-rouge">await</code> کدهامون بازم ساده‌تر و تروتمیزتر از چیزی که الان هست میشه. دیگه مثال این رو هم میزارم به عهده خودتون 😬🖐.</p>
+
+<p><img src="/assets/img/post/2017-11-27/js-promise-relaxing.gif" alt="Relaxing" /></p>
+
+<h2 id="observable">عضو جدید این خانواده: Observables</h2>
+
+<p>قبل از اینکه خیلی با پرامیس حال کرده و کف خون قاطی کنید، این رو باید اضافه کنم، یه چیزی وجود داره که قضیه مدیریت فانکشن‌های async رو از اینی که هست هم آسونتر کرده، و بهش میگن <code class="highlighter-rouge">Observable</code>.</p>
+
+<p>واضحترین تعریفی که میتونم راجع به Observabale بهتون بگم اینه:</p>
+
+<blockquote>
+  <p>قابل‌مشاده یا Observable یک جریانی از رویداد‌های تنبله که میتونه میتونه صفر یا بی‌نهایت رویداد رو منتشر کنه، و این قضیه میتونه پایانی داشته یا نداشته باشه.</p>
+</blockquote>
+
+<p>و اگه بخوام ساده‌ترش کنم:</p>
+
+<blockquote>
+  <p>فانکشن Observable از خودش مقادیری رو منتشر میکنه، و با یک <strong>Observer</strong> یا مشاهده‌گر میتونیم بشینیم و این مقدار رو رسد کنیم. در نتیجه هرموقع این Observabale از خودش چیزی منتشر کرد، سریع متوجه میشیم و متناسب با این مقدار، ری‌اکشن موردنظر رو نشون بدیم.</p>
+</blockquote>
+
+<p>فانکشن یا مقادیر Observable از مفهوم  ReactiveX Programming اومده و در همه زبان‌هایی که از RX پشتیبانی میکنن وجود داره، در جاوا اسکریپت بهش میگیم RxJs. برای اطلاعات بیشتر لینک‌های زیر مطالب خوب و کاملی دارند:</p>
+
+<ul>
+  <li><a href="http://reactivex.io/">ReactiveX</a></li>
+  <li><a href="https://xgrommx.github.io/rx-book/index.html">RxJS v4.0</a></li>
+  <li><a href="https://blog.pusher.com/building-realtime-applications-with-cyclejs-and-rxjs/">Building realtime applications with CycleJS and RxJS</a></li>
+</ul>
+
+<p>و برای آشنایی بیشتر با Observable پیشنهاد میکنم لینک‌های زیر رو مطالعه کنید:</p>
+
+<ul>
+  <li><a href="http://reactivex.io/documentation/observable.html">Observable</a></li>
+  <li><a href="https://xgrommx.github.io/rx-book/content/observable/index.html">Observable object</a></li>
+  <li><a href="https://egghead.io/lessons/javascript-introducing-the-observable">Introducing the Observable</a></li>
+  <li><a href="https://cycle.js.org/streams.html">Stream: Reactive Programming</a></li>
+  <li><a href="https://medium.com/@benlesh/learning-observable-by-building-observable-d5da57405d87">Learning Observable By Building Observable</a></li>
+</ul>
+
+<p>اما برگردیم سر بحث خودمون. یکسری تفاوت‌ها بین Observable و Promise وجود داره:</p>
+
+<ul>
+  <li>Observable قابلیت لغو شدن داره (Cancellable)</li>
+  <li>Observable اصولا تنبله (Lazy)</li>
+</ul>
+
+<p>نترسین، در ادامه یه مثال درباره اینکه از آبزروبل چطوری میتونم استفاده کنیم آوردم. در مثال زیر من از قابلیت‌های RxJs برای پیاده کردن Observable استفاده کردم.</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">Observable</span> <span class="o">=</span> <span class="nx">Rx</span><span class="p">.</span><span class="nx">Observable</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">resultA</span><span class="p">,</span> <span class="nx">resultB</span><span class="p">,</span> <span class="nx">resultC</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">addAsync</span><span class="p">(</span><span class="nx">num1</span><span class="p">,</span> <span class="nx">num2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// use ES6 fetch API, which return a promise</span>
+    <span class="kr">const</span> <span class="nx">promise</span> <span class="o">=</span> <span class="nx">fetch</span><span class="p">(</span><span class="err">`</span><span class="nx">http</span><span class="err">:</span><span class="c1">//www.example.com?num1=${num1}&amp;num2=${num2}`)</span>
+        <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">x</span> <span class="o">=&gt;</span> <span class="nx">x</span><span class="p">.</span><span class="nx">json</span><span class="p">());</span>
+
+    <span class="k">return</span> <span class="nx">Observable</span><span class="p">.</span><span class="nx">fromPromise</span><span class="p">(</span><span class="nx">promise</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">addAsync</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+  <span class="p">.</span><span class="k">do</span><span class="p">(</span><span class="nx">x</span> <span class="o">=&gt;</span> <span class="nx">resultA</span> <span class="o">=</span> <span class="nx">x</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">flatMap</span><span class="p">(</span><span class="nx">x</span> <span class="o">=&gt;</span> <span class="nx">addAsync</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+  <span class="p">.</span><span class="k">do</span><span class="p">(</span><span class="nx">x</span> <span class="o">=&gt;</span> <span class="nx">resultB</span> <span class="o">=</span> <span class="nx">x</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">flatMap</span><span class="p">(</span><span class="nx">x</span> <span class="o">=&gt;</span> <span class="nx">addAsync</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+  <span class="p">.</span><span class="k">do</span><span class="p">(</span><span class="nx">x</span> <span class="o">=&gt;</span> <span class="nx">resultC</span> <span class="o">=</span> <span class="nx">x</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">x</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'total: '</span> <span class="o">+</span> <span class="nx">x</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">resultA</span><span class="p">,</span> <span class="nx">resultB</span><span class="p">,</span> <span class="nx">resultC</span><span class="p">)</span>
+  <span class="p">});</span>
+</code></pre>
+</div>
+
+<p>نکته:</p>
+
+<ul>
+  <li>متد <code class="highlighter-rouge">Observable.fromPromise</code> مقدار Promise ما رو به یه استریم از observable تبدیل می‌کنه.</li>
+  <li>اوپراتورهای <code class="highlighter-rouge">.do</code> و <code class="highlighter-rouge">.flatMap</code> به ما در مدیریت رویداد‌های منتشره از Observable کمک می‌کنند.</li>
+  <li>استریم‌های Observable تنبل یا lazy هستند. متد <code class="highlighter-rouge">addAsync</code> موقعی اجرا میشه که ما بهش <code class="highlighter-rouge">.subscribe</code> کرده باشیم.</li>
+</ul>
+
+<p>فانکش‌های Observable امکانات باحالتری هم به ما می‌دن. مثلا در مثال زیر من با استفاده از اوپراتون <code class="highlighter-rouge">delay</code> بهش گفتم در اجرای فانکشن ۳۰۰۰میلی‌ثانیه تاخیر ایجاد کنی و بعد کارتو انجام بده.</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="p">...</span>
+<span class="nx">addAsync</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">delay</span><span class="p">(</span><span class="mi">3000</span><span class="p">)</span> <span class="c1">// delay 3 seconds</span>
+  <span class="p">.</span><span class="k">do</span><span class="p">(</span><span class="nx">x</span> <span class="o">=&gt;</span> <span class="nx">resultA</span> <span class="o">=</span> <span class="nx">x</span><span class="p">)</span>
+<span class="p">...</span>
+</code></pre>
+</div>
+
+<p>تا همین‌جارو داشته باشین، و اجازه بدین راجع به Observable در یه پست دیگه مفصل‌تر صحبت کنم.</p>
+
+<h2 id="Conclusion">نتیجه گیری</h2>
+
+<p>سعی کنید با انجام مثال‌های بیشتر یا مطالعه مقاله‌های دیگه با Promiseها و Callbackها بیشتر آشنا بشید. اونهارو کامل درک کنید و واقعا در پروژه‌هاتون استفاده کنید. درباره Observable هم نگران نباشید، این یه موضوع جدیده و حالا حالا وقت هست واسه اینکه توش مهارت پیدا کنید.
+دوباره تکرار میکنم، با هرسه این مفاهیم و ابزارهای آشنا بشید، و ببینید واقعا کجا بدردتون میخوره، متناسب با اون ازشون استفاده کنید.</p>
+
+<p>می‌تونید از لینک‌های زیر هم مثالی که درباره <code class="highlighter-rouge">Mom Promise to buy new phone</code> رو ببینید:</p>
+
+<ul>
+  <li><a href="https://gist.github.com/sadra/60429ffd4d5f1d8e7b0533c66d7f510d#file-mom-promise-in-es5-js">Mom Promise in ES5</a></li>
+  <li><a href="https://gist.github.com/sadra/60429ffd4d5f1d8e7b0533c66d7f510d#file-mom-promise-in-es6-js">Mom Promise in ES6</a></li>
+  <li><a href="https://gist.github.com/sadra/60429ffd4d5f1d8e7b0533c66d7f510d#file-mom-promise-in-es7-js">Mom Promise in ES7</a></li>
+</ul>
+
+<p>خب همش همین بود. امیدوارم مبحث Promise رو ساده توضیح داده باشم و شما هم راحت درک ‌باشینش. اگه سوال یا موردی بود، مثل همیشه در <a href="https://twitter.com/sadra_amlashi">توییتر</a> یا در <a href="https://t.me/amlashi">تلگرام</a> میتونیم باهم در ارتباط باشیم. 😉🍷</p>
+
+        </div>
+
+
+        <div class="post-routes-list">
+            
+            <a class="category-link" href="/category/جاوا-اسکریپت">جاوا اسکریپت</a>
+            
+            <a class="category-link" href="/category/آموزش">آموزش</a>
+            
+            
+            <a class="tag-link" href="/tag/prmise">Prmise</a>
+            
+            <a class="tag-link" href="/tag/rxjs">RxJs</a>
+            
+            <a class="tag-link" href="/tag/javascript">JavaScript</a>
+            
+            <a class="tag-link" href="/tag/es6">ES6</a>
+            
+        </div>
+
+
+        <div class="Prev-next-post-container">
+            
+            <a class="previous-btn" href="/2017/how-to-fcm-android">نوشته قبلی: فایربیس ۱: سرویس Firebase Cloud Messaging ←</a>
+            
+            
+        </div>
+
+
+    </div>
+
+</div>
+
+<a id="back-to-top" href="#" class="back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left">
+    <img src="/assets/img/base/arrow-up.png" class="arrow-up"/>
+</a>
+
+
+        <!-- Footer -->
+<footer class="footer-wrapper">
+
+    <div class="delimiter">
+        <a href="/" class="footer-logo">
+            <img src="http://isapanah.com/assets/img/base/favicon.png" class="logo-wrapper">
+        </a>
+    </div>
+
+    <p class="footer-copyright">
+        2008 - 2017<br>
+        مطالب تحت لیسانس <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" rel="license" target="_blank">کریتیو کامنز</a> منتشر می‌شوند.
+
+    </p>
+
+    <div class="footer-social-links">
+        <a href="https://twitter.com/sadra-amlashi" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a href="https://github.com/sadra" title="Github" target="_blank"><i class="fa fa-github"></i></a>
+        <a href="https://medium.com/sadra" title="Medium" target="_blank"><i class="fa fa-medium"></i></a>
+        <a href="https://www.linkedin.com/in/amlashisadra/" title="Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
+        <a href="https://facebook.com/sadra.am123" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+    </div>
+
+
+ </footer>
+<!-- /Footer -->
+
+        <script  type="application/javascript" src="http://isapanah.com/assets/js/jquery-3.2.1.min.js"></script>
+<script  type="application/javascript" src="http://isapanah.com/assets/js/function.js"></script>
+<script  type="application/javascript" src="http://isapanah.com/assets/js/html2canvas.min.js"></script>
+<script  type="application/javascript" src="http://isapanah.com/assets/js/canvas2image.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5952bba56b75766c"></script>
+    </body>
+</html>

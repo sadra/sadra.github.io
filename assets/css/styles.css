@@ -474,6 +474,13 @@ code.highlighter-rouge {
   font-weight: bold;
   margin: 1px; }
 
+pre code.language-TXT,
+pre code.language-Log {
+  background-color: #E0E0E0;
+  color: #09317b;
+  display: block;
+  padding: 16px; }
+
 figure {
   margin: 0; }
 

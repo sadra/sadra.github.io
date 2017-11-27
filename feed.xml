@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://isapanah.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://isapanah.com/" rel="alternate" type="text/html" /><updated>2017-11-27T12:55:09+03:30</updated><id>http://isapanah.com/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده اپلیکیشن iOS و Android.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://isapanah.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://isapanah.com/" rel="alternate" type="text/html" /><updated>2017-11-27T13:07:35+03:30</updated><id>http://isapanah.com/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده اپلیکیشن iOS و Android.
 </subtitle><entry><title type="html">Promise تابحال هیچوقت انقدر آسون نبوده</title><link href="http://isapanah.com/2017/js-promise" rel="alternate" type="text/html" title="Promise تابحال هیچوقت انقدر آسون نبوده" /><published>2017-11-27T00:00:00+03:30</published><updated>2017-11-27T00:00:00+03:30</updated><id>http://isapanah.com/2017/js-promise</id><content type="html" xml:base="http://isapanah.com/2017/js-promise">&lt;h2 id=&quot;مقدمه&quot;&gt;مقدمه&lt;/h2&gt;
 
 &lt;p&gt;خیلی وقت پیش در حین انجام یک پروژه در NodeJs نیاز پیدا کردم که چندتا متد رو بصورت متوالی و nested استفاده کنم، و متد ها هم به این صورت بود که باید صبر میکردن تا داخلی ترین متد انجام بشه و بعد خارجی با استفاده از نتیجه متد داخلی وظیفه خودش رو انجام بده.&lt;/p&gt;
@@ -598,7 +598,7 @@
 
 &lt;p&gt;تا همین‌جارو داشته باشین، و اجازه بدین راجع به Observable در یه پست دیگه مفصل‌تر صحبت کنم.&lt;/p&gt;
 
-&lt;h2 id=&quot;Conclusion&quot;&gt;نتیجه گیری&lt;/h2&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;نتیجه گیری&lt;/h2&gt;
 
 &lt;p&gt;سعی کنید با انجام مثال‌های بیشتر یا مطالعه مقاله‌های دیگه با Promiseها و Callbackها بیشتر آشنا بشید. اونهارو کامل درک کنید و واقعا در پروژه‌هاتون استفاده کنید. درباره Observable هم نگران نباشید، این یه موضوع جدیده و حالا حالا وقت هست واسه اینکه توش مهارت پیدا کنید.
 دوباره تکرار میکنم، با هرسه این مفاهیم و ابزارهای آشنا بشید، و ببینید واقعا کجا بدردتون میخوره، متناسب با اون ازشون استفاده کنید.&lt;/p&gt;

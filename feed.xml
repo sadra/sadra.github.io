@@ -1,16 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://isapanah.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://isapanah.com/" rel="alternate" type="text/html" /><updated>2017-11-27T13:07:35+03:30</updated><id>http://isapanah.com/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده اپلیکیشن iOS و Android.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://isapanah.com/feed.xml" rel="self" type="application/atom+xml" /><link href="http://isapanah.com/" rel="alternate" type="text/html" /><updated>2017-11-27T16:37:48+03:30</updated><id>http://isapanah.com/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده اپلیکیشن iOS و Android.
 </subtitle><entry><title type="html">Promise تابحال هیچوقت انقدر آسون نبوده</title><link href="http://isapanah.com/2017/js-promise" rel="alternate" type="text/html" title="Promise تابحال هیچوقت انقدر آسون نبوده" /><published>2017-11-27T00:00:00+03:30</published><updated>2017-11-27T00:00:00+03:30</updated><id>http://isapanah.com/2017/js-promise</id><content type="html" xml:base="http://isapanah.com/2017/js-promise">&lt;h2 id=&quot;مقدمه&quot;&gt;مقدمه&lt;/h2&gt;
 
-&lt;p&gt;خیلی وقت پیش در حین انجام یک پروژه در NodeJs نیاز پیدا کردم که چندتا متد رو بصورت متوالی و nested استفاده کنم، و متد ها هم به این صورت بود که باید صبر میکردن تا داخلی ترین متد انجام بشه و بعد خارجی با استفاده از نتیجه متد داخلی وظیفه خودش رو انجام بده.&lt;/p&gt;
+&lt;p&gt;خیلی وقت پیش در حین انجام یک پروژه در NodeJs نیاز پیدا کردم که چندتا متد رو بصورت متوالی و nested استفاده کنم، و متد ها هم به این صورت بود که باید صبر میکردن تا داخلی ترین متد انجام بشه و بعد متد خارجی با استفاده از نتیجه متد داخلی وظیفه خودش رو انجام بده، و این توالی تا آخرین متد خارجی ادامه داشت. (تا جایی که یادم میاد تا ۴ مرحله نست شده بود.)&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/post/2017-11-27/js-promise-nested-blocks.jpg&quot; alt=&quot;Nested Blocks&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;جدا از این مورد، مشکل دیگه ای که وجود داشته این بود که اولا این متد‌ها Async بودن، و دوما اینکه ممکن بود نتیجه sucessfull یا failed میشد. خلاصه به هر کثافتی که بود کارو انجام دادم.
-چند وقت بعد مهدی بهم گفت که میتونی از Promise برای این قضیه استفاده کنید. و اینگونه بود که زندگی زیبا شد.&lt;/p&gt;
+چند وقت بعد &lt;a href=&quot;http://moshtaghi.ir/&quot;&gt;مهدی&lt;/a&gt; بهم گفت که میتونی از &lt;strong&gt;Promise&lt;/strong&gt; برای این معضل استفاده کنی. و اینجوری بود که زندگی زیبا می‌شود!&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/post/2017-11-27/js-promise-yeah.gif&quot; alt=&quot;Yes&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;از چندتا از دوستان شنیدم که هنوز پرامیس رو درک نکردن و نمیدونم فرقش با چیزای دیگه مثل Callback چیه. در این پست قصد دارم به ساده‌ترین روش ممکن راجع به Promiseها و اینکه واقعا چطوری باید ازشون استفاده کرد صحبت کنم. پس حرف رو کوتاه کنیم و بریم سر اصل مطلب.&lt;/p&gt;
+&lt;p&gt;از چندتا از دوستان شنیدم که هنوز پرامیس رو درک نکردن و نمیدونن که فرقش با چیزای دیگه مثل Callback چیه. در این پست قصد دارم به ساده‌ترین روش ممکن راجع به Promiseها و اینکه واقعا چطوری باید ازشون استفاده کرد صحبت کنم. پس حرف رو کوتاه کنیم و بریم سر اصل مطلب.&lt;/p&gt;
+
+&lt;p&gt;در ادامه فهرستی از سرفصل مطالبی که میخوام در این پست صحبت کنم با لینک به همون تیتر قرار دادم.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;#subject&quot;&gt;شرح&lt;/a&gt;&lt;/li&gt;
@@ -20,9 +22,9 @@
   &lt;li&gt;&lt;a href=&quot;#asynchronous-promise&quot;&gt;پرامیس‌ها Asynchronous هستند&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#promises-in-variety-of-js&quot;&gt;پرامیس در ES5، ES6, ES7&lt;/a&gt;
     &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#promise-in-es5&quot;&gt;ES5 - در اکثر مرورگرها&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#promise-in-es6&quot;&gt;ES6 - در مرورگرهای مدرن، و NodeJs v6&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#promise-in-es7&quot;&gt;ES7 - استفاده زا Async Await سینتکس رو قابل خوندن میکنه&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#promise-in-es5&quot;&gt;ES5 - در اکثر مرورگرها پشتیبانی میشه&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#promise-in-es6&quot;&gt;ES6 - در مرورگرهای مدرن، و NodeJs v6 پشتیبانی میشه&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#promise-in-es7&quot;&gt;ES7 - استفاده از Async Await سینتکس رو قابل خوندن میکنه&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#when-and-why-promises&quot;&gt;چرا و چه موقع از Promise استفاده کنیم؟&lt;/a&gt;&lt;/li&gt;
@@ -34,15 +36,15 @@
 
 &lt;h2 id=&quot;subject&quot;&gt;شرح&lt;/h2&gt;
 
-&lt;p&gt;بزارین همین اول کار، پرامیس رو با شرح یک مثال براتون ساده کنم:&lt;/p&gt;
+&lt;p&gt;بزارین همین اول کار، پرامیس رو با طرح یک مثال براتون ساده کنم:&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;فرض کنید یه &lt;strong&gt;بچه&lt;/strong&gt; هستید هستید. و &lt;strong&gt;مادرتون&lt;/strong&gt; بهتون &lt;strong&gt;قول میده&lt;/strong&gt; که هفته دیگه یه &lt;strong&gt;گوشی جدید&lt;/strong&gt; براتون بخره.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;شما اولا نمی‌دونید که آیا هفته دیگه یه گوشی براتون میخره یا نه. و ثانیا اینکه آیا واقعا مادرتون برای شما یه گوشی جدید میخره؟ ثالثا ممکنه اصلا اون هفته از دستتون ناراحت باشه و کلا بیخیال خرید گوشی بشه!&lt;/p&gt;
+&lt;p&gt;شما اولا نمی‌دونید که آیا هفته دیگه یه گوشی براتون میخره یا نه؟ ثانیا اینکه آیا واقعا مادرتون برای شما یه گوشی جدید میخره؟ ثالثا ممکنه اصلا اون هفته از دستتون ناراحت باشه و کلا بیخیال خرید گوشی بشه!&lt;/p&gt;
 
-&lt;p&gt;این یه مثال کامل از Promise. هر پرامیس ۳وضعیت داره:&lt;/p&gt;
+&lt;p&gt;این یه کامل‌ترین مثالی بود که از Promise می‌تونستم بزنم. هر پرامیس ۳وضعیت داره:&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;پرامیس در حال بررسیه &lt;strong&gt;Pending&lt;/strong&gt;: شما نمی‌دونید که آیا هفته دیگه براتون گوشی میخره یا نه.&lt;/li&gt;
@@ -84,7 +86,7 @@
     &lt;p&gt;ما یک متغییر بولین بنام &lt;code class=&quot;highlighter-rouge&quot;&gt;isMomHappy&lt;/code&gt; داریم، که برامون مشخص میکنه آیا مامان OK هست واسه خریدن یا نه.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;یه پرامیس هم بنام &lt;code class=&quot;highlighter-rouge&quot;&gt;willGetNewPhone&lt;/code&gt; داریم. که این پارمیس هم میتونه حل &lt;code class=&quot;highlighter-rouge&quot;&gt;Resolved&lt;/code&gt; بشه (مامان برات یه گوشی جدید بخره)، هم میتونه رد &lt;code class=&quot;highlighter-rouge&quot;&gt;Rejected&lt;/code&gt; بشه (مامان از دستت عصبانیه، و عمرا برات گوشی جدید بخره).&lt;/p&gt;
+    &lt;p&gt;یه پرامیس هم بنام &lt;code class=&quot;highlighter-rouge&quot;&gt;willGetNewPhone&lt;/code&gt; داریم. که این پارمیس، هم میتونه حل &lt;code class=&quot;highlighter-rouge&quot;&gt;Resolved&lt;/code&gt; بشه (مامان برات یه گوشی جدید بخره)، هم میتونه رد &lt;code class=&quot;highlighter-rouge&quot;&gt;Rejected&lt;/code&gt; بشه (مامان از دستت عصبانیه، و عمرا برات گوشی جدید بخره).&lt;/p&gt;
 
     &lt;p&gt;یک syntax استاندارد برای نوشتن &lt;code class=&quot;highlighter-rouge&quot;&gt;Promise&lt;/code&gt; جدید وجود داره که بر اساس &lt;a href=&quot;https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise&quot;&gt;داکیومنت MDN&lt;/a&gt;، این سینتکس اینجوریه:&lt;/p&gt;
   &lt;/li&gt;
@@ -96,7 +98,7 @@
 &lt;/div&gt;
 
 &lt;p&gt;تنها چیزهایی که لازمه بخاطر بسپارین این که، وقتی نتیجه کار موفقیت‌آمیزه، باید متد &lt;code class=&quot;highlighter-rouge&quot;&gt;resolve(your_success_value)&lt;/code&gt; رو فراخوانی کرده، و به هر دلیلی اگه نتیجه موفقیت‌آمیز نیست، باید متد &lt;code class=&quot;highlighter-rouge&quot;&gt;reject(your_fail_value)&lt;/code&gt; رو فراخوانی کنید. هردوی اینها باید در داخل متد &lt;code class=&quot;highlighter-rouge&quot;&gt;Promise&lt;/code&gt; انجام بشه.
-   همونطور هم که در مثال می‌بینید ازونجایی که مامان عصبانی بود، ما مجبور شدیم درخواست رو رد کرده و با فرواخوانی متد &lt;code class=&quot;highlighter-rouge&quot;&gt;reject(reason)&lt;/code&gt; و پاس کردن مقدار reason این مقوله رو به سرانجام برسونیم. البته، اگرهم مامان اوکی بود و گوشی جدید رو خرید، جهت بیان نتیجه، با فراخوانی متد &lt;code class=&quot;highlighter-rouge&quot;&gt;resolve&lt;/code&gt; به همراه مقداری از مشخصات گوشی خریداری شده، اعلام کردیم.&lt;/p&gt;
+   همونطور هم که در مثال می‌بینید ازونجایی که مامان عصبانی بود، ما مجبور شدیم درخواست رو رد کرده و با فرواخوانی متد &lt;code class=&quot;highlighter-rouge&quot;&gt;reject(reason)&lt;/code&gt; و پاس کردن مقدار reason این مقوله رو به سرانجام برسونیم. البته، اگرهم مامان اوکی بود و گوشی جدید رو خرید، با فراخوانی متد &lt;code class=&quot;highlighter-rouge&quot;&gt;resolve&lt;/code&gt; به همراه مقدار JSON از مشخصات گوشی خریداری شده، نتیجه &lt;strong&gt;قول&lt;/strong&gt; رو اعلام می‌کردیم.&lt;/p&gt;
 
 &lt;h2 id=&quot;how-to-user-promise&quot;&gt;استفاده از Promise&lt;/h2&gt;
 
@@ -106,7 +108,7 @@
 &lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;// call our promise&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;askMom&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;nx&quot;&gt;willGetNewPhone&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;willGetNewPhone&lt;/span&gt;
 		&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fulfilled&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
 			&lt;span class=&quot;c1&quot;&gt;//yay, you got a new phone&lt;/span&gt;
 			&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fulfilled&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
@@ -122,11 +124,11 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;در اینجا ما متد &lt;code class=&quot;highlighter-rouge&quot;&gt;askMom&lt;/code&gt; رو صدا میزنیم. در این متد، ما متد پرامیسمون یعنی &lt;code class=&quot;highlighter-rouge&quot;&gt;willGetNewPhone&lt;/code&gt; رو صدا میزنیم.&lt;/p&gt;
+&lt;p&gt;در اینجا ما متد &lt;code class=&quot;highlighter-rouge&quot;&gt;askMom&lt;/code&gt; رو فراخونی میکنیم. و در داخل اون، متد پرامیسی که ساخته بودیم، یعنی &lt;code class=&quot;highlighter-rouge&quot;&gt;willGetNewPhone&lt;/code&gt;، رو صدا میزنیم.&lt;/p&gt;
 
-&lt;p&gt;ما میخواییم از وقتی که پرامیس بهمون جواب میده بتونیم اکشن مناسب رو نشون بده. برای مواقعی که پاسخ &lt;strong&gt;resolve&lt;/strong&gt; هست متد &lt;code class=&quot;highlighter-rouge&quot;&gt;then&lt;/code&gt; استفاده میشه؛ و برای مواقعی که پاسخ &lt;strong&gt;reject&lt;/strong&gt; هست، متد &lt;code class=&quot;highlighter-rouge&quot;&gt;catch&lt;/code&gt; صدا میشه.&lt;/p&gt;
+&lt;p&gt;ما میخواییم وقتی که پرامیس بهمون جواب میده بتونیم اکشن مناسب رو نشون بدیم. برای مواقعی که پاسخ &lt;strong&gt;resolve&lt;/strong&gt; هست متد &lt;code class=&quot;highlighter-rouge&quot;&gt;then&lt;/code&gt; استفاده میشه؛ و برای مواقعی که پاسخ &lt;strong&gt;reject&lt;/strong&gt; هست، متد &lt;code class=&quot;highlighter-rouge&quot;&gt;catch&lt;/code&gt; صدا میشه.&lt;/p&gt;
 
-&lt;p&gt;در این مثال، در داخل &lt;code class=&quot;highlighter-rouge&quot;&gt;.then&lt;/code&gt; ما متد &lt;code class=&quot;highlighter-rouge&quot;&gt;function(fulfilled) {…}&lt;/code&gt; رو داریم. مقدار این متغییر &lt;code class=&quot;highlighter-rouge&quot;&gt;fulfilled&lt;/code&gt; چیه؟ دقیقا همون چیزیه که شما در متد &lt;code class=&quot;highlighter-rouge&quot;&gt;resolve(your-success_value)&lt;/code&gt; پاس کردیم. که در اینجا همون مشخصات گوشی جدیده ست.&lt;/p&gt;
+&lt;p&gt;در این مثال، در داخل &lt;code class=&quot;highlighter-rouge&quot;&gt;.then&lt;/code&gt; ما متد &lt;code class=&quot;highlighter-rouge&quot;&gt;function(fulfilled) {…}&lt;/code&gt; رو داریم. مقدار این متغییرِ &lt;code class=&quot;highlighter-rouge&quot;&gt;fulfilled&lt;/code&gt; چیه؟ دقیقا همون چیزیه که شما در متد &lt;code class=&quot;highlighter-rouge&quot;&gt;resolve(your-success_value)&lt;/code&gt; پاس کردین. که در اینجا همون مشخصات گوشی جدیده ست.&lt;/p&gt;
 
 &lt;p&gt;همینطور در داخل &lt;code class=&quot;highlighter-rouge&quot;&gt;.catch‍&lt;/code&gt; هم متد &lt;code class=&quot;highlighter-rouge&quot;&gt;function(error) {…}&lt;/code&gt; رو داریم. که مقدار &lt;code class=&quot;highlighter-rouge&quot;&gt;error&lt;/code&gt; برابر با مقداری هست که ما با &lt;code class=&quot;highlighter-rouge&quot;&gt;reject(your_fail_value)&lt;/code&gt; پاسش کردیم. در این مثال مقدار error برابر بود با دلیل ریجکت شدن درخواست.&lt;/p&gt;
 
@@ -139,7 +141,7 @@
 
 &lt;p&gt;پرامیس‌ها قابلیت زنجیره (متوالی) شدن رو دارند.&lt;/p&gt;
 
-&lt;p&gt;برای مثال، فرض کنید شما همون کودک مثال قبل هستید. حالا به دوستتون &lt;strong&gt;قول می‌دید&lt;/strong&gt; که وقتی مامان واستون گوشی جدید رو خرید، بهشون &lt;strong&gt;نشون بدید.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;برای مثال، فرض کنید شما همون کودک مثال قبل هستید. حالا به دوستتون &lt;strong&gt;قول می‌دید&lt;/strong&gt; که وقتی مامان واستون گوشی جدید رو خرید، بهش &lt;strong&gt;نشون بدید.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;خب، پس بریم پرامیس بعدی رو بنویسیم.&lt;/p&gt;
 
@@ -159,7 +161,7 @@
 
 &lt;p&gt;&lt;strong&gt;نکات:&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;در این مثال احتمالا متوجه شدید که ما از &lt;code class=&quot;highlighter-rouge&quot;&gt;reject&lt;/code&gt; استفاده نکردیم. خب این متد یه چیزی optional و انتخابیه، فقط موقعی که نیاز هست ازش استفاده کنید.&lt;/p&gt;
+&lt;p&gt;در این مثال احتمالا متوجه شدید که ما از &lt;code class=&quot;highlighter-rouge&quot;&gt;reject&lt;/code&gt; استفاده نکردیم. خب این متد یه چیز optional و انتخابیه، فقط موقعی که نیاز هست ازش استفاده کنید.&lt;/p&gt;
 
 &lt;p&gt;ما حتی میتونیم با استفاده از &lt;code class=&quot;highlighter-rouge&quot;&gt;Promise.solve&lt;/code&gt; این متد رو ساده‌تر هم بنویسیم .&lt;/p&gt;
 
@@ -174,7 +176,7 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;خب، حالا وقت زنجیر کردن پرامیس‌هاست. شما، اون بچه داستان، فقط وقتی میتونید به دوستتون اون گوشی جدید رو نشون بدید &lt;code class=&quot;highlighter-rouge&quot;&gt;showNewPhone&lt;/code&gt; بعد از اینکه مامان اون گوشی رو واستون خریده باشه &lt;code class=&quot;highlighter-rouge&quot;&gt;willGetNewPhone&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;خب، حالا وقت زنجیر کردن پرامیس‌هاست. شما - اون بچه داستان - فقط وقتی می‌تونید به دوستتون اون گوشی جدید رو نشون بدید &lt;code class=&quot;highlighter-rouge&quot;&gt;showNewPhone&lt;/code&gt;، بعد از اینکه مامان اون گوشی رو واستون خریده باشه &lt;code class=&quot;highlighter-rouge&quot;&gt;willGetNewPhone&lt;/code&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;...&lt;/span&gt;
 
@@ -195,28 +197,28 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;به همین راحتی میتونید پرامیس‌ها رو به همن زنجیر کنید.&lt;/p&gt;
+&lt;p&gt;به همین راحتی می‌تونید پرامیس‌ها رو به همن زنجیر کنید.&lt;/p&gt;
 
 &lt;h2 id=&quot;asynchronous-promise&quot;&gt;پرامیس‌ها Asynchronous هستند&lt;/h2&gt;
 
-&lt;p&gt;این خیلی واضحه که پرامیس‌ها آسنکرون هستن. اصن اجازه بدید برای اثبات این موضوع چندتا لاگ بندازیم.&lt;/p&gt;
+&lt;p&gt;این خیلی واضحه که پرامیس‌ها آسنکرون هستن. اصلا اجازه بدید برای اثبات این موضوع چندتا لاگ بندازیم.&lt;/p&gt;
 
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// call our promise&lt;/span&gt;
 &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;askMom&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'before asking Mom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// log before&lt;/span&gt;
-	&lt;span class=&quot;nx&quot;&gt;willGetNewPhone&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;willGetNewPhone&lt;/span&gt;
 		&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;showNewPhone&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 		&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fulfilled&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
 			&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fulfilled&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 		&lt;span class=&quot;p&quot;&gt;}).&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
 			&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 		&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-	&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'after asking mom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// log after&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'after asking mom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// log after&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;فکر میکنید چه نتیجه‌ چی میشه؟ احتمالا انتظار داریم همچین چیزی دریافت کنید:&lt;/p&gt;
+&lt;p&gt;فکر می‌کنید نتیجه‌ چی میشه؟ احتمالا انتظار دارید همچین چیزی دریافت کنید:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&quot;language-Log&quot;&gt;1. before asking Mom
 2. Hey friend, I have a new black Samsung phone.
@@ -234,15 +236,15 @@
 
 &lt;p&gt;&lt;strong&gt;چرا؟ چون زندگی (یا JS) منتظر هیچ کسی نمیومونه&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;شما، یا درواقع همون بچه، از بازی کردن دست نمی‌کشید موقعی که منتظرید تا مامانتون به قولش (خریدن موبایل جدید) عمل کنه؛ غیر از اینه؟ این همون چیزیه که ما بهش میگیم asynchronous، کد کاملا اجرا میشه، بدون اینکه سرویسمون رو بلاک کنه یا منتظر جواب بشه. هرموقع جواب رسید، بهش واکنش مناسب رو نشون میده. هرکاری که قرار بکنین موقعی که مامان به قولش عمل کرد، فقط کافیه بزارینش داخل &lt;code class=&quot;highlighter-rouge&quot;&gt;.then&lt;/code&gt; 😉 .&lt;/p&gt;
+&lt;p&gt;شما، یا درواقع همون بچه، از بازی کردن دست نمی‌کشید موقعی که منتظرید تا مامانتون به قولش (خریدن موبایل جدید) عمل کنه؛ غیر از اینه؟ این همون چیزیه که ما بهش میگیم asynchronous، کد کاملا اجرا میشه، بدون اینکه سرویسمون رو بلاک کنه یا منتظر جواب بشه. هرموقع جواب رسید، بهش واکنش مناسب رو نشون میده. هرکاری که قراره موقع عمل کردن مامان به قولش  انجام بدید، فقط کافیه بزارینش داخل &lt;code class=&quot;highlighter-rouge&quot;&gt;.then&lt;/code&gt; 😉 .&lt;/p&gt;
 
 &lt;h2 id=&quot;promises-in-variety-of-js&quot;&gt;پرامیس در ES5، ES6, ES7&lt;/h2&gt;
 
-&lt;p&gt;&lt;b id=&quot;promise-in-es5&quot;&gt;ES5 - در اکثر مرورگرها&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b id=&quot;promise-in-es5&quot;&gt;ES5 - در اکثر مرورگرها پشتیبانی میشه&lt;/b&gt;&lt;/p&gt;
 
 &lt;p&gt;سرویسی که نوشتیم در اکثر مرورگرها و البته در NodeJs قابل استفاده است. البته در ES5 این ابزار همینجوری قابل استفاده نیست و برای استفاده ازش باید از لایبرری &lt;a href=&quot;http://bluebirdjs.com/docs/getting-started.html&quot;&gt;Bluebird&lt;/a&gt; استفاده کنید. البته لایبرری معروف دیگه‌ای هم برای اینکار هست به اسم &lt;a href=&quot;https://github.com/kriskowal/q&quot;&gt;Q&lt;/a&gt; که توسط Kris Kowal توسعه داده شده.&lt;/p&gt;
 
-&lt;p&gt;&lt;b id=&quot;promise-in-es6&quot;&gt;ES6 - در مرورگرهای مدرن، و NodeJs v6&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b id=&quot;promise-in-es6&quot;&gt;ES6 - در مرورگرهای مدرن، و NodeJs v6 پشتیبانی میشه&lt;/b&gt;&lt;/p&gt;
 
 &lt;p&gt;سرویسی که نوشتیم بصورت نیتیو در ES6 اجرا میشه و احتیاج به هیچ لایبرری خارجی وجود نداره. البته ما در ES6 میتونیم با استفاده از &lt;code class=&quot;highlighter-rouge&quot;&gt;fat arrow =&amp;gt;&lt;/code&gt; فاکنکشن‌ها کدمون رو ساده‌تر هم بنویسیم.&lt;/p&gt;
 
@@ -282,7 +284,7 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;توجه کنید که اگه با ES6 آشنایی ندارید. من همه متغییر هایی که قابل تغییر بودند رو با &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; مشخص کردم و اونهایی رو هم که با immutable و بدون تغییر هستند رو با &lt;code class=&quot;highlighter-rouge&quot;&gt;const&lt;/code&gt; مشخص کردم. همه فانکشنهایی هم که بصورت &lt;code class=&quot;highlighter-rouge&quot;&gt;function(arguments)&lt;/code&gt; بود رو به &lt;code class=&quot;highlighter-rouge&quot;&gt;(argument)&lt;/code&gt; تغییر دادم. برای آشنایی بیشتر با ES6 می‌تونید لینک‌های زیر رو مطالعه کنید:&lt;/p&gt;
+&lt;p&gt;اگه با ES6 آشنایی ندارید، توجه کنید که من همه متغییر هایی که قابل تغییر بودند رو با &lt;code class=&quot;highlighter-rouge&quot;&gt;let&lt;/code&gt; مشخص کردم و اونهایی رو هم که immutable و بدون تغییر هستند رو با &lt;code class=&quot;highlighter-rouge&quot;&gt;const&lt;/code&gt; مشخص کردم. همه فانکشنهایی هم که بصورت &lt;code class=&quot;highlighter-rouge&quot;&gt;function(arguments)&lt;/code&gt; بود رو به &lt;code class=&quot;highlighter-rouge&quot;&gt;(argument) =&amp;gt;&lt;/code&gt; تغییر دادم. برای آشنایی بیشتر با ES6 می‌تونید لینک‌های زیر رو مطالعه کنید:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -293,9 +295,9 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;b id=&quot;promise-in-es7&quot;&gt;ES7 - استفاده زا Async Await سینتکس رو قابل خوندن میکنه&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b id=&quot;promise-in-es7&quot;&gt;ES7 - استفاده از Async Await سینتکس رو قابل خوندن میکنه&lt;/b&gt;&lt;/p&gt;
 
-&lt;p&gt;اگه قرار باشه این سرویس رو با ES7 بنویسیم، میتونیم با استفاده از تگ های &lt;code class=&quot;highlighter-rouge&quot;&gt;async&lt;/code&gt; و &lt;code class=&quot;highlighter-rouge&quot;&gt;await&lt;/code&gt; کدمون رو تمیزتر بنویسیم. اینطوری میتونیم &lt;code class=&quot;highlighter-rouge&quot;&gt;then&lt;/code&gt; و &lt;code class=&quot;highlighter-rouge&quot;&gt;catch&lt;/code&gt; رو از کدمون حذف کنیم.&lt;/p&gt;
+&lt;p&gt;اگه قرار باشه این سرویس رو با ES7 بنویسیم، میتونیم با استفاده از تگ های &lt;code class=&quot;highlighter-rouge&quot;&gt;async&lt;/code&gt; و &lt;code class=&quot;highlighter-rouge&quot;&gt;await&lt;/code&gt; کدمون رو تمیزتر کنیم. اینطوری میتونیم &lt;code class=&quot;highlighter-rouge&quot;&gt;then&lt;/code&gt; و &lt;code class=&quot;highlighter-rouge&quot;&gt;catch&lt;/code&gt; رو از کدمون حذف کنیم.&lt;/p&gt;
 
 &lt;p&gt;پس چیزی که درنهایت بازنویسی میکنیم در ES7 میشه این:&lt;/p&gt;
 
@@ -351,11 +353,12 @@
 &lt;/div&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;هرموقع که نیاز داشتید یه پرامیس return کنید، فقط کافیه متد مورد نظر رو با &lt;code class=&quot;highlighter-rouge&quot;&gt;asyn&lt;/code&gt; نشانه گذاری کنید. برای مثال:
+  &lt;li&gt;هرموقع که نیاز داشتید یه پرامیس return کنید، فقط کافیه متد مورد نظر رو با &lt;code class=&quot;highlighter-rouge&quot;&gt;async&lt;/code&gt; نشانه گذاری کنید.
+برای مثال:
 &lt;code class=&quot;highlighter-rouge&quot;&gt;async function showNewPhone(phone)&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;هرموقع که احتیاج داشتید پرامیس رو فراخوانی کنید، کافیه قبلش با &lt;code class=&quot;highlighter-rouge&quot;&gt;await&lt;/code&gt; نشانه‌گذاری کنید. برای مثال:
 &lt;code class=&quot;highlighter-rouge&quot;&gt;let phone = await willIGetNewPhone;&lt;/code&gt; و &lt;code class=&quot;highlighter-rouge&quot;&gt;let message = await showNewPhone(phone);&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;و در نهایت با استفاده از &lt;code class=&quot;highlighter-rouge&quot;&gt;try { ... } catch(error) { … }&lt;/code&gt; میتونید قضیه &lt;strong&gt;resolved&lt;/strong&gt; و &lt;strong&gt;rejected&lt;/strong&gt; پرامیس رو هم هندل کندی.&lt;/li&gt;
+  &lt;li&gt;و در نهایت با استفاده از &lt;code class=&quot;highlighter-rouge&quot;&gt;try { ... } catch(error) { … }&lt;/code&gt; میتونید قضیه &lt;strong&gt;resolved&lt;/strong&gt; و &lt;strong&gt;rejected&lt;/strong&gt; پرامیس رو هم هندل کنید.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&quot;when-and-why-promises&quot;&gt;چرا و چه موقع از Promise استفاده کنیم؟&lt;/h2&gt;
@@ -384,14 +387,14 @@
 
 &lt;p&gt;اگه شما عددهارو با متد معمولی جمع بزنید، همون لحظه جوابشو می‌گیرید. اما برعکس،‌ وقتی میخوایید به یک API ریکوئست بزنید که این دوتا عدد رو براتون جمع بزنه، اونموقع باید صبر کنید تا جواب برگرده،‌و نمی‌تونید همون لحظه به جوابتون برسید.&lt;/p&gt;
 
-&lt;p&gt;مورد دیگه‌ای هم وجود داره، اگه شما به این شکل بخوایید جوابتون رو بگیرید، معلوم نیست که جواب سرور چیه، و ممکنه حتی سایت دان باشه، یا سرعت پاسخگویی خیلی کم باشه، یا هر مشکل دیگه‌ای. و اینو هم میدونیم که شما قرار نیست کل سرویستون رو بلاک یا فریز کنید و منتظر وایستیم تا بلکه بلاخره جوابی برسه.&lt;/p&gt;
+&lt;p&gt;مورد دیگه‌ای هم وجود داره، اگه شما به این شکل بخواهید جوابتون رو بگیرید، معلوم نیست که جواب سرور چیه، و ممکنه حتی سایت دان باشه، یا سرعت پاسخگویی خیلی کم باشه، یا هر مشکل دیگه‌ای. و اینو هم میدونیم که شما قرار نیست کل سرویستون رو بلاک یا فریز کنید و منتظر وایستید تا بلکه بلاخره جوابی برسه.&lt;/p&gt;
 
 &lt;p&gt;فراخوانی APIها، دانلود کردن فایل، خواندن فایل و چیزهایی مثل این، مواردی هستند که باید با استفاده از متد های Async باهاشون کار کرد.&lt;/p&gt;
 
 &lt;h2 id=&quot;callback&quot;&gt;دنیا قبل از پرامیس: Callback&lt;/h2&gt;
 
 &lt;p&gt;آیا حتما باید از پرامیس برای فراخوانی متدهای Async استفاده کنیم؟ خیر. قبل از پرامیس، ما از callback استفاده می‌کردیم.
-فانکشن callback فقط برای مواقعی که میخواهیم نتیجه بازگشتی رو دریافت کنیم به کار می‌رود. اجازه بدید با توجه به چیزی حالا راجع به کال‌بک میدونیم، متد قبلی رو بازنویسی کنیم.&lt;/p&gt;
+فانکشن callback فقط برای مواقعی که میخواهیم نتیجه بازگشتی رو دریافت کنیم به کار میره. اجازه بدید با توجه به چیزی که حالا راجع به کال‌بک میدونیم، متد قبلی رو بازنویسی کنیم.&lt;/p&gt;
 
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// add two numbers remotely&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;// get the result by calling an API&lt;/span&gt;
@@ -507,7 +510,7 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;با استفاده از پرامیس‌ها، ما بجای callback از &lt;code class=&quot;highlighter-rouge&quot;&gt;.then&lt;/code&gt; کمک می‌گیریم. در همین نگاه اول متوجه میشیم که چقدر کدهامون با حذف کال‌بک‌های nested یا تودرتو ترو تمیزتر شده. البته که با استفاده از سینکس &lt;code class=&quot;highlighter-rouge&quot;&gt;asyn&lt;/code&gt; و &lt;code class=&quot;highlighter-rouge&quot;&gt;await&lt;/code&gt; کدهامون بازم ساده‌تر و تروتمیزتر از چیزی که الان هست میشه. دیگه مثال این رو هم میزارم به عهده خودتون 😬🖐.&lt;/p&gt;
+&lt;p&gt;با استفاده از پرامیس‌ها، ما بجای callback از &lt;code class=&quot;highlighter-rouge&quot;&gt;.then&lt;/code&gt; کمک می‌گیریم. در همین نگاه اول متوجه میشیم که چقدر کدهامون با حذف کال‌بک‌های nested یا تودرتو تروتمیزتر شده. البته که با استفاده از سینکتس &lt;code class=&quot;highlighter-rouge&quot;&gt;asyn&lt;/code&gt; و &lt;code class=&quot;highlighter-rouge&quot;&gt;await&lt;/code&gt; کدهامون بازم ساده‌تر و تروتمیزتر از چیزی که الان هست میشه. دیگه مثال این رو هم میزارم به عهده خودتون 😬🖐.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/post/2017-11-27/js-promise-relaxing.gif&quot; alt=&quot;Relaxing&quot; /&gt;&lt;/p&gt;
 
@@ -601,7 +604,7 @@
 &lt;h2 id=&quot;conclusion&quot;&gt;نتیجه گیری&lt;/h2&gt;
 
 &lt;p&gt;سعی کنید با انجام مثال‌های بیشتر یا مطالعه مقاله‌های دیگه با Promiseها و Callbackها بیشتر آشنا بشید. اونهارو کامل درک کنید و واقعا در پروژه‌هاتون استفاده کنید. درباره Observable هم نگران نباشید، این یه موضوع جدیده و حالا حالا وقت هست واسه اینکه توش مهارت پیدا کنید.
-دوباره تکرار میکنم، با هرسه این مفاهیم و ابزارهای آشنا بشید، و ببینید واقعا کجا بدردتون میخوره، متناسب با اون ازشون استفاده کنید.&lt;/p&gt;
+دوباره تکرار میکنم، با هرسه این مفاهیم و ابزارها آشنا بشید و ببینید واقعا کجا بدردتون میخوره، تا متناسب با اون ازشون استفاده کنید.&lt;/p&gt;
 
 &lt;p&gt;می‌تونید از لینک‌های زیر هم مثالی که درباره &lt;code class=&quot;highlighter-rouge&quot;&gt;Mom Promise to buy new phone&lt;/code&gt; رو ببینید:&lt;/p&gt;
 

@@ -113,8 +113,8 @@ apply plugin: 'com.google.gms.google-services'
 dependencies {
   ...
   // Add this line
-  compile "com.google.firebase:firebase-core:25.+"
-  compile "com.google.firebase:firebase-messaging:25.+"
+  compile "com.google.firebase:firebase-core:11.+"
+  compile "com.google.firebase:firebase-messaging:11.+"
 }
 ```
 

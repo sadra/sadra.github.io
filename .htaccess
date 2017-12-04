@@ -2,10 +2,8 @@
     Header set Connection keep-alive
 </ifModule>
 
-
 # -- Error Docs --
 ErrorDocument 404 /404.html
-
 
 # -- Browser Caching --
 <IfModule mod_expires.c>

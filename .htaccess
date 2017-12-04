@@ -9,7 +9,7 @@ ErrorDocument 404 /404.html
 <IfModule mod_headers.c>
 #WEEK
 <FilesMatch "\.(css|jpg|jpeg|js|png|gif|woff|swf)$">
-    Header set Cache-Controle "Max-age=604800, public"
+    Header set Cache-Control "Max-age=604800, public"
 </FilesMatch>
 </IfModule>
 

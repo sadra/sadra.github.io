@@ -53,3 +53,5 @@ collections:
   course:
     output: true
     permalink: "video/:collection/:categories/:title/"
+
+version : 100

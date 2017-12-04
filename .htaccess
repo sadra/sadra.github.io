@@ -6,6 +6,14 @@
 ErrorDocument 404 /404.html
 
 # -- Browser Caching --
+<IfModule mod_headers.c>
+#WEEK
+<FilesMatch "\.(css|jpg|jpeg|js|png|gif|woff|swf)$">
+    Header set Cache-Controle "Max-age=604800, public"
+</FilesMatch>
+</IfModule>
+
+# -- Browser Caching --
 <IfModule mod_expires.c>
 ExpiresActive On
 # Default

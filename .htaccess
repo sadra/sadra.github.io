@@ -2,20 +2,10 @@
     Header set Connection keep-alive
 </ifModule>
 
-# -- Password Protection --
-# AuthName "Restricted Area"
-# AuthType Basic
-# AuthUserFile /Applications/MAMP/htdocs/.htpasswd
-# AuthGroupFile /dev/null
-# require valid-user
-
 
 # -- Error Docs --
 ErrorDocument 404 /404.html
 
-# -- 301 Redirects --
-# Redirect 301 /oldlocation/oldlocation/ /newlocation/
-# Redirect 301 /oldlocation/ /
 
 # -- Browser Caching --
 <IfModule mod_expires.c>

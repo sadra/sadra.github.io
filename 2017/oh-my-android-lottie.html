@@ -7,7 +7,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="keywords" content="Android,UI,Animation,Lottie, ابزار,تجربه کاربری">
 <meta name="author" content="Sadra Isapanah Amlashi | صدرا عیسی پناه املشی">
-<meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script>
@@ -47,8 +46,8 @@
 
 
 <link rel="alternative" href="/site-map.xml" title="وبلاگ صدرا املشی" type="application/atom+xml">
-<link rel="short icon" type="image/x-icon" href="http://isapanah.com/assets/img/base/favicon.png?v=100">
-<link rel="stylesheet" type="text/css" href="http://isapanah.com/assets/css/styles.css?v=100">
+<link rel="short icon" type="image/x-icon" href="http://isapanah.com/assets/img/base/favicon.png">
+<link rel="stylesheet" type="text/css" href="http://isapanah.com/assets/css/styles.css">
 
     </head>
 
@@ -70,7 +69,23 @@
 </header>
 <!-- /Header -->
 
-        <div class="content">
+        <script>
+
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        document.getElementById("back-to-top").style.display = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? "block" : "none";
+    }
+
+    function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+
+</script>
+
+
+<div class="content">
 
     <div class="blog-post-container">
 
@@ -81,7 +96,7 @@
         <div class="post_created">
 
             <div class="author_avatar">
-                <img src="/assets/img/base/avatar.jpg?v=100" alt="صدرا املشی" id="avatar-img" />
+                <img src="/assets/img/base/avatar.jpg" alt="صدرا املشی" id="avatar-img" />
             </div>
 
             <div class="post_info">
@@ -731,7 +746,7 @@
 
 </div>
 
-<a id="back-to-top" href="#" class="back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left">
+<a id="back-to-top" class="back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left" onclick="topFunction()">
     <img src="/assets/img/base/arrow-up.png" class="arrow-up"/>
 </a>
 

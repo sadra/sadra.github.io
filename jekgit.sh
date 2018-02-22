@@ -5,7 +5,7 @@ if [[ -z "$1" ]]; then
   exit
 fi
 
-jekyll build && \
+bundle exec jekyll build && \
   git add . && \
   git commit -am "$1" && \
   git push origin source && \

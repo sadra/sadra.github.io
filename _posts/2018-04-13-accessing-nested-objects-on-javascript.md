@@ -7,11 +7,12 @@ date: '2017-11-27'
 tags:
 - JavaScript
 - ES6
-- کاربردی
 
 categories:
 - جاوا اسکریپت
 - آموزش
+- کاربردی
+
 
 cover: /assets/img/post/2018-04-13/undefined_access.jpg
 

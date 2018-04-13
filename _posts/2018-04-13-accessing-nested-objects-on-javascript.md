@@ -56,7 +56,7 @@ const userCity = user.personalInfo.address.city;
 ```javascript
 const user = {
     id: 101,
-    email: 'jack@dev.com'
+    email: 'sadra@dev.com'
 }
 ```
 

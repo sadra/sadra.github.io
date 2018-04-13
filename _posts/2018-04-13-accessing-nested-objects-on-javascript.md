@@ -7,6 +7,7 @@ date: '2017-11-27'
 tags:
 - JavaScript
 - ES6
+- کاربردی
 
 categories:
 - جاوا اسکریپت

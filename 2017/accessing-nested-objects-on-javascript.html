@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+<meta content="IE-edge,chrome=1" http-equiv="X-UA-Compatable">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="JavaScript,ES6, جاوا اسکریپت,آموزش">
+<meta name="author" content="Sadra Isapanah Amlashi | صدرا عیسی پناه املشی">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script>
+    (function(b,l,e,g,h,f){1!==parseInt(e.msDoNotTrack||b.doNotTrack||e.doNotTrack,10)&&b.addEventListener("load",function(){var r=(new Date).getTime();b.galite=b.galite||{};var m=new XMLHttpRequest,n="https://www.google-analytics.com/collect?cid="+(l.uid=l.uid||Math.random()+"."+Math.random())+"&v=1&tid="+galite.UA+"&dl="+f(h.location.href)+"&ul=en-us&de=UTF-8",a=function(b){var d="",c;for(c in b){if(void 0===b[c])return!1;d+=f(b[c])}return d},p={dt:[h.title],sd:[g.colorDepth,"-bit"],sr:[g.availHeight,
+        "x",g.availWidth],vp:[innerWidth,"x",innerHeight],dr:[h.referrer]},k;for(k in p){var q=k+"="+a(p[k]);q&&(n+="&"+q)}a=function(b,d){var c="",a;for(a in d)c+="&"+a+"="+f(d[a]);return function(){var a=n+c+(galite.anonymizeIp?"&aip=1":"")+"&t="+f(b)+"&z="+(new Date).getTime();if(e.sendBeacon)e.sendBeacon(a);else try{m.open("GET",a,!1),m.send()}catch(t){(new Image).src=a}}};setTimeout(a("pageview",null),100);b.addEventListener("unload",a("timing",{utc:"JS Dependencies",utv:"unload",utt:(new Date).getTime()-
+    r}))})})(window,localStorage,navigator,screen,document,encodeURIComponent);
+
+    var galite = galite || {};
+    galite.UA = 'UA-107934487-1'; // Insert your tracking code here
+</script>
+
+
+<meta name="twitter:card" content="summary">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="//isapanah.com/2017/accessing-nested-objects-on-javascript">
+
+
+<meta name="description" content="دسترسی امن و راحت به Nested Objectها در زبان JavaScript">
+<meta property="og:description" content="دسترسی امن و راحت به Nested Objectها در زبان JavaScript">
+<meta name="twitter:description" content="دسترسی امن و راحت به Nested Objectها در زبان JavaScript">
+
+
+
+
+<title>دسترسی به Nested Objectها در JavaScript | صدرا املشی</title>
+<meta property="twitter:title" content="دسترسی به Nested Objectها در JavaScript | صدرا املشی">
+<meta property="og:site_name" content="دسترسی به Nested Objectها در JavaScript | صدرا املشی">
+<meta property="og:title" content="دسترسی به Nested Objectها در JavaScript | صدرا املشی">
+
+
+
+<meta property="twitter:image" content="//isapanah.com/assets/img/post/2018-04-13/undefined_access.jpg" />
+<meta property="og:image" content="//isapanah.com/assets/img/post/2018-04-13/undefined_access.jpg" />
+
+
+<link rel="alternative" href="/site-map.xml" title="وبلاگ صدرا املشی" type="application/atom+xml">
+<link rel="short icon" type="image/x-icon" href="//isapanah.com/assets/img/base/favicon.png">
+<link rel="stylesheet" type="text/css" href="//isapanah.com/assets/css/styles.css">
+
+    </head>
+
+    <body dir="rtl" lang="Farsi" >
+        <!-- Header -->
+<header class="header-rtl">
+    <nav class="nav-wrap">
+        <a href="/" class="nav-logo">وبلاگ صدرا املشی</a>
+        <ul class="navigation">
+
+            <li><a href="/">یادداشت‌ها</a></li>
+            <li><a href="/list/items">موضوعات</a></li>
+            <li><a href="/about">درباره</a></li>
+            <li><a href="http://cv.isapanah.com/">رزومه</a></li>
+            <li><a href="https://sadra.github.io/english">English</a></li>
+
+        </ul>
+    </nav>
+</header>
+<!-- /Header -->
+
+        <script>
+
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        document.getElementById("back-to-top").style.display = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? "block" : "none";
+    }
+
+    function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+
+</script>
+
+
+<div class="content">
+
+    <div class="blog-post-container">
+
+        <div class="post-title-container">
+            <h1 class="post-title">دسترسی به Nested Objectها در JavaScript</h1>
+        </div>
+
+        <div class="post_created">
+
+            <div class="author_avatar">
+                <img src="/assets/img/base/avatar.jpg" alt="صدرا املشی" id="avatar-img" />
+            </div>
+
+            <div class="post_info">
+                <p> <a href="/about">صدرا املشی</a> </p>
+                <small>توسعه دهنده</small><br/>
+                <small>دوشنبه 06 آذر 1396</small>
+            </div>
+
+        </div>
+
+        
+        <div class="post-cover">
+            <img src="//isapanah.com/assets/img/post/2018-04-13/undefined_access.jpg" alt="دسترسی به Nested Objectها در JavaScript">
+        </div>
+        
+
+        <div class="post-content">
+            <p>همونطور که احتمالا خیلی‌هاتون بامن هم‌عقیده هستین، جاوا اسکریپت زبان در دسترس، جالب و گاهی اوقات فوق‌العاده‌ایه. اما بعضی چیزا توی جاوا اسکریپت هست که واقعا عجیبه و غریبه! یکی از اون چیزا، وقتیه که سعی میکنیم یه آبجک نستد شده رو بگیریم و یهو این خطا به ما برمیگرده:</p>
+
+<blockquote>
+  <p><strong>Cannot read property ‘foo’ of undefined</strong></p>
+</blockquote>
+
+<p>خیلی وقتایی که داریم در پروژه‌ جاوا اسکریپت کد میزینم، لازمه که از نستد آبجکت‌ها استفاده کرده و دیتا رو بطور امن دریافت کنیم، نه اینکه ازین خطاهای مزخرف بده و یکساعت بگردی ببینی کجای کارو اشتباه رفتی و چه مشکلی بوجود اومده.</p>
+
+<p>میخوایم ببینیم برای حل این مشکل چه کارایی میشه انجام داد، بیایید با یه مثال بریم جلوو، فرض کنین همچین آبجکتی داریم:</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">user</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">id</span><span class="p">:</span> <span class="mi">101</span><span class="p">,</span>
+    <span class="na">email</span><span class="p">:</span> <span class="s1">'sadra@dev.com'</span><span class="p">,</span>
+    <span class="na">personalInfo</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">name</span><span class="p">:</span> <span class="s1">'Sadra'</span><span class="p">,</span>
+        <span class="na">address</span><span class="p">:</span> <span class="p">{</span>
+            <span class="na">line1</span><span class="p">:</span> <span class="s1">'kakh square'</span><span class="p">,</span>
+            <span class="na">line2</span><span class="p">:</span> <span class="s1">'5 azar st'</span><span class="p">,</span>
+            <span class="na">city</span><span class="p">:</span> <span class="s1">'gorgan'</span><span class="p">,</span>
+            <span class="na">state</span><span class="p">:</span> <span class="s1">'GOLESTAN'</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>برای دسترسی به اسم یا شهر userمون اینجوری مینویسیم:</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="nx">user</span><span class="p">.</span><span class="nx">personalInfo</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">userCity</span> <span class="o">=</span> <span class="nx">user</span><span class="p">.</span><span class="nx">personalInfo</span><span class="p">.</span><span class="nx">address</span><span class="p">.</span><span class="nx">city</span><span class="p">;</span>
+</code></pre>
+</div>
+
+<p>خب این ساده و مستقیمه.</p>
+
+<p>اما یه موقع‌هایی اصلا آبجکت user فیلدی به نام personalInfo نداره.  (الالخصوص وقتی داری با دیتابیس‌های non-relational مثل mongo کار میکنی). اونوق آبجکتت این شکلی میشه:</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">user</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">id</span><span class="p">:</span> <span class="mi">101</span><span class="p">,</span>
+    <span class="na">email</span><span class="p">:</span> <span class="s1">'jack@dev.com'</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>خب حالا وقتی تلاش میکنی که به مقدار name دسترسی پیدا کنی، با خطای <em>Cannot read property ‘name’ of undefined</em> مواجه میشی.</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="nx">user</span><span class="p">.</span><span class="nx">personalInfo</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span> <span class="c1">// Cannot read property 'name' of undefined</span>
+</code></pre>
+</div>
+
+<p>این برای اینه که سعی میکنیم به آبجکت <code class="highlighter-rouge">name</code> دسترسی پیدا کنیم، درحالی که حتی وجود خارجی نداره!</p>
+
+<p>معمول‌ترین راه برای حل این مشکل که خیلی‌ها هم استفاده میکنن اینه:</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="nx">user</span> <span class="o">&amp;&amp;</span> <span class="nx">user</span><span class="p">.</span><span class="nx">personalInfo</span> <span class="p">?</span> <span class="nx">user</span><span class="p">.</span><span class="nx">personalInfo</span><span class="p">.</span><span class="nx">name</span> <span class="p">:</span> <span class="kc">null</span><span class="p">;</span>
+<span class="c1">// undefined error will NOT be thrown as we check for existence before access</span>
+</code></pre>
+</div>
+
+<p>خب اینم یه راهه، ولی تا موقعی که آبجکتت مثل چیزی که بالا مثال زدیم ساده باشه. اگه یه آبجکت تودرتو تا ۵ ۶ مرحله داشته باشیم، اونموقع دستور شرطی که مینوسیم یه چیز احمقانه و عجیب قریبی مثل این میشه:</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">city</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span>
+    <span class="nx">data</span> <span class="o">&amp;&amp;</span> <span class="nx">data</span><span class="p">.</span><span class="nx">user</span> <span class="o">&amp;&amp;</span> <span class="nx">data</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">personalInfo</span> <span class="o">&amp;&amp;</span>
+    <span class="nx">data</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">personalInfo</span><span class="p">.</span><span class="nx">addressDetails</span> <span class="o">&amp;&amp;</span>
+    <span class="nx">data</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">personalInfo</span><span class="p">.</span><span class="nx">addressDetails</span><span class="p">.</span><span class="nx">primaryAddress</span>
+   <span class="p">)</span> <span class="p">{</span>
+    <span class="nx">city</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">personalInfo</span><span class="p">.</span><span class="nx">addressDetails</span><span class="p">.</span><span class="nx">primaryAddress</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>اینجا چندتا راه حل هست تا بتونیم این قضیه رو به درستی هندل کنیم.</p>
+
+<h2 id="الگوی-دسترسی-به-نستد-آبجکتِ-oliver-steele">الگوی دسترسی به نستد آبجکتِ Oliver Steele</h2>
+
+<p>این یکی از محبوب‌ترین روش‌های دسترسی به یک شی نستد هست که کار رو کلی <strong>ساده</strong> و <strong>تمیز</strong> میکنه. من این راه حل رو خیلی وقت پیش توی  <strong><a href="https://stackoverflow.com/a/4034468/5330668">Stackoverflow</a></strong> پیدا کرده بودم و بنظرم خیلی حرفه‌ای میومد.</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="p">((</span><span class="nx">user</span> <span class="o">||</span> <span class="p">{}).</span><span class="nx">personalInfo</span> <span class="o">||</span> <span class="p">{}).</span><span class="nx">name</span><span class="p">;</span>
+</code></pre>
+</div>
+
+<p>با این notationای که استفاده کردیم، عمرا دیگه به خطای <em>Cannot read property ‘name’ of undefined</em> بربخوریم 😬.</p>
+
+<p>اگه بخوام روش کنم که دقیقا چیکار کردیم، باید بگم داریم چک میکنیم اگر آبجکت <code class="highlighter-rouge">user</code> وجود نداره یه آبجکت خالی همینجوری رو هوا بساز و اگه وجود داشت، مرحله مرحله جلو میریم تا به property مورد نظرمون برسیم. و این باعث میشه که <strong>تاهیچوقتِ تاریخ، به خطایِ نبودنِ شیِ موردِ نظر</strong> بر نخوریم!</p>
+
+<p>اما خب، متاسفانه با این روش نمیتونین به <strong>nester array object</strong> دسترسی داشته باشین!</p>
+
+<p><img src="/assets/img/post/2018-04-13/screaming_from_js.gif" alt="Screaming from js" /></p>
+
+<h2 id="استفاده-از-array-reduce-برای-دسترسی-به-آبجکتی-از-آرایهی-نستد-شده">استفاده از Array Reduce برای دسترسی به آبجکتی از آرایه‌ی نستد شده!</h2>
+
+<p>متد Array Reduce یه راه قدرتمند و امن برای دسترسی به همچین مواردی هست. به مثال توجه کنید.</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">getNestedObject</span> <span class="o">=</span> <span class="p">(</span><span class="nx">nestedObj</span><span class="p">,</span> <span class="nx">pathArr</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">pathArr</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">key</span><span class="p">)</span> <span class="o">=&gt;</span>
+        <span class="p">(</span><span class="nx">obj</span> <span class="o">&amp;&amp;</span> <span class="nx">obj</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">!==</span> <span class="s1">'undefined'</span><span class="p">)</span> <span class="p">?</span> <span class="nx">obj</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="p">:</span> <span class="kc">undefined</span><span class="p">,</span> <span class="nx">nestedObj</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// pass in your object structure as array elements</span>
+<span class="kr">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="nx">getNestedObject</span><span class="p">(</span><span class="nx">user</span><span class="p">,</span> <span class="p">[</span><span class="s1">'personalInfo'</span><span class="p">,</span> <span class="s1">'name'</span><span class="p">]);</span>
+
+<span class="c1">// to access nested array, just pass in array index as an element the path array.</span>
+<span class="kr">const</span> <span class="nx">city</span> <span class="o">=</span> <span class="nx">getNestedObject</span><span class="p">(</span><span class="nx">user</span><span class="p">,</span> <span class="p">[</span><span class="s1">'personalInfo'</span><span class="p">,</span> <span class="s1">'addresses'</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">'city'</span><span class="p">]);</span>
+<span class="c1">// this will return the city from the first address item.</span>
+</code></pre>
+</div>
+
+<h2 id="کتابخونه-typy">کتابخونه Typy</h2>
+
+<p>و در نهایت، این کتابخونه میتونه حلال همه مشکلاتتون باشه.</p>
+
+<p>این کتابخونه علاوه به اینکه بهتون کمک میکنه تا به راحتی و با خیال راحت به هر آبجکت نستدی دسترسی پیدا کنید، بلکه کلی امکانات دیگه هم در ختیارتن میگذاره. این ابزار کاربردی از طریق کتابخونه npm در دسترس شماست - <a href="https://github.com/flexdinesh/typy">Typy</a></p>
+
+<p>خب، برای همون مثال بالا اگه بخواییم از Typy استفاده کنیم، اینجوری میشه</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kr">import</span> <span class="nx">t</span> <span class="nx">from</span> <span class="s1">'typy'</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">name</span> <span class="o">=</span> <span class="nx">t</span><span class="p">(</span><span class="nx">user</span><span class="p">,</span> <span class="s1">'personalInfo.name'</span><span class="p">).</span><span class="nx">safeObject</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">city</span> <span class="o">=</span> <span class="nx">t</span><span class="p">(</span><span class="nx">user</span><span class="p">,</span> <span class="s1">'personalInfo.addresses[0].city'</span><span class="p">).</span><span class="nx">safeObject</span><span class="p">;</span>
+<span class="c1">// address is an array</span>
+</code></pre>
+</div>
+
+<h2 id="کلام-آخر">کلام آخر</h2>
+
+<p>کلی راه حل مختلف برای حل این مشکل وجود داره که میتونید در <a href="https://stackoverflow.com/a/41532415/5330668">این کامنت</a> ۱۰ تاشونو ببینین، ولی خب من سعی کردم به اون ۲ ۳ تایی که واقعا بدرد بخور بودن بپردازم.</p>
+
+<p>البته یه سری لایبرری دیگه هم هستن که خیلی میتونن تو این قضیه کمکتون کنن، کتابخونه‌هایی مثل Lodash و Ramda.</p>
+
+<p>اما در پروژه‌‌های که کدهاتون لازمه در سبک‌ترین حالت ممکنن قرار بگیره (مثلا پروژه‌های front-end) و الالخصوص جاهایی که به یکی دو تا ازین متد‌ها بیشتر احتیاج ندارین، سعی کنین شخصا کد و متد موردنیازتون رو بنویسین و خودتون رو همیشه از شر دیپندنسی‌هاو لایبررهای عجیب غریب همیشه در امان نگهدارید 😎.</p>
+
+<p>اگه سوال یا موردی بود، مثل همیشه در <a href="https://twitter.com/sadra_amlashi">توییتر</a> یا در <a href="https://t.me/amlashi">تلگرام</a> میتونیم باهم در ارتباط باشیم. 😉🍷</p>
+
+        </div>
+
+
+        <div class="post-routes-list">
+            
+            <a class="category-link" href="/category/جاوا-اسکریپت">جاوا اسکریپت</a>
+            
+            <a class="category-link" href="/category/آموزش">آموزش</a>
+            
+            
+            <a class="tag-link" href="/tag/javascript">JavaScript</a>
+            
+            <a class="tag-link" href="/tag/es6">ES6</a>
+            
+        </div>
+
+
+        <div class="Prev-next-post-container">
+            
+            <a class="previous-btn" href="/2017/js-promise">نوشته قبلی: Promise تابحال هیچوقت انقدر آسون نبوده ←</a>
+            
+            
+        </div>
+
+
+    </div>
+
+</div>
+
+<a id="back-to-top" class="back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left" onclick="topFunction()">
+    <img src="/assets/img/base/arrow-up.png" class="arrow-up"/>
+</a>
+
+
+        <!-- Footer -->
+<footer class="footer-wrapper">
+
+    <div class="delimiter">
+        <a href="/" class="footer-logo">
+            <img src="//isapanah.com/assets/img/base/favicon.png" class="logo-wrapper">
+        </a>
+    </div>
+
+    <p class="footer-copyright">
+        2008 - 2017<br>
+        مطالب تحت لیسانس <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" rel="license" target="_blank">کریتیو کامنز</a> منتشر می‌شوند.
+
+    </p>
+
+    <div class="footer-social-links">
+        <a href="https://twitter.com/sadra-amlashi" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a href="https://github.com/sadra" title="Github" target="_blank"><i class="fa fa-github"></i></a>
+        <a href="https://medium.com/sadra" title="Medium" target="_blank"><i class="fa fa-medium"></i></a>
+        <a href="https://www.linkedin.com/in/amlashisadra/" title="Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
+        <a href="https://facebook.com/sadra.am123" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+    </div>
+
+
+ </footer>
+<!-- /Footer -->
+
+        
+    </body>
+</html>

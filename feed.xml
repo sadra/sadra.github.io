@@ -1,5 +1,137 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="//isapanah.com/feed.xml" rel="self" type="application/atom+xml" /><link href="//isapanah.com/" rel="alternate" type="text/html" /><updated>2018-03-15T21:15:15+03:30</updated><id>//isapanah.com/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده اپلیکیشن iOS و Android.
-</subtitle><entry><title type="html">Promise تابحال هیچوقت انقدر آسون نبوده</title><link href="//isapanah.com/2017/js-promise" rel="alternate" type="text/html" title="Promise تابحال هیچوقت انقدر آسون نبوده" /><published>2017-11-27T00:00:00+03:30</published><updated>2017-11-27T00:00:00+03:30</updated><id>//isapanah.com/2017/js-promise</id><content type="html" xml:base="//isapanah.com/2017/js-promise">&lt;h2 id=&quot;مقدمه&quot;&gt;مقدمه&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="//isapanah.com/feed.xml" rel="self" type="application/atom+xml" /><link href="//isapanah.com/" rel="alternate" type="text/html" /><updated>2018-04-13T15:25:22+04:30</updated><id>//isapanah.com/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده اپلیکیشن iOS و Android.
+</subtitle><entry><title type="html">دسترسی به Nested Objectها در JavaScript</title><link href="//isapanah.com/2017/accessing-nested-objects-on-javascript" rel="alternate" type="text/html" title="دسترسی به Nested Objectها در JavaScript" /><published>2017-11-27T00:00:00+03:30</published><updated>2017-11-27T00:00:00+03:30</updated><id>//isapanah.com/2017/accessing-nested-objects-on-javascript</id><content type="html" xml:base="//isapanah.com/2017/accessing-nested-objects-on-javascript">&lt;p&gt;همونطور که احتمالا خیلی‌هاتون بامن هم‌عقیده هستین، جاوا اسکریپت زبان در دسترس، جالب و گاهی اوقات فوق‌العاده‌ایه. اما بعضی چیزا توی جاوا اسکریپت هست که واقعا عجیبه و غریبه! یکی از اون چیزا، وقتیه که سعی میکنیم یه آبجک نستد شده رو بگیریم و یهو این خطا به ما برمیگرده:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Cannot read property ‘foo’ of undefined&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;خیلی وقتایی که داریم در پروژه‌ جاوا اسکریپت کد میزینم، لازمه که از نستد آبجکت‌ها استفاده کرده و دیتا رو بطور امن دریافت کنیم، نه اینکه ازین خطاهای مزخرف بده و یکساعت بگردی ببینی کجای کارو اشتباه رفتی و چه مشکلی بوجود اومده.&lt;/p&gt;
+
+&lt;p&gt;میخوایم ببینیم برای حل این مشکل چه کارایی میشه انجام داد، بیایید با یه مثال بریم جلوو، فرض کنین همچین آبجکتی داریم:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;101&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;email&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'sadra@dev.com'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;personalInfo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Sadra'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;line1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'kakh square'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;line2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'5 azar st'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;city&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'gorgan'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;na&quot;&gt;state&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'GOLESTAN'&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;برای دسترسی به اسم یا شهر userمون اینجوری مینویسیم:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;personalInfo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;userCity&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;personalInfo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;city&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;خب این ساده و مستقیمه.&lt;/p&gt;
+
+&lt;p&gt;اما یه موقع‌هایی اصلا آبجکت user فیلدی به نام personalInfo نداره.  (الالخصوص وقتی داری با دیتابیس‌های non-relational مثل mongo کار میکنی). اونوق آبجکتت این شکلی میشه:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;101&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;email&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'jack@dev.com'&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;خب حالا وقتی تلاش میکنی که به مقدار name دسترسی پیدا کنی، با خطای &lt;em&gt;Cannot read property ‘name’ of undefined&lt;/em&gt; مواجه میشی.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;personalInfo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Cannot read property 'name' of undefined&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;این برای اینه که سعی میکنیم به آبجکت &lt;code class=&quot;highlighter-rouge&quot;&gt;name&lt;/code&gt; دسترسی پیدا کنیم، درحالی که حتی وجود خارجی نداره!&lt;/p&gt;
+
+&lt;p&gt;معمول‌ترین راه برای حل این مشکل که خیلی‌ها هم استفاده میکنن اینه:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;personalInfo&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;personalInfo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// undefined error will NOT be thrown as we check for existence before access&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;خب اینم یه راهه، ولی تا موقعی که آبجکتت مثل چیزی که بالا مثال زدیم ساده باشه. اگه یه آبجکت تودرتو تا ۵ ۶ مرحله داشته باشیم، اونموقع دستور شرطی که مینوسیم یه چیز احمقانه و عجیب قریبی مثل این میشه:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;city&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;personalInfo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;personalInfo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addressDetails&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;personalInfo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addressDetails&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;primaryAddress&lt;/span&gt;
+   &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;city&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;personalInfo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addressDetails&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;primaryAddress&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;اینجا چندتا راه حل هست تا بتونیم این قضیه رو به درستی هندل کنیم.&lt;/p&gt;
+
+&lt;h2 id=&quot;الگوی-دسترسی-به-نستد-آبجکتِ-oliver-steele&quot;&gt;الگوی دسترسی به نستد آبجکتِ Oliver Steele&lt;/h2&gt;
+
+&lt;p&gt;این یکی از محبوب‌ترین روش‌های دسترسی به یک شی نستد هست که کار رو کلی &lt;strong&gt;ساده&lt;/strong&gt; و &lt;strong&gt;تمیز&lt;/strong&gt; میکنه. من این راه حل رو خیلی وقت پیش توی  &lt;strong&gt;&lt;a href=&quot;https://stackoverflow.com/a/4034468/5330668&quot;&gt;Stackoverflow&lt;/a&gt;&lt;/strong&gt; پیدا کرده بودم و بنظرم خیلی حرفه‌ای میومد.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;personalInfo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;با این notationای که استفاده کردیم، عمرا دیگه به خطای &lt;em&gt;Cannot read property ‘name’ of undefined&lt;/em&gt; بربخوریم 😬.&lt;/p&gt;
+
+&lt;p&gt;اگه بخوام روش کنم که دقیقا چیکار کردیم، باید بگم داریم چک میکنیم اگر آبجکت &lt;code class=&quot;highlighter-rouge&quot;&gt;user&lt;/code&gt; وجود نداره یه آبجکت خالی همینجوری رو هوا بساز و اگه وجود داشت، مرحله مرحله جلو میریم تا به property مورد نظرمون برسیم. و این باعث میشه که &lt;strong&gt;تاهیچوقتِ تاریخ، به خطایِ نبودنِ شیِ موردِ نظر&lt;/strong&gt; بر نخوریم!&lt;/p&gt;
+
+&lt;p&gt;اما خب، متاسفانه با این روش نمیتونین به &lt;strong&gt;nester array object&lt;/strong&gt; دسترسی داشته باشین!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-13/screaming_from_js.gif&quot; alt=&quot;Screaming from js&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;استفاده-از-array-reduce-برای-دسترسی-به-آبجکتی-از-آرایهی-نستد-شده&quot;&gt;استفاده از Array Reduce برای دسترسی به آبجکتی از آرایه‌ی نستد شده!&lt;/h2&gt;
+
+&lt;p&gt;متد Array Reduce یه راه قدرتمند و امن برای دسترسی به همچین مواردی هست. به مثال توجه کنید.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getNestedObject&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;nestedObj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;pathArr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;pathArr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;reduce&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!==&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'undefined'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;undefined&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;nestedObj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// pass in your object structure as array elements&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getNestedObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'personalInfo'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'name'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// to access nested array, just pass in array index as an element the path array.&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;city&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;getNestedObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'personalInfo'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'addresses'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'city'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// this will return the city from the first address item.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;کتابخونه-typy&quot;&gt;کتابخونه Typy&lt;/h2&gt;
+
+&lt;p&gt;و در نهایت، این کتابخونه میتونه حلال همه مشکلاتتون باشه.&lt;/p&gt;
+
+&lt;p&gt;این کتابخونه علاوه به اینکه بهتون کمک میکنه تا به راحتی و با خیال راحت به هر آبجکت نستدی دسترسی پیدا کنید، بلکه کلی امکانات دیگه هم در ختیارتن میگذاره. این ابزار کاربردی از طریق کتابخونه npm در دسترس شماست - &lt;a href=&quot;https://github.com/flexdinesh/typy&quot;&gt;Typy&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;خب، برای همون مثال بالا اگه بخواییم از Typy استفاده کنیم، اینجوری میشه&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kr&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'typy'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'personalInfo.name'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;safeObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;city&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'personalInfo.addresses[0].city'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;safeObject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// address is an array&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;کلام-آخر&quot;&gt;کلام آخر&lt;/h2&gt;
+
+&lt;p&gt;کلی راه حل مختلف برای حل این مشکل وجود داره که میتونید در &lt;a href=&quot;https://stackoverflow.com/a/41532415/5330668&quot;&gt;این کامنت&lt;/a&gt; ۱۰ تاشونو ببینین، ولی خب من سعی کردم به اون ۲ ۳ تایی که واقعا بدرد بخور بودن بپردازم.&lt;/p&gt;
+
+&lt;p&gt;البته یه سری لایبرری دیگه هم هستن که خیلی میتونن تو این قضیه کمکتون کنن، کتابخونه‌هایی مثل Lodash و Ramda.&lt;/p&gt;
+
+&lt;p&gt;اما در پروژه‌‌های که کدهاتون لازمه در سبک‌ترین حالت ممکنن قرار بگیره (مثلا پروژه‌های front-end) و الالخصوص جاهایی که به یکی دو تا ازین متد‌ها بیشتر احتیاج ندارین، سعی کنین شخصا کد و متد موردنیازتون رو بنویسین و خودتون رو همیشه از شر دیپندنسی‌هاو لایبررهای عجیب غریب همیشه در امان نگهدارید 😎.&lt;/p&gt;
+
+&lt;p&gt;اگه سوال یا موردی بود، مثل همیشه در &lt;a href=&quot;https://twitter.com/sadra_amlashi&quot;&gt;توییتر&lt;/a&gt; یا در &lt;a href=&quot;https://t.me/amlashi&quot;&gt;تلگرام&lt;/a&gt; میتونیم باهم در ارتباط باشیم. 😉🍷&lt;/p&gt;</content><author><name>صدرا املشی</name></author><category term="JavaScript" /><category term="ES6" /><summary type="html">همونطور که احتمالا خیلی‌هاتون بامن هم‌عقیده هستین، جاوا اسکریپت زبان در دسترس، جالب و گاهی اوقات فوق‌العاده‌ایه. اما بعضی چیزا توی جاوا اسکریپت هست که واقعا عجیبه و غریبه! یکی از اون چیزا، وقتیه که سعی میکنیم یه آبجک نستد شده رو بگیریم و یهو این خطا به ما برمیگرده:</summary></entry><entry><title type="html">Promise تابحال هیچوقت انقدر آسون نبوده</title><link href="//isapanah.com/2017/js-promise" rel="alternate" type="text/html" title="Promise تابحال هیچوقت انقدر آسون نبوده" /><published>2017-11-27T00:00:00+03:30</published><updated>2017-11-27T00:00:00+03:30</updated><id>//isapanah.com/2017/js-promise</id><content type="html" xml:base="//isapanah.com/2017/js-promise">&lt;h2 id=&quot;مقدمه&quot;&gt;مقدمه&lt;/h2&gt;
 
 &lt;p&gt;خیلی وقت پیش در حین انجام یک پروژه در NodeJs نیاز پیدا کردم که چندتا متد رو بصورت متوالی و nested استفاده کنم، و متد ها هم به این صورت بود که باید صبر میکردن تا داخلی ترین متد انجام بشه و بعد متد خارجی با استفاده از نتیجه متد داخلی وظیفه خودش رو انجام بده، و این توالی تا آخرین متد خارجی ادامه داشت. (تا جایی که یادم میاد تا ۴ مرحله نست شده بود.)&lt;/p&gt;
 

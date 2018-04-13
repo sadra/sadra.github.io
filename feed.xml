@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="//isapanah.com/feed.xml" rel="self" type="application/atom+xml" /><link href="//isapanah.com/" rel="alternate" type="text/html" /><updated>2018-04-13T15:27:16+04:30</updated><id>//isapanah.com/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده اپلیکیشن iOS و Android.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="//isapanah.com/feed.xml" rel="self" type="application/atom+xml" /><link href="//isapanah.com/" rel="alternate" type="text/html" /><updated>2018-04-13T15:34:33+04:30</updated><id>//isapanah.com/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده اپلیکیشن iOS و Android.
 </subtitle><entry><title type="html">دسترسی به Nested Objectها در JavaScript</title><link href="//isapanah.com/2017/accessing-nested-objects-on-javascript" rel="alternate" type="text/html" title="دسترسی به Nested Objectها در JavaScript" /><published>2017-11-27T00:00:00+03:30</published><updated>2017-11-27T00:00:00+03:30</updated><id>//isapanah.com/2017/accessing-nested-objects-on-javascript</id><content type="html" xml:base="//isapanah.com/2017/accessing-nested-objects-on-javascript">&lt;p&gt;همونطور که احتمالا خیلی‌هاتون بامن هم‌عقیده هستین، جاوا اسکریپت زبان در دسترس، جالب و گاهی اوقات فوق‌العاده‌ایه. اما بعضی چیزا توی جاوا اسکریپت هست که واقعا عجیبه و غریبه! یکی از اون چیزا، وقتیه که سعی میکنیم یه آبجک نستد شده رو بگیریم و یهو این خطا به ما برمیگرده:&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -38,7 +38,7 @@
 
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kr&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;101&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;email&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'jack@dev.com'&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;email&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'sadra@dev.com'&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;

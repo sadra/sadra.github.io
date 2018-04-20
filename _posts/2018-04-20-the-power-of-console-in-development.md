@@ -44,27 +44,35 @@ author: Sadra
 
 - برای Mozilla Firefox
 
+{% ltr %}
   > **For MAC users:** *COMMAND + OPTION + K*
   >
   > **For Windows and Linux users:** *CTRL + SHIFT + K*
+{% endltr %}
 
   - در Google Chrome
 
+{% ltr %}
   > **For MAC users:** *COMMAND + OPTION + J*
   >
   > **For Windows and Linux users:** *CTRL + SHIFT + J*
   >
   > **For Windows users:** *F12*
+{% endltr %}
 
   - در Safari
 
+{% ltr %}
   > **For MAC users:** *COMMAND + OPTION + C*
+{% endltr %}
 
   - در Opera mini
 
+{% ltr %}
   > **For MAC users:** *COMMAND + OPTION + I*
   >
   > **For Windows and Linux users:** *CTRL + SHIFT + I*
+{% endltr %}
 
   وقت که کنسول رو باز می‌کنید، با چیزی شبیه این که از پایین ابز شده باید مواجه بشید:
 

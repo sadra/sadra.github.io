@@ -21,3 +21,25 @@ blockquote
     margin-left: 10px
 
 
+.div-ltr
+  blockquote
+    background: $element-blockquote-bg
+    border-left: 10px solid $element-blockquote-border
+    border-right: 0
+    font-size: 16px
+    line-height: 1.2
+    text-align: justify
+    color: $text-quote
+    margin: 1.5em 1.5px
+    padding: 15px
+    p
+      color: $text-quote !important
+    p:first-child:before
+      color: $gray-400
+      content: " \201D "
+      font-family: Georgia, serif
+      font-size: 4em
+      line-height: 0.1em
+      margin-right: 0.16em
+      vertical-align: -0.4em
+      margin-left: 10px

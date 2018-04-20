@@ -2,7 +2,7 @@
 layout: blog_post_rtl
 title:  "دسترسی به Nested Objectها در JavaScript"
 description: "دسترسی امن و راحت به Nested Objectها در زبان JavaScript"
-date: '2017-11-27'
+date: '2018-04-13'
 
 tags:
 - JavaScript

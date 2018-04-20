@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="//isapanah.com/feed.xml" rel="self" type="application/atom+xml" /><link href="//isapanah.com/" rel="alternate" type="text/html" /><updated>2018-04-20T18:04:53+04:30</updated><id>//isapanah.com/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده اپلیکیشن iOS و Android.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="//isapanah.com/feed.xml" rel="self" type="application/atom+xml" /><link href="//isapanah.com/" rel="alternate" type="text/html" /><updated>2018-04-20T18:25:46+04:30</updated><id>//isapanah.com/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده اپلیکیشن iOS و Android.
 </subtitle><entry><title type="html">قدرت پنهان console در توسعه جاوا اسکریپت</title><link href="//isapanah.com/2018/the-power-of-console-in-development" rel="alternate" type="text/html" title="قدرت پنهان console در توسعه جاوا اسکریپت" /><published>2018-04-20T00:00:00+04:30</published><updated>2018-04-20T00:00:00+04:30</updated><id>//isapanah.com/2018/the-power-of-console-in-development</id><content type="html" xml:base="//isapanah.com/2018/the-power-of-console-in-development">&lt;p&gt;وقتی شروع به توسعه در یک تکنولوژی یا زبان خاص می‌کنید، در اغلب موارد غرق در ابزارهای مختلفی میشیم که اون بیرون بهمون پیشنهاد میشه یا باهاش مواجه میشیم(البته ابزارهایی که برای برای راحتی و سرعت بخشیدن به توسعه در همون اسکوپ ایجاد شدن). حتی درگیر جنگ با خودم و اون ابزارها میشم تا پیدا کنم کدومشون واقعا به درد کارم میخوره. در نهایت وقتی کارم تموم میشه، میفهمم کلی ابزار مختلف رو تست کردم، که هیچکدوم یا توی پروژه استفاده نشده، یا استفاده درست و کاملی ازشون نکردم، در عوضش پروژه رو هم نتونستم به TimeBox برسونم!&lt;/p&gt;
 
 &lt;p&gt;در طی این چندسالی که عمیقا به برنامه نویسی علاقه‌مند شدم، با ابزراهای مختلفی روبرو شدم که برای مدتها اونهارو نادیده میگرفتم، ابزاری ضروری، ساده و قدرمند، که در داخل همون تکنولوژی‌ها ایمپلمنت و امبد شده بود.&lt;/p&gt;
@@ -27,48 +27,62 @@
 &lt;p&gt;می‌تونید با استفاده از کلیدها میانبری که در ادامه بهش اشاره میکنم‌، برای بالا آوردن کنسول در مرورگرتون استفاده کنین:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;برای Mozilla Firefox&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;&lt;strong&gt;For MAC users:&lt;/strong&gt; &lt;em&gt;COMMAND + OPTION + K&lt;/em&gt;&lt;/p&gt;
-
-      &lt;p&gt;&lt;strong&gt;For Windows and Linux users:&lt;/strong&gt; &lt;em&gt;CTRL + SHIFT + K&lt;/em&gt;&lt;/p&gt;
-    &lt;/blockquote&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;در Google Chrome&lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;&lt;strong&gt;For MAC users:&lt;/strong&gt; &lt;em&gt;COMMAND + OPTION + J&lt;/em&gt;&lt;/p&gt;
-
-      &lt;p&gt;&lt;strong&gt;For Windows and Linux users:&lt;/strong&gt; &lt;em&gt;CTRL + SHIFT + J&lt;/em&gt;&lt;/p&gt;
-
-      &lt;p&gt;&lt;strong&gt;For Windows users:&lt;/strong&gt; &lt;em&gt;F12&lt;/em&gt;&lt;/p&gt;
-    &lt;/blockquote&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;در Safari&lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;&lt;strong&gt;For MAC users:&lt;/strong&gt; &lt;em&gt;COMMAND + OPTION + C&lt;/em&gt;&lt;/p&gt;
-    &lt;/blockquote&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;در Opera mini&lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;&lt;strong&gt;For MAC users:&lt;/strong&gt; &lt;em&gt;COMMAND + OPTION + I&lt;/em&gt;&lt;/p&gt;
-
-      &lt;p&gt;&lt;strong&gt;For Windows and Linux users:&lt;/strong&gt; &lt;em&gt;CTRL + SHIFT + I&lt;/em&gt;&lt;/p&gt;
-    &lt;/blockquote&gt;
-
-    &lt;p&gt;وقت که کنسول رو باز می‌کنید، با چیزی شبیه این که از پایین ابز شده باید مواجه بشید:&lt;/p&gt;
-  &lt;/li&gt;
+  &lt;li&gt;برای Mozilla Firefox&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;div class=&quot;div-ltr&quot;&gt;
+
+  &lt;blockquote&gt;
+    &lt;p&gt;&lt;strong&gt;For MAC users:&lt;/strong&gt; &lt;em&gt;COMMAND + OPTION + K&lt;/em&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;For Windows and Linux users:&lt;/strong&gt; &lt;em&gt;CTRL + SHIFT + K&lt;/em&gt;&lt;/p&gt;
+  &lt;/blockquote&gt;
+
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;در Google Chrome&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;div-ltr&quot;&gt;
+
+  &lt;blockquote&gt;
+    &lt;p&gt;&lt;strong&gt;For MAC users:&lt;/strong&gt; &lt;em&gt;COMMAND + OPTION + J&lt;/em&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;For Windows and Linux users:&lt;/strong&gt; &lt;em&gt;CTRL + SHIFT + J&lt;/em&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;For Windows users:&lt;/strong&gt; &lt;em&gt;F12&lt;/em&gt;&lt;/p&gt;
+  &lt;/blockquote&gt;
+
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;در Safari&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;div-ltr&quot;&gt;
+
+  &lt;blockquote&gt;
+    &lt;p&gt;&lt;strong&gt;For MAC users:&lt;/strong&gt; &lt;em&gt;COMMAND + OPTION + C&lt;/em&gt;&lt;/p&gt;
+  &lt;/blockquote&gt;
+
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;در Opera mini&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;div-ltr&quot;&gt;
+
+  &lt;blockquote&gt;
+    &lt;p&gt;&lt;strong&gt;For MAC users:&lt;/strong&gt; &lt;em&gt;COMMAND + OPTION + I&lt;/em&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;strong&gt;For Windows and Linux users:&lt;/strong&gt; &lt;em&gt;CTRL + SHIFT + I&lt;/em&gt;&lt;/p&gt;
+  &lt;/blockquote&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;وقت که کنسول رو باز می‌کنید، با چیزی شبیه این که از پایین ابز شده باید مواجه بشید:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-20/console-0.png&quot; alt=&quot;Screaming from js&quot; /&gt;&lt;/p&gt;
 

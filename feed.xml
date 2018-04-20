@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="//isapanah.com/feed.xml" rel="self" type="application/atom+xml" /><link href="//isapanah.com/" rel="alternate" type="text/html" /><updated>2018-04-20T18:25:46+04:30</updated><id>//isapanah.com/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده اپلیکیشن iOS و Android.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="//isapanah.com/feed.xml" rel="self" type="application/atom+xml" /><link href="//isapanah.com/" rel="alternate" type="text/html" /><updated>2018-04-20T19:10:56+04:30</updated><id>//isapanah.com/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده اپلیکیشن iOS و Android.
 </subtitle><entry><title type="html">قدرت پنهان console در توسعه جاوا اسکریپت</title><link href="//isapanah.com/2018/the-power-of-console-in-development" rel="alternate" type="text/html" title="قدرت پنهان console در توسعه جاوا اسکریپت" /><published>2018-04-20T00:00:00+04:30</published><updated>2018-04-20T00:00:00+04:30</updated><id>//isapanah.com/2018/the-power-of-console-in-development</id><content type="html" xml:base="//isapanah.com/2018/the-power-of-console-in-development">&lt;p&gt;وقتی شروع به توسعه در یک تکنولوژی یا زبان خاص می‌کنید، در اغلب موارد غرق در ابزارهای مختلفی میشیم که اون بیرون بهمون پیشنهاد میشه یا باهاش مواجه میشیم(البته ابزارهایی که برای برای راحتی و سرعت بخشیدن به توسعه در همون اسکوپ ایجاد شدن). حتی درگیر جنگ با خودم و اون ابزارها میشم تا پیدا کنم کدومشون واقعا به درد کارم میخوره. در نهایت وقتی کارم تموم میشه، میفهمم کلی ابزار مختلف رو تست کردم، که هیچکدوم یا توی پروژه استفاده نشده، یا استفاده درست و کاملی ازشون نکردم، در عوضش پروژه رو هم نتونستم به TimeBox برسونم!&lt;/p&gt;
 
 &lt;p&gt;در طی این چندسالی که عمیقا به برنامه نویسی علاقه‌مند شدم، با ابزراهای مختلفی روبرو شدم که برای مدتها اونهارو نادیده میگرفتم، ابزاری ضروری، ساده و قدرمند، که در داخل همون تکنولوژی‌ها ایمپلمنت و امبد شده بود.&lt;/p&gt;
@@ -6,8 +6,10 @@
 &lt;p&gt;یکی از اون ابزارها که همه برنامه نویسها حتما یکبار باهاش روبرو شدن، و برنامه نویسای وب، که ابزار کاری هرروزه‌شونه، چیزی نیست جز &lt;strong&gt;JavaScript Console&lt;/strong&gt; یا راحت‌تر بگیم &lt;code class=&quot;highlighter-rouge&quot;&gt;console.log()&lt;/code&gt;. من باهاش کاملا آشنام، شما چطور؟&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;در این پست قصد دارم در رابطه با امکانات و ابزارهایی که کنسول جاوااسکریپت بهمون میده صحبت کرده و باهم بررسیشون کنیم.&lt;/p&gt;
+  &lt;p&gt;در این پست قصد دارم در رابطه با امکانات و ابزارهایی که کنسول جاوااسکریپت بهمون میده صحبت کرده و باهم بررسیشون کنیم. پس بریم ببینیم قراره چیکار کنیم.&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-20/console-0.gif&quot; alt=&quot;Screaming from js&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;کنسول-یا-console-چیست&quot;&gt;کنسول یا console چیست؟&lt;/h2&gt;
 
@@ -82,7 +84,7 @@
 
 &lt;/div&gt;
 
-&lt;p&gt;وقت که کنسول رو باز می‌کنید، با چیزی شبیه این که از پایین ابز شده باید مواجه بشید:&lt;/p&gt;
+&lt;p&gt;وقتی که کنسول رو باز می‌کنید، با چیزی شبیه این که از پایین باز شده باید مواجه بشید:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-20/console-0.png&quot; alt=&quot;Screaming from js&quot; /&gt;&lt;/p&gt;
 

@@ -1,5 +1,262 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="//isapanah.com/feed.xml" rel="self" type="application/atom+xml" /><link href="//isapanah.com/" rel="alternate" type="text/html" /><updated>2018-04-13T22:19:41+04:30</updated><id>//isapanah.com/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده اپلیکیشن iOS و Android.
-</subtitle><entry><title type="html">دسترسی به Nested Objectها در JavaScript</title><link href="//isapanah.com/2017/accessing-nested-objects-on-javascript" rel="alternate" type="text/html" title="دسترسی به Nested Objectها در JavaScript" /><published>2017-11-27T00:00:00+03:30</published><updated>2017-11-27T00:00:00+03:30</updated><id>//isapanah.com/2017/accessing-nested-objects-on-javascript</id><content type="html" xml:base="//isapanah.com/2017/accessing-nested-objects-on-javascript">&lt;p&gt;همونطور که احتمالا خیلی‌هاتون بامن هم‌عقیده هستین، جاوا اسکریپت زبان در دسترس، جالب و گاهی اوقات فوق‌العاده‌ایه. اما بعضی چیزا توی جاوا اسکریپت هست که واقعا عجیبه و غریبه! یکی از اون چیزا، وقتیه که سعی میکنیم یه آبجک نستد شده رو بگیریم و یهو این خطا به ما برمیگرده:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="//isapanah.com/feed.xml" rel="self" type="application/atom+xml" /><link href="//isapanah.com/" rel="alternate" type="text/html" /><updated>2018-04-20T18:04:53+04:30</updated><id>//isapanah.com/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده اپلیکیشن iOS و Android.
+</subtitle><entry><title type="html">قدرت پنهان console در توسعه جاوا اسکریپت</title><link href="//isapanah.com/2018/the-power-of-console-in-development" rel="alternate" type="text/html" title="قدرت پنهان console در توسعه جاوا اسکریپت" /><published>2018-04-20T00:00:00+04:30</published><updated>2018-04-20T00:00:00+04:30</updated><id>//isapanah.com/2018/the-power-of-console-in-development</id><content type="html" xml:base="//isapanah.com/2018/the-power-of-console-in-development">&lt;p&gt;وقتی شروع به توسعه در یک تکنولوژی یا زبان خاص می‌کنید، در اغلب موارد غرق در ابزارهای مختلفی میشیم که اون بیرون بهمون پیشنهاد میشه یا باهاش مواجه میشیم(البته ابزارهایی که برای برای راحتی و سرعت بخشیدن به توسعه در همون اسکوپ ایجاد شدن). حتی درگیر جنگ با خودم و اون ابزارها میشم تا پیدا کنم کدومشون واقعا به درد کارم میخوره. در نهایت وقتی کارم تموم میشه، میفهمم کلی ابزار مختلف رو تست کردم، که هیچکدوم یا توی پروژه استفاده نشده، یا استفاده درست و کاملی ازشون نکردم، در عوضش پروژه رو هم نتونستم به TimeBox برسونم!&lt;/p&gt;
+
+&lt;p&gt;در طی این چندسالی که عمیقا به برنامه نویسی علاقه‌مند شدم، با ابزراهای مختلفی روبرو شدم که برای مدتها اونهارو نادیده میگرفتم، ابزاری ضروری، ساده و قدرمند، که در داخل همون تکنولوژی‌ها ایمپلمنت و امبد شده بود.&lt;/p&gt;
+
+&lt;p&gt;یکی از اون ابزارها که همه برنامه نویسها حتما یکبار باهاش روبرو شدن، و برنامه نویسای وب، که ابزار کاری هرروزه‌شونه، چیزی نیست جز &lt;strong&gt;JavaScript Console&lt;/strong&gt; یا راحت‌تر بگیم &lt;code class=&quot;highlighter-rouge&quot;&gt;console.log()&lt;/code&gt;. من باهاش کاملا آشنام، شما چطور؟&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;در این پست قصد دارم در رابطه با امکانات و ابزارهایی که کنسول جاوااسکریپت بهمون میده صحبت کرده و باهم بررسیشون کنیم.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;کنسول-یا-console-چیست&quot;&gt;کنسول یا console چیست؟&lt;/h2&gt;
+
+&lt;p&gt;کنسول یه فیچر یا ابزار ساخته شده در دل جاوا اسکریپته که امروزه همه مرورگرها از اون به عنوان یه ابزار توسعه ضروری پشتیبانی میکنن. این ابزار کاربردی جاوااسکریپت با رابط کاربری‌ &lt;strong&gt;shell&lt;/strong&gt; مانندی، به توسعه‌دهندگان این اجازه رو میده تا:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;خطا یا اخطاری که در  وب پیج بوجود اومده رو ببینن&lt;/li&gt;
+  &lt;li&gt;بتونن از طریق کامند‌ها و دستورات جاوااسکریپت با اون صفحه وب تعامل داشته باشن&lt;/li&gt;
+  &lt;li&gt;اپلیکیشن‌ها رو دیباگ کنن، مستقیما بتونن DOM هارو از طریق مرورگر بررسی کنن&lt;/li&gt;
+  &lt;li&gt;بتونن فعالیت شبکه رو تجزیه تحلیل کنند&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;بطور کلی، به ما کمک میکنه تا بتونیم در داخل خود مرورگر جاوا اسکریپت رو بنویسیم، مدیریت کرده و در نهایت اون رو مانیتور کنیم.&lt;/p&gt;
+
+&lt;h2 id=&quot;استفاده-از-console-در-مرورگر&quot;&gt;استفاده از Console در مرورگر&lt;/h2&gt;
+
+&lt;p&gt;می‌تونید با استفاده از کلیدها میانبری که در ادامه بهش اشاره میکنم‌، برای بالا آوردن کنسول در مرورگرتون استفاده کنین:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;برای Mozilla Firefox&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;&lt;strong&gt;For MAC users:&lt;/strong&gt; &lt;em&gt;COMMAND + OPTION + K&lt;/em&gt;&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;For Windows and Linux users:&lt;/strong&gt; &lt;em&gt;CTRL + SHIFT + K&lt;/em&gt;&lt;/p&gt;
+    &lt;/blockquote&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;در Google Chrome&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;&lt;strong&gt;For MAC users:&lt;/strong&gt; &lt;em&gt;COMMAND + OPTION + J&lt;/em&gt;&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;For Windows and Linux users:&lt;/strong&gt; &lt;em&gt;CTRL + SHIFT + J&lt;/em&gt;&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;For Windows users:&lt;/strong&gt; &lt;em&gt;F12&lt;/em&gt;&lt;/p&gt;
+    &lt;/blockquote&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;در Safari&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;&lt;strong&gt;For MAC users:&lt;/strong&gt; &lt;em&gt;COMMAND + OPTION + C&lt;/em&gt;&lt;/p&gt;
+    &lt;/blockquote&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;در Opera mini&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;&lt;strong&gt;For MAC users:&lt;/strong&gt; &lt;em&gt;COMMAND + OPTION + I&lt;/em&gt;&lt;/p&gt;
+
+      &lt;p&gt;&lt;strong&gt;For Windows and Linux users:&lt;/strong&gt; &lt;em&gt;CTRL + SHIFT + I&lt;/em&gt;&lt;/p&gt;
+    &lt;/blockquote&gt;
+
+    &lt;p&gt;وقت که کنسول رو باز می‌کنید، با چیزی شبیه این که از پایین ابز شده باید مواجه بشید:&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-20/console-0.png&quot; alt=&quot;Screaming from js&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;بررسی-apiهای-ابزار-کنسول&quot;&gt;بررسی APIهای ابزار کنسول&lt;/h2&gt;
+
+&lt;p&gt;در مسیر توسعه، خیلی مهمه که هر توسعه‌دهنده‌ای با تمام زیبایی‌ها و قدرت کنسول آشنا شده باشه و حتما اونها رو در روند دیباگ کردن بکار ببنده. خب پس اجازه بدین یه سری از این امکانات و APIهای ضروری که کنسول در اختیارمون میگذاره بررسی کنیم.&lt;/p&gt;
+
+&lt;h3 id=&quot;consolelog&quot;&gt;Console.log&lt;/h3&gt;
+
+&lt;p&gt;احتمالا این پرکاربردترین چیزیه که تاحالا از کنسول دیده باشین. این API بهمون کمک میکنه تا رشته متنی که مد نظرمون هست رو به راحتی چاپ کنیم. به ازای هر آبجکتی که در log قرار میدین (و بینیشون &lt;code class=&quot;highlighter-rouge&quot;&gt;,&lt;/code&gt; هست)، یه فاصله یا &lt;strong&gt;space&lt;/strong&gt; چاپ میکنه.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;The current time is:&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;now&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;اگه کنسول رو باز کنید و این تکه کد رو باهاش تست کنین، جوابی که میگیرن حتما چیزی مثل این خواهد بود:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-20/console-1.png&quot; alt=&quot;Screaming from js&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;این API عملکردش مثل &lt;code class=&quot;highlighter-rouge&quot;&gt;console.debug()&lt;/code&gt; هست.&lt;/p&gt;
+
+&lt;h3 id=&quot;consolegroup&quot;&gt;Console.group&lt;/h3&gt;
+
+&lt;p&gt;این متد بهمون کمک میکنه تا یه گروه از لاگ ساخته و بعد چاپ کنید. گروهی که میسازین همیشه باید بین &lt;code class=&quot;highlighter-rouge&quot;&gt;console.group()&lt;/code&gt; و &lt;code class=&quot;highlighter-rouge&quot;&gt;console.groupEnd()&lt;/code&gt; قرار بگیره. برای مثال اینطوری میتونین یه گروه از لاگ‌ها ایجاد کنین.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;group&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Country Profile'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'name: '&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'continent: '&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;continent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'type: '&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;groupEnd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Nigeria&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;continent&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Africa&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Democratic&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;و چیزی که در کنسول میبینید شبیه اینه:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-20/console-2.png&quot; alt=&quot;Screaming from js&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;وقتی که یه گروه لاگ داشتید که کلی آبجکت داره، میتونید بجای &lt;code class=&quot;highlighter-rouge&quot;&gt;console.group()&lt;/code&gt; از &lt;code class=&quot;highlighter-rouge&quot;&gt;console.groupCollapsed()&lt;/code&gt; استفاده کنید تا چیزی که لاگ میگیرید بصورت collapse یا بسته شده چاپ بشه. نتیجه‌ش میشه این.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-20/console-3.png&quot; alt=&quot;Screaming from js&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;consoletrace&quot;&gt;Console.trace&lt;/h3&gt;
+
+&lt;p&gt;این متد کمک میکنه تا یه stack trace رو از نقطه‌ای که قرارش دادیم برامون چاپ کنه. این کد این امکان رو میده تا چیز‌های callشده یا execute میشن چاپ بشه، درواقع ایونت‌ها رو trackیا پیگری میکنه. اگه خواستین اطلاعات بیشتری راجع به console.trace کسب کنین، میتونین &lt;a href=&quot;https://hungryturtlecode.com/tips-tricks/console-trace/&quot;&gt;این مقاله&lt;/a&gt; رو مطالعه و یا &lt;a href=&quot;https://www.youtube.com/watch?v=QuO0UDkW2rk&quot;&gt;این وید&lt;/a&gt; رو مشاهده کنید. اما برای نمونه به این تکه کد نگاه کنید:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;trace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;bar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;و چیزی که درنهات برامون چاپ میشه خیلی جالبه:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-20/console-4.png&quot; alt=&quot;Screaming from js&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;consoletable&quot;&gt;Console.table&lt;/h3&gt;
+
+&lt;p&gt;یکی از جذابترین امکاناتی که من از کنسول دیدم، همین قضیه تیبل کردن لاگ‌هاست. این متد بهتون کمک میکنه تا یه object array رو بصورت تیبل نمایش بدید. به کد دقت کنید:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;food&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Rice&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;carbohydrate&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;protein&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Beans&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;table&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;food&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;و این عصای جادویی، چیزی که در نهایت برامون چاپ خواهد کرد اینه:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-20/console-5.png&quot; alt=&quot;Screaming from js&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;consoleerror&quot;&gt;Console.error&lt;/h3&gt;
+
+&lt;p&gt;این متد، رشته مارو بصورت یک error یا خطا نمایش میده. برخلاف console.log این متد، استایل و طرح متفاوتی شبیه error ها صفحهات وب داره (مثل اون خطاهای قرمز رنگ). همچنین هنگام چاپ اون پیام، استکی که اون پیام رو داره چاپ میکنه رو هم بهمون خبر میده. چرا زیاد حرف میزنم، بهتره خود مثال رو ببینیم:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;error: There is a terrifying error!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;و نتیجه:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-20/console-6.png&quot; alt=&quot;Screaming from js&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;متد &lt;code class=&quot;highlighter-rouge&quot;&gt;console.warn()&lt;/code&gt; هم رفتار مشابه‌ای داره، با این تفاوت که استایل چاپ کردنش با error فرق میکنه و زرد رنگه.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-20/console-7.png&quot; alt=&quot;Screaming from js&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;consolecount&quot;&gt;Console.count&lt;/h3&gt;
+
+&lt;p&gt;این متد برای ما میشمره که که چندبار اون پیام (با لیبل مشابه) برامون چاپ شده. فرقی نمیکنه که این متد رو کجای کدتون و چندبار گذاشته باشین. هربار که لیبلی مشابه داشته باشه. برامون تعدادش رو چاپ میکنه. برای مثال:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;printThe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;city&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;city&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;' is printed.'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;printThe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Tehran&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;و نتیجه:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-20/console-8.png&quot; alt=&quot;Screaming from js&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;consoletime-و-consoletimeend&quot;&gt;Console.time و Console.timeEnd&lt;/h3&gt;
+
+&lt;p&gt;با استفاده از متد &lt;code class=&quot;highlighter-rouge&quot;&gt;console.time()&lt;/code&gt; ما میتونیم زمان اتفاق افتاده بین دو نقطه رو تریس کنیم و ببینیم چقدر طول کشیده. در یک صفحه میتونیم تا ۱۰هزار تایمر همزمان ایجاد کنیم. و از متد &lt;code class=&quot;highlighter-rouge&quot;&gt;console.timeEnd()&lt;/code&gt; برای متوقف کردن تایمر و چاپ اون در لاگ استفاده میکنیم. توجه کنید که برای مشخص کردن تایمر، باید به عنوان پارامتر، یک لیبل یکتا پاس کنید. برای مثال توجه کنید به کد زیر:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'total'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'init arr'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;timeEnd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'init arr'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;timeEnd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'total'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;و نتیجه ای که در کنسول میبینیم:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-20/console-9.png&quot; alt=&quot;Screaming from js&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;consoleclear&quot;&gt;Console.clear&lt;/h3&gt;
+
+&lt;p&gt;این هم که خیلی مشخصه، لاگ‌های پاک شده در کنسول رو پاک میکنه.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;clear&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;با اینکه واضحه، ولی اینم نتیجه‌ش:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-20/console-10.png&quot; alt=&quot;Screaming from js&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;consoleassert&quot;&gt;Console.assert&lt;/h3&gt;
+
+&lt;p&gt;این متد بهمون کمک میکنه تا یه جورای assert test بگیریم. شامل دو پارت میشه، اولی شرط ادعا و پارامترهای دوم و بعدی، متنی که قراره چاپ بشه. این متد موقعی اقدام به چاپ میکنه که شرط اداعای شما صحت نداشته باشه و درواقع نتیجه برابر &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt; باشه. به این مثال زیبا توجه کنید:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;lesserThan&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;assert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;message&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;a is not lesser than b&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;a&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;b&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;lesserThan&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//and then&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;lesserThan&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;نتیجه حاصل این میشه:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-20/console-11.png&quot; alt=&quot;Screaming from js&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;دیگر-امکانات-معمولی-که-کنسول-به-ما-میدهد&quot;&gt;دیگر امکانات معمولی که کنسول به ما می‌دهد&lt;/h2&gt;
+
+&lt;p&gt;کنسول کلی امکانات مختلف و جورواجور بهمون میده تا بتونیم تو جای جای مسیر توسعه ازش استفاده کنیم. چیزهایی مثل:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Diagnosing and logging to console&lt;/li&gt;
+  &lt;li&gt;Time and monitor executions&lt;/li&gt;
+  &lt;li&gt;Handle exceptions and errors&lt;/li&gt;
+  &lt;li&gt;Monitor events&lt;/li&gt;
+  &lt;li&gt;Evaluate expressions&lt;/li&gt;
+  &lt;li&gt;Comparison of data objects&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;در-انتها&quot;&gt;در انتها&lt;/h2&gt;
+
+&lt;p&gt;امکانات کاربرد یو بیشماری که کنسول بهمون میده، باعث میشه که همیشه از اون بعنوان یه ابزار مفید و صد البته ضروری در مسیر توسعه جاوا اسکریپت استفاده کنیم. بجای که اینکه با دهها ابزار که هیمنجوری در workspaceمون ریخته ور بریم، بهتره با چندتا ابزار کاربردی و قوی آشنا شده و توی اونها به قول معروف به درجه master برسیم.&lt;/p&gt;
+
+&lt;p&gt;اگه زیادی از اصطلاحات انگلیسی استفاده کردم که باعث شده خوندن در برخی جاها سخت بشه پوزش میخوام، ولی واقعا نمیشه برای بسیاری از این لغات تکنیکال معادل فارسی آورد،‌ و هیچی مثل خود همون عبارت انگلیسیش نمیتونه حق مطلب رو ادا کنه. شاید تو یه پست جدا گانه راجع به این موضوع صحبت کردم.&lt;/p&gt;
+
+&lt;h2 id=&quot;منابع-مفید&quot;&gt;منابع مفید&lt;/h2&gt;
+
+&lt;p&gt;اگه دوست داشتین بیشتر راجع به امکانات و قدرت‌هایی که کنسول بهمون میده مطالعه کنید، در ادامه چندتا لینک آورد که امیدوارم بدردتون بخوره:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developers.google.com/web/tools/chrome-devtools/console/&quot;&gt;Google Developer Docs on Chrome Dev Tools&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Console&quot;&gt;Mozilla Developer Network Web Docs&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.digitalocean.com/community/tutorials/how-to-use-the-javascript-developer-console#working-with-the-console-in-a-browser&quot;&gt;Digital Ocean Community Tutorials&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;اگه سوال یا موردی بود، مثل همیشه در &lt;a href=&quot;https://twitter.com/sadra_amlashi&quot;&gt;توییتر&lt;/a&gt; یا در &lt;a href=&quot;https://t.me/amlashi&quot;&gt;تلگرام&lt;/a&gt; میتونیم باهم در ارتباط باشیم. 😉🍷&lt;/p&gt;</content><author><name>صدرا املشی</name></author><category term="JavaScript" /><category term="console" /><category term="ES6" /><summary type="html">وقتی شروع به توسعه در یک تکنولوژی یا زبان خاص می‌کنید، در اغلب موارد غرق در ابزارهای مختلفی میشیم که اون بیرون بهمون پیشنهاد میشه یا باهاش مواجه میشیم(البته ابزارهایی که برای برای راحتی و سرعت بخشیدن به توسعه در همون اسکوپ ایجاد شدن). حتی درگیر جنگ با خودم و اون ابزارها میشم تا پیدا کنم کدومشون واقعا به درد کارم میخوره. در نهایت وقتی کارم تموم میشه، میفهمم کلی ابزار مختلف رو تست کردم، که هیچکدوم یا توی پروژه استفاده نشده، یا استفاده درست و کاملی ازشون نکردم، در عوضش پروژه رو هم نتونستم به TimeBox برسونم!</summary></entry><entry><title type="html">دسترسی به Nested Objectها در JavaScript</title><link href="//isapanah.com/2018/accessing-nested-objects-on-javascript" rel="alternate" type="text/html" title="دسترسی به Nested Objectها در JavaScript" /><published>2018-04-13T00:00:00+04:30</published><updated>2018-04-13T00:00:00+04:30</updated><id>//isapanah.com/2018/accessing-nested-objects-on-javascript</id><content type="html" xml:base="//isapanah.com/2018/accessing-nested-objects-on-javascript">&lt;p&gt;همونطور که احتمالا خیلی‌هاتون بامن هم‌عقیده هستین، جاوا اسکریپت زبان در دسترس، جالب و گاهی اوقات فوق‌العاده‌ایه. اما بعضی چیزا توی جاوا اسکریپت هست که واقعا عجیبه و غریبه! یکی از اون چیزا، وقتیه که سعی میکنیم یه آبجک نستد شده رو بگیریم و یهو این خطا به ما برمیگرده:&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;Cannot read property ‘foo’ of undefined&lt;/strong&gt;&lt;/p&gt;
@@ -2606,69 +2863,4 @@
 
   &lt;p&gt;Translated from: &lt;a href=&quot;https://developer.atlassian.com/blog/2015/05/try-pair-programming/&quot;&gt;developer.atlassian.com&lt;/a&gt;&lt;/p&gt;
 
-&lt;/div&gt;</content><author><name>صدرا املشی</name></author><category term="مقاله" /><category term="اسکرام" /><category term="اجایل" /><category term="مدیریت پروژه نرم‌افزاری" /><summary type="html">در این پست قصد دارم درباره Pair Programming يا برنامه نویسی ۲نفره (جفتی) صحبت کنم. اگر میدونید برنامه نویسی ۲نفره چیه لازم نیست پارگراف بعدی رو بخونید:</summary></entry><entry><title type="html">اینترنت اشیا، به سبک گیتار Sensus</title><link href="//isapanah.com/2016/sensus-iot-electronic-guitar" rel="alternate" type="text/html" title="اینترنت اشیا، به سبک گیتار Sensus" /><published>2016-08-29T00:00:00+04:30</published><updated>2016-08-29T00:00:00+04:30</updated><id>//isapanah.com/2016/sensus-iot-electronic-guitar</id><content type="html" xml:base="//isapanah.com/2016/sensus-iot-electronic-guitar">&lt;p&gt;یخچال هوشمند، فِر هوشمند، لامپ هوشمند، حتی قفل هوشمند و.. و… و..، مطمئنا اینا واژه هایی هستن که تو یک یا نهایت دو سال اخیر بارها شنیده ایم و البته در سالهای آینده بیشتر خواهیم شنید. همه دستگاه هایی که نام بردم یا چیزهای دیگه‌ای که خودتون شنیدید در دسته ای به نام اینترنت اشیا یا بطور مخفف IOT قرار میگیرند( البته خیلی ها از دوستان لطف دارن و میگن اینترنت اشیا نه! اینترنت چیزها! بعضی از دوستان هم که خسته ان میگن چیزنت! ) اما واقعا اینترنت اشیا چیه و چه تعریفی داره. بهتره برای روشن شدن ماجرا از ویکی‌پدیا کمک بگیرییم:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;اینترنت چیزها، یا چیزنت (به انگلیسی: Internet of Things) (یا IOT به اختصار) که گاهی در زبان انگلیسی اینترنت اشیا(Internet of Objects) هم برای این کلمه استفاده می شود، به طور کلی اشاره دارد به بسیاری از چیزها شامل اشیا و وسایل محیط پیرامون‌مان که به شبکه اینترنت متصل شده و بتوان توسط اپلیکیشن‌های موجود در تلفن‌های هوشمند و تبلت کنترل و مدیریت شوند. (&lt;a href=&quot;https://fa.wikipedia.org/wiki/%D8%A7%DB%8C%D9%86%D8%AA%D8%B1%D9%86%D8%AA_%D8%A7%D8%B4%DB%8C%D8%A7&quot;&gt;اینترنت اشیا در ویکیپدیا&lt;/a&gt;)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;اما نمیخوام درمورد اینترنت اشیا صبحت کنم، یا اینکه واقعا IOT چیه باهم بحث کنیم، کافیه خودتو این کلمه رو گوگل کنید تا هزاران هزار لینک، مقاله، ویدئو و .. بهتون پیشنهاد بشه!&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;چیزی که امروز من رو به وجد آورده تا با شما به اشتراک بگذارم، یه گیتاره! گیتار الکتریک.اما قبلش:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;ایده پیدایش گیتار ازونجا شروع شد که در همنوازی ها، در مقابل سازهایی مثل &lt;a href=&quot;https://en.wikipedia.org/wiki/Bass_(instrument)&quot;&gt;بیس&lt;/a&gt; و &lt;a href=&quot;https://en.wikipedia.org/wiki/Drum_kit&quot;&gt;درامرز&lt;/a&gt;، صدای &lt;a href=&quot;https://fa.wikipedia.org/wiki/%DA%AF%DB%8C%D8%AA%D8%A7%D8%B1&quot;&gt;گیتار آکوستیک&lt;/a&gt; به خوبی شنیده نمیشد. در نتیجه موسیقی دانها برای حل این مشکل دست به‌-دامن علم الکترونیک شدن. در دهه ۳۰ بود که گیتار الکتریک وارد دنیای موسیقی شد. این یه انقلاب در صدا و تکنولوژی بود و تا هنوز هم ادامه داره. در دهه ۵۰ و با پیدایش &lt;a href=&quot;https://fa.wikipedia.org/wiki/%D8%B1%D8%A7%DA%A9_%D8%A7%D9%86%D8%AF_%D8%B1%D9%88%D9%84&quot;&gt;راک اند رول&lt;/a&gt;، گیتار های الکتریک با سرعت هرچه بیشتر جاشون رو در موسیقی باز کردن و به یکی از فراگیرترین ابزارهای موسیقی تبدیل شدن.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-12-30/1-guitar-timeline.jpg&quot; alt=&quot;Electronic Guitar Timeline&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;اگه دوست دارید بیشتر راجع به گیتار الکتریک بدونید از شما دعوت میکنم تا به صفحه &lt;a href=&quot;https://en.wikipedia.org/wiki/Electric_guitar&quot;&gt;گیتار الکتریک در ویکیپدیا&lt;/a&gt; مراجعه کنید. همانطور که در گیتار آکوستیک صدا به شدت به بدنه و جریان ارتعشات سیمها در داخلش بستگی داره، در گیتار الکتریک این مسئله به سیگنال هایی که از پیکاپ‌ها منتقل میشه بستگی داره (راجع به پیکاپ بیشتر بدانید: &lt;a href=&quot;https://en.wikipedia.org/wiki/Electric_guitar#Pickups&quot;&gt;لینک۱&lt;/a&gt; – &lt;a href=&quot;https://fa.wikipedia.org/wiki/%D9%BE%DB%8C%DA%A9%D8%A7%D9%BE&quot;&gt;لینک ۲&lt;/a&gt; و مفصل تر در &lt;a href=&quot;http://www.electricguitar.blogfa.com/post/6&quot;&gt;لینک ۳&lt;/a&gt;). میشه به این سیگنال ها توسط ابزاری که بهش اِفکت مگیم، &lt;a href=&quot;https://fa.wikipedia.org/wiki/%D8%AA%D9%85%D8%A8%D8%B1_(%D9%85%D9%88%D8%B3%DB%8C%D9%82%DB%8C)&quot;&gt;طنین&lt;/a&gt; یا در اصطلاح حرفه‌ای &lt;a href=&quot;https://fa.wikipedia.org/wiki/%D8%AA%D9%85%D8%A8%D8%B1_(%D9%85%D9%88%D8%B3%DB%8C%D9%82%DB%8C)&quot;&gt;تِیمبر&lt;/a&gt; داد و سپس اون رو به اَمپلیفایر منتقل کرد. بسیاری از گیتار های امروزی بصورت Built-in ابزاری جهت افکت و تیمبر کردن دارن، اما برای ایجاد بسامد و طیف های گسترده از افکت های مختلف و دیجیتالی اکسترنال یا پدالی استفاده میشه.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-12-30/2-guitar-tools.jpg&quot; alt=&quot;Electronic Guitar Timeline&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;امیدوارم اگر هم تاحالا با گیتار الکتریک آشنایی نداشتید، تا همینجا هم اطلاعات خوبی نصیبتون شده باشه. و اما از هرچه بگذریم، سخن یار خوشتر است .&lt;/p&gt;
-
-&lt;p&gt;گیتار Sensus اولین گیتار هوشمند دنیاست. میشه باهاش مثل گیتار آکوستیک زد؟ یا یه گیتار الکتیریکه؟ میشه به عنوان گیتار بیس ازش استفاده کرد؟ حتی سیتی سایزر هم هست!!؟ باید به همه سوالهای که پرسیدین جواب بله! رو بدم. بله، گیتار هوشمند Sensus اجازه میده تا شما از مدولاسیون بینهایت بهره ببرین و بین گیتار آکوستیک و الکتریک سوییچ کنین، حتی میتونید افکت های سیتی‌سایزر رو باهاش پیاده کنین! میتونین باهاش رقص نور رو کنترل کنید! واسه گیتاریست های الکتریک (احتمالا مثل شما) میتونه هیجان انگیز باشه که وقتی بفهمید با Snesus میتونید از Spotify موزیک استریم کنین و با اون همنوازی کنین. تاز قراره در ادامه جالبترم هم بشه! این گیتار بدون هیچ اکسسوری مثل کامپیوتر یا اسپیکر کار میکنه. حتی بدون سیم! گیتار هوشمند Sensus به عبارتی دقیقتر توانایی های مارو در موزیک افزایش داده، بزارین راحت‌تر بگم، باید منتظر انقلابی که Seunsus خواهد آفرید باشیم.&lt;/p&gt;
-
-&lt;div class=&quot;video-container&quot;&gt;&lt;style&gt;.h_iframe-aparat_embed_frame{position:relative;} .h_iframe-aparat_embed_frame .ratio {display:block;width:100%;height:auto;} .h_iframe-aparat_embed_frame iframe {position:absolute;top:0;left:0;width:100%; height:100%;}&lt;/style&gt;&lt;div class=&quot;h_iframe-aparat_embed_frame&quot;&gt; &lt;span style=&quot;display: block;padding-top: 57%&quot;&gt;&lt;/span&gt;&lt;iframe src=&quot;https://www.aparat.com/video/video/embed/videohash/GoLQc/vt/frame&quot; allowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;گیتار هوشمند Sensus برای اولین بار در ۳ نوامبر ۲۰۱۵ در یک نمایش زنده در کنفرانس Web Summit Dubin توسط یک استارتاپ سوئدی-ایتالیایی به نام &lt;a href=&quot;http://www.mindmusiclabs.com/&quot;&gt;MIND Music Labs&lt;/a&gt; رونمایی شد. و در &lt;a href=&quot;https://en.wikipedia.org/wiki/Angel_investor&quot;&gt;همانجا از سوی فرشتگان کسب&lt;/a&gt; و کار مثل Jscob Key مدیر دیجیتال در شرکت Warner Music، سپس Per Briliton مدیر کمپانی Ludvig Linge و همچنین آقای Marcelo Benitez از Proaltus Capital سرمایه گذاری شد و حمایت شد. چیزی نزدیک به نیم میلیون دلار.&lt;/p&gt;
-
-&lt;p&gt;Sensus برای نوازندگانی که بیش از ۵۰ دهه منتظر همچنین چیزی بودن، حد نهایت تکامل یک ابزار موسیقی به حساب میاد، و این تکنولوژی بود که توسط تیم منحصر بفرد MIND پیاده سازی شد، بقول Michele Benincaso موسس و مدیر MIND: “سنسُس ترکیبی از گیتار آکوستیک سنتی و پیشرفته ترین تکنولوژی‌هاست”&lt;/p&gt;
-
-&lt;p&gt;بنیان‌گذار و ایده پرداز این گیتار &lt;a href=&quot;http://www.benincaso.com/&quot;&gt;Michele Benincaso&lt;/a&gt; ست که در مدرسه Cremona’s Antonio Stradivari Luthiery ایتالیا تحصیل موسیقی کرده. از دهه ۶۰ به بعد همگام با رشد و انقلاب در صنایع الکترونیک و کامپیوتر، صنعت موسیقی و خود موزیسین ها نیز دچار تحول شدن. همونطور که Stradivari در صده ۱۶ و فندر (&lt;a href=&quot;https://en.wikipedia.org/wiki/Fender_Musical_Instruments_Corporation&quot;&gt;Fender&lt;/a&gt; یکی از معتبر ترین شرکت ها در طراحی و تولید گیتار الکتریکی است) در دهه ۶۰ در موسیقی انقلابی به پا کردن، میشل بنینکاسو نیز با استفاده از آخرین تکنولوژی های موجود سعی کرد به نیاز های موزیسین ها پاسخ بده تا با استفاده از اون بتونن صداهای جدید خلق کنند، با روشهای جدید خودشون رو مطرح کرده در نتیجه بتونن مخاطبین بیشتری جذب کنن.&lt;/p&gt;
-
-&lt;p&gt;گیتار Sensus با صدای 360 درجه، و سیستم موزیک وایرلس و امکان استفاده به عنوان یک واحد IOT میتونه امکانت محشر و بدون محدودیتی به موزیسین ها برای ساخت موزیک و افکت های بینظیر بده. شما میتونید همه اینکارهارو بطور طبیعی و بدون نیاز به ابزارهایی مثل امپ و افکت که در بالاتر هم ذکر کردم انجام بدید، چون همه چیزهایی که شما لازم دارین،‌ در داخل گیتار تعبیه شده. تمامی این امکانات بطور بلادرنگ انجام میشه و شما میتونید بلافاصله اونهارو به اشتراک بگذارید. گیتار Sensus با استفاده از سنسورهایی که طراحی کرده (مثل سنسور شتابسنج و سنوسور های لیزری) میتونه یه حلقه یا Loop بینهایت برای اون ملودی که زدید ایجاد کنه.&lt;/p&gt;
-
-&lt;p&gt;به لطف فناوری MIND، تمامی صداهای HD تولید شده بطور مستقیم توسط بدنه چوبی همین گیتار تولید می‌شن. همون بدنه چوبی که با اتکا به اصول آکوستیک طراحی و از همون چوبی که برای ساخت ویالون مشهور &lt;a href=&quot;https://en.wikipedia.org/wiki/Stradivarius&quot;&gt;Stradivari&lt;/a&gt; ساخته شده. بدنه ای از چوب قرمزِ روشنِ کریستالیِ صنوبر.&lt;/p&gt;
-
-&lt;div class=&quot;video-container&quot;&gt;&lt;style&gt;.h_iframe-aparat_embed_frame{position:relative;} .h_iframe-aparat_embed_frame .ratio {display:block;width:100%;height:auto;} .h_iframe-aparat_embed_frame iframe {position:absolute;top:0;left:0;width:100%; height:100%;}&lt;/style&gt;&lt;div class=&quot;h_iframe-aparat_embed_frame&quot;&gt; &lt;span style=&quot;display: block;padding-top: 57%&quot;&gt;&lt;/span&gt;&lt;iframe src=&quot;https://www.aparat.com/video/video/embed/videohash/i2Shl/vt/frame&quot; allowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;گیتار هوشمند Senus رو واقعا میشه یک دستگاه تمام IOT به حساب آورد. با بکارگیری هوشمندانه سنسورهای حساس و به پشتیبانی از یک مغز دیجیتالی، میتونه در لحظه اطلاعات مورد نیاز رو دریافت، پردازش و سپس اون رو به اشتراک بگذاره. این گیتار ۱۰۰٪ اینترنت بیس هست، Sensus میتونه ملودی های ضبط شده رو پخش یا از پلتفرم مورد نظر شما استریم کنه، و صدالبته آثار شمارو با کیفیت HD روی شبکه های اجتماعی منتشر کنه. شما میتونید با استفاده از Spotify موزیک مورد نظرتون رو استریم کنید، شگفت انگیزه اگه بدونید که شما حتی میتونید با دوستی که خیلی خیلی خیلی از شما دوره، با استفاده از اینترنت بهم متصل بشید و باهم همنوازی کنید، و از اون جالبتر، بعد از اینکه موزیکتون رو نواختید، اون رو روی شبکه های اجتماعی مثل فیسبوک و ساندکلاود به اشتراک بزارید.&lt;/p&gt;
-
-&lt;p&gt;همه چیز مهییجتر میشه وقتی بفهمید که اون میتونه با بقیه ابزارهایی که مجهز به سرویس IOT باشه ارتباط برقرار کنه، اونوقته که باید نشست و شنید و دید که این ابزارها چه کارهایی که به کمک هم نمیکنن! برای همینه که میگم این گیتار یک انقلاب در صنعت موسیقیه.&lt;/p&gt;
-
-&lt;p&gt;میشل، با کمک یک تیم روییای از محقیقین و هنرمندان کاربلد تونست به این هدف خودش جامه عمل بپوشونه. نسخه هایی مدرن از صنعتگرانی مانند استاد Stradivari و پدر گیتار الکتریک (آنطور که ما میشناسیمش) آقای &lt;a href=&quot;https://en.wikipedia.org/wiki/Leo_Fender&quot;&gt;Leo Fender&lt;/a&gt;. در میان این تیم میتوانیم از پروفسور Carlo Fischione که یکی از محقیقن برجسته جهان در فن آوری IOT نام ببریم، فردی که کسوت استادی در هردو دانشگاه MIT و Harvard رو تجربه کرده، که ایشان مغز متفکر و طراح سرویس های اینترنت بیس در این گیتار بودند. همچنین دکتر Luca Truchet، مدیر بخش موسیقی در این تیم و متخصص تعامل موسیقی الکترونیک و انسان-کامپیوتری (روجوع شود به &lt;a href=&quot;https://en.wikipedia.org/wiki/Human_computer&quot;&gt;این مقاله&lt;/a&gt;). و در نهایت دکتر Stefano Zambon، متخصص طراحی صدا با استفاده از ابزارهای موسیقی دیجیتال هستند. برای آشنایی با دیگر اعضای به این &lt;a href=&quot;http://www.mindmusiclabs.com/team/&quot;&gt;لینک&lt;/a&gt; مراجعه کنید.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-12-30/3-sensus.jpg&quot; alt=&quot;Electronic Guitar Timeline&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-12-30/4-sensus.jpg&quot; alt=&quot;Electronic Guitar Timeline&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;شاید براتون این سوال پیش اومده خب! من عاشق این گیتار شدم! قیمتش چقدره و از کجا میتونم بخرمش؟ متاسفانه هنوز از قیمت دقیق و حتی تقریبی و زمان انتشار این محصول به بازار اطلاعی در دسترسی نیست. من ایمیل به تیم MIND ارسال کردم و در این باره ازشون پرسیدم. اما تا زمان نگارش این مطلب، هنوز پاسخی داده نشده. درصورتی که اطلاعای ازین بابت بدستم برسه حتما این پست رو آپدیت خواهم کرد.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-12-30/5-sensus.jpg&quot; alt=&quot;Electronic Guitar Timeline&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;مقاله های زیر رو هم جالب دیدم، اگه دوس داشتین میتونید مطالعه کنید:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://umgasmagazine.com/swedish-made-sensus-making-guitars-smart/&quot;&gt;Swedish-made SENSUS: making guitars ‘smart’&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.gitarist.nl/nieuws/artikel/3-17646/sensus-smartguitar&quot;&gt;Sensus Smartguitar’s werelds eerste smartguitar door Mind Music Labs&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://www.guitarworld.com/gear-news-electrics/meet-sensus-worlds-first-real-smart-guitar/29086&quot;&gt;Meet Sensus, “The World’s First Real Smart Guitar”&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://blog.thethings.io/how-iot-will-change-music/&quot;&gt;How IOT will Changes Music&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>صدرا املشی</name></author><category term="راک" /><category term="اینترنت اشیاء" /><category term="گیتار" /><category term="گیتار الکتریک" /><category term="ابزار" /><summary type="html">یخچال هوشمند، فِر هوشمند، لامپ هوشمند، حتی قفل هوشمند و.. و… و..، مطمئنا اینا واژه هایی هستن که تو یک یا نهایت دو سال اخیر بارها شنیده ایم و البته در سالهای آینده بیشتر خواهیم شنید. همه دستگاه هایی که نام بردم یا چیزهای دیگه‌ای که خودتون شنیدید در دسته ای به نام اینترنت اشیا یا بطور مخفف IOT قرار میگیرند( البته خیلی ها از دوستان لطف دارن و میگن اینترنت اشیا نه! اینترنت چیزها! بعضی از دوستان هم که خسته ان میگن چیزنت! ) اما واقعا اینترنت اشیا چیه و چه تعریفی داره. بهتره برای روشن شدن ماجرا از ویکی‌پدیا کمک بگیرییم:</summary></entry></feed>
+&lt;/div&gt;</content><author><name>صدرا املشی</name></author><category term="مقاله" /><category term="اسکرام" /><category term="اجایل" /><category term="مدیریت پروژه نرم‌افزاری" /><summary type="html">در این پست قصد دارم درباره Pair Programming يا برنامه نویسی ۲نفره (جفتی) صحبت کنم. اگر میدونید برنامه نویسی ۲نفره چیه لازم نیست پارگراف بعدی رو بخونید:</summary></entry></feed>

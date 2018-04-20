@@ -49,8 +49,12 @@
 <lastmod>2017-11-27T00:00:00+03:30</lastmod>
 </url>
 <url>
-<loc>//isapanah.com/2017/accessing-nested-objects-on-javascript</loc>
-<lastmod>2017-11-27T00:00:00+03:30</lastmod>
+<loc>//isapanah.com/2018/accessing-nested-objects-on-javascript</loc>
+<lastmod>2018-04-13T00:00:00+04:30</lastmod>
+</url>
+<url>
+<loc>//isapanah.com/2018/the-power-of-console-in-development</loc>
+<lastmod>2018-04-20T00:00:00+04:30</lastmod>
 </url>
 <url>
 <loc>//isapanah.com/video/screencast/first-screen/</loc>
@@ -151,6 +155,9 @@
 </url>
 <url>
 <loc>//isapanah.com/tag/es6/</loc>
+</url>
+<url>
+<loc>//isapanah.com/tag/console/</loc>
 </url>
 <url>
 <loc>//isapanah.com/category/%D9%85%D9%88%D8%B3%DB%8C%D9%82%DB%8C/</loc>

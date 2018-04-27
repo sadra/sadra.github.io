@@ -27,6 +27,7 @@ author: Sadra
 بیشتر از ۱۵ دقیقه از پیام من نگذشته بود که برام این پاسخ رو فرستادن:
 
 {% ltr %}
+>
 > Hi Sadra,
 >
 > You are in luck — we have classified the sadra account as inactive and released the username for you to claim, as per our Name Squatting Policy:

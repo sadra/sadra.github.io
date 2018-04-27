@@ -26,6 +26,7 @@ author: Sadra
 
 بیشتر از ۱۵ دقیقه از پیام من نگذشته بود که برام این پاسخ رو فرستادن:
 
+{% ltr %}
 > Hi Sadra,
 >
 > You are in luck — we have classified the sadra account as inactive and released the username for you to claim, as per our Name Squatting Policy:
@@ -37,6 +38,7 @@ author: Sadra
 > Thanks,
 >
 > Jacqui
+{% endltr %}
 
 بله، اون حساب کاربری رو آزاد کرده بودن و منم سریع رفتم و بر اساس راهنمای [Change your GitHub Username](https://help.github.com/articles/changing-your-github-username/) ، حساب کاربریم رو به یوزر Sadra تغییر دادم.
 

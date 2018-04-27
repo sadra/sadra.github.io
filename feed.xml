@@ -1,5 +1,267 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="//isapanah.com/feed.xml" rel="self" type="application/atom+xml" /><link href="//isapanah.com/" rel="alternate" type="text/html" /><updated>2018-04-20T19:22:58+04:30</updated><id>//isapanah.com/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده اپلیکیشن iOS و Android.
-</subtitle><entry><title type="html">قدرت پنهان console در توسعه جاوا اسکریپت</title><link href="//isapanah.com/2018/the-power-of-console-in-development" rel="alternate" type="text/html" title="قدرت پنهان console در توسعه جاوا اسکریپت" /><published>2018-04-20T00:00:00+04:30</published><updated>2018-04-20T00:00:00+04:30</updated><id>//isapanah.com/2018/the-power-of-console-in-development</id><content type="html" xml:base="//isapanah.com/2018/the-power-of-console-in-development">&lt;p&gt;وقتی شروع به توسعه در یک تکنولوژی یا زبان خاص می‌کنید، در اغلب موارد غرق در ابزارهای مختلفی میشیم که اون بیرون بهمون پیشنهاد میشه یا باهاش مواجه میشیم(البته ابزارهایی که برای برای راحتی و سرعت بخشیدن به توسعه در همون اسکوپ ایجاد شدن). حتی درگیر جنگ با خودم و اون ابزارها میشم تا پیدا کنم کدومشون واقعا به درد کارم میخوره. در نهایت وقتی کارم تموم میشه، میفهمم کلی ابزار مختلف رو تست کردم، که هیچکدوم یا توی پروژه استفاده نشده، یا استفاده درست و کاملی ازشون نکردم، در عوضش پروژه رو هم نتونستم به TimeBox برسونم!&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="//isapanah.com/feed.xml" rel="self" type="application/atom+xml" /><link href="//isapanah.com/" rel="alternate" type="text/html" /><updated>2018-04-27T18:02:54+04:30</updated><id>//isapanah.com/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده اپلیکیشن iOS و Android.
+</subtitle><entry><title type="html">کمربندهای خود را محکم ببندید، این یک پرواز آزمایشی است!</title><link href="//isapanah.com/2018/testflight-beta-testing" rel="alternate" type="text/html" title="کمربندهای خود را محکم ببندید، این یک پرواز آزمایشی است!" /><published>2018-04-26T00:00:00+04:30</published><updated>2018-04-26T00:00:00+04:30</updated><id>//isapanah.com/2018/testflight-beta-testing</id><content type="html" xml:base="//isapanah.com/2018/testflight-beta-testing">&lt;p&gt;نسخه جدید اپ iOS فایبرنت که تموم شد، برای تست گرفتن رو چندتا دیوایس مختلف و بچه‌هایی که داخل تیم یا دوستایی که بیرون تیم بودن باید یه راه خوب پیدا می‌کردم.&lt;/p&gt;
+
+&lt;p&gt;وقتی که روی اندروید کار می‌کنید، راه حل مختلفی وجود داره! راحت‌ترین راهش اینه که یه بیلد APK بگیری، بفرستیش واسه کسایی که میخوای، اونا هم اگه باگی پیدا کنن و یا بخوان نتیجه تست رو بهتون میگن به راحتی به اطلاعاتون میرسونن. البته میتونین از ابزارهای دیگه‌هم استفاده کنین، ‌مثل سرویس تست Firebase یا شرکتای دیگه که ازین خدمات میدن.&lt;/p&gt;
+
+&lt;p&gt;اما وقتی روی iOS کار میکنی، ‌معمولا یه انتخاب بیشتر نداری؛ اونم سرویسیه که خود iTunes بهت میده و اسمشم هست &lt;a href=&quot;https://developer.apple.com/testflight/&quot;&gt;TestFlight&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;در این پست میخوام درمورد  آماده کردن اپ و انجام فرآیند تست‌فلایت صحبت کنم. پس کمربندهاتون رو برای یه پرواز لذت‌بخش ببنیدن.&lt;/p&gt;
+
+&lt;h2 id=&quot;فهرست&quot;&gt;فهرست&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#what-is-testflight&quot;&gt;ابزار TestFlight چیست؟&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#before-start&quot;&gt;توجه پیش از شروع&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#preparing-for-testflight&quot;&gt;آماده سازی اپ برای TestFlight&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#creating-internal-users&quot;&gt;تعریف کاربران تست داخلی&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#creating-test-case&quot;&gt;ایجاد یک Test Case&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#internal-users&quot;&gt;کاربران Internal&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#external-users&quot;&gt;کاربران External&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#test-information&quot;&gt;اطلاعات تست&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#user-beta-testing&quot;&gt;تست Beta توسط کاربر&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#cancel-test&quot;&gt;لغو نسخه تست&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#conclusion&quot;&gt;جمع‌بندی&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;what-is-testflight&quot;&gt;ابزار TestFlight چیست؟&lt;/h2&gt;
+
+&lt;p&gt;تست‌فلایت یا TestFlight ابزاریه که توسط Apple توسعه داده شده، تا شما بتونید نسخه تستی اپلیکیشنتون رو در اختیار کاربرانتون یا همون beta userها قرار بدین. توجه داشته باشین که این سرویس کاملا با انتشار اپ روی اپستور فرق میکنه و جداست. شما فقط یه نسخه رو برای یکسری از کاربران مشخصی که میشناسید منتشر می‌کنید تا براتون تست بگیرن، و درواقع بصورت پابلیک یا عمومی در دسترس کسی قرار نمیگیره.&lt;/p&gt;
+
+&lt;p&gt;وقتی که شما یه نسخه تستی از اپتون رو روی تست‌فلایت میفرستین، و اونها ۹۰ روز (قبلا ۶۰ روز بوده) فرصت دارن تا اپ شمارو تست کرده و بهتون فیدبک بدن.&lt;/p&gt;
+
+&lt;p&gt;کمتر حرف بزنیم و وارد بخش عملی بشیم.&lt;/p&gt;
+
+&lt;h2 id=&quot;before-start&quot;&gt;توجه پیش از شروع&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;برای استفاده از این سرویس نیازه که حتما اکانت توسعه‌دهنده &lt;strong&gt;Individual&lt;/strong&gt; یا &lt;strong&gt;Enterprise&lt;/strong&gt; داشته باشین.&lt;/li&gt;
+  &lt;li&gt;اگر از xcode غیر 9.3 استفاده می‌کنید، ممکنه برخی منوهایی که در این پست میبینید با چیزی که شما دارین فرق کنه. نگران نباشید، فرآیند کلی همیشه همینه.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-cover-1.jpg&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;preparing-for-testflight&quot;&gt;آماده سازی اپ برای TestFlight&lt;/h2&gt;
+
+&lt;p&gt;قبل از اینکه هرکاری بکنیم، لازمه که دو مشخصه Version و Build اپمون رو ست کنیم. از Navigator اپ رو انتخاب کرده و از لیست Targest اپ رو انتخاب کنید. در بخش Identity مشخصات اپ رو باید وارد کنیم. متاسفانه اپل اجازه نمیده که برای version هیچ نامی از نوع String بنویسیم بلکه فقط باید از متد &lt;strong&gt;Semantic Versioning&lt;/strong&gt; پیروی کنیم. برای مثال نمیتونیم بنوسیم &lt;code class=&quot;highlighter-rouge&quot;&gt;2.0 beta&lt;/code&gt; بلکه باید بنویسیم &lt;code class=&quot;highlighter-rouge&quot;&gt;2.0.0&lt;/code&gt; یا هر ورژن دیگه‌ای که مد نظرتون هست. اگه راجع به نوع شماره گذاری ورژن اطلاع ندارید بهتره &lt;a href=&quot;https://semver.org/lang/fa/&quot;&gt;داکیونت خود سیمنتک&lt;/a&gt; رو بخونید. نسخه build هم که احتمالا می‌دونید، به ازای هربار بیلد و انتشار باید اون رو increment کرده یا همون افزایش بدید.&lt;/p&gt;
+
+&lt;p&gt;در نهایت من برای اینکه نسخه بتا رو مشخص کنم در Display Name عبارت &lt;code class=&quot;highlighter-rouge&quot;&gt;beta&lt;/code&gt; رو استفاده کردم. (هواستون باشه بعدا برای ریلیز اصلی beta رو بردارید)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-0.jpg&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;از منوی نوار ابزا توسعه، دیوایسی که میخوام اپ رو منتشر کنیم رو میگذاریم روی &lt;code class=&quot;highlighter-rouge&quot;&gt;Generic iOS Device&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-1.jpg&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;بعد هم از نوار ابزار اصلی، منو Product گزینه Archive رو انتخاب کرده و صبر می‌کنیم تا اپمون رو پکیج کنه.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-2.jpg&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;بعد از بیلد پنجره Orginizer باز میشه خودش. در صفحه اپمون که بیلد شده رو میبینید. نسخه‌ای که تمایل به بیلد دارید رو انتخاب کرده و بعد باید روی دکمه &lt;code class=&quot;highlighter-rouge&quot;&gt;Upload to App Store&lt;/code&gt; کلیک کنید. (البته میتونید از نوار ابزار اصلی، منوی Window به پنجره Organizer دسترسی پیدا کنید)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-3.jpg&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;بعدش هم دونه دونه پنجره‌هایی که باز میشه رو اکسپت کنید تا بره واسه ارسال به اپستور.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-4.jpg&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-5.jpg&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-6.jpg&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-7.jpg&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;و درنهایت که اپتون با موفقیت ارسال شد این پیغام رو می‌بینید.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-8.jpg&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;در مرحله بعد باید بریم سراغ آماده سازی خود &lt;a href=&quot;https://itunesconnect.apple.com&quot;&gt;iTunesConnect&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;creating-internal-users&quot;&gt;تعریف کاربران تست داخلی&lt;/h2&gt;
+
+&lt;p&gt;در تست فلایت دو نوع کاربر تست داریم، Internal Tester (که در نسخه جدید itunes تبدیل شده به &lt;code class=&quot;highlighter-rouge&quot;&gt;iTunes Users&lt;/code&gt;) و &lt;code class=&quot;highlighter-rouge&quot;&gt;External Users&lt;/code&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;iTunes users&lt;/strong&gt;: کاربرانی هستن،‌ که معمولا در تیم شما قرار دارند یا افرادی هستن که متقابلا همدیگه رو میشناسین و بهم اعتماد دارین. شما می‌تونید حداکثر تا ۲۵ نفر رو برای تست بتا انتخاب کنید. این افراد بدون هیچ معطلی و Review، میتونن اپتون و دریافتو تست کرده و درنهایت feedback بدن.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;External Users&lt;/strong&gt;: کسایی هستن که در تیم شما وجود ندارن، بلکه یکسری از کاربرانتون هستن که اعلام آمادگی کردن که تمایل دارن در تستهاتون شرکت کنن و البته الزاما در داخل تیم توسعه شما نیستن. شما در هربار تست می‌تونید تا ۱۰هزار کاربر انتخاب کنید (قبلا ۶۰۰۰ بود). اپ قبل از اینکه بدست این کاربران برسه باید توسط اپل Review و تست بشه تا مشکل امنیتی نداشته باشه، و بعد از اون در اختیار کاربران شما قرار میگیره. فرآیندی مثل انتشار اپ روی اپستور داره.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;برای تعریف کاربران تست داخلی یا Internal اول وارد پنل &lt;a href=&quot;https://itunesconnect.apple.com&quot;&gt;itunesconnect.apple.com&lt;/a&gt; بشید و سپس از منوها به گزینه Users Role بروید.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-9.jpg&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;در این صفحه لازمه که شما افرادی که میخواهید در تست‌های Internal شرکت میکنند رو ثبت کنید. روی علامت &lt;code class=&quot;highlighter-rouge&quot;&gt;+&lt;/code&gt; کلید کنید.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-10.png&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;در صفحه افزودن کاربر جدید مشخصات کاربر به همراه Apple IDشون رو ثبت کنید.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-11.jpg&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;در صفحه بعد باید &lt;code class=&quot;highlighter-rouge&quot;&gt;Role&lt;/code&gt; یا نقش این کابر جدید رو تعریف کنید. حداقل Roleی که میتونه در تست مشارکت داشته باشه &lt;strong&gt;Marketer&lt;/strong&gt; هست.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-12.jpg&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;یادتون نره که حتما کاربر رو به اپ مورد نظرتون assign کنید، البته اگه چندتا اپ دارین و فرقی براتون نمیکنه و تمایل دارین به همشون دسترسی مشابه رو داشته باشه، بزارید همون گزینه All Apps بمونه.
+&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-12-1.jpg&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;و بعدش میزان دسترسی که مد نظرتون هست رو در براش ست کنید. (البته اگه گزینه Marketer رو انتخاب کرده‌بودید)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-13.jpg&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;توانایی‌های هرکدوم از نقش‌هارو می‌تونید در جدول زیر ببینید:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-14.jpg&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;خب کاربر به لیست اضافه شد. بعد از اضافه شدن، کاربر مورد نظر باید ایمیلی که براش اومده رو تایید کنه تا به عنوان کاربر Role مورد نظر، ثبت نهایی شه. شما از همین صفحه میتونید Role و برخی مشخصات کاربر رو ویرایش کنید.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-14-1.jpg&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;creating-test-case&quot;&gt;ایجاد یک Test Case&lt;/h2&gt;
+
+&lt;p&gt;بعد از اینکه کاربر بطور کامل تایید و فعال شد، از پنل &lt;strong&gt;itunesconnect&lt;/strong&gt; به بخش &lt;strong&gt;MyApps&lt;/strong&gt; رفته و &lt;strong&gt;اپ خودتون&lt;/strong&gt; رو انتخاب کنید. در این صفحه وارد تب Activty بشین و مطمئین بشید که اپتون در حالت &lt;code class=&quot;highlighter-rouge&quot;&gt;Process&lt;/code&gt; نباشه و فرآیند بررسی و پردازش اولیه‌ش تموم شده باشه.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-15.jpg&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;سپس وارد بخش TestFlight میشیم. از دسته Builds روی &lt;strong&gt;iOS&lt;/strong&gt; کلیک میکنیم تا لیست اپ‌های قابل تست رو بیاره. همونطور که میبینید اپ‌ی رو که اضافه کردیم کنارش یه Warning داده و گفته &lt;strong&gt;Missing Compliance&lt;/strong&gt;. روش کلیک میکنیم تا مواردی که ازمون میخواد رو تایید کنیم. این اطلاعات مربوط به این میشه که آیا اپلیکیشن شما Encryption و امنیت اطلاعات کاربر رو رعایت کرده؟ و آیا با قوانین ایالات متحده منافاتی نداره؟ و چیزای مثل این، که روی همه‌ي nextها میزنیم بره پی کارش.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-16.jpg&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-17.jpg&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-18.jpg&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-19.jpg&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;خب حالا اپمون آماده‌ست برای انتشار به افرادی که در گروه‌های تست ما قرار دارند.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-20.jpg&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;internal-users&quot;&gt;کاربران Internal&lt;/h3&gt;
+
+&lt;p&gt;برای اینکه افرادی که در اینترنال قرار دارند رو مشخص کنید، از دسته Tester &amp;amp; Groups گزینه &lt;strong&gt;iTunes Connect Users&lt;/strong&gt; رو انتخاب می‌کنیم. با کلیک روی علات &lt;code class=&quot;highlighter-rouge&quot;&gt;+&lt;/code&gt; می‌تونید افرادی رو که میخواید اپ بتا برای تست رو دریافت کنند انتخاب کنید. این افراد همونهای هستند که در بخش User Roles قبلا تعریف و فعالشون کردیم.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-21.jpg&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;external-users&quot;&gt;کاربران External&lt;/h3&gt;
+
+&lt;p&gt;مثل سری قبل، از دسته Tester &amp;amp; Groups گزینه &lt;strong&gt;Add External Tester&lt;/strong&gt; رو انتخاب می‌کنیم، در پنجره‌ای که باز میشه، بهمون میگه که واسه گروهی که قراره اپ رو تست کنن یه اسم بنویسیم.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-22.jpg&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;حالا باید تستر جدید اضافه کنیم، کافیه در گروه جدیدمون روی &lt;code class=&quot;highlighter-rouge&quot;&gt;Add Tester&lt;/code&gt; کلیک کنیم. در صفحه جدید بهمون این امکان رو میده که به ۳ روش کاربر تست اضافه کنیم.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;New Tester :&lt;/strong&gt; که مثل حالت تعریف کردن internal tester هست.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Existing Tester :&lt;/strong&gt; میتونیم از بین کاربرای اینترنال به این گروه کاربر اضافه کنیم. فکر کنین تو شرکتتون ۵۰تا کارمند دارین، فقط ۲۰ نفرشون میتونن تو اینترنال شرکت کنن، الباقی رو باید به همین روش به عنوان کاربر اکسترنال اضافه کنید. (توجه کنید که کاربری که در حالت Internal انتخاب کردید، نمیتونه در گروه External هم حضور داشته باشه.)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;CVS List :&lt;/strong&gt; و گزینه سوم که بهمون این امکان رو میده تا از طریق یا فایل CSV کاربرانمون رو ایمپورت کنین. فرض کنین یه فرم گذاشتین تو سایتتون تا کاربرای که تمایل دارن تو تست شرکت کنند رو بیارون تو تست فلایت، مثلا ۵هزار کاربر ثبتنام کردن، بجای اینکه دستی دونه دونه اضافه کنید، با این روش تا ۱۰ هزار کاربر رو میتونید اضافه کنید.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-23.jpg&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;اگه خواستید با CSV کاربر اضافه کنید، &lt;a href=&quot;https://itunesconnect.apple.com/itc/docs/tester_import.csv&quot;&gt;ازین قالب CSV&lt;/a&gt; استفاده کنید تا فرمت فایلتون صحیح باشه.&lt;/p&gt;
+
+&lt;p&gt;بعد از کلیک روی &lt;strong&gt;Add New Tester&lt;/strong&gt; به صفحه‌ای رسیدم که بصورت دستی کاربران تست External رو باید وارد کنیم. برای مثال باز مشخصات خودم رو مینویسم:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-24.jpg&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;و میبینید که من به لیست External اضافه شدم.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-25.jpg&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;وارد تب Build شده و روی تب &lt;code class=&quot;highlighter-rouge&quot;&gt;+&lt;/code&gt; کلیک می‌کنیم. در پنجره‌ای که باز میشه، اون بیلد از اپمون رو که دوست داریم ازش تست اکسترنال بگیریم انتخاب می‌کنیم.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-26.jpg&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;اگر اپ احتیاج به Sign in داشته باشه، مشخصات یه اکانت تست رو توش می‌نویسیم تا کابرا در sign-in مشکل نداشته باشن.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-27.jpg&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;و همونطور هم که از اسکرین‌شات پایین برمیاد، یه توضیح باید واسه رویوو کننده و البته کاربر تست بنویسیم (اگه احتیاج به توضیحی بود البته).&lt;/p&gt;
+
+&lt;p&gt;تیک &lt;code class=&quot;highlighter-rouge&quot;&gt;Automatically notify testers&lt;/code&gt; رو هم بزارین باشه تا بعد از اینکه اپ آماده تست شد خود اپل به اونا خبر بده که برن برای تست. (معمولا بصورت ایمیلی یا نوتیفیکیشن بهشون خبر میده)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-28.jpg&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;و در نهایت اپتون میره برای Reviewو در صورتی که (انشاالله) بدون مشکل تایید بشه، میرسه دست کاربرانتون برای تست. تقریبا بین ۱۲ تا ۲۴ ساعت (اگر مشکلی نباشه) اپتون برای تست بتا تایید شده و در اختیار کاربرا قرار میگیره.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-29.jpg&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-anim-1.gif&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;به محض انتشار اپ برای تست، براشون ایمیل و نوتیفیکیشن میره (اگه اون تیک Automatically که گفتم رو زده باشین). کاربرا ۶۰ روز فرصت دارن تا کار تست رو انجام داده و در صورت لزوم feedback بدن.&lt;/p&gt;
+
+&lt;blockquote&gt;
+
+  &lt;p&gt;هنگامی که داشتم این پست رو مینوشتم همزمان هم نسخه تست رو فرستادم بالا، در کمتر از ۶ ساعت تایید شد و در اختیار لیست کاربرای External قرار گرفت.&lt;/p&gt;
+
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-anim-2.gif&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-29-1.jpg&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;test-information&quot;&gt;اطلاعات تست&lt;/h3&gt;
+
+&lt;p&gt;اگر در حین تعریف تست (احتمالا اولین‌باری که دارید روند تست رو انجام می‌دید) به خطای نبود اطلاعات تست برخوردید، باید از بخش App Information گزینه &lt;strong&gt;Test Information&lt;/strong&gt; رو انتخاب کنید و مشخصات خودتون رو وارد کنید. اطلاعاتی مثل ایمیل (برای دریافت feedback)، آدرس وبسایتتون، آدرس قوانین و حریم شخصی در وبسایتتون، مشخصات تماس شما از قبیل نام و شماره تلفن، مجددا همون اکانت تست و توضیحاتی که لازمه.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-30.jpg&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;user-beta-testing&quot;&gt;تست Beta توسط کاربر&lt;/h2&gt;
+
+&lt;p&gt;اول از همه نیازه تا کاربر اپلیکیشن &lt;a href=&quot;https://itunes.apple.com/us/app/testflight/id899247664?mt=8&quot;&gt;TestFlight&lt;/a&gt; رو از &lt;a href=&quot;https://itunes.apple.com/us/app/testflight/id899247664?mt=8&quot;&gt;اپستور&lt;/a&gt; دریافت و روی دیوایس خودش نصب کنه. کاربر تمامی آپدیت‌ها و نوتفیکیشن‌ها برای تست رو از طریق این اپلیکیشن دریافت میکنه.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-31.jpg&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;اگر احتیاج به لاگین داشت که باید با همون اپل‌ایدی که بعنوان کاربر تست معرفی شده لاگین کنید. ایمیل جهت تایید دریافت نسخه تست به دست شما (کاربر) میرسه به ایمیل رفته و روی دکمه &lt;code class=&quot;highlighter-rouge&quot;&gt;view in TestFlight&lt;/code&gt; کلیک کنید.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-32.jpg&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;اگر اپ تست‌فلایت روی آیفون نصب بوده، و اکانت اپل IDتون هم بدون مشکل لاگین باشه، این صفحه در اپلیکیشن TestFlight براتون ظاهر میشه که باید &lt;strong&gt;Accept&lt;/strong&gt; کرده و سپس اپ رو نصب کنید.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-33.jpg&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;در بعضی موارد بعد از کلیک روی اون دکمه آبی &lt;strong&gt;view in TestFlight&lt;/strong&gt;، به سمت سایت اپل هدایت می‌شید، ازتون درخواست میکنه که لاگین کنید، قوانینش رو تایید کنید و بعد از تایید شمارو میفرسته به یه صفحه که یه &lt;strong&gt;کد (معمولا) ۸ حرفی&lt;/strong&gt; داره، اون رو کپی کنید.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-33-1.jpg&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;اگر اپ تست‌فلایت روی آیفون نصب بوده، و اکانت اپل IDتون هم بدون مشکل لاگین باشه، این صفحه در اپلیکیشن TestFlight براتون ظاهر میشه که باید &lt;strong&gt;Accept&lt;/strong&gt; کرده و سپس اپ رو نصب کنید.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-33-2.jpg&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;بعد از تایید و نصب، نسخه تست با نقطه &lt;strong&gt;قرمز&lt;/strong&gt;ی که کنارش مشخص شده، روی صفحه اپهاتون ظاهر میشه. اگه قبلا یه نسخه نصب کرده باشید و نسخه جدید روی اون نصب کنید، نقطه &lt;strong&gt;آبی&lt;/strong&gt; کنارش ظاهر میشه.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-34.jpg&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;در صورتی که در اپلیکیشن باگ یا مشکلی پیدا کردین، یا که پیشنهادی داشتین، از همون اپ TestFlight می‌تونید به توسعه دهنده &lt;code class=&quot;highlighter-rouge&quot;&gt;FeedBack&lt;/code&gt; رو ارسال کنید.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-35.jpg&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;باقی چیزهایی هم که در &lt;strong&gt;Test Information&lt;/strong&gt; ثبت کرده بودیم از داخل همین صفحه در اختیار کاربر تست هست و میتونه اونهارو مشاهده کنه.&lt;/p&gt;
+
+&lt;h2 id=&quot;cancel-test&quot;&gt;لغو نسخه تست&lt;/h2&gt;
+
+&lt;p&gt;درصورتی که بعد یه مدت زمان مشخص، مثلا چند هفته یا یکی دو ماه تشخیص دادین که دیگه کافیه و نیازی به ادامه تست نیست، و یا موردی در اپ وجود داشت که نیاز بود هرچه سریعتر نسخه تست رو از دست همه کاربران تستتون خارج کنید. فقط کافیه وارد بخش TestFlight شده. به دسته Builds و بخش iOS رفته، نسخه مورد نظرتون رو انتخاب کنید. در نهایت روی دکمه &lt;code class=&quot;highlighter-rouge&quot;&gt;Expire Build&lt;/code&gt; کلیک کرده و تاییدش کنید.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-36.jpg&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;اینجوری اپتون از دسترس آپدیت خارج میشه و دیگه نمیتونن بهش دسترسی داشته باشه.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;جمع‌بندی&lt;/h2&gt;
+
+&lt;p&gt;میدونم خیلی طولانی و گیج کننده بود، ‌ولی یکبار که فرآیندش رو طی کنید، همه‌چیز براتون روال میشه. این بهترین، سریعترین، امن‌ترین و تمیزترین کاریه که شما می‌تونید برای تست بتا انجام بدین.&lt;/p&gt;
+
+&lt;p&gt;اگه تمایل داشتین راجع به تست فلایت بیشتر بدونید، بهترین منبع داکیومنت خودشه که می‌تونید از صفحه &lt;a href=&quot;https://developer.apple.com/library/ios/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/Chapters/BetaTestingTheApp.html&quot;&gt;TestFlight Beta Testing Documentation&lt;/a&gt; اون رو مطالعه کنید. صفحه اپل هم خودش بطور خلاصه راجع به این سرویس در &lt;a href=&quot;https://developer.apple.com/testflight/&quot;&gt;این صفحه&lt;/a&gt; صحبت کرده، و هرچی منبع و مقاله و ویدئو راجع به تست‌فلایت هست رو آورده، مثل ویدئوِ &lt;a href=&quot;https://itunespartner.apple.com/en/apps/videos#testflight-beta-testing&quot;&gt;TestFlight Traning Process&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;این پست حاصل تجربه شخصی من از تست فلایت و خوندن و دیدن چند مقاله و ویدئو بوده. امیدوارم تو این پست کامل و جامع راجع به سرویس TestFlight صحبت کرده و تمام گوشه‌های تاریکش رو براتون روشن کرده باشم.&lt;/p&gt;
+
+&lt;p&gt;تمامی فرآیند انتشار و آزمون تست رو در روند توسعه اپلیکیشن &lt;a href=&quot;https://fibernet.ir&quot;&gt;فایبرنت&lt;/a&gt; انجام دادیم. از تیم خوبم برای پشتیبانی و تست تمامی مراحل و نسخه‌های بتا تشکر میکنم. مرسی از &lt;a href=&quot;https://twitter.com/mahsa4733&quot;&gt;مهسا&lt;/a&gt; بخاطر تستهای دقیقش، از &lt;a href=&quot;moshtaghi.ir&quot;&gt;مهدی&lt;/a&gt; بابت همراهی و راهنماییهاش و همچنین &lt;a href=&quot;https://twitter.com/fsalehpour&quot;&gt;فرامرز&lt;/a&gt; (برای توسعه بک‌اند) و &lt;a href=&quot;https://twitter.com/xdshayan&quot;&gt;شایان&lt;/a&gt; (برای طراحی UI).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2018-04-27/testflight-anim-3.gif&quot; alt=&quot;TestFlight Beta Testing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;اگه سوال یا موردی بود، مثل همیشه در &lt;a href=&quot;https://twitter.com/sadra_amlashi&quot;&gt;توییتر&lt;/a&gt; یا در &lt;a href=&quot;https://t.me/amlashi&quot;&gt;تلگرام&lt;/a&gt; میتونیم باهم در ارتباط باشیم. 😉🍷&lt;/p&gt;</content><author><name>صدرا املشی</name></author><category term="Test" /><category term="TestFlight" /><summary type="html">نسخه جدید اپ iOS فایبرنت که تموم شد، برای تست گرفتن رو چندتا دیوایس مختلف و بچه‌هایی که داخل تیم یا دوستایی که بیرون تیم بودن باید یه راه خوب پیدا می‌کردم.</summary></entry><entry><title type="html">قدرت پنهان console در توسعه جاوا اسکریپت</title><link href="//isapanah.com/2018/the-power-of-console-in-development" rel="alternate" type="text/html" title="قدرت پنهان console در توسعه جاوا اسکریپت" /><published>2018-04-20T00:00:00+04:30</published><updated>2018-04-20T00:00:00+04:30</updated><id>//isapanah.com/2018/the-power-of-console-in-development</id><content type="html" xml:base="//isapanah.com/2018/the-power-of-console-in-development">&lt;p&gt;وقتی شروع به توسعه در یک تکنولوژی یا زبان خاص می‌کنید، در اغلب موارد غرق در ابزارهای مختلفی میشیم که اون بیرون بهمون پیشنهاد میشه یا باهاش مواجه میشیم(البته ابزارهایی که برای برای راحتی و سرعت بخشیدن به توسعه در همون اسکوپ ایجاد شدن). حتی درگیر جنگ با خودم و اون ابزارها میشم تا پیدا کنم کدومشون واقعا به درد کارم میخوره. در نهایت وقتی کارم تموم میشه، میفهمم کلی ابزار مختلف رو تست کردم، که هیچکدوم یا توی پروژه استفاده نشده، یا استفاده درست و کاملی ازشون نکردم، در عوضش پروژه رو هم نتونستم به TimeBox برسونم!&lt;/p&gt;
 
 &lt;p&gt;در طی این چندسالی که عمیقا به برنامه نویسی علاقه‌مند شدم، با ابزارهای مختلفی روبرو شدم که برای مدتها اونهارو نادیده میگرفتم؛ ابزارهایی ضروری، ساده و قدرمند که در داخل همون تکنولوژی‌ها ایمپلمنت و اِمبِد شده بود.&lt;/p&gt;
 
@@ -2703,180 +2965,4 @@
 
 &lt;p&gt;بله، اون حساب کاربری رو آزاد کرده بودن و منم سریع رفتم و بر اساس راهنمای &lt;a href=&quot;https://help.github.com/articles/changing-your-github-username/&quot;&gt;Change your GitHub Username&lt;/a&gt; ، حساب کاربریم رو به یوزر Sadra تغییر دادم.&lt;/p&gt;
 
-&lt;p&gt;حرف آخر، مطابق راهنمای&lt;a href=&quot;What happens when I change my username&quot;&gt; What happens when I change my username &lt;/a&gt;توجه کنید که اگر نام کاربریتون رو تغییر بدین، پروژه‌های که تعریف کرده بودین به آدرس جدید ریدایرکت نمیشن. پس یادتون باشه بعد تغییر نام‌کاربری، حتما لینکهایی که قبلا به پروژتون داده بودید (مثل وبلاگ یا اگر لایبرری ریلیز شده) رو هم اصلاح کنید.&lt;/p&gt;</content><author><name>صدرا املشی</name></author><category term="Github" /><category term="گیتهاب" /><summary type="html">شاید براتون پیش اومده باشه که توی گیتهاب میخواستین یک نام کاربری ثبت کنین، اما این نام‌کاربری قبلا توسط یه نفر دیگه گرفته شده. اوضاع وقتی ضدحالتر میشه که، میبینی طرف فقط اون رو اشغال کرده و تابحال هیچ استفاده‌ای ازش نشده!</summary></entry><entry><title type="html">برنامه نویسی ۲ نفره</title><link href="//isapanah.com/2016/pair-programing" rel="alternate" type="text/html" title="برنامه نویسی ۲ نفره" /><published>2016-08-29T00:00:00+04:30</published><updated>2016-08-29T00:00:00+04:30</updated><id>//isapanah.com/2016/pair-programing</id><content type="html" xml:base="//isapanah.com/2016/pair-programing">&lt;p&gt;در این پست قصد دارم درباره Pair Programming يا برنامه نویسی ۲نفره (جفتی) صحبت کنم. اگر میدونید برنامه نویسی ۲نفره چیه لازم نیست پارگراف بعدی رو بخونید:&lt;/p&gt;
-
-&lt;p&gt;یکی از مواردی که در مدل XP (یکی از متدهاي اجایل) به وضوح مشاهده می شود، مفهومی است تحت عنوان Pair Programming. منظور از این اصطلاح این است که دو برنامه نویس در کنار یکدیگر شروع به کار کردن می کنند. یکی کدنویسی می‌کند و دیگری به کدهای همکارش نگاه می‌کند و در صورتی که نظری در مورد بهتر شدن کد داشت، به همکارش اعلام می کند. (&lt;a href=&quot;https://www.sokanacademy.com/categories/programming/coding/tutorials/457/%D8%A2%D8%B4%D9%86%D8%A7%DB%8C%DB%8C-%D8%A8%D8%A7-%D9%85%D8%AF%D9%84-%D9%87%D8%A7%DB%8C-%D8%A7%D8%AC%D8%A7%DB%8C%D9%84&quot;&gt;سکان آکادمی&lt;/a&gt;)&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-8-29/1-intro.jpg&quot; alt=&quot;Intro&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;چرا-کد-نویسی-دو-نفره&quot;&gt;چرا کد نویسی دو نفره؟&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;اشتراک گذاری دانش:&lt;/strong&gt; وقتی که باهم روی یه کد کار میکنید اشتباه احتمالیتون رو پیدا کرده و یاد می‌گیرید که دیگه اون اشتباه رو تکرار نکنید، این قضیه میتونه برعکس باشه و شما به دوستون یادآور بشید که فلان جای کدش اشتباست و درستش چیه. وقتی که دو نفری کد میزنید نسبت به وقتی که تنهایی کار می‌کنید، بهتر میتونید بفهمید که چی دارید مینویسید و یا چیکار دارید می‌کنید (چون دائما هی از هم میپرسید چرا؟ چرا باید اینکارو بکنم؟ مثلا وقتی بحث میکنید سر اینکه چرا بجای حلقه For باید از While استفاده کنید).&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;یه مقدمه خوب:&lt;/strong&gt; دو نفری کد زدن برای کسانی که تازه استخدام شدن یا تازه از دانشگاه (مثلا رشته برنامه نویسی) فارغ التحصیل شدن میتونه یه نمونه خوب و تمرینی باشه تا نحوه کد زدن صحیح و تفکر برنامه نویسی رو یاد بگیرن. این یه راه خیلی خوبیه تا بتونید اعضای تیمتون رو بهتر بشناسید (با تواناییهاشون آشنا بشید)، بفهمید که استایل کد زدنشون چطوره و ازتون انتظار داره که چطور باهم کار کنید و کد بزنید. برنامه نویسی دو نفری بهتون کمک میکنه تا افراد تیم رو بهتر بشناسید در نتیجه میدونید اگه يك روز به یه مشکل خاص برخوردید به کدوم یک از اعضای تیم باید مراجعه کنید و مشکلتون رو درمیون بگذارید تا حل بشه.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;متمرکز شدن موقع کد نویسی:&lt;/strong&gt; خیلی از ماها در کنار کد زدنمون با صدای ناتیفیکیشن پیام دوستامون تو شبکه های اجتماعی حواسمون پرت میشه و سریع میریم ببینیم کی چی پیام داده (مثلا تلگرام، فیسبوم، توییتر و …)، اما وقتی یکی کنارتون باشه و قرار باشه دو نفری کد بزنید اونوقته که دیگه خجالت می‌کشید و تمام تمرکزتون رو در اون زمان روی کد زدنتون میگذارید ( محاله که دیگه توییترو باز کنی ? )!&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;کد های بهتر و اصولی تر:&lt;/strong&gt; قائدتا موقعی که دو نفری کد میزنید (نسبت به تک نفری) سرعت کمتری دارید اما حتما کدها تمیزتر و اصولی تر بوده، همچنین با باگ یا خطای کمتری روبرو خواهید شد. (البته تحقیق مستندی در این باره صورت نگرفته که بخوام بهتون اثباتش کنم، اما شخصا فکر می‌کنم این حرف صادق باشه. نظر خودتون چیه؟ ? )&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;این موارد و فوایدی که درباره دونفری کد زدن گفتم شبیه فواید CodeReview نیست؟&lt;/strong&gt; (اگه دوس داری بدونی &lt;a href=&quot;https://en.wikipedia.org/wiki/Code_review&quot;&gt;Code Review&lt;/a&gt; چیه از &lt;a href=&quot;https://en.wikipedia.org/wiki/Code_review&quot;&gt;ویکی پدیا&lt;/a&gt; توضیحاتش رو بخون). اگرچه که دو نفری کد زدن خیلی فواید بیشتری بجای CodeReview داره: درواقع شما در لحظه کدهارو بازخوانی (CodeReview) میکنی.&lt;/p&gt;
-
-&lt;h2 id=&quot;واو-اینکه-خیلی-عالیه-اما-چطوری-میتونم-شروع-کنم&quot;&gt;واو اینکه خیلی عالیه! اما چطوری میتونم شروع کنم؟&lt;/h2&gt;
-
-&lt;p&gt;در این مقاله سعی كردم راجع به فرهنگ کد زدن دو نفره صحبت کنم، در جامعه ای که برنامه نویسی دو نفره خیلی کمه (البته اگه اصلا وجود داشته باشه!). پیشنهاد و بحث هایی که در این مقاله میشه ممکنه برای کساني که همین الان دارن دو نفری کد میزنن کمی عجیب و غریب باشه. البته من امیدوارم که این مقاله یه دید مثبت به شما بده در نتیجه ترغیب کنه شمارو که رو بیارید به برنامه نویسی دونفره. بعد از این شما می‌تونید برید تحقیق کنید، مقاله های بیشتری بخونید، حتی راجع بهش مقاله بنویسید، تیم خودتون رو تشکیل داده و این فرهنگ رو گسترش بدید.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;با کی باید جفت بشم؟&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;با کسی که میخواد یا تمایل داره با شما جفت بشه! کسی که تمایل داره در کنار شما کد نویسی کنه بهتر از کسی هست که “بهترین همسان” برای دونفره کد زدنه.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;اگه برای اولین باره، ابتدا در کنار تعدادی برنامه نویس (کمتر از ۵ تا) بنشینید و دو نفره کد زدن رو تجربه کنید تا بفهمید اصلا ۲نفری کد زدن با روحیات شما سازگاره و میتونید اون رو قبول کنید؟&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt; خیلی از مردم دوست ندارن شما وقتتون رو سر نگاه کردن به کد های پروژه اونها (در فکر خودشون) هدر بدید! اگه واسه اونها سخته که (یا تمایل ندارن) بیان سراغ کد های شما، این به دور از ادب هست که شما هم سراغ کدهای اونها رفته و بخوایید که دونفره برنامه نویسی کنید.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;در اولین دفعات اول شما به سراغ دوستتون رفته، و در بازخوانی یا Review کدها بهش کمک کنید. این امر باعث میشه اون هم رغبت پیدا کنه و بیاد پیش شما و وقتش رو روی پروژه شما بزاره.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;خیلی از مردم دوست ندارن دو نفره کد بنویسین (یکی کنارشون بشینه و مثلا کدهاشونو تماشا کنه!)، خودتونو آماده کنید که با تواضع جواب “نه” اونهارو بپذیرید.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;چطوری باید جفتمو پیدا کنم؟&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;با__درخواست مستقیم__ شروع کنید (مثلا: سعید میای کنارم بشینی و باهم روی این پروژه کار کنیم؟). موفق نشدید؟ خوب اشکالی نداره. یه تقویم آماده کنید و زمان و تاریخ هایی که دوست دارین در اون تایم بصورت دو نفری رو پروژه خاص کار کنید رو مشخص کرده و برای اونها بفرستید. (مردم وقتی ببینن شما چقدر مصمم هستید و برای کارهاتون برنامه و زمان بندی مشخص دارید تمایل پیدا میکنن که باهاتون همکاری کنن).&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;این دعوت نامه تقویمی رو برای همه اعضای تیم بفرستید. سعی کنید یه سری برنامه منظم برای یادگیری، آموزش و درگیر کردن اونها با پروژه های برنامه نویسی جفتی تهیه و تدارک ببینید.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-8-29/2-finally-ill-find-you.jpg&quot; alt=&quot;Finally I Found You&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;چه مدت باید جفتی کار کنم؟&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;بعضی ها ۹۰ دقیقه رو مناسب میدونن، بعضی ها هم هستن که کل روز رو جفتی کار می‌کنن، این کار باید هرروز تا تموم شدن یک اسپرینت (دوره های ۲ تا ۴ هفته ای برای اتمام یک فاز از پروژه در مدل اسکرام از متد اجایل – &lt;a href=&quot;https://en.wikipedia.org/wiki/Scrum_(software_development)#Sprint_Backlog&quot;&gt;اطلاعات بیشتر&lt;/a&gt; ) انجام بشه. البته در تحقیقات انجام شده مشخص شده دوره های زمانی کوتاه تر نتیجه بهتری در برنامه نویسی جفتی می‌گیریند (Article: &lt;a href=&quot;http://csis.pace.edu/~grossman/dcs/XR4-PromiscuousPairing.pdf&quot;&gt;Promiscuous Pairing&lt;/a&gt;). البته حتما با دوستتون مشورت کنید و ببینید که اون چقدر میتونه یا تمایل داره که در روز با شما وقت بگذاره و باهم برنامه نویسی کنید!&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;سعی کنید برنامه تون رو بصورت دوره های ۱.۵ تا ۲ ساعته طراحی کنید.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-8-29/3-how-long-pair-programming.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;چند بار میتونم جفتی کار کنم؟&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;این یه موضوعه بین شما، جفت برنامه نویستون و تیمی که توش کار می‌کنید؛ فقط مطمئن بشید همتون باهم سر این موضوع موافقید.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;اگر ممکن بود، سعی کنید با دونفر (مختلف) در طول هفته کار کنید. این به شما کمک می‌کنه تا حس کنید که کار کردن با آدمهای مختلف چطوریه و چطور میتونید خودتون رو با اونها وفق بدید.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;strong&gt;خب، حالا باید چیکار کنم؟&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;دو تا واژه خیلی مهم&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;کد زن (Driver) :&lt;/strong&gt; کدهارو می‌نویسه، طرح کلی از برنامه تو ذهنشه، در باره کدها دید جزئی (Micro) داره.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;راهنما (Navigator) :&lt;/strong&gt; توی کد ها به دنبال مشکلات منطقی، باگ احتمالی و یا پیاده سازی بهتر می‌گرده،‌ مانند یه ناظر حرفه ای عمل میکنه، و از قبل به مشکلات بلقوه که ممکنه پیش بیاد فکر می‌کنه؛ در ضمن، به کد ها یه دید کلی (Macro) داره.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-8-29/4-pairing-vocab.jpg&quot; alt=&quot;Pairing Vocab&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;راهنما کارش مثل کسیه که کدهارو بازبینی میکنه، درواقع یه Code Reviewer، اون دائما به یه راه حل یا روش بهتر توی نوشتن کدها فکر میکنه.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;انواع-برنامه-نویسی-دو-نفره&quot;&gt;انواع برنامه نویسی دو نفره:&lt;/h2&gt;
-
-&lt;p&gt;اصطلاح‌هایی که در زیر میاد کاملا اختراع و ایده خودمه و اصلا ربطی به واژه های رسمی (برنامه نویسی دو نفره) نداره، فقط واسه اینه که یه دید بهتر بهتون بده.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;کلاسیک:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-8-29/5-classic.jpg&quot; alt=&quot;Classic&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;یه ماوس و کیبورد اضافی روی میز باشه که بتونید در لحظه نقش‌هاتون رو باهم عوض کنید، مثلا راهنما بشه کدزن و کدزن بشه راهنما. معمولا در هر ۱۵ دقیقه تا یکساعت حداقل یکبار این اتفاق میفته و مجبور میشید نقش‌هارو رو بهم پاس بدید؛ البته این مورد برای کسایی که تازه کارن حتی به دفعات بیشتر هم میرسه!&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;فواید: کمکتون میکنه تا باهم هماهنگ شده، باهم کار کنید و پیش برید&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;معایب: ممکنه روی میز فضای کافی برای گذاشتن یه کیبورد و ماوس اضافی نباشه&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;تیمی که من باهاشون کار می‌کنم اخیرا یه میز بزرگ واسه برنامه نویسی دو نفره تعیین کردن که دو تا کیبور، ماوس و مانیتور داره – هرموقع که اراده کنن در کثری از ثانیه نقش‌هاشون عوض میشه.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;کند:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;کارشون مثل همون بالاییه، فقط دیگه ماوس و کیبور اضافی در کار نیست!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-8-29/6-the-lazy.jpg&quot; alt=&quot;The Lazy&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;فواید: دیگه نمیتونین پوینتر ماوس همدیگه رو بدزدین و هی با کدا ور برین وسط کد زدن بقلی ؟ ، بدون هیچ دردسر و ابزار اضافه ای شروع به برنامه نویسی اشتراکی (دو نفره) میکنید (هر لحظه که اراده کردین ).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;معایب: مجبورین دستتون رو درااااز کنید و اون نقطه از کد که مشکل داره رو نشون دوستتون بدین ( دهنت سرویس میشه ).&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;تازه کارانه:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;همزمان “راهنما” هم باشید.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-8-29/7-the-noob.jpg&quot; alt=&quot;The Noob&quot; /&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;فواید: دیگه پر از استرس و نگرانی نخواهید بود،‌ فرصت بیشتری برای سوال پرسیدن دارید&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;معایب: این روش هیچوقت رضایت بخش نیست، و شما خیلی سخت می‌تونید روی کد زدن تمرکز کنید&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;من عاشق تازه کارام. این فرصت رو پیش میاره تا بتونید از راهنما سوال بپرسید، یاد بگیرین که تیم چطوری فکر و کار میکنه، و اینکه بفهمید جفتتون “راهنما” توی چه بخشی خیلی خوبه. این واسه تازه کارهایی مثل من وااااقعا یه فرصت عالیه.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;پریشانانه:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-8-29/8-the-distracted.jpg&quot; alt=&quot;The Distracted&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;مثل همون روش قبلی (تازه کارانه)، با این تفاوت که شما لپتابتونم میارین. اکثر زمان لپتاپاتون رو خیلی نزدیک بهم نگه می‌دارید و ازش برای بررسی کردن سینتسک، مترجم گوگل و یا حل و فصل یه مبحث استفاده می‌کنید. هیچ وقت بقل دستتیتون بیشتر از چند دقیقه معطل نکنید.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;فواید: میتونید خیلی راحت دنبال یه چیزی بگردین و پیداش کنید&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;معایب: خیلی راحت تمرکزتون از بین میره&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;مثل “تازه کارانه” شروع کنید به کار کردن، اما وقتی که احتیاج داشتید دنبال یه چیزی بگردین برید استراتژیتون رو به “پریشانانه” تغییر بدین. یه جورایی این مثل همون حالت کلاسیکه.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;strong&gt;آیا مورد یا چیز دیگه ای هست که باید بدونم؟&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;بهداشت فردیتون رو رعایت کنید!&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-8-29/9-hygiene.jpg&quot; alt=&quot;Hygiene&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;حتما دوش بگیرید، ادکلن خوشبو بزنید، مسواک کنید، خوشبو کننده دهان بخورید و حتما شب قبلش از خوردن پیاز و سیر خودداری کنید.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;strong&gt;باهم رفیق و شریک باشید&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-8-29/10-welcoming-pairing.png&quot; alt=&quot;Welcoming Pairing&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;من-اینکارو-شروع-کردم-و-عاشقش-شدمازش-متنفرم&quot;&gt;من اینکارو شروع کردم و عاشقش شدم/ازش متنفرم!&lt;/h2&gt;
-
-&lt;p&gt;بعله! بجای تشکر از من این روش رو تست کنید. خیلی خوشحال می‌شم اگه بدونم شما چه تجربه ای از برنامه نویسی دو نفره داشتید.&lt;/p&gt;
-
-&lt;p&gt;اگه شما ازش متنفر بودین، من واقعا متاسفم. برنامه نویسی دو نفره رو با فرد دیگه ای هم تست کردین؟ اگه نه، سعی کنید با چند نفر دیگه هم این روش رو تجربه کنید. خیلی ها اینجوری کار کردن رو دوست ندارن، اما فکر کنم شما واسه یه بارم که شده باید این روش کار کردن رو تجربه کنید.&lt;/p&gt;
-
-&lt;div class=&quot;div-ltr&quot;&gt;
-
-  &lt;p&gt;Translated from: &lt;a href=&quot;https://developer.atlassian.com/blog/2015/05/try-pair-programming/&quot;&gt;developer.atlassian.com&lt;/a&gt;&lt;/p&gt;
-
-&lt;/div&gt;</content><author><name>صدرا املشی</name></author><category term="مقاله" /><category term="اسکرام" /><category term="اجایل" /><category term="مدیریت پروژه نرم‌افزاری" /><summary type="html">در این پست قصد دارم درباره Pair Programming يا برنامه نویسی ۲نفره (جفتی) صحبت کنم. اگر میدونید برنامه نویسی ۲نفره چیه لازم نیست پارگراف بعدی رو بخونید:</summary></entry></feed>
+&lt;p&gt;حرف آخر، مطابق راهنمای&lt;a href=&quot;What happens when I change my username&quot;&gt; What happens when I change my username &lt;/a&gt;توجه کنید که اگر نام کاربریتون رو تغییر بدین، پروژه‌های که تعریف کرده بودین به آدرس جدید ریدایرکت نمیشن. پس یادتون باشه بعد تغییر نام‌کاربری، حتما لینکهایی که قبلا به پروژتون داده بودید (مثل وبلاگ یا اگر لایبرری ریلیز شده) رو هم اصلاح کنید.&lt;/p&gt;</content><author><name>صدرا املشی</name></author><category term="Github" /><category term="گیتهاب" /><summary type="html">شاید براتون پیش اومده باشه که توی گیتهاب میخواستین یک نام کاربری ثبت کنین، اما این نام‌کاربری قبلا توسط یه نفر دیگه گرفته شده. اوضاع وقتی ضدحالتر میشه که، میبینی طرف فقط اون رو اشغال کرده و تابحال هیچ استفاده‌ای ازش نشده!</summary></entry></feed>

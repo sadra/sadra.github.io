@@ -1,11 +1,14 @@
+.commets-delimiter-space
+  clear: both
+
 .commets-delimiter
-  margin-top: 2em
+  margin-top: 1.5em
   width: 100%
   border-top: 1px solid $gray-200
   clear: both
 
 #isso-thread
-  margin: 1em auto !important
+  margin: 1.3em auto 1em auto!important
   max-width: 70em !important
 
 .isso-postbox
@@ -30,6 +33,7 @@
   padding: 5px 10px !important
   @media screen and (max-width: 790px)
     width: 80% !important
+    padding: 10px 10px !important
 
 .post-action input:hover
   background-color: #3774f4 !important
@@ -74,6 +78,7 @@
 .form-wrapper small
   color: $gray-700
   font-size: 0.85em
+  margin-bottom: 5px
 
 .form-wrapper small:before
   content: "❗️"
@@ -81,7 +86,7 @@
   position: relative
 
 .textarea-wrapper
-  margin-top: 10px
+  margin-top: 15px
 
 #isso-thread h4:before
   content: "#نظرات: "
@@ -91,3 +96,9 @@
 
 .isso-postbox
   clear: both
+
+.isso-comment > div.avatar, .isso-postbox > .avatar
+  margin: 3px 0 0 15px !important
+
+.isso-postbox
+  margin: 0 auto 1em !important

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="https://isapanah.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://isapanah.com/" rel="alternate" type="text/html" /><updated>2018-12-11T01:11:17+03:30</updated><id>https://isapanah.com/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده اپلیکیشن iOS و Android.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="https://isapanah.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://isapanah.com/" rel="alternate" type="text/html" /><updated>2018-12-11T01:19:19+03:30</updated><id>https://isapanah.com/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده اپلیکیشن iOS و Android.
 </subtitle><entry><title type="html">اصول ۵ گانه SOLID - مقدماتی</title><link href="https://isapanah.com/2018/solid" rel="alternate" type="text/html" title="اصول ۵ گانه SOLID - مقدماتی" /><published>2018-12-10T00:00:00+03:30</published><updated>2018-12-10T00:00:00+03:30</updated><id>https://isapanah.com/2018/solid</id><content type="html" xml:base="https://isapanah.com/2018/solid">&lt;h2 id=&quot;مقدمه&quot;&gt;مقدمه&lt;/h2&gt;
 
 &lt;p&gt;تصمیم دارم در مجموعه‌ای از پست‌های بهم پیوسته، مهم‌ترین اصول برنامه نویسی را بررسی کرده و با آنها آشنا شویم. اصولی مانند SOLID، DesignPattern، تست نویسی و غیره. تمامی این اصول و مفاهیم تا حدود زیادی انتزاعی و گاهی حوصله سر بر هستند، تمام سعی‌ام را کرده ام که مفاهیم تا جای ممکن قابل لمس و درک باشند.&lt;/p&gt;
@@ -171,18 +171,18 @@
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;نتوانید ماژول یا بخشی از کد را از سیستم جدا کرده و فورا بدون تغییر در آن، در جای دیگری استفاده کنید.&lt;/p&gt;
-
-    &lt;h5 id=&quot;دلایل-ابتلا-به-immobility&quot;&gt;دلایل ابتلا به Immobility&lt;/h5&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;اصلی ترین دلیل ابتلا به immobility یا عدم تحرک، پرداختن به جزئیات بیش از حد و غیر ضروری در آن بخش از کد است.&lt;/li&gt;
-      &lt;li&gt;ماژول بیش از حد به محیط و envirement خودش وابسته باشد.&lt;/li&gt;
-      &lt;li&gt;ماژول بیش از یک وظیفه را بر دوش داشته باشد.&lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;p&gt;برای مثال، همان ماژول لاگین را در نظر داشته باشید. این ماژول برای احراز هویت کاربر از یک database schema خاص در دیتابیس Redis استفاده می‌کند. این ماژول ابتدا به دیتابیس Redis وصل شده و سپس با توجه به آن schema خاص، کاربر را احراز هویت می‌کند. حال قصد داریم آن را در سرویسی دیگری استفاده کنیم که از MySQL استفاده می‌کند و از قضا schema آن سیستم نیز با schema سیستم قبلی متفاوت است. حال، &lt;em&gt;تو خود حدیث مفصل بخوان ازین مجمل!&lt;/em&gt;&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h5 id=&quot;دلایل-ابتلا-به-immobility&quot;&gt;دلایل ابتلا به Immobility&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;اصلی ترین دلیل ابتلا به immobility یا عدم تحرک، پرداختن به جزئیات بیش از حد و غیر ضروری در آن بخش از کد است.&lt;/li&gt;
+  &lt;li&gt;ماژول بیش از حد به محیط و envirement خودش وابسته باشد.&lt;/li&gt;
+  &lt;li&gt;ماژول بیش از یک وظیفه را بر دوش داشته باشد.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;برای مثال، همان ماژول لاگین را در نظر داشته باشید. این ماژول برای احراز هویت کاربر از یک database schema خاص در دیتابیس Redis استفاده می‌کند. این ماژول ابتدا به دیتابیس Redis وصل شده و سپس با توجه به آن schema خاص، کاربر را احراز هویت می‌کند. حال قصد داریم آن را در سرویسی دیگری استفاده کنیم که از MySQL استفاده می‌کند و از قضا schema آن سیستم نیز با schema سیستم قبلی متفاوت است. حال، &lt;em&gt;تو خود حدیث مفصل بخوان ازین مجمل!&lt;/em&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;چسبناکی-یا-viscosity&quot;&gt;چسبناکی یا Viscosity&lt;/h4&gt;
 

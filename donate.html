@@ -1,0 +1,70 @@
+---
+layout: donate
+title: دونیا
+---
+
+<div class="content h-100 d-inline-block" style="padding:0; margin:0; width:100%;">
+
+    <div class="container h-100 d-inline-block" style="padding:0; margin:0; width:100%; max-width: 100%;">
+        <div class="row h-100">
+            <div class="col-7" style="background-color: blue;">col-8</div>
+            <div class="col-5" style="background-color: #e9e9e9;">
+
+                <h1 align="center">همین حالا دونیت کن</h1>
+
+                <div class="btn-group-toggle" data-toggle="buttons" align="center">
+                    <label class="btn btn-outline-primary col-2">
+                        <input type="radio" name="options" id="option1" autocomplete="off"> ۵ هزار
+                    </label>
+                    <label class="btn btn-outline-primary col-2 active">
+                        <input type="radio" name="options" id="option2" autocomplete="off" checked> ۱۰ هزار
+                    </label>
+                    <label class="btn btn-outline-primary col-2">
+                        <input type="radio" name="options" id="option3" autocomplete="off"> ۲۰ هزار
+                    </label>
+                    <label class="btn btn-outline-primary col-2">
+                        <input type="radio" name="options" id="option4" autocomplete="off"> ۵۰ هزار
+                    </label>
+                    <label class="btn btn-outline-primary col-2">
+                        <input type="radio" name="options" id="option5" autocomplete="off"> ۱۰۰ هزار
+                    </label>
+                    <br/>
+                    <br/>
+
+                    <div style="direction:ltr" class="input-group col-10">
+                        <div class="input-group-append input-currency-lable">
+                            <span class="input-group-text input-currency-curve-left">هزارتومان</span>
+                        </div>
+                        <input type="text" class="form-control" id="optional-value" onfocus="onTextFocus(this)">
+                        <div class="input-group-prepend">
+                            <label class="btn btn-outline-primary input-group-append input-currency-curve-right" id="optional-value-wrapper" onclick="onOptionalValueClicked()">
+                                <input type="radio" name="options" id="option6" autocomplete="off">مقدار دلخواه
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        optionaValueButtonWrapper = document.getElementById("optional-value-wrapper");
+        optionalValue = document.getElementById("optional-value");
+        function onTextFocus() {
+            var pattern = /(?:^|\s)active(?:\s|$)/
+            if(!optionaValueButtonWrapper.className.match(pattern)){
+                optionaValueButtonWrapper.click()
+                optionalValue.focus()
+            }
+        }
+        function onOptionalValueClicked() {
+            // optionalValue.focus();
+            optionalValue.focus()
+            console.log("onOptionalValueClicked");
+        }
+    </script>
+
+</div>

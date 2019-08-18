@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="https://isapanah.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://isapanah.com/" rel="alternate" type="text/html" /><updated>2019-08-18T22:40:39+04:30</updated><id>https://isapanah.com/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده اپلیکیشن iOS و Android.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="https://isapanah.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://isapanah.com/" rel="alternate" type="text/html" /><updated>2019-08-18T23:54:47+04:30</updated><id>https://isapanah.com/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده اپلیکیشن iOS و Android.
 </subtitle><entry><title type="html">مثل زئوس مارکداون بنویسیم</title><link href="https://isapanah.com/2019/markdown-like-the-zeus" rel="alternate" type="text/html" title="مثل زئوس مارکداون بنویسیم" /><published>2019-08-18T00:00:00+04:30</published><updated>2019-08-18T00:00:00+04:30</updated><id>https://isapanah.com/2019/markdown-like-the-zeus</id><content type="html" xml:base="https://isapanah.com/2019/markdown-like-the-zeus">&lt;h2 id=&quot;مقدمه&quot;&gt;مقدمه&lt;/h2&gt;
 
 &lt;p&gt;اگه شما یه توسعه دهنده هستن، خب خداروشکر، پس تا الان حتما برای یک بار هم که شده با یکی از ادیتورهای Markdown کار کردین.&lt;/p&gt;
@@ -73,7 +73,7 @@
 &lt;p&gt;مثلا این یه لیست وظیفه هست که باید &lt;a href=&quot;https://twitter.com/TheTweetOfGod&quot;&gt;God&lt;/a&gt; انجامشون بده:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- [x] Send an email to Hera
-- [ ] Find Lukie on earth
+- [ ] Find Loki on earth
 - [x] Help Thor to find his hammer
 - [ ] Save the world
 &lt;/code&gt;&lt;/pre&gt;
@@ -81,11 +81,11 @@
 
 &lt;p&gt;که در نهایت چیزی که باید در خروجی مارک داون چاپ شه به این صورت هست:&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;[x] Send an email to Hera&lt;/li&gt;
-  &lt;li&gt;[ ] Find Lukie on earth&lt;/li&gt;
-  &lt;li&gt;[x] Help Thor to find his hammer&lt;/li&gt;
-  &lt;li&gt;[ ] Save the world&lt;/li&gt;
+&lt;ul class=&quot;task-list&quot; style=&quot;list-style-type: none&quot;&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;Send an email to Hera&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Find Loki on earth&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;Help Thor to find his hammer&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Save the world&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;البته امیدواریم زئوس تا قبل ددلاین به تسک‌هاش برسه 🤪&lt;/p&gt;
@@ -252,13 +252,13 @@ hollyMotherFucntion(params)
 &lt;div class=&quot;footnotes&quot;&gt;
   &lt;ol&gt;
     &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;The sculpture was presented to Louis XIV as Aesculapius but restored as Zeus, ca. 1686, by Pierre Granier, who added the upraised right arm brandishing the thunderbolt. Marble, middle 2nd century CE. Formerly in the ‘Allée Royale’, (Tapis Vert) in the Gardens of Versailles, now conserved in the Louvre Museum (Official on-line catalog)&amp;nbsp;&lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;The sculpture was presented to Louis XIV as Aesculapius but restored as Zeus, ca. 1686, by Pierre Granier, who added the upraised right arm brandishing the thunderbolt. Marble, middle 2nd century CE. Formerly in the ‘Allée Royale’, (Tapis Vert) in the Gardens of Versailles, now conserved in the Louvre Museum (Official on-line catalog) &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:book&quot;&gt;
-      &lt;p&gt;Larousse Desk Reference Encyclopedia, The Book People, Haydock, 1995, p. 215.&amp;nbsp;&lt;a href=&quot;#fnref:book&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;Larousse Desk Reference Encyclopedia, The Book People, Haydock, 1995, p. 215. &lt;a href=&quot;#fnref:book&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:3&quot;&gt;
-      &lt;p&gt;Oxford English Dictionary, 1st ed. “Zeus, n.” Oxford University Press (Oxford), 1921.&amp;nbsp;&lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;Oxford English Dictionary, 1st ed. “Zeus, n.” Oxford University Press (Oxford), 1921. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;</content><author><name>صدرا املشی</name></author><category term="Markdown" /><category term="Editor" /><category term="مارکداون" /><summary type="html">مقدمه</summary></entry><entry><title type="html">امن کردن MongoDB در دو گام</title><link href="https://isapanah.com/2019/secure-mongo-in-2-steps" rel="alternate" type="text/html" title="امن کردن MongoDB در دو گام" /><published>2019-04-19T00:00:00+04:30</published><updated>2019-04-19T00:00:00+04:30</updated><id>https://isapanah.com/2019/secure-mongo-in-2-steps</id><content type="html" xml:base="https://isapanah.com/2019/secure-mongo-in-2-steps">&lt;h2 id=&quot;مقدمه&quot;&gt;مقدمه&lt;/h2&gt;

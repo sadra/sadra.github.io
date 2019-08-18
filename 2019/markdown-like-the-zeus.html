@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" dir="rtl" lang="fa-IR">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" dir="rtl" lang="fa-IR">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html dir="rtl" lang="fa-IR">
+<!--<![endif]-->
+    <head>
+        <meta charset="utf-8"/>
+<meta content="IE-edge,chrome=1" http-equiv="X-UA-Compatable"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="keywords" content="Markdown,Editor,مارکداون, Tools"/>
+<meta name="author" content="Sadra Isapanah Amlashi | صدرا عیسی پناه املشی"/>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script>
+    (function(b,l,e,g,h,f){1!==parseInt(e.msDoNotTrack||b.doNotTrack||e.doNotTrack,10)&&b.addEventListener("load",function(){var r=(new Date).getTime();b.galite=b.galite||{};var m=new XMLHttpRequest,n="https://www.google-analytics.com/collect?cid="+(l.uid=l.uid||Math.random()+"."+Math.random())+"&v=1&tid="+galite.UA+"&dl="+f(h.location.href)+"&ul=en-us&de=UTF-8",a=function(b){var d="",c;for(c in b){if(void 0===b[c])return!1;d+=f(b[c])}return d},p={dt:[h.title],sd:[g.colorDepth,"-bit"],sr:[g.availHeight,
+        "x",g.availWidth],vp:[innerWidth,"x",innerHeight],dr:[h.referrer]},k;for(k in p){var q=k+"="+a(p[k]);q&&(n+="&"+q)}a=function(b,d){var c="",a;for(a in d)c+="&"+a+"="+f(d[a]);return function(){var a=n+c+(galite.anonymizeIp?"&aip=1":"")+"&t="+f(b)+"&z="+(new Date).getTime();if(e.sendBeacon)e.sendBeacon(a);else try{m.open("GET",a,!1),m.send()}catch(t){(new Image).src=a}}};setTimeout(a("pageview",null),100);b.addEventListener("unload",a("timing",{utc:"JS Dependencies",utv:"unload",utt:(new Date).getTime()-
+    r}))})})(window,localStorage,navigator,screen,document,encodeURIComponent);
+
+    var galite = galite || {};
+    galite.UA = 'UA-107934487-1'; // Insert your tracking code here
+</script>
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@sadra_amlashi" />
+<meta name="twitter:creator" content="@sadra_amlashi" />
+
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="fa_IR" />
+<meta property="og:url" content="https://isapanah.com/2019/markdown-like-the-zeus" />
+
+
+<meta name="description" content="در این پست درباره چندتا تکنیک بدردبخور برای نوشتن مارکداون صحبت کردم که باعث میشه مثل یه خدا مارکداون بنویسید."/>
+<meta property="og:description" content="در این پست درباره چندتا تکنیک بدردبخور برای نوشتن مارکداون صحبت کردم که باعث میشه مثل یه خدا مارکداون بنویسید."/>
+<meta name="twitter:description" content="در این پست درباره چندتا تکنیک بدردبخور برای نوشتن مارکداون صحبت کردم که باعث میشه مثل یه خدا مارکداون بنویسید."/>
+
+
+
+
+<title>مثل زئوس مارکداون بنویسیم | صدرا املشی</title>
+<meta property="twitter:title" content="مثل زئوس مارکداون بنویسیم | صدرا املشی"/>
+<meta property="og:site_name" content="مثل زئوس مارکداون بنویسیم | صدرا املشی"/>
+<meta property="og:title" content="مثل زئوس مارکداون بنویسیم | صدرا املشی"/>
+
+
+
+<meta property="twitter:image" content="https://isapanah.com/assets/img/post/2019-08-18/markdown-like-the-zeus-cover" />
+<meta property="og:image" content="https://isapanah.com/assets/img/post/2019-08-18/markdown-like-the-zeus-cover" />
+
+
+<link rel="alternate" type="application/rss+xml" title="وبلاگ صدرا املشی » Feed" href="/site-map.xml"/>
+<link rel="alternative" href="/site-map.xml" title="وبلاگ صدرا املشی" type="application/atom+xml"/>
+<link rel="short icon" type="image/x-icon" href="https://isapanah.com/assets/img/base/favicon.png"/>
+<link rel="stylesheet" type="text/css" href="https://isapanah.com/assets/css/styles.css"/>
+    </head>
+
+    <body dir="rtl" lang="Farsi" >
+        <!-- Header -->
+<header class="header-rtl">
+    <nav class="nav-wrap">
+        <a href="/" class="nav-logo">وبلاگ صدرا املشی</a>
+        <ul class="navigation">
+
+            <li><a href="/">یادداشت‌ها</a></li>
+            <li><a href="/list/items">موضوعات</a></li>
+            <li><a href="/about">درباره</a></li>
+            <li><a href="http://cv.isapanah.com/">رزومه</a></li>
+            <li><a href="https://sadra.github.io/english">English</a></li>
+
+        </ul>
+    </nav>
+</header>
+<!-- /Header -->
+
+        <script xmlns:date="http://www.w3.org/1999/xhtml">
+
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        document.getElementById("back-to-top").style.display = (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) ? "block" : "none";
+    }
+
+    function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+
+</script>
+
+
+<div class="content">
+
+    <div class="blog-post-container">
+
+        <div class="post-title-container">
+            <h1 class="post-title">مثل زئوس مارکداون بنویسیم</h1>
+        </div>
+
+        <div class="post_created">
+
+            <div class="author_avatar">
+                <img src="/assets/img/base/avatar.jpg" alt="صدرا املشی" id="avatar-img" />
+            </div>
+
+            <div class="post_info">
+                <p> <a href="/about">صدرا املشی</a> </p>
+                <small>توسعه دهنده</small><br/>
+                <small>یک‌شنبه 27 مرداد 1398</small>
+            </div>
+
+        </div>
+
+        
+        <div class="post-cover">
+            <img src="https://isapanah.com/assets/img/post/2019-08-18/markdown-like-the-zeus-cover" alt="مثل زئوس مارکداون بنویسیم">
+        </div>
+        
+
+        <div class="post-content">
+            <h2 id="مقدمه">مقدمه</h2>
+
+<p>اگه شما یه توسعه دهنده هستن، خب خداروشکر، پس تا الان حتما برای یک بار هم که شده با یکی از ادیتورهای Markdown کار کردین.</p>
+
+<p>زبان (نوشتاری) مارکداون توسط Github، Medium، خیلی از سرویس‌های تیکتینگ، سرویس‌های وبلاگ‌دهی، ابزارهای کامنت گذاری (حتی توی همین وبلاگ) پشتیبانی میشه. دونستن سینتکس Markdown می‌تونه به شما در نوشتن (داکیومنت، کامنت یا هر مطلبی) کمک بزرگی کنه و کاری کنه که مثل یه توسعه دهنده‌ی حرفه‌ای بنظر بیایید.</p>
+
+<p>روی اینترنت پره از بلاگ پست‌ها و چیت‌شیت‌های مختلف که شما می‌تونید با مطالعه اون‌ها در مارکداون نویسی مهارت خوبی پیدا کنید (مثلا این <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet">لینک</a>). توی این پست وبلاگ قرار نیست راجع به اینا صحبت کنم، بلکه می‌خوام چندتا تکنیک کوچیک ولی باحال رو بهتون بگم که کمتر جایی روی وب پیداش می‌کنید و ممکنه بدردتون بخوره.</p>
+
+<p>من برای نوشتن مستندات Markdown از ادیتور Typora استفاده می‌کنم. قبلا در <a href="https://twitter.com/sadra_amlashi/status/1115300664865972224?s=20">توییتر</a> گفته بودم که واسه Typora یه تم RTL به نام <a href="http://theme.typora.io/theme/Middle-East/">Middle-East</a> توسعه دادم، می‌تونید از Typora بعنوان یه ادیتور آفلاین تروتمیز مارکداون استفاده کنید که هم RTL رو ساپورت می‌کنه هم می‌تونید با فرمت‌های مختلف (مثل PDF, HTML و حتی EPub) ازش خروجی بگیرید.</p>
+
+<blockquote class="twitter-tweet"><p lang="fa" dir="rtl">مایلم به اطلاعتون برسونم که بالاخره تم Middle-East مرج شد توی تم‌های <a href="https://twitter.com/Typora?ref_src=twsrc%5Etfw">@Typora</a>😍<br />از الان می‌تونید بصورت Makrdown با استایل <a href="https://twitter.com/BearNotesApp?ref_src=twsrc%5Etfw">@BearNotesApp</a> در تایپورا به <a href="https://twitter.com/hashtag/%D9%81%D8%A7%D8%B1%D8%B3%DB%8C?src=hash&amp;ref_src=twsrc%5Etfw">#فارسی</a> و <a href="https://twitter.com/hashtag/%D8%B1%D8%A7%D8%B3%D8%AA_%DA%86%DB%8C%D9%86?src=hash&amp;ref_src=twsrc%5Etfw">#راست_چین</a> رایگان، ساده و تمیز بنویسید😎<br />استار <a href="https://twitter.com/hashtag/%DA%AF%DB%8C%D8%AA%D9%87%D8%A7%D8%A8?src=hash&amp;ref_src=twsrc%5Etfw">#گیتهاب</a> و <a href="https://twitter.com/hashtag/%D8%B1%DB%8C%D8%AA%D9%88%DB%8C%DB%8C%D8%AA?src=hash&amp;ref_src=twsrc%5Etfw">#ریتوییت</a> مزید امتنان است🥰<a href="https://t.co/WggeJhVopb">https://t.co/WggeJhVopb</a></p>&mdash; Sadra Amlashi (@sadra_amlashi) <a href="https://twitter.com/sadra_amlashi/status/1115300664865972224?ref_src=twsrc%5Etfw">April 8, 2019</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<h2 id="لیست-ترتیبی-یا-همون-order-list">لیست ترتیبی یا همون Order List</h2>
+
+<p>همونطور که می‌دونید، لیست ترتیبی رو با سیسنتکس زیر می‌نویسیم:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>1. Item One
+2. Item Two
+3. Item Three
+</code></pre>
+</div>
+
+<p>که قائدتا باید همچین چیزی برامون چاپ بشه</p>
+
+<ol>
+  <li>Item One</li>
+  <li>Item Two</li>
+  <li>Item Three</li>
+</ol>
+
+<p>و اما… تاحالا شده یه لیست خیلی بند بالا بنویسین و بعد یهو متوجه شید ای بابا یه آیتم رو اون وسطا جا انداختین!؟ حتما می‌تونید تصور کنید چقدر آزار دهنده‌ست که برگردین آیتم رو اضافه کنید و تموم شماره گذاری لیست رو دوباره در ادامه بازنویسی و مرتب کنید 😩</p>
+
+<p>اما خب، شما اصلا مجبور نیستین اینکارو بکنید!!! مارکداون اصلا به شماره گذاری شما توجهی نمیکنه!</p>
+
+<p><img src="/assets/img/post/2019-08-18/markdown-like-the-zeus-1.jpg" alt="markdown-like-the-zeus-1" /></p>
+
+<p>تا موقعی که شما یه لیست داشته باشین و کنار آیتم‌های لیستتون شماره گذاری کرده باشین، موقع نمایش دادن متن خود مارکداون اون رو بصورت یه لیست بازشماری شده render کرده و نمایش میده.</p>
+
+<p>لیست زیر رو ببینید:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>1. Item One
+2. Item Two
+3. Item Three
+
+1. Item One
+8. Item Two
+5. Item Three
+
+1. Item One
+2. Item Two
+524. Item Three
+</code></pre>
+</div>
+
+<p>فرقی نمی‌کنه چی نوشتین، در هر سه حالت چیزی که برامون چاپ می‌کنه اینه:</p>
+
+<ol>
+  <li>Item One</li>
+  <li>Item Two</li>
+  <li>Item Three</li>
+</ol>
+
+<p>ازتون می‌خوام اگه فکر می‌کنید من حقه‌ي خاصی استفاده می‌کنم یا توی ترتیب شماره‌ها دستکاری کردم، برید و فایل md همین پست رو ببینید. تنها چیزی که برای مارکداون مهمه اینه که آیتم اول حتما از <strong>«یک»</strong> شروع شده باشه.</p>
+
+<p>بعضیا کلا برای همه آیتم‌ها عدد ۱ رو میگذارن. اما اگه شما خیلی روی ترتیب حساسین و اون اتفاق ناگوار براتون پیش اومده، فقط کافیه آیتم رو بهش اضافه کنید و همون عدد آیتم بعدی رو بهش بدید. (مثلا قبل آیتم شماره ۹ باید چیز دیگه‌ای اضافه می‌کردین، اوکی به این ترتیب لیست رو بازنویسی کنید: <em>۸. آیتم قبلی</em>، <strong>۹. آیتم فراموش شده</strong>، <em>۹. آیتم بعدی</em>).</p>
+
+<h2 id="لیست-وظایف">لیست وظایف</h2>
+
+<p>لیست وظافه یا همو Task Lists در مارکداون به شما کمک میتونه تا بتونین یه لیست به همراه چک باکس درست کنین. برای نوشتن یک چک لیست ابتدا باید یه دَش <code class="highlighter-rouge">-</code> و بعد یه براکت به همراه یک اسپس <code class="highlighter-rouge">[ ]</code> پشت هر آیتم لیستتون بگذارید. اگر اون آیتم لیستتون انجام شده بود باید یه <code class="highlighter-rouge">x</code> بین دو تا براکت بگذارید <code class="highlighter-rouge">[x]</code>.</p>
+
+<p>مثلا این یه لیست وظیفه هست که باید <a href="https://twitter.com/TheTweetOfGod">God</a> انجامشون بده:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>- [x] Send an email to Hera
+- [ ] Find Lukie on earth
+- [x] Help Thor to find his hammer
+- [ ] Save the world
+</code></pre>
+</div>
+
+<p>که در نهایت چیزی که باید در خروجی مارک داون چاپ شه به این صورت هست:</p>
+
+<ul>
+  <li>[x] Send an email to Hera</li>
+  <li>[ ] Find Lukie on earth</li>
+  <li>[x] Help Thor to find his hammer</li>
+  <li>[ ] Save the world</li>
+</ul>
+
+<p>البته امیدواریم زئوس تا قبل ددلاین به تسک‌هاش برسه 🤪</p>
+
+<p><img src="/assets/img/post/2019-08-18/markdown-like-the-zeus-2.jpg" alt="markdown-like-the-zeus-2" /></p>
+
+<h2 id="لینک-دادن-به-سر-تیترها">لینک دادن به سر تیترها</h2>
+
+<p>یکی از مواردی که خیلی به درد می‌خوره (علی الخصوص در داکیومنت نوشتن) لینک دادن به سر تیترهاست. پردازشگرهای مارکداون از custom IDها در سر تیترها پشتیبانی می‌کنن. البته اگه شما هیچ کاستم آی دی واسه اون سرتیتر تعریف نکرده باشین، خودش بصورت اتوماتیک یه ID واسش ایجاد می‌کنه. برای اینکه بتونید یه کاستم ID برای سر تیتر مورد نظرتون درست کنید، کافیه ID رو بین دوتا براکت (با رعایت اینکه تموم حروف کوچیک باشه و بین کلمات هم فقط از <code class="highlighter-rouge">-</code> استفاده شده باشه) به همراه یک <code class="highlighter-rouge">#</code> بنویسید.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>### The Odin's Heading {#custom-odin-heading}
+</code></pre>
+</div>
+
+<p>چیزی که ما در مرور گر میبینیم اینه:</p>
+
+<h3 id="custom-odin-heading">The Odin’s Heading</h3>
+
+<p>که بعد از چاپ شدن بصورت HTML همچین چیزی در سورس کد صفحه قرار گرفته میشه:</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;h3</span> <span class="na">id=</span><span class="s">"custom-odin-heading"</span><span class="nt">&gt;</span>The Odin's Heading<span class="nt">&lt;/h3&gt;</span>
+</code></pre>
+</div>
+
+<p>خب حالا اگه بخوایم به این تیتر لینک بدیم چطور میشه؟ فقط کافیه موقع نوشتن یه لینک در مارکداون، بجای لینک در داخل پرانتزها، ID تیتر مورد نظر به همراه یک <code class="highlighter-rouge">#</code> رو بنویسیم. که اینجوری میشه:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>[The Odin's Heading](#custom-odin-heading)
+</code></pre>
+</div>
+
+<p>و چیزی که بصورت HTML پردازش میشه:</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#custom-odin-heading"</span><span class="nt">&gt;</span>The Odin's Heading<span class="nt">&lt;/a&gt;</span>
+</code></pre>
+</div>
+
+<p>و در نهایت چیزی که برای ما در مرورگر نمایش داده میشه اینه:</p>
+
+<p><a href="#custom-odin-heading">The Odin’s Heading</a></p>
+
+<p>و اگه روش کلیک کنید، میبینید که میپرسه روی سر تیتری که در بالاتر چاپ کرده بودیم.</p>
+
+<p>البته شما می‌تونید بصورت full URL هم به اون تیتر مورد نظر ارجاع بدید:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>[The Odin's Heading](https://isapanah.com/2019-08-18-markdown-like-a-god#custom-odin-heading)
+</code></pre>
+</div>
+
+<h2 id="پانویس">پانویس</h2>
+
+<p>یکی از چیزهای که خیلی ها فکر می‌کنن مارکداون پشتیبانی کنه، استفاده از پانویس یا همون Footnote هست. پانویس‌ها بهتون اجازه می‌دن که به یه شرح یا توضیحی اجمالی در خارج از متن اصلی ارجاع داده بشه. این پا نویس‌ها عموما با شماره گذاری‌ها بصورت ترتیبی مشخص می‌شن.</p>
+
+<p>برای اینکه بتونید یه پانویس بنویسید ابتدا لازمه در میانه‌ی پارگراف (اونجایی که میخواهید به پانویس ارجاع بدید) با استفاده از براکت که در داخل اون <code class="highlighter-rouge">^</code> و بعدش عدد رفرنس رو مشخص کردین لینک کنید <code class="highlighter-rouge">[^1]</code>.</p>
+
+<p>نکته‌ای این قضیه اینجاست که می‌تونید بصورت ID هم به مرجع مورد نظرتون لینک کنید، یعنی بجای عدد از یه عبارت لاتین، با حروف کوچک و بدون هیچ اسپیس یا tab اضافی استفاده کنید <code class="highlighter-rouge">[^to-id]</code>.</p>
+
+<p>در ادامه، هرجایی که دلتون خواست می‌تونید پانویس‌هاتون رو بنویسید (توجه کنید که لازم نیست پانویس‌ها در انتهای انتهای متنتون باشه). می‌تونید پانویس رو در انتهای یک سکشن، یا حتی یه پارگراف بیارید.</p>
+
+<p>برای ذکر کردن پانویس هم نیازه که در ابتدا عدد یا ID رنفرنس رو به همراه یک <code class="highlighter-rouge">^</code> نوشته بعدش با یه <code class="highlighter-rouge">:</code> شرح مورد نظرتون رو بنویسید.</p>
+
+<p>به مثالی که در ادامه میاد توجه کنید:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Zeus (/zjuːs/;[^1] Ancient Greek: Ζεύς, Zeús [zdeǔ̯s])[^book] is the sky and thunder god in ancient Greek religion, who rules as king of the gods of Mount Olympus. His name is cognate with the first element of his Roman equivalent Jupiter. His mythologies and powers are similar, though not identical, to those of Indo-European deities such as Jupiter, Perkūnas, Perun, Indra and Thor.[^3]
+
+[^1]: The sculpture was presented to Louis XIV as Aesculapius but restored as Zeus, ca. 1686, by Pierre Granier, who added the upraised right arm brandishing the thunderbolt. Marble, middle 2nd century CE. Formerly in the 'Allée Royale', (Tapis Vert) in the Gardens of Versailles, now conserved in the Louvre Museum (Official on-line catalog)
+
+[^book]: Larousse Desk Reference Encyclopedia, The Book People, Haydock, 1995, p. 215.
+
+[^3]: Oxford English Dictionary, 1st ed. "Zeus, n." Oxford University Press (Oxford), 1921.
+</code></pre>
+</div>
+
+<p>و چیزی که چاپ میشه در نهایت اینه:</p>
+
+<p>Zeus (/zjuːs/;<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> Ancient Greek: Ζεύς, Zeús [zdeǔ̯s])<sup id="fnref:book"><a href="#fn:book" class="footnote">2</a></sup> is the sky and thunder god in ancient Greek religion, who rules as king of the gods of Mount Olympus. His name is cognate with the first element of his Roman equivalent Jupiter. His mythologies and powers are similar, though not identical, to those of Indo-European deities such as Jupiter, Perkūnas, Perun, Indra and Thor.<sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup></p>
+
+<p><img src="/assets/img/post/2019-08-18/markdown-like-the-zeus-3.jpg" alt="markdown-like-the-zeus-3" /></p>
+
+<p>البته شما نمی‌تونید لینک پانویس‌هایی که من اینجا در ادامه متن آورد رو ببینید، و پانویس‌ها در انتهای این پست بلاگ چاپ میشن.</p>
+
+<p>نکته‌ای که باید به اون واقف باشید اینه که درسته که شما با ID به پانویس مورد نظر لینک میدید (مثل رفرنس دوم که به آی‌دی book بود) اما موقع رندر شدن صفحه چیزی که نمایش داده میشه عددِ ترتیبی که پانویس هست که در اینجا هم بصورت اتوماتیک خود مارکداون عدد‌های پانویس‌ها رو مرتب و چاپ می‌کنه.</p>
+
+<h2 id="هایلایت-کدها">هایلایت کدها‭</h2>
+
+<p>خب یکی از آیتم‌هایی که برنامه نویس‌ها خیلی خیلی در مارکداون استفاده می‌کنن اسنیپد کردن یه کد یا سینتکسه. خب برای اینکه یه تیکه کد رو اسنیپد کنیم اینجوری مینویسیم:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>​```
+hollyMotherFucntion(params)
+{
+	console.log("Shift it, shift it in Forward!")
+}
+​```
+</code></pre>
+</div>
+
+<p>که نتیجتا چیزی که چاپ میکنه اینه:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>hollyMotherFucntion(params)
+{
+	console.log("Shift it, shift it in Forward!")
+}
+</code></pre>
+</div>
+
+<p>امروز دیگه اکثر ادیتور ها از هایلایت کدها پشتیبانی می‌کنن. برای اینکه بتونیم یه کد خشگل توی پست داشته باشیم بعد از اون ۳تا backtick فقط کافیه اسم اون زبان رو بیاریم، مثلا در اینجا من باید بنویسم javascript:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>​```javascript
+hollyMotherFucntion(params)
+{
+	console.log("Shift it, shift it in Forward!")
+}
+​```
+</code></pre>
+</div>
+
+<p>که باید همچین چیزی واسمون چاپ کنه:</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">hollyMotherFucntion</span><span class="p">(</span><span class="nx">params</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Shift it, shift it in Forward!"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>اما، آیا میدونستید که شما می‌تونید از عبارت <code class="highlighter-rouge">diff</code> هم برای زبان استفاده کنید!؟ حتما میپرسین به چه کاری میاد!</p>
+
+<p><img src="/assets/img/post/2019-08-18/markdown-like-the-zeus-4.jpg" alt="markdown-like-the-zeus-4" /></p>
+
+<p>تاحالا شده که بخواین توی پست یا داکیومنت نشون بدین که قبلا اینجوری بوده، این خط حذف شده و بجاش این اضافه  شده یا این تغییر در اون قطعه کد صورت گرفته؟</p>
+
+<p>با استفاده از <code class="highlighter-rouge">diff</code> و دوتا علات <strong>+</strong>  و <strong>-</strong> پشت اون خط از کد مورد نظر، میتونید تغییرات یا همون different صورت گرفته رو نمایش بدید. اینجوری:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>​```diff
+hollyMotherFucntion(params)
+{
+-	console.log("Shift it, shift it in Forward!")
++	console.log("Shift it, shift it in Reverse!")
+}
+​```
+</code></pre>
+</div>
+
+<p>که در نهایت این چاپ میشه:</p>
+
+<div class="language-diff highlighter-rouge"><pre class="highlight"><code>hollyMotherFucntion(params)
+{
+<span class="gd">-	console.log("Shift it, shift it in Forward!")
+</span><span class="gi">+	console.log("Shift it, shift it in Reverse!")
+</span>}
+</code></pre>
+</div>
+
+<p>استفاده از خیلی بهتون در نوشتن داکیومنت یا پست‌های آموزشی کمک می‌کنه. باعث میشه که افراد بهتر بتونن کدهاتون رو دنبال کنن و ببینین واقعا چه اتفاقی یهویی وسط کدها پیش اومده. استفاده از <code class="highlighter-rouge">diff</code> رو هیچوقت فراموش نکنید.</p>
+
+<h2 id="جمع-بندی">جمع بندی</h2>
+
+<p>این چندتا نکته و ترفند در استفاده از مارکداون بود که امیدوارم به تو نوشتن مطالب و داکیومنت‌ها کمکتون کنه و متن‌هاتون حرفه‌ای بنظر بیاد. یا همونی که در تیتر پست گفتم،‌ مثل زئوس مارکداون بنویسید 😇</p>
+
+<p>اگر شما هم ترفندی یا نکته‌ای می‌دونید که شاید به درد کسی بخوره، می‌تونید در انتهای همین پست کامنت کنید.😍</p>
+
+<p>اگه سوال یا موردی بود، مثل همیشه در توییتر یا در تلگرام میتونیم باهم در ارتباط باشیم. 😉🍷</p>
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>The sculpture was presented to Louis XIV as Aesculapius but restored as Zeus, ca. 1686, by Pierre Granier, who added the upraised right arm brandishing the thunderbolt. Marble, middle 2nd century CE. Formerly in the ‘Allée Royale’, (Tapis Vert) in the Gardens of Versailles, now conserved in the Louvre Museum (Official on-line catalog)&nbsp;<a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:book">
+      <p>Larousse Desk Reference Encyclopedia, The Book People, Haydock, 1995, p. 215.&nbsp;<a href="#fnref:book" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>Oxford English Dictionary, 1st ed. “Zeus, n.” Oxford University Press (Oxford), 1921.&nbsp;<a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+        </div>
+
+
+        <div class="post-routes-list">
+            
+            <a class="category-link" href="/category/tools">Tools</a>
+            
+            
+            <a class="tag-link" href="/tag/markdown">Markdown</a>
+            
+            <a class="tag-link" href="/tag/editor">Editor</a>
+            
+            <a class="tag-link" href="/tag/مارکداون">مارکداون</a>
+            
+        </div>
+
+
+        <div class="Prev-next-post-container">
+            
+            <a class="previous-btn" href="/2019/secure-mongo-in-2-steps">نوشته قبلی: امن کردن MongoDB در دو گام ←</a>
+            
+            
+        </div>
+
+        <div class="commets-delimiter-space"></div>
+        <div class="commets-delimiter">
+            <span></span>
+        </div>
+
+        <script
+                data-isso-vote="true"
+                data-isso-avatar="true"
+                data-isso="https://isso.isapanah.com/"
+                data-isso-lang="ru"
+                src="https://isapanah.com/assets/js/embed.min.js"></script>
+
+        <section id="isso-thread">
+        </section>
+
+    </div>
+
+</div>
+
+<a id="back-to-top" class="back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left" onclick="topFunction()">
+    <img src="/assets/img/base/arrow-up.png" class="arrow-up"/>
+</a>
+
+
+        <!-- Footer -->
+<footer class="footer-wrapper">
+
+    <div class="delimiter">
+        <a href="/" class="footer-logo">
+            <img src="https://isapanah.com/assets/img/base/favicon.png" class="logo-wrapper">
+        </a>
+    </div>
+
+    <p class="footer-copyright">
+        2008 - 2017<br>
+        مطالب تحت لیسانس <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" rel="license" target="_blank">کریتیو کامنز</a> منتشر می‌شوند.
+
+    </p>
+
+    <div class="footer-social-links">
+        <a href="https://twitter.com/sadra-amlashi" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a href="https://github.com/sadra" title="Github" target="_blank"><i class="fa fa-github"></i></a>
+        <a href="https://medium.com/sadra" title="Medium" target="_blank"><i class="fa fa-medium"></i></a>
+        <a href="https://www.linkedin.com/in/amlashisadra/" title="Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
+        <a href="https://facebook.com/sadra.am123" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+    </div>
+
+
+ </footer>
+<!-- /Footer -->
+
+        
+    </body>
+</html>

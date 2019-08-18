@@ -1,5 +1,265 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="https://isapanah.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://isapanah.com/" rel="alternate" type="text/html" /><updated>2019-04-19T23:21:05+04:30</updated><id>https://isapanah.com/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده اپلیکیشن iOS و Android.
-</subtitle><entry><title type="html">امن کردن MongoDB در دو گام</title><link href="https://isapanah.com/2019/secure-mongo-in-2-steps" rel="alternate" type="text/html" title="امن کردن MongoDB در دو گام" /><published>2019-04-19T00:00:00+04:30</published><updated>2019-04-19T00:00:00+04:30</updated><id>https://isapanah.com/2019/secure-mongo-in-2-steps</id><content type="html" xml:base="https://isapanah.com/2019/secure-mongo-in-2-steps">&lt;h2 id=&quot;مقدمه&quot;&gt;مقدمه&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="https://isapanah.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://isapanah.com/" rel="alternate" type="text/html" /><updated>2019-08-18T22:33:49+04:30</updated><id>https://isapanah.com/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده اپلیکیشن iOS و Android.
+</subtitle><entry><title type="html">مثل زئوس مارکداون بنویسیم</title><link href="https://isapanah.com/2019/markdown-like-the-zeus" rel="alternate" type="text/html" title="مثل زئوس مارکداون بنویسیم" /><published>2019-08-18T00:00:00+04:30</published><updated>2019-08-18T00:00:00+04:30</updated><id>https://isapanah.com/2019/markdown-like-the-zeus</id><content type="html" xml:base="https://isapanah.com/2019/markdown-like-the-zeus">&lt;h2 id=&quot;مقدمه&quot;&gt;مقدمه&lt;/h2&gt;
+
+&lt;p&gt;اگه شما یه توسعه دهنده هستن، خب خداروشکر، پس تا الان حتما برای یک بار هم که شده با یکی از ادیتورهای Markdown کار کردین.&lt;/p&gt;
+
+&lt;p&gt;زبان (نوشتاری) مارکداون توسط Github، Medium، خیلی از سرویس‌های تیکتینگ، سرویس‌های وبلاگ‌دهی، ابزارهای کامنت گذاری (حتی توی همین وبلاگ) پشتیبانی میشه. دونستن سینتکس Markdown می‌تونه به شما در نوشتن (داکیومنت، کامنت یا هر مطلبی) کمک بزرگی کنه و کاری کنه که مثل یه توسعه دهنده‌ی حرفه‌ای بنظر بیایید.&lt;/p&gt;
+
+&lt;p&gt;روی اینترنت پره از بلاگ پست‌ها و چیت‌شیت‌های مختلف که شما می‌تونید با مطالعه اون‌ها در مارکداون نویسی مهارت خوبی پیدا کنید (مثلا این &lt;a href=&quot;https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet&quot;&gt;لینک&lt;/a&gt;). توی این پست وبلاگ قرار نیست راجع به اینا صحبت کنم، بلکه می‌خوام چندتا تکنیک کوچیک ولی باحال رو بهتون بگم که کمتر جایی روی وب پیداش می‌کنید و ممکنه بدردتون بخوره.&lt;/p&gt;
+
+&lt;p&gt;من برای نوشتن مستندات Markdown از ادیتور Typora استفاده می‌کنم. قبلا در &lt;a href=&quot;https://twitter.com/sadra_amlashi/status/1115300664865972224?s=20&quot;&gt;توییتر&lt;/a&gt; گفته بودم که واسه Typora یه تم RTL به نام &lt;a href=&quot;http://theme.typora.io/theme/Middle-East/&quot;&gt;Middle-East&lt;/a&gt; توسعه دادم، می‌تونید از Typora بعنوان یه ادیتور آفلاین تروتمیز مارکداون استفاده کنید که هم RTL رو ساپورت می‌کنه هم می‌تونید با فرمت‌های مختلف (مثل PDF, HTML و حتی EPub) ازش خروجی بگیرید.&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;fa&quot; dir=&quot;rtl&quot;&gt;مایلم به اطلاعتون برسونم که بالاخره تم Middle-East مرج شد توی تم‌های &lt;a href=&quot;https://twitter.com/Typora?ref_src=twsrc%5Etfw&quot;&gt;@Typora&lt;/a&gt;😍&lt;br /&gt;از الان می‌تونید بصورت Makrdown با استایل &lt;a href=&quot;https://twitter.com/BearNotesApp?ref_src=twsrc%5Etfw&quot;&gt;@BearNotesApp&lt;/a&gt; در تایپورا به &lt;a href=&quot;https://twitter.com/hashtag/%D9%81%D8%A7%D8%B1%D8%B3%DB%8C?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#فارسی&lt;/a&gt; و &lt;a href=&quot;https://twitter.com/hashtag/%D8%B1%D8%A7%D8%B3%D8%AA_%DA%86%DB%8C%D9%86?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#راست_چین&lt;/a&gt; رایگان، ساده و تمیز بنویسید😎&lt;br /&gt;استار &lt;a href=&quot;https://twitter.com/hashtag/%DA%AF%DB%8C%D8%AA%D9%87%D8%A7%D8%A8?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#گیتهاب&lt;/a&gt; و &lt;a href=&quot;https://twitter.com/hashtag/%D8%B1%DB%8C%D8%AA%D9%88%DB%8C%DB%8C%D8%AA?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#ریتوییت&lt;/a&gt; مزید امتنان است🥰&lt;a href=&quot;https://t.co/WggeJhVopb&quot;&gt;https://t.co/WggeJhVopb&lt;/a&gt;&lt;/p&gt;&amp;mdash; Sadra Amlashi (@sadra_amlashi) &lt;a href=&quot;https://twitter.com/sadra_amlashi/status/1115300664865972224?ref_src=twsrc%5Etfw&quot;&gt;April 8, 2019&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;h2 id=&quot;لیست-ترتیبی-یا-همون-order-list&quot;&gt;لیست ترتیبی یا همون Order List&lt;/h2&gt;
+
+&lt;p&gt;همونطور که می‌دونید، لیست ترتیبی رو با سیسنتکس زیر می‌نویسیم:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. Item One
+2. Item Two
+3. Item Three
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;که قائدتا باید همچین چیزی برامون چاپ بشه&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Item One&lt;/li&gt;
+  &lt;li&gt;Item Two&lt;/li&gt;
+  &lt;li&gt;Item Three&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;و اما… تاحالا شده یه لیست خیلی بند بالا بنویسین و بعد یهو متوجه شید ای بابا یه آیتم رو اون وسطا جا انداختین!؟ حتما می‌تونید تصور کنید چقدر آزار دهنده‌ست که برگردین آیتم رو اضافه کنید و تموم شماره گذاری لیست رو دوباره در ادامه بازنویسی و مرتب کنید 😩&lt;/p&gt;
+
+&lt;p&gt;اما خب، شما اصلا مجبور نیستین اینکارو بکنید!!! مارکداون اصلا به شماره گذاری شما توجهی نمیکنه!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2019-08-18/markdown-like-the-zeus-1.jpg&quot; alt=&quot;markdown-like-the-zeus-1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;تا موقعی که شما یه لیست داشته باشین و کنار آیتم‌های لیستتون شماره گذاری کرده باشین، موقع نمایش دادن متن خود مارکداون اون رو بصورت یه لیست بازشماری شده render کرده و نمایش میده.&lt;/p&gt;
+
+&lt;p&gt;لیست زیر رو ببینید:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. Item One
+2. Item Two
+3. Item Three
+
+1. Item One
+8. Item Two
+5. Item Three
+
+1. Item One
+2. Item Two
+524. Item Three
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;فرقی نمی‌کنه چی نوشتین، در هر سه حالت چیزی که برامون چاپ می‌کنه اینه:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Item One&lt;/li&gt;
+  &lt;li&gt;Item Two&lt;/li&gt;
+  &lt;li&gt;Item Three&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;ازتون می‌خوام اگه فکر می‌کنید من حقه‌ي خاصی استفاده می‌کنم یا توی ترتیب شماره‌ها دستکاری کردم، برید و فایل md همین پست رو ببینید. تنها چیزی که برای مارکداون مهمه اینه که آیتم اول حتما از &lt;strong&gt;«یک»&lt;/strong&gt; شروع شده باشه.&lt;/p&gt;
+
+&lt;p&gt;بعضیا کلا برای همه آیتم‌ها عدد ۱ رو میگذارن. اما اگه شما خیلی روی ترتیب حساسین و اون اتفاق ناگوار براتون پیش اومده، فقط کافیه آیتم رو بهش اضافه کنید و همون عدد آیتم بعدی رو بهش بدید. (مثلا قبل آیتم شماره ۹ باید چیز دیگه‌ای اضافه می‌کردین، اوکی به این ترتیب لیست رو بازنویسی کنید: &lt;em&gt;۸. آیتم قبلی&lt;/em&gt;، &lt;strong&gt;۹. آیتم فراموش شده&lt;/strong&gt;، &lt;em&gt;۹. آیتم بعدی&lt;/em&gt;).&lt;/p&gt;
+
+&lt;h2 id=&quot;لیست-وظایف&quot;&gt;لیست وظایف&lt;/h2&gt;
+
+&lt;p&gt;لیست وظافه یا همو Task Lists در مارکداون به شما کمک میتونه تا بتونین یه لیست به همراه چک باکس درست کنین. برای نوشتن یک چک لیست ابتدا باید یه دَش &lt;code class=&quot;highlighter-rouge&quot;&gt;-&lt;/code&gt; و بعد یه براکت به همراه یک اسپس &lt;code class=&quot;highlighter-rouge&quot;&gt;[ ]&lt;/code&gt; پشت هر آیتم لیستتون بگذارید. اگر اون آیتم لیستتون انجام شده بود باید یه &lt;code class=&quot;highlighter-rouge&quot;&gt;x&lt;/code&gt; بین دو تا براکت بگذارید &lt;code class=&quot;highlighter-rouge&quot;&gt;[x]&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;مثلا این یه لیست وظیفه هست که باید &lt;a href=&quot;https://twitter.com/TheTweetOfGod&quot;&gt;God&lt;/a&gt; انجامشون بده:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- [x] Send an email to Hera
+- [ ] Find Lukie on earth
+- [x] Help Thor to find his hammer
+- [ ] Save the world
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;که در نهایت چیزی که باید در خروجی مارک داون چاپ شه به این صورت هست:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;[x] Send an email to Hera&lt;/li&gt;
+  &lt;li&gt;[ ] Find Lukie on earth&lt;/li&gt;
+  &lt;li&gt;[x] Help Thor to find his hammer&lt;/li&gt;
+  &lt;li&gt;[ ] Save the world&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;البته امیدواریم زئوس تا قبل ددلاین به تسک‌هاش برسه 🤪&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2019-08-18/markdown-like-the-zeus-2.jpg&quot; alt=&quot;markdown-like-the-zeus-2&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;لینک-دادن-به-سر-تیترها&quot;&gt;لینک دادن به سر تیترها&lt;/h2&gt;
+
+&lt;p&gt;یکی از مواردی که خیلی به درد می‌خوره (علی الخصوص در داکیومنت نوشتن) لینک دادن به سر تیترهاست. پردازشگرهای مارکداون از custom IDها در سر تیترها پشتیبانی می‌کنن. البته اگه شما هیچ کاستم آی دی واسه اون سرتیتر تعریف نکرده باشین، خودش بصورت اتوماتیک یه ID واسش ایجاد می‌کنه. برای اینکه بتونید یه کاستم ID برای سر تیتر مورد نظرتون درست کنید، کافیه ID رو بین دوتا براکت (با رعایت اینکه تموم حروف کوچیک باشه و بین کلمات هم فقط از &lt;code class=&quot;highlighter-rouge&quot;&gt;-&lt;/code&gt; استفاده شده باشه) به همراه یک &lt;code class=&quot;highlighter-rouge&quot;&gt;#&lt;/code&gt; بنویسید.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;### The Odin's Heading {#custom-odin-heading}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;چیزی که ما در مرور گر میبینیم اینه:&lt;/p&gt;
+
+&lt;h3 id=&quot;custom-odin-heading&quot;&gt;The Odin’s Heading&lt;/h3&gt;
+
+&lt;p&gt;که بعد از چاپ شدن بصورت HTML همچین چیزی در سورس کد صفحه قرار گرفته میشه:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;h3&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;custom-odin-heading&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;The Odin's Heading&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h3&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;خب حالا اگه بخوایم به این تیتر لینک بدیم چطور میشه؟ فقط کافیه موقع نوشتن یه لینک در مارکداون، بجای لینک در داخل پرانتزها، ID تیتر مورد نظر به همراه یک &lt;code class=&quot;highlighter-rouge&quot;&gt;#&lt;/code&gt; رو بنویسیم. که اینجوری میشه:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[The Odin's Heading](#custom-odin-heading)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;و چیزی که بصورت HTML پردازش میشه:&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;#custom-odin-heading&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;The Odin's Heading&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;و در نهایت چیزی که برای ما در مرورگر نمایش داده میشه اینه:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;#custom-odin-heading&quot;&gt;The Odin’s Heading&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;و اگه روش کلیک کنید، میبینید که میپرسه روی سر تیتری که در بالاتر چاپ کرده بودیم.&lt;/p&gt;
+
+&lt;p&gt;البته شما می‌تونید بصورت full URL هم به اون تیتر مورد نظر ارجاع بدید:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[The Odin's Heading](https://isapanah.com/2019-08-18-markdown-like-a-god#custom-odin-heading)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;پانویس&quot;&gt;پانویس&lt;/h2&gt;
+
+&lt;p&gt;یکی از چیزهای که خیلی ها فکر می‌کنن مارکداون پشتیبانی کنه، استفاده از پانویس یا همون Footnote هست. پانویس‌ها بهتون اجازه می‌دن که به یه شرح یا توضیحی اجمالی در خارج از متن اصلی ارجاع داده بشه. این پا نویس‌ها عموما با شماره گذاری‌ها بصورت ترتیبی مشخص می‌شن.&lt;/p&gt;
+
+&lt;p&gt;برای اینکه بتونید یه پانویس بنویسید ابتدا لازمه در میانه‌ی پارگراف (اونجایی که میخواهید به پانویس ارجاع بدید) با استفاده از براکت که در داخل اون &lt;code class=&quot;highlighter-rouge&quot;&gt;^&lt;/code&gt; و بعدش عدد رفرنس رو مشخص کردین لینک کنید &lt;code class=&quot;highlighter-rouge&quot;&gt;[^1]&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;نکته‌ای این قضیه اینجاست که می‌تونید بصورت ID هم به مرجع مورد نظرتون لینک کنید، یعنی بجای عدد از یه عبارت لاتین، با حروف کوچک و بدون هیچ اسپیس یا tab اضافی استفاده کنید &lt;code class=&quot;highlighter-rouge&quot;&gt;[^to-id]&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;در ادامه، هرجایی که دلتون خواست می‌تونید پانویس‌هاتون رو بنویسید (توجه کنید که لازم نیست پانویس‌ها در انتهای انتهای متنتون باشه). می‌تونید پانویس رو در انتهای یک سکشن، یا حتی یه پارگراف بیارید.&lt;/p&gt;
+
+&lt;p&gt;برای ذکر کردن پانویس هم نیازه که در ابتدا عدد یا ID رنفرنس رو به همراه یک &lt;code class=&quot;highlighter-rouge&quot;&gt;^&lt;/code&gt; نوشته بعدش با یه &lt;code class=&quot;highlighter-rouge&quot;&gt;:&lt;/code&gt; شرح مورد نظرتون رو بنویسید.&lt;/p&gt;
+
+&lt;p&gt;به مثالی که در ادامه میاد توجه کنید:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Zeus (/zjuːs/;[^1] Ancient Greek: Ζεύς, Zeús [zdeǔ̯s])[^book] is the sky and thunder god in ancient Greek religion, who rules as king of the gods of Mount Olympus. His name is cognate with the first element of his Roman equivalent Jupiter. His mythologies and powers are similar, though not identical, to those of Indo-European deities such as Jupiter, Perkūnas, Perun, Indra and Thor.[^3]
+
+[^1]: The sculpture was presented to Louis XIV as Aesculapius but restored as Zeus, ca. 1686, by Pierre Granier, who added the upraised right arm brandishing the thunderbolt. Marble, middle 2nd century CE. Formerly in the 'Allée Royale', (Tapis Vert) in the Gardens of Versailles, now conserved in the Louvre Museum (Official on-line catalog)
+
+[^book]: Larousse Desk Reference Encyclopedia, The Book People, Haydock, 1995, p. 215.
+
+[^3]: Oxford English Dictionary, 1st ed. &quot;Zeus, n.&quot; Oxford University Press (Oxford), 1921.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;و چیزی که چاپ میشه در نهایت اینه:&lt;/p&gt;
+
+&lt;p&gt;Zeus (/zjuːs/;&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; Ancient Greek: Ζεύς, Zeús [zdeǔ̯s])&lt;sup id=&quot;fnref:book&quot;&gt;&lt;a href=&quot;#fn:book&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; is the sky and thunder god in ancient Greek religion, who rules as king of the gods of Mount Olympus. His name is cognate with the first element of his Roman equivalent Jupiter. His mythologies and powers are similar, though not identical, to those of Indo-European deities such as Jupiter, Perkūnas, Perun, Indra and Thor.&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2019-08-18/markdown-like-the-zeus-3.jpg&quot; alt=&quot;markdown-like-the-zeus-3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;البته شما نمی‌تونید لینک پانویس‌هایی که من اینجا در ادامه متن آورد رو ببینید، و پانویس‌ها در انتهای این پست بلاگ چاپ میشن.&lt;/p&gt;
+
+&lt;p&gt;نکته‌ای که باید به اون واقف باشید اینه که درسته که شما با ID به پانویس مورد نظر لینک میدید (مثل رفرنس دوم که به آی‌دی book بود) اما موقع رندر شدن صفحه چیزی که نمایش داده میشه عددِ ترتیبی که پانویس هست که در اینجا هم بصورت اتوماتیک خود مارکداون عدد‌های پانویس‌ها رو مرتب و چاپ می‌کنه.&lt;/p&gt;
+
+&lt;h2 id=&quot;هایلایت-کدها&quot;&gt;هایلایت کدها‭&lt;/h2&gt;
+
+&lt;p&gt;خب یکی از آیتم‌هایی که برنامه نویس‌ها خیلی خیلی در مارکداون استفاده می‌کنن اسنیپد کردن یه کد یا سینتکسه. خب برای اینکه یه تیکه کد رو اسنیپد کنیم اینجوری مینویسیم:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;​```
+hollyMotherFucntion(params)
+{
+	console.log(&quot;Shift it, shift it in Forward!&quot;)
+}
+​```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;که نتیجتا چیزی که چاپ میکنه اینه:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hollyMotherFucntion(params)
+{
+	console.log(&quot;Shift it, shift it in Forward!&quot;)
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;امروز دیگه اکثر ادیتور ها از هایلایت کدها پشتیبانی می‌کنن. برای اینکه بتونیم یه کد خشگل توی پست داشته باشیم بعد از اون ۳تا backtick فقط کافیه اسم اون زبان رو بیاریم، مثلا در اینجا من باید بنویسم javascript:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;​```javascript
+hollyMotherFucntion(params)
+{
+	console.log(&quot;Shift it, shift it in Forward!&quot;)
+}
+​```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;که باید همچین چیزی واسمون چاپ کنه:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;hollyMotherFucntion&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Shift it, shift it in Forward!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;اما، آیا میدونستید که شما می‌تونید از عبارت &lt;code class=&quot;highlighter-rouge&quot;&gt;diff&lt;/code&gt; هم برای زبان استفاده کنید!؟ حتما میپرسین به چه کاری میاد!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2019-08-18/markdown-like-the-zeus-4.jpg&quot; alt=&quot;markdown-like-the-zeus-4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;تاحالا شده که بخواین توی پست یا داکیومنت نشون بدین که قبلا اینجوری بوده، این خط حذف شده و بجاش این اضافه  شده یا این تغییر در اون قطعه کد صورت گرفته؟&lt;/p&gt;
+
+&lt;p&gt;با استفاده از &lt;code class=&quot;highlighter-rouge&quot;&gt;diff&lt;/code&gt; و دوتا علات &lt;strong&gt;+&lt;/strong&gt;  و &lt;strong&gt;-&lt;/strong&gt; پشت اون خط از کد مورد نظر، میتونید تغییرات یا همون different صورت گرفته رو نمایش بدید. اینجوری:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;​```diff
+hollyMotherFucntion(params)
+{
+-	console.log(&quot;Shift it, shift it in Forward!&quot;)
++	console.log(&quot;Shift it, shift it in Reverse!&quot;)
+}
+​```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;که در نهایت این چاپ میشه:&lt;/p&gt;
+
+&lt;div class=&quot;language-diff highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hollyMotherFucntion(params)
+{
+&lt;span class=&quot;gd&quot;&gt;-	console.log(&quot;Shift it, shift it in Forward!&quot;)
+&lt;/span&gt;&lt;span class=&quot;gi&quot;&gt;+	console.log(&quot;Shift it, shift it in Reverse!&quot;)
+&lt;/span&gt;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;استفاده از خیلی بهتون در نوشتن داکیومنت یا پست‌های آموزشی کمک می‌کنه. باعث میشه که افراد بهتر بتونن کدهاتون رو دنبال کنن و ببینین واقعا چه اتفاقی یهویی وسط کدها پیش اومده. استفاده از &lt;code class=&quot;highlighter-rouge&quot;&gt;diff&lt;/code&gt; رو هیچوقت فراموش نکنید.&lt;/p&gt;
+
+&lt;h2 id=&quot;جمع-بندی&quot;&gt;جمع بندی&lt;/h2&gt;
+
+&lt;p&gt;این چندتا نکته و ترفند در استفاده از مارکداون بود که امیدوارم به تو نوشتن مطالب و داکیومنت‌ها کمکتون کنه و متن‌هاتون حرفه‌ای بنظر بیاد. یا همونی که در تیتر پست گفتم،‌ مثل زئوس مارکداون بنویسید 😇&lt;/p&gt;
+
+&lt;p&gt;اگر شما هم ترفندی یا نکته‌ای می‌دونید که شاید به درد کسی بخوره، می‌تونید در انتهای همین پست کامنت کنید.😍&lt;/p&gt;
+
+&lt;p&gt;اگه سوال یا موردی بود، مثل همیشه در توییتر یا در تلگرام میتونیم باهم در ارتباط باشیم. 😉🍷&lt;/p&gt;
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;The sculpture was presented to Louis XIV as Aesculapius but restored as Zeus, ca. 1686, by Pierre Granier, who added the upraised right arm brandishing the thunderbolt. Marble, middle 2nd century CE. Formerly in the ‘Allée Royale’, (Tapis Vert) in the Gardens of Versailles, now conserved in the Louvre Museum (Official on-line catalog)&amp;nbsp;&lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:book&quot;&gt;
+      &lt;p&gt;Larousse Desk Reference Encyclopedia, The Book People, Haydock, 1995, p. 215.&amp;nbsp;&lt;a href=&quot;#fnref:book&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;Oxford English Dictionary, 1st ed. “Zeus, n.” Oxford University Press (Oxford), 1921.&amp;nbsp;&lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>صدرا املشی</name></author><category term="Markdown" /><category term="Editor" /><category term="مارکداون" /><summary type="html">مقدمه</summary></entry><entry><title type="html">امن کردن MongoDB در دو گام</title><link href="https://isapanah.com/2019/secure-mongo-in-2-steps" rel="alternate" type="text/html" title="امن کردن MongoDB در دو گام" /><published>2019-04-19T00:00:00+04:30</published><updated>2019-04-19T00:00:00+04:30</updated><id>https://isapanah.com/2019/secure-mongo-in-2-steps</id><content type="html" xml:base="https://isapanah.com/2019/secure-mongo-in-2-steps">&lt;h2 id=&quot;مقدمه&quot;&gt;مقدمه&lt;/h2&gt;
 
 &lt;p&gt;بعد از اتفاقی که دیروز برای &lt;a href=&quot;https://tap30.ir/&quot;&gt;TAP30&lt;/a&gt; اتفاق افتاد، تصمیم گرفتم برم سراغ دیتابیسای مونگوی خودم و اونارو بررسی کرده و کردنشیال هاشون رو ست کنم. (البته نگران نباشین، دیتاهای موجود روی دیتابیس من اصلا چیز قابل داری نبوده و همه‌ش دیتای تست واسه کارای تستیه 😬)&lt;/p&gt;
 
@@ -2979,169 +3239,4 @@ some-db
 
 &lt;p&gt;اول که شروع کردم قرار بود راجع به پیاده‌سازی فایبربیس در اپلیکیشمون فایبرنت صحبت کنم. اما خب دلم نیومد راجع به سرویس‌های فایبربیس ننویسم (چون جایی هم در منابع فارسی ندیدم که کامل راجع بهش نوشته باشه). انشالله در پست یا پست‌های بعدی حسابی راجع به پیاده کردن چند سرویسی که استفاده کردم خواهم نوشت.&lt;/p&gt;
 
-&lt;p&gt;پس تا پست بعدی، اگه سوال مورد یا چیزی بود لطفا در &lt;a href=&quot;https://twitter.com/sadra_amlashi&quot;&gt;توئیتر&lt;/a&gt; یا &lt;a href=&quot;https://t.me/amlashi&quot;&gt;تلگرام&lt;/a&gt; با هم در ارتباط باشیم.&lt;/p&gt;</content><author><name>صدرا املشی</name></author><category term="Google" /><category term="Firebase" /><category term="Android" /><category term="iOS" /><category term="WebApplication" /><summary type="html">مصائب مسیح!</summary></entry><entry><title type="html">بهبود رابط کاربری با BottomNavigationView</title><link href="https://isapanah.com/2017/bottom-navigation-view-challenges" rel="alternate" type="text/html" title="بهبود رابط کاربری با BottomNavigationView" /><published>2017-10-11T00:00:00+03:30</published><updated>2017-10-11T00:00:00+03:30</updated><id>https://isapanah.com/2017/bottom-navigation-view-challenges</id><content type="html" xml:base="https://isapanah.com/2017/bottom-navigation-view-challenges">&lt;p&gt;اگر پست “&lt;a href=&quot;http://dcamp.ir/hamburger-menu-vs-bottom-navigation&quot;&gt;جایگزینی برای منوی همبرگر&lt;/a&gt;” شایان رو خونده باشید حتما متوجه شدید که ما در پروژمون بجای همبرگر منو از &lt;a href=&quot;https://developer.android.com/reference/android/support/design/widget/BottomNavigationView.html&quot;&gt;BottomNavigationView&lt;/a&gt; استفاده کردیم.&lt;/p&gt;
-
-&lt;p&gt;در این پست قراره به چالش هایی که در روند پیاده سازی این مقوله برخوردیم اشاره کنم و اینکه به چه روشی اونهارو حل کردیم.&lt;/p&gt;
-
-&lt;p&gt;خوشحال میشم اگه شما روش بهتری برای رفع این چالشها داشتین با ما به اشتراک بگذارین.&lt;/p&gt;
-
-&lt;p&gt;اگه دنبال این هستین که چطوری میتونید BottomNavigationView رو در پروژه‌تون پیاده کنید تنها کافیه تو گوگل سرچ کنید کلی آموزش فارسی و انگلیسی پیدا میشه. با اینحال بنظرم کامل‌ترین آموزش برای این قضیه &lt;a href=&quot;https://medium.com/@hitherejoe/exploring-the-android-design-support-library-bottom-navigation-drawer-548de699e8e0&quot;&gt;پست Joe Brich&lt;/a&gt; هست، البته اگه دنبال یه آموزش ویدئویی هستین بنظرم &lt;a href=&quot;https://www.youtube.com/watch?v=wcE7IIHKfRg&quot;&gt;این ویدئو در یوتیوب&lt;/a&gt; هم گزینه خوبیه.&lt;/p&gt;
-
-&lt;h2 id=&quot;چالش-اول-حالت-shiftmode-منوی-انتخابی&quot;&gt;چالش اول: حالت ShiftMode منوی انتخابی&lt;/h2&gt;
-
-&lt;p&gt;اولین چالشی که باهاش مواجه شدیم این بود که موقع کلیک روی یک منو در &lt;strong&gt;BottomNavigationView&lt;/strong&gt; اون منو به اصطلاح مَگنیفاید یا بزرگ شده و متن زیرش پنهان میشد، که به این حالت &lt;code class=&quot;highlighter-rouge&quot;&gt;ShiftMode&lt;/code&gt; میگن . مثل انیمیشن پایین:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/2017-10-11/bottom-navigation-menu-0.gif&quot; alt=&quot;Bottom Navigation View&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;در نظر داشتیم تا همه آیکون و متن منو در زیر نشون داده بشه. تمایلی هم به بزرگ شدن آیکون ها نداشتیم، فقط کافی بود که رنگ آیتم انتخاب شده تغییر کنه و فقط آیکون کمی بالا بیاد که نشون بده انتخاب شده.&lt;/p&gt;
-
-&lt;p&gt;خب برای اینکار اول از همه یه کلاس &lt;code class=&quot;highlighter-rouge&quot;&gt;BottomNavigationViewHelper&lt;/code&gt; درست کردم. در این کلاس با کمک متد &lt;strong&gt;disableShiftMode&lt;/strong&gt; قابلیت ShiftingMode رو از تک تک منو ها گرفته، سپس حذف و جایگزین می‌کنیم.&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;BottomNavigationViewHelper&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;disableShiftMode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BottomNavigationView&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;view&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;BottomNavigationMenuView&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;menuView&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BottomNavigationMenuView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;view&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getChildAt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;Field&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;shiftingMode&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;menuView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getClass&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getDeclaredField&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;mShiftingMode&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;shiftingMode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setAccessible&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;shiftingMode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setBoolean&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;menuView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;shiftingMode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setAccessible&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;menuView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getChildCount&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;BottomNavigationItemView&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BottomNavigationItemView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;menuView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getChildAt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-                &lt;span class=&quot;c1&quot;&gt;//noinspection RestrictedApi&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setShiftingMode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-                &lt;span class=&quot;c1&quot;&gt;// set once again checked value, so view will be updated&lt;/span&gt;
-                &lt;span class=&quot;c1&quot;&gt;//noinspection RestrictedApi&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setChecked&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getItemData&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isChecked&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;NoSuchFieldException&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;Log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;BNVHelper&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Unable to get shift mode field&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;IllegalAccessException&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;Log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;BNVHelper&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Unable to change value of shift mode&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;کلاس BottomNavigationViewHelper رو به پروژه‌تون اضافه کنید. حالا کافیه بعد از کست کردن BottomNavigationView مون، اون رو به کلاس هلپر معرفی کرده تا قابلیت ShiftMode شدن رو ازش صلب کنه.&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;BottomNavigationView&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bottomNavigationView&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BottomNavigationView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;findViewById&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;bottomNavigationView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;BottomNavigationViewHelper&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;disableShiftMode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bottomNavigationView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;چالش-دوم-تغییر-رنگ-آیکون-انتخاب-شده&quot;&gt;چالش دوم: تغییر رنگ آیکون انتخاب شده&lt;/h2&gt;
-
-&lt;p&gt;ما میخواستیم موقع انتخاب شدن آیتم، آیکون‌ش به شکل یا رنگ خاصی تبدیل بشه. اما این امکان درحال عادی وجود نداشت. پس چیکار کردیم؟&lt;/p&gt;
-
-&lt;p&gt;من یکبار قبل شروع همه چیز برای همه آیتم ها یک آیکون پیشرفض تعریف کرده،‌ سپس یک متد به نام &lt;code class=&quot;highlighter-rouge&quot;&gt;changeIcon&lt;/code&gt; ایجاد کردم، تا هربار که کاربر آیتمی رو انتخاب میکنه این متد صدا زده بشه. این متد ابتدا آیکونِ همه‌ی آیتم‌هارو روی پیشفرض قرار میده و سپس بر اساس &lt;code class=&quot;highlighter-rouge&quot;&gt;ID&lt;/code&gt; آیتم انتخاب شده، آیکون پیشفرض‌ش رو با آیکون اَکتیو شده، تعویض میکنه.&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;changeIcon&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;itemIndex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;bottomNavigationView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getMenu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getItem&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setIcon&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;mipmap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;bnv_menu_ic_home&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;bottomNavigationView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getMenu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getItem&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setIcon&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;mipmap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;bnv_menu_ic_news&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;bottomNavigationView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getMenu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getItem&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setIcon&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;mipmap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;bnv_menu_ic_support&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;bottomNavigationView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getMenu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getItem&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setIcon&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;mipmap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;bnv_menu_ic_profile&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;switch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;itemIndex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;){&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;bottomNavigationView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getMenu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getItem&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setIcon&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;mipmap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;bnv_menu_ic_home_active&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;bottomNavigationView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getMenu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getItem&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setIcon&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;mipmap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;bnv_menu_ic_news_active&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;bottomNavigationView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getMenu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getItem&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setIcon&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;mipmap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;bnv_menu_ic_support_active&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;bottomNavigationView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getMenu&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getItem&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setIcon&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;mipmap&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;bnv_menu_ic_profile_active&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;بعدش، یک &lt;strong&gt;listener&lt;/strong&gt; برای bottomNavigationView مون تعریف کردم که هرموقع آیتمی انتخاب شد، این متد رو صدا بزنه تا آیکونش به آیکون مورد نظر ما تغییر کنه.&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;bottomNavigationView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setOnNavigationItemSelectedListener&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BottomNavigationView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;OnNavigationItemSelectedListener&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;onNavigationItemSelected&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;@NonNull&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;MenuItem&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-
-        &lt;span class=&quot;k&quot;&gt;switch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getItemId&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;action_mainFragments_home&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;changeIcon&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;action_mainFragments_news&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;changeIcon&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;action_mainFragments_support&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;changeIcon&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;action_mainFragments_profile&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;changeIcon&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;});&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;و در نهایت با توجه به برداشتن حالت مگنیفای و تغییر آیکون چیزی که انتظار داشتیم این شکلی شد:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/2017-10-11/bottom-navigation-menu-1.gif&quot; alt=&quot;Bottom Navigation View&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;چالش-سوم-قرار-دادن-badge-در-هنگام-دریافت-ناتیفیکیشن&quot;&gt;چالش سوم: قرار دادن Badge در هنگام دریافت ناتیفیکیشن&lt;/h2&gt;
-
-&lt;p&gt;یکی از پر دردسرترین چیزهایی که باهاش روبرو شدیم، بَج گذاشتن کنار یکی از آیتم‌های BNV بود. در اولین تلاش یه shape قرمز رنگ از نوع oval ساختم، بعدش به این فکر کردم که میخوام برای آیتم دومی یه بج نشون بدم، پس عرض صفحه رو گرفته، تقسیم بر ۴ کرده و سپس صربدر ۲.۵ میکردم تا بیافته در مرکز آيتممون! در نهایت هم ویوو مربوطه رو به BNV اضافه میکردم. همه چی درست کار می‌کرد تا موقعی که قرار نبود در سایزهای غیر موبایلی (مثل تبلت) نشون داده بشه، اونموقع دیگه مثل سابق جاش اونجایی نبود که باید باشه و روی هر اسکرین چندین پیکسل جابجا می‌شد.&lt;/p&gt;
-
-&lt;p&gt;در اقدام بعدی برای حل این مشکل یه کلاس &lt;code class=&quot;highlighter-rouge&quot;&gt;BadgeView&lt;/code&gt; درست کردم که از نوع AppCompatTextView هست، و تمام حالات ممکن رو براش پیاده کردم تا روی اسکرین های مختلف مشکلی نداشته باشیم، حتی مشکل حالت count یا empty بج رو هم براش در نظر گرفتم. لازم نیست خودتون رو درگیر این اینکه این کلاس چطوری کار میکنه بکنید، فقط کافیه کلاس رو &lt;a href=&quot;https://gist.github.com/sadra/d13b354d6205360fc03c80aa2d3fd32b&quot;&gt;از اینجا&lt;/a&gt; دریافت کرده و به پروژتون اضافه کنید.&lt;/p&gt;
-
-&lt;p&gt;حالا برای اضافه کردن Badge اول از همه آیتم منوی مورد نظرتون رو باید انتخاب کنید.&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;BottomNavigationMenuView&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;menuView&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BottomNavigationMenuView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bottomNavigationView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getChildAt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;targetView&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;menuView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getChildAt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//I' select second menu item&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;سپس، از BadgeView یه نمونه ایجاد کرده و آیتم منوی مورد نظر رو براش تعریف می‌کنیم.&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;badgeView&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BadgeView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;badgeView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setTargetView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;targetView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;اگه میخوایین Badge تون شماره داشته باشه (مثلا تعداد پیام‌های دریافتی)، متد &lt;code class=&quot;highlighter-rouge&quot;&gt;setBadgeCount&lt;/code&gt; رو صدا کرده و داخلش مقدار مورد نظرتون رو وارد کنید. اگر نه مثل اینستاگرام یه نقطه کوچیک خالی کنار آیتم مورد نظر خواستین فقط کافیه متد &lt;code class=&quot;highlighter-rouge&quot;&gt;setEmptyBadge&lt;/code&gt; و یا حتی برای سایز کوچیکتر &lt;code class=&quot;highlighter-rouge&quot;&gt;setEmptySmallerBadge&lt;/code&gt; رو صدا کنید.&lt;/p&gt;
-
-&lt;p&gt;بطور پیشفرض بَج در بالا سمت راست قرار میگیره. برای اینکه بَج مورد نظر در همه سایز ها و اسکرین ها یکسان و در یک جا قرار داشته باشه (سمت راست آیتم با فاصله ۵ پیکسل از سمت چپ) اول از همه باید اون رو در مرکز آیتم قرار بدیم، بعدش با استفاده از متد &lt;code class=&quot;highlighter-rouge&quot;&gt;setBadgeMargin&lt;/code&gt; مقدار لازمه رو برای فاصله گرفتن از مرکز به سمت بالا سمت راست، یا هرجایی که شما دوست داشتین وارد می‌کنیم.&lt;/p&gt;
-
-&lt;p&gt;خب درنهایت، چیزی نوشتیم برای یه &lt;em&gt;بج empty&lt;/em&gt; اینه:&lt;/p&gt;
-
-&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;insertBadge&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;BottomNavigationMenuView&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;menuView&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;BottomNavigationMenuView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bottomNavigationView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getChildAt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;targetView&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;menuView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getChildAt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-
-	&lt;span class=&quot;n&quot;&gt;badgeView&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BadgeView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;badgeView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setTargetView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;targetView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;badgeView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setEmptyBadge&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;badgeView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setBadgeGravity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Gravity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;CENTER&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;badgeView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;setBadgeMargin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;24&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;13&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;اگر از Badge با شمارنده استفاده کردین، برای افزایش مقدار داخل بَج هم میتونید بصورت دستی مقدار جدید بهش بدید، و هم میتونید با صدا زدن متد &lt;code class=&quot;highlighter-rouge&quot;&gt;incrementBadgeCount&lt;/code&gt; یا &lt;code class=&quot;highlighter-rouge&quot;&gt;decrementBadgeCount&lt;/code&gt; اون رو کم یا زیاد کنید.&lt;/p&gt;
-
-&lt;p&gt;برای حذف کردن بج از روی منوی آیتم فقط کافیه متد &lt;code class=&quot;highlighter-rouge&quot;&gt;removeBadge&lt;/code&gt; رو صدا بزنید.&lt;/p&gt;
-
-&lt;p&gt;در نهایت چیزی که انتظارشو داشتیم، به همین سادگی به همین خوشمزگی :)&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/2017-10-11/bottom-navigation-menu-2.png&quot; alt=&quot;Bottom Navigation View&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/2017-10-11/bottom-navigation-menu-3.png&quot; alt=&quot;Bottom Navigation View&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/2017-10-11/bottom-navigation-menu-4.png&quot; alt=&quot;Bottom Navigation View&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;نتیجه-گیری&quot;&gt;نتیجه گیری&lt;/h2&gt;
-
-&lt;p&gt;نتیجه اینکه کس نخوارد پشت من جز ناخن انگشت من! به هرحال این بندگان خدا در شرکت google خودشون رو به هر دری میزنن تا راه توسعه رو برای ما هموارتر کنن ولی خوب نمیشه در هرچیزی کمال مطلق آفرید، ابزارها آفریده میشن،‌و تکمیل کردنشون وظیفه ما توسعه دهنده‌هاست، مثل همین چالش‌هایی که در این مقوله پیش اومد.&lt;/p&gt;
-
-&lt;p&gt;اگر شما تو استفاده از این BottomNavigationView به چالشی برخوردید و حلش کردید یا برای همین موارد پیش اومده پیشنهاد بهتری داشتین ممنون میشم اگه روی &lt;a href=&quot;https://twitter.com/sadra_amlashi&quot;&gt;توییتر&lt;/a&gt; یا &lt;a href=&quot;https://t.me/Amlashi&quot;&gt;تلگرام&lt;/a&gt; با من درمیون بگذارید.&lt;/p&gt;</content><author><name>صدرا املشی</name></author><category term="Android" /><category term="UI" /><category term="BottomNavigationView" /><summary type="html">اگر پست “جایگزینی برای منوی همبرگر” شایان رو خونده باشید حتما متوجه شدید که ما در پروژمون بجای همبرگر منو از BottomNavigationView استفاده کردیم.</summary></entry></feed>
+&lt;p&gt;پس تا پست بعدی، اگه سوال مورد یا چیزی بود لطفا در &lt;a href=&quot;https://twitter.com/sadra_amlashi&quot;&gt;توئیتر&lt;/a&gt; یا &lt;a href=&quot;https://t.me/amlashi&quot;&gt;تلگرام&lt;/a&gt; با هم در ارتباط باشیم.&lt;/p&gt;</content><author><name>صدرا املشی</name></author><category term="Google" /><category term="Firebase" /><category term="Android" /><category term="iOS" /><category term="WebApplication" /><summary type="html">مصائب مسیح!</summary></entry></feed>

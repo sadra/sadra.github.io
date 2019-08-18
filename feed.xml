@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="https://isapanah.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://isapanah.com/" rel="alternate" type="text/html" /><updated>2019-08-19T00:06:08+04:30</updated><id>https://isapanah.com/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده اپلیکیشن iOS و Android.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="https://isapanah.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://isapanah.com/" rel="alternate" type="text/html" /><updated>2019-08-19T00:10:09+04:30</updated><id>https://isapanah.com/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده اپلیکیشن iOS و Android.
 </subtitle><entry><title type="html">مثل زئوس مارکداون بنویسیم</title><link href="https://isapanah.com/2019/markdown-like-the-zeus" rel="alternate" type="text/html" title="مثل زئوس مارکداون بنویسیم" /><published>2019-08-18T00:00:00+04:30</published><updated>2019-08-18T00:00:00+04:30</updated><id>https://isapanah.com/2019/markdown-like-the-zeus</id><content type="html" xml:base="https://isapanah.com/2019/markdown-like-the-zeus">&lt;h2 id=&quot;مقدمه&quot;&gt;مقدمه&lt;/h2&gt;
 
 &lt;p&gt;اگه شما یه توسعه دهنده هستن، خب خداروشکر، پس تا الان حتما برای یک بار هم که شده با یکی از ادیتورهای Markdown کار کردین.&lt;/p&gt;
@@ -164,7 +164,7 @@
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/post/2019-08-18/markdown-like-the-zeus-3.jpg&quot; alt=&quot;markdown-like-the-zeus-3&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;البته شما نمی‌تونید لینک پانویس‌هایی که من اینجا در ادامه متن آورد رو ببینید، و پانویس‌ها در انتهای این پست بلاگ چاپ میشن.&lt;/p&gt;
+&lt;p&gt;الان اگر روی لینک رفنرنس‌ها کلیک کنید میبینید که شمارو به انتهای این پست وبلاگ هدایت می‌کنه، در حالی که من متن ارجاعات رو بلافاصله بعد از پارگراف نوشتم، این رو هم می‌تونید در &lt;a href=&quot;https://raw.githubusercontent.com/sadra/sadra.github.io/source/_posts/2019-08-18-markdown-like-the-zeus.md&quot;&gt;فایل md همین پست&lt;/a&gt; ببینید.&lt;/p&gt;
 
 &lt;p&gt;نکته‌ای که باید به اون واقف باشید اینه که درسته که شما با ID به پانویس مورد نظر لینک میدید (مثل رفرنس دوم که به آی‌دی book بود) اما موقع رندر شدن صفحه چیزی که نمایش داده میشه عددِ ترتیبی که پانویس هست که در اینجا هم بصورت اتوماتیک خود مارکداون عدد‌های پانویس‌ها رو مرتب و چاپ می‌کنه.&lt;/p&gt;
 

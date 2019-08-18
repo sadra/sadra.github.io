@@ -12,7 +12,7 @@ tags:
 categories:
 - Tools
 
-cover: /assets/img/post/2019-08-18/markdown-like-the-zeus-cover
+cover: /assets/img/post/2019-08-18/markdown-like-the-zeus-cover.jpg
 
 author: Sadra
 ---
@@ -28,6 +28,7 @@ author: Sadra
 من برای نوشتن مستندات Markdown از ادیتور Typora استفاده می‌کنم. قبلا در [توییتر](https://twitter.com/sadra_amlashi/status/1115300664865972224?s=20) گفته بودم که واسه Typora یه تم RTL به نام [Middle-East](http://theme.typora.io/theme/Middle-East/) توسعه دادم، می‌تونید از Typora بعنوان یه ادیتور آفلاین تروتمیز مارکداون استفاده کنید که هم RTL رو ساپورت می‌کنه هم می‌تونید با فرمت‌های مختلف (مثل PDF, HTML و حتی EPub) ازش خروجی بگیرید.
 
 <blockquote class="twitter-tweet"><p lang="fa" dir="rtl">مایلم به اطلاعتون برسونم که بالاخره تم Middle-East مرج شد توی تم‌های <a href="https://twitter.com/Typora?ref_src=twsrc%5Etfw">@Typora</a>😍<br>از الان می‌تونید بصورت Makrdown با استایل <a href="https://twitter.com/BearNotesApp?ref_src=twsrc%5Etfw">@BearNotesApp</a> در تایپورا به <a href="https://twitter.com/hashtag/%D9%81%D8%A7%D8%B1%D8%B3%DB%8C?src=hash&amp;ref_src=twsrc%5Etfw">#فارسی</a> و <a href="https://twitter.com/hashtag/%D8%B1%D8%A7%D8%B3%D8%AA_%DA%86%DB%8C%D9%86?src=hash&amp;ref_src=twsrc%5Etfw">#راست_چین</a> رایگان، ساده و تمیز بنویسید😎<br>استار <a href="https://twitter.com/hashtag/%DA%AF%DB%8C%D8%AA%D9%87%D8%A7%D8%A8?src=hash&amp;ref_src=twsrc%5Etfw">#گیتهاب</a> و <a href="https://twitter.com/hashtag/%D8%B1%DB%8C%D8%AA%D9%88%DB%8C%DB%8C%D8%AA?src=hash&amp;ref_src=twsrc%5Etfw">#ریتوییت</a> مزید امتنان است🥰<a href="https://t.co/WggeJhVopb">https://t.co/WggeJhVopb</a></p>&mdash; Sadra Amlashi (@sadra_amlashi) <a href="https://twitter.com/sadra_amlashi/status/1115300664865972224?ref_src=twsrc%5Etfw">April 8, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 ## لیست ترتیبی یا همون Order List
 
 همونطور که می‌دونید، لیست ترتیبی رو با سیسنتکس زیر می‌نویسیم:

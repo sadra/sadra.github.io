@@ -94,7 +94,6 @@ author: Sadra
 
 که در نهایت چیزی که باید در خروجی مارک داون چاپ شه به این صورت هست:
 
-
 - [x] Send an email to Hera
 - [ ] Find Loki on earth
 - [x] Help Thor to find his hammer

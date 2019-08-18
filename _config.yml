@@ -57,4 +57,4 @@ collections:
     output: true
     permalink: "video/:collection/:categories/:title/"
 
-version : 101
+version : 102

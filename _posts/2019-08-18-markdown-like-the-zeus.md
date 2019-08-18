@@ -87,17 +87,19 @@ author: Sadra
 
 ```
 - [x] Send an email to Hera
-- [ ] Find Lukie on earth
+- [ ] Find Loki on earth
 - [x] Help Thor to find his hammer
 - [ ] Save the world
 ```
 
 که در نهایت چیزی که باید در خروجی مارک داون چاپ شه به این صورت هست:
 
+
 - [x] Send an email to Hera
-- [ ] Find Lukie on earth
+- [ ] Find Loki on earth
 - [x] Help Thor to find his hammer
 - [ ] Save the world
+{: style='list-style-type: none'}
 
 البته امیدواریم زئوس تا قبل ددلاین به تسک‌هاش برسه 🤪
 

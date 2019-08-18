@@ -15,6 +15,9 @@ linkedin_path: https://www.linkedin.com/in/amlashisadra/
 # Build settings
 permalink: :year/:title
 markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
 plugins:
   - jekyll-feed
   - jekyll-autoprefixer

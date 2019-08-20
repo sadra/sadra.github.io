@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="https://isapanah.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://isapanah.com/" rel="alternate" type="text/html" /><updated>2019-08-19T00:10:40+04:30</updated><id>https://isapanah.com/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده اپلیکیشن iOS و Android.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="https://isapanah.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://isapanah.com/" rel="alternate" type="text/html" /><updated>2019-08-20T14:43:35+04:30</updated><id>https://isapanah.com/</id><title type="html">وبلاگ صدرا املشی</title><subtitle>سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده اپلیکیشن iOS و Android.
 </subtitle><entry><title type="html">مثل زئوس مارکداون بنویسیم</title><link href="https://isapanah.com/2019/markdown-like-the-zeus" rel="alternate" type="text/html" title="مثل زئوس مارکداون بنویسیم" /><published>2019-08-18T00:00:00+04:30</published><updated>2019-08-18T00:00:00+04:30</updated><id>https://isapanah.com/2019/markdown-like-the-zeus</id><content type="html" xml:base="https://isapanah.com/2019/markdown-like-the-zeus">&lt;h2 id=&quot;مقدمه&quot;&gt;مقدمه&lt;/h2&gt;
 
-&lt;p&gt;اگه شما یه توسعه دهنده هستن، خب خداروشکر، پس تا الان حتما برای یک بار هم که شده با یکی از ادیتورهای Markdown کار کردین.&lt;/p&gt;
+&lt;p&gt;اگه شما یه توسعه دهنده هستید، حتما تا الان برای یک بار هم که شده با یکی از ادیتورهای Markdown کار کردین.&lt;/p&gt;
 
-&lt;p&gt;زبان (نوشتاری) مارکداون توسط Github، Medium، خیلی از سرویس‌های تیکتینگ، سرویس‌های وبلاگ‌دهی، ابزارهای کامنت گذاری (حتی توی همین وبلاگ) پشتیبانی میشه. دونستن سینتکس Markdown می‌تونه به شما در نوشتن (داکیومنت، کامنت یا هر مطلبی) کمک بزرگی کنه و کاری کنه که مثل یه توسعه دهنده‌ی حرفه‌ای بنظر بیایید.&lt;/p&gt;
+&lt;p&gt;زبان (نوشتاری) مارکداون توسط Github، Medium و خیلی از سرویس‌های تیکتینگ، سرویس‌های وبلاگ‌دهی و ابزارهای کامنت گذاری (حتی توی همین وبلاگ) پشتیبانی میشه. دونستن سینتکس Markdown می‌تونه کمک بزرگی به شما در نوشتن (داکیومنت، کامنت یا هر مطلبی)  بکنه و کاری کنه که مثل یه توسعه دهنده‌ی حرفه‌ای بنظر بیایید.&lt;/p&gt;
 
-&lt;p&gt;روی اینترنت پره از بلاگ پست‌ها و چیت‌شیت‌های مختلف که شما می‌تونید با مطالعه اون‌ها در مارکداون نویسی مهارت خوبی پیدا کنید (مثلا این &lt;a href=&quot;https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet&quot;&gt;لینک&lt;/a&gt;). توی این پست وبلاگ قرار نیست راجع به اینا صحبت کنم، بلکه می‌خوام چندتا تکنیک کوچیک ولی باحال رو بهتون بگم که کمتر جایی روی وب پیداش می‌کنید و ممکنه بدردتون بخوره.&lt;/p&gt;
+&lt;p&gt;روی اینترنت پر از بلاگ پست‌ها و چیت‌شیت‌های مختلف در این باره هست که شما می‌تونید با مطالعه اون‌ها در مارکداون نویسی مهارت خوبی پیدا کنید (مثلا این &lt;a href=&quot;https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet&quot;&gt;لینک&lt;/a&gt;). توی این پست قرار نیست راجع به اینا صحبت کنم، بلکه می‌خوام چندتا تکنیک کوچیک ولی باحال رو باهاتون به اشتراک بگذارم که کمتر جایی روی وب پیداش می‌کنید.&lt;/p&gt;
 
-&lt;p&gt;من برای نوشتن مستندات Markdown از ادیتور Typora استفاده می‌کنم. قبلا در &lt;a href=&quot;https://twitter.com/sadra_amlashi/status/1115300664865972224?s=20&quot;&gt;توییتر&lt;/a&gt; گفته بودم که واسه Typora یه تم RTL به نام &lt;a href=&quot;http://theme.typora.io/theme/Middle-East/&quot;&gt;Middle-East&lt;/a&gt; توسعه دادم، می‌تونید از Typora بعنوان یه ادیتور آفلاین تروتمیز مارکداون استفاده کنید که هم RTL رو ساپورت می‌کنه هم می‌تونید با فرمت‌های مختلف (مثل PDF, HTML و حتی EPub) ازش خروجی بگیرید.&lt;/p&gt;
+&lt;p&gt;من برای نوشتن مستندات Markdown از ادیتور Typora استفاده می‌کنم. قبلا در &lt;a href=&quot;https://twitter.com/sadra_amlashi/status/1115300664865972224?s=20&quot;&gt;توییتر&lt;/a&gt; گفته بودم که واسه Typora یه تم RTL به نام &lt;a href=&quot;http://theme.typora.io/theme/Middle-East/&quot;&gt;Middle-East&lt;/a&gt; توسعه دادم، می‌تونید از Typora بعنوان یه ادیتور آفلاین تروتمیزِ مارکداون استفاده کنید که هم RTL رو ساپورت می‌کنه هم می‌تونید با فرمت‌های مختلف (مثل PDF, HTML و حتی EPub) ازش خروجی بگیرید.&lt;/p&gt;
 
 &lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;fa&quot; dir=&quot;rtl&quot;&gt;مایلم به اطلاعتون برسونم که بالاخره تم Middle-East مرج شد توی تم‌های &lt;a href=&quot;https://twitter.com/Typora?ref_src=twsrc%5Etfw&quot;&gt;@Typora&lt;/a&gt;😍&lt;br /&gt;از الان می‌تونید بصورت Makrdown با استایل &lt;a href=&quot;https://twitter.com/BearNotesApp?ref_src=twsrc%5Etfw&quot;&gt;@BearNotesApp&lt;/a&gt; در تایپورا به &lt;a href=&quot;https://twitter.com/hashtag/%D9%81%D8%A7%D8%B1%D8%B3%DB%8C?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#فارسی&lt;/a&gt; و &lt;a href=&quot;https://twitter.com/hashtag/%D8%B1%D8%A7%D8%B3%D8%AA_%DA%86%DB%8C%D9%86?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#راست_چین&lt;/a&gt; رایگان، ساده و تمیز بنویسید😎&lt;br /&gt;استار &lt;a href=&quot;https://twitter.com/hashtag/%DA%AF%DB%8C%D8%AA%D9%87%D8%A7%D8%A8?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#گیتهاب&lt;/a&gt; و &lt;a href=&quot;https://twitter.com/hashtag/%D8%B1%DB%8C%D8%AA%D9%88%DB%8C%DB%8C%D8%AA?src=hash&amp;amp;ref_src=twsrc%5Etfw&quot;&gt;#ریتوییت&lt;/a&gt; مزید امتنان است🥰&lt;a href=&quot;https://t.co/WggeJhVopb&quot;&gt;https://t.co/WggeJhVopb&lt;/a&gt;&lt;/p&gt;&amp;mdash; Sadra Amlashi (@sadra_amlashi) &lt;a href=&quot;https://twitter.com/sadra_amlashi/status/1115300664865972224?ref_src=twsrc%5Etfw&quot;&gt;April 8, 2019&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async=&quot;&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
@@ -36,7 +36,7 @@
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/post/2019-08-18/markdown-like-the-zeus-1.jpg&quot; alt=&quot;markdown-like-the-zeus-1&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;تا موقعی که شما یه لیست داشته باشین و کنار آیتم‌های لیستتون شماره گذاری کرده باشین، موقع نمایش دادن متن خود مارکداون اون رو بصورت یه لیست بازشماری شده render کرده و نمایش میده.&lt;/p&gt;
+&lt;p&gt;تا موقعی که شما یه لیست داشته باشین و کنار آیتم‌های لیستتون شماره گذاری کرده باشین، موقع نمایش دادن متن، خودِ پردازشگر مارکداون اون رو بصورت یه لیست بازشماری شده دوباره render کرده و نمایش میده.&lt;/p&gt;
 
 &lt;p&gt;لیست زیر رو ببینید:&lt;/p&gt;
 
@@ -62,7 +62,7 @@
   &lt;li&gt;Item Three&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;ازتون می‌خوام اگه فکر می‌کنید من حقه‌ي خاصی استفاده می‌کنم یا توی ترتیب شماره‌ها دستکاری کردم، برید و &lt;a href=&quot;https://raw.githubusercontent.com/sadra/sadra.github.io/source/_posts/2019-08-18-markdown-like-the-zeus.md&quot;&gt;فایل md همین پست&lt;/a&gt; رو ببینید. تنها چیزی که برای مارکداون مهمه اینه که آیتم اول حتما از &lt;strong&gt;«یک»&lt;/strong&gt; شروع شده باشه.&lt;/p&gt;
+&lt;p&gt;ازتون می‌خوام اگه فکر می‌کنید من حقه‌ی خاصی استفاده می‌کنم یا توی ترتیب شماره‌ها دستکاری کردم، برید و &lt;a href=&quot;https://raw.githubusercontent.com/sadra/sadra.github.io/source/_posts/2019-08-18-markdown-like-the-zeus.md&quot;&gt;فایل md همین پست&lt;/a&gt; رو ببینید. تنها چیزی که برای مارکداون مهمه اینه که آیتم اول حتما از &lt;strong&gt;«یک»&lt;/strong&gt; شروع شده باشه.&lt;/p&gt;
 
 &lt;p&gt;بعضیا کلا برای همه آیتم‌ها عدد ۱ رو میگذارن. اما اگه شما خیلی روی ترتیب حساسین و اون اتفاق ناگوار براتون پیش اومده، فقط کافیه آیتم رو بهش اضافه کنید و همون عدد آیتم بعدی رو بهش بدید. (مثلا قبل آیتم شماره ۹ باید چیز دیگه‌ای اضافه می‌کردین، اوکی به این ترتیب لیست رو بازنویسی کنید: &lt;em&gt;۸. آیتم قبلی&lt;/em&gt;، &lt;strong&gt;۹. آیتم فراموش شده&lt;/strong&gt;، &lt;em&gt;۹. آیتم بعدی&lt;/em&gt;).&lt;/p&gt;
 
@@ -72,7 +72,7 @@
 
 &lt;p&gt;مثلا این یه لیست وظیفه هست که باید &lt;a href=&quot;https://twitter.com/TheTweetOfGod&quot;&gt;God&lt;/a&gt; انجامشون بده:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- [x] Send an email to Hera
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- [x] Send a message to Hera
 - [ ] Find Loki on earth
 - [x] Help Thor to find his hammer
 - [ ] Save the world
@@ -82,7 +82,7 @@
 &lt;p&gt;که در نهایت چیزی که باید در خروجی مارک داون چاپ شه به این صورت هست:&lt;/p&gt;
 
 &lt;ul class=&quot;task-list&quot; style=&quot;list-style-type: none&quot;&gt;
-  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;Send an email to Hera&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;Send a message to Hera&lt;/li&gt;
   &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Find Loki on earth&lt;/li&gt;
   &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;Help Thor to find his hammer&lt;/li&gt;
   &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Save the world&lt;/li&gt;
@@ -126,7 +126,7 @@
 
 &lt;p&gt;&lt;a href=&quot;#custom-odin-heading&quot;&gt;The Odin’s Heading&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;و اگه روش کلیک کنید، میبینید که میپرسه روی سر تیتری که در بالاتر چاپ کرده بودیم.&lt;/p&gt;
+&lt;p&gt;و اگه روش کلیک کنید، میبینید که می‌پَره روی سر تیتری که در بالاتر چاپ کرده بودیم.&lt;/p&gt;
 
 &lt;p&gt;البته شما می‌تونید بصورت full URL هم به اون تیتر مورد نظر ارجاع بدید:&lt;/p&gt;
 
@@ -136,7 +136,7 @@
 
 &lt;h2 id=&quot;پانویس&quot;&gt;پانویس&lt;/h2&gt;
 
-&lt;p&gt;یکی از چیزهای که خیلی ها فکر می‌کنن مارکداون پشتیبانی کنه، استفاده از پانویس یا همون Footnote هست. پانویس‌ها بهتون اجازه می‌دن که به یه شرح یا توضیحی اجمالی در خارج از متن اصلی ارجاع داده بشه. این پا نویس‌ها عموما با شماره گذاری‌ها بصورت ترتیبی مشخص می‌شن.&lt;/p&gt;
+&lt;p&gt;یکی از چیزهای که خیلی ها نمی‌دونن مارکداون پشتیبانی می‌کنه، استفاده از پانویس یا همون Footnote هست. پانویس‌ها بهتون اجازه می‌دن که به یه شرح یا توضیحی اجمالی در خارج از متن اصلی ارجاع داده بشه. این پا نویس‌ها عموما با شماره گذاری‌ها بصورت ترتیبی مشخص می‌شن.&lt;/p&gt;
 
 &lt;p&gt;برای اینکه بتونید یه پانویس بنویسید ابتدا لازمه در میانه‌ی پارگراف (اونجایی که میخواهید به پانویس ارجاع بدید) با استفاده از براکت که در داخل اون &lt;code class=&quot;highlighter-rouge&quot;&gt;^&lt;/code&gt; و بعدش عدد رفرنس رو مشخص کردین لینک کنید &lt;code class=&quot;highlighter-rouge&quot;&gt;[^1]&lt;/code&gt;.&lt;/p&gt;
 

@@ -1,10 +1,10 @@
 title: وبلاگ صدرا املشی
-email: sadra@isapanah.com
+email: contact@sadra.me
 description: > # this means to ignore newlines until "baseurl:"
  سلام! من صدرا عیسی پناه املشی هستم. توسعه دهنده اپلیکیشن iOS و Android.
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://isapanah.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://sadra.me" # the base hostname & protocol for your site, e.g. http://example.com
 
 twitter_path: https://twitter.com/sadra-amlashi
 github_path: https://github.com/sadra

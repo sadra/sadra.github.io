@@ -142,7 +142,7 @@ author: Sadra
 البته شما می‌تونید بصورت full URL هم به اون تیتر مورد نظر ارجاع بدید:
 
 ```
-[The Odin's Heading](https://isapanah.com/2019-08-18-markdown-like-a-god#custom-odin-heading)
+[The Odin's Heading](https://sadra.me/2019-08-18-markdown-like-a-god#custom-odin-heading)
 ```
 
 ## پانویس
